@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-16T19:20:01.794891+00:00",
+  "finished_utc": "2026-11-16T19:20:07.637439+00:00",
+  "scope": "Actual source histories, order-four membership, rank, zero tree counterterms, and finite-reader reduction. Does not prove the evaluated ghost-box constant or exhaustiveness of the ghost projection in Lean.",
+  "source": "checks/matching/GhostBoxSource.lean",
+  "source_sha256": "106546c347d97d12b283fef5f95a53b3f97437658d114a2f509502a796e7f51d",
+  "log": "evidence/matching/ghost-box-source.log",
+  "log_sha256": "7a5958bded9b4166c2ea4633b6d8b524f13a06c6a7159c1951035caa1f3f7346",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/ghost-box-check/final-build/project/.lake/build/lib/lean/GhostBoxSource.olean",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/ghost-box-check/final-build/project/GhostBoxSource.lean"
+  ],
+  "project": "/Users/oai/Documents/Codex/2026-11-13/loo/work/ghost-box-check/final-build/project",
+  "exit_code": 0,
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GhostBox.tree_result": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostBox.tree_pole": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostBox.family_member": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostBox.family_slots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostBox.finite_reading": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostBox.actual_pole": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "submission_files_verified": 37673,
+  "source_build_reused": true,
+  "fresh_review_build": true,
+  "comparator_run": false,
+  "warnings": []
+}

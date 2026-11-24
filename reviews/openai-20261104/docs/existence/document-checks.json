@@ -1,0 +1,15 @@
+{
+  "compile": "passed",
+  "latex_warnings": 0,
+  "cross_references": "resolved",
+  "source_keys": "resolved",
+  "code_spaces": "preserved",
+  "section_5_source_records": 19,
+  "sha256": {
+    "october-november-existence-comparison.tex": "c48c8a120b5d5e5971dff325f82d29df78a4a628b4ecec113a7c7071325646d6",
+    "october-november-existence-comparison.pdf": "fce352c9f29fc399f94d01f0af0e7c9bb2d81f1713180fb49730ada383fd3f22"
+  },
+  "visual_inspection": "All 15 pages inspected across revisions. Pages 11-15 re-rendered and inspected after clarifying Section 6; final evidence note rechecked on page 15.",
+  "pages": 15,
+  "checked_utc": "2026-11-12T01:00:50.156951+00:00"
+}

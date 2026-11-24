@@ -1,0 +1,178 @@
+{
+  "checked_utc": "2026-11-16T19:21:11.462358+00:00",
+  "scope": "Direct convergent four-dimensional momentum integral with source H(u)=(1+u)exp(-u). Numerical corroboration of the written analytic comparison, without a certified error bound or Lean finite-value theorem.",
+  "normalization": "128 pi^2 I_R^MSbar, p^2=mu_bar^2=1",
+  "reference_integrand": "(e.k)^4 / ((k+3p/2)^2+1)^4",
+  "reference_finite_part": 0,
+  "c_box": 0.09600088275537288,
+  "quadrature": [
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 1,
+      "normalized_finite_value": -0.1828861534436856,
+      "difference_from_infinite_length_formula": -0.2788870361990585
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 2,
+      "normalized_finite_value": 0.07090128324370293,
+      "difference_from_infinite_length_formula": -0.025099599511669957
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 4,
+      "normalized_finite_value": 0.09519902759092795,
+      "difference_from_infinite_length_formula": -0.000801855164444934
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 8,
+      "normalized_finite_value": 0.09598527691785005,
+      "difference_from_infinite_length_formula": -1.5605837522830734e-05
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 16,
+      "normalized_finite_value": 0.09600061574945438,
+      "difference_from_infinite_length_formula": -2.6700591850004063e-07
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": 32,
+      "normalized_finite_value": 0.09600087091669267,
+      "difference_from_infinite_length_formula": -1.1838680216702535e-08
+    },
+    {
+      "nodes_per_panel_axis": 192,
+      "infrared_length": null,
+      "normalized_finite_value": 0.09600087503358071,
+      "difference_from_infinite_length_formula": -7.721792177894926e-09
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 1,
+      "normalized_finite_value": -0.1828861467271996,
+      "difference_from_infinite_length_formula": -0.2788870294825725
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 2,
+      "normalized_finite_value": 0.0709012899601809,
+      "difference_from_infinite_length_formula": -0.025099592795191986
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 4,
+      "normalized_finite_value": 0.09519903430740519,
+      "difference_from_infinite_length_formula": -0.0008018484479676985
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 8,
+      "normalized_finite_value": 0.09598528363432733,
+      "difference_from_infinite_length_formula": -1.559912104555361e-05
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 16,
+      "normalized_finite_value": 0.09600062246593165,
+      "difference_from_infinite_length_formula": -2.60289441236794e-07
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": 32,
+      "normalized_finite_value": 0.09600087763316993,
+      "difference_from_infinite_length_formula": -5.12220295345589e-09
+    },
+    {
+      "nodes_per_panel_axis": 320,
+      "infrared_length": null,
+      "normalized_finite_value": 0.09600088175005798,
+      "difference_from_infinite_length_formula": -1.0053149007704931e-09
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 1,
+      "normalized_finite_value": -0.1828861458756758,
+      "difference_from_infinite_length_formula": -0.2788870286310487
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 2,
+      "normalized_finite_value": 0.07090129081171538,
+      "difference_from_infinite_length_formula": -0.025099591943657504
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 4,
+      "normalized_finite_value": 0.0951990351589406,
+      "difference_from_infinite_length_formula": -0.0008018475964322869
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 8,
+      "normalized_finite_value": 0.09598528448586276,
+      "difference_from_infinite_length_formula": -1.5598269510128104e-05
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 16,
+      "normalized_finite_value": 0.09600062331746706,
+      "difference_from_infinite_length_formula": -2.594379058251661e-07
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": 32,
+      "normalized_finite_value": 0.09600087848470532,
+      "difference_from_infinite_length_formula": -4.270667569583608e-09
+    },
+    {
+      "nodes_per_panel_axis": 512,
+      "infrared_length": null,
+      "normalized_finite_value": 0.09600088260159334,
+      "difference_from_infinite_length_formula": -1.5377954465378707e-10
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 1,
+      "normalized_finite_value": -0.18288614575231563,
+      "difference_from_infinite_length_formula": -0.27888702850768854
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 2,
+      "normalized_finite_value": 0.070901290935079,
+      "difference_from_infinite_length_formula": -0.02509959182029388
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 4,
+      "normalized_finite_value": 0.09519903528230453,
+      "difference_from_infinite_length_formula": -0.0008018474730683567
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 8,
+      "normalized_finite_value": 0.09598528460922665,
+      "difference_from_infinite_length_formula": -1.5598146146239555e-05
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 16,
+      "normalized_finite_value": 0.09600062344083096,
+      "difference_from_infinite_length_formula": -2.593145419227394e-07
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": 32,
+      "normalized_finite_value": 0.09600087860806926,
+      "difference_from_infinite_length_formula": -4.147303625523513e-09
+    },
+    {
+      "nodes_per_panel_axis": 768,
+      "infrared_length": null,
+      "normalized_finite_value": 0.09600088272495727,
+      "difference_from_infinite_length_formula": -3.041561447147956e-11
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "checked_utc": "2026-11-11T03:57:09.038915+00:00",
+  "november_source_files": 37673,
+  "november_source_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "source_differences": [],
+  "comparator_runs": [
+    {
+      "stage": "existence-comparator",
+      "status": "passed",
+      "exit_code": 0,
+      "finished_utc": "2026-11-10T04:48:38.392864+00:00",
+      "elapsed_seconds": 768.847,
+      "log_sha256": "18c27138f58de745ffc7ca4465f281b764c5753a439263344e430a5a0d0e7ac4"
+    },
+    {
+      "stage": "matching-comparator",
+      "status": "passed",
+      "exit_code": 0,
+      "finished_utc": "2026-11-10T05:30:13.229175+00:00",
+      "elapsed_seconds": 2391.801,
+      "log_sha256": "4232861fa01f6035a6583f598152cc0fd7551f0afcbba9d911cc4c8b0815f45d"
+    },
+    {
+      "stage": "patched-existence-comparator",
+      "status": "passed",
+      "exit_code": 0,
+      "finished_utc": "2026-11-10T05:43:19.865009+00:00",
+      "elapsed_seconds": 770.44,
+      "log_sha256": "2db951316c8a632abc317dac5ba7f8c3523bb3f76767655b31b113d037e2795d"
+    },
+    {
+      "stage": "patched-matching-comparator",
+      "status": "passed",
+      "exit_code": 0,
+      "finished_utc": "2026-11-10T08:18:57.132529+00:00",
+      "elapsed_seconds": 9337.16,
+      "log_sha256": "8145d25417c8f1d5904bf78ab46b11e7fac6f5e6140d88d7ff974c45527a8a6f"
+    },
+    {
+      "status": "passed",
+      "exit_code": 0,
+      "finished_utc": "2026-11-11T23:33:32.669714+00:00",
+      "elapsed_seconds": 1020.28,
+      "log_sha256": "c477c047b2421b127ed90b813b24e3c36638fb0f2c7358516ac6657734bbbbbf",
+      "stage": "independent-combined-comparator",
+      "receipt": "evidence/combined-targets/combined-comparator.json",
+      "targets": [
+        "YMReview.November.combined_acceptance",
+        "YMReview.Acceptance.combined_acceptance"
+      ]
+    }
+  ],
+  "definition_digest_rows_equal": 1591,
+  "definition_audit_scope": "Retained YM.Spec.Final types and definition-body closure; theorem proof bodies excluded. This is not a new kernel replay.",
+  "matching_scientific_review": "Deferred by user request",
+  "public_declaration_comparison": [
+    {
+      "old_file": "PublicTheory.lean",
+      "status": "same_tokens",
+      "count": 37
+    },
+    {
+      "old_file": "PublicWilson.lean",
+      "status": "same_tokens",
+      "count": 14
+    },
+    {
+      "old_file": "PublicWilson.lean",
+      "status": "changed",
+      "count": 2
+    },
+    {
+      "old_file": "ChallengeSpec.lean",
+      "status": "same_tokens",
+      "count": 12
+    },
+    {
+      "old_file": "ChallengeSpec.lean",
+      "status": "changed",
+      "count": 9
+    },
+    {
+      "old_file": "ChallengeSpec.lean",
+      "status": "not_same_name",
+      "count": 6
+    }
+  ],
+  "independent_checks": {
+    "recorded_utc": "2026-11-12T00:58:03.361676+00:00",
+    "proof_and_evidence_commit": "7a15e748eedc89e951be4dbc0ce5200478171451",
+    "audit": "evidence/independent-checks/AxiomAudit.json",
+    "review_modules": 49,
+    "warnings": 0,
+    "axiom_reports": 95,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "input_stability": "evidence/combined-targets/input-stability.json",
+    "scope": "Transferred October independent predicates plus November public existence conditions on retained native data; selected scalar OS bridge; no cross-release equality or positive-order perturbative-matching conclusion."
+  }
+}

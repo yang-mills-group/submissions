@@ -1,0 +1,10 @@
+import GluonLoopSolution
+#check YMReview.NovemberMatching.GluonSolution.acceptance
+#print axioms YMReview.NovemberMatching.GluonSolution.acceptance
+#print axioms YMReview.NovemberMatching.GluonUnit.finite_unit_exact
+#print axioms YMReview.NovemberMatching.GluonSolution.nonzero_limit
+#print axioms YMReview.NovemberMatching.GluonYeast.actual_yeast
+#print axioms YMReview.NovemberMatching.GluonRadial.actual_carpet_evaluated
+#print axioms YMReview.NovemberMatching.GluonContinuation.actual_force_real
+#print axioms YMReview.NovemberMatching.GluonJetParameter.submitted_jet_unit
+#print axioms YMReview.NovemberMatching.GluonInfrared.submitted_force_unit

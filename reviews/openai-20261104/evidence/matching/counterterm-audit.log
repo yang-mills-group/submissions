@@ -1,0 +1,61 @@
+YM.MS.ScaleForest.TwoPoint.poleK (G : YM.Gauge) (ξ σ : Bool) :
+  (YM.MS.ScaleForest.TwoPoint.bubble G ξ σ).instructions.pole =
+    YM.MS.Shine.Ice 1 (YM.MS.ScaleForest.TwoPoint.poleTensor G ξ σ)
+YM.MS.ScaleForest.TwoPoint.ghost_bill {G : YM.Gauge} {m : ℕ} (a b : YM.MS.Landau.CI G) (p : YM.MS.Arts.SectorP m)
+  (i j : YM.MS.Arts.L m) :
+  YM.MS.ScaleForest.TwoPoint.kinetic (YM.MS.ScaleForest.TwoPoint.poleTensor G true true) a b p i j =
+    YM.MS.ScaleForest.TwoPoint.ghost_residue p i j (YM.MS.ScaleForest.TwoPoint.traceAd a b)
+YM.MS.ScaleForest.Triangle.ghost_input {G : YM.Gauge} {I : Type} (μ : ℝ) (X Y : YM.MS.ScaleForest.Quadratic.Pupil)
+  (A : I → YM.MS.Tone.QP) [TopologicalSpace I] [FirstCountableTopology I] (h : YM.MS.ScaleForest.AdmittedGap A) :
+  YM.MS.ScaleForest.Iris
+    (YM.MS.ScaleForest.Planted.nominal μ
+      (YM.MS.ScaleForest.Triangle.triangle X Y A (YM.MS.ScaleForest.Triangle.ghostV G)))
+    (YM.MS.ScaleForest.Triangle.lineIntegral μ X Y A (YM.MS.ScaleForest.Triangle.ghostV G).instructions.prep +
+      YM.MS.ScaleForest.Triangle.proton 1
+        (YM.MS.ScaleForest.Planted.nominal μ
+          (YM.MS.ScaleForest.Triangle.triangle X Y A
+            (YM.MS.ScaleForest.GraphSum.vertex (YM.MS.ScaleForest.Triangle.ghostR G)))))
+YM.MS.ScaleForest.Triangle.premature {G : YM.Gauge} {I : Type} (μ : ℝ) (X Y : YM.MS.ScaleForest.Quadratic.Pupil)
+  (A : I → YM.MS.Tone.QP) [TopologicalSpace I] [FirstCountableTopology I] (hA : YM.MS.ScaleForest.AdmittedGap A) {m : ℕ}
+  (w : YM.MS.Koszul.Legs (YM.MS.Arts.Shore G m)) (s : ℝ) (x : I) :
+  have d := fun z => YM.MS.ScaleForest.Triangle.D μ X Y A G z s x m w;
+  Filter.Tendsto (fun z => z⁻¹ * (d z - d 0)) YM.MS.Shine.dotty (nhds (deriv d 0)) ∧
+    Filter.Tendsto (fun z => YM.MS.ScaleForest.Triangle.BareG μ X Y A G z s x m w + z⁻¹ * d 0) YM.MS.Shine.dotty
+      (nhds (YM.MS.ScaleForest.Triangle.H μ X Y A G 0 s x m w - deriv d 0))
+YM.MS.ScaleForest.Triangle.DScaleJet {G : YM.Gauge} {I : Type} (μ : ℝ) (X Y : YM.MS.ScaleForest.Quadratic.Pupil)
+  (A : I → YM.MS.Tone.QP) (u : ℝ) [TopologicalSpace I] [FirstCountableTopology I] (hA : YM.MS.ScaleForest.AdmittedGap A)
+  {m : ℕ} (w : YM.MS.Koszul.Legs (YM.MS.Arts.Shore G m)) (s : ℝ) (x : I) :
+  deriv (fun z => YM.MS.ScaleForest.Triangle.D μ X Y (YM.MS.ScaleForest.Triangle.surge A u) G z (s + u) x m w) 0 =
+    YM.MS.Alps.amount (-8) u *
+      (deriv (fun z => YM.MS.ScaleForest.Triangle.D μ X Y A G z s x m w) 0 -
+        4 * ↑u * YM.MS.ScaleForest.Triangle.D μ X Y A G 0 s x m w)
+YM.MS.ScaleForest.simple_finite {G : YM.Gauge} {W : YM.MS.Pearl.Coat G} {X : YM.MS.Pearl.Flats G}
+  (hW : YM.MS.Shine.Lift W (W 0)) (hX : YM.MS.Train.Pact X (YM.MS.ScaleForest.pageOne W)) (h : ℕ) (s y : ℝ) :
+  YM.MS.Shine.Lift
+    (YM.MS.Pearl.Parade
+      (YM.MS.ScaleForest.integratePages h X + YM.MS.ScaleForest.collapsed (YM.MS.ScaleForest.taylorPole h W)) h y s)
+    (YM.MS.ScaleForest.oneLoopFinite h W s y)
+YM.MS.ScaleForest.simple_pole_rule {G : YM.Gauge} {W : YM.MS.Pearl.Coat G} {h : ℕ} {b : Bool} {r : ℤ}
+  {X : YM.MS.Pearl.Flats G} (hW : YM.MS.Shine.Lift W (W 0)) (hX : YM.MS.Train.Pact X (YM.MS.ScaleForest.pageOne W))
+  (hc : YM.MS.Dock.Coal b h 0 r X) :
+  YM.MS.ScaleForest.counterterm (YM.MS.ScaleForest.integratePages h X) = YM.MS.ScaleForest.taylorPole h W ∧
+    ∀ (y s : ℝ),
+      YM.MS.Shine.Lift
+        (YM.MS.Pearl.Parade
+          (YM.MS.ScaleForest.integratePages h X +
+            YM.MS.ScaleForest.collapsed (YM.MS.ScaleForest.counterterm (YM.MS.ScaleForest.integratePages h X)))
+          h y s)
+        (YM.MS.ScaleForest.oneLoopFinite h W s y)
+YM.MS.ScaleForest.final_including {G : YM.Gauge} {h : ℕ} {b : Bool} {x : YM.MS.ScaleForest.GraphSum G b h}
+  {L : YM.MS.ScaleForest.Hist G b h} (hx : x ∈ L) :
+  YM.MS.Outlook.four h (YM.MS.ScaleForest.forest L) =
+    YM.MS.Outlook.four h x.instructions.renorm +
+      YM.MS.Outlook.four h (YM.MS.ScaleForest.forest (YM.MS.ScaleForest.afterTaking L x))
+'YM.MS.ScaleForest.TwoPoint.poleK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.TwoPoint.ghost_bill' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.Triangle.ghost_input' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.Triangle.premature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.Triangle.DScaleJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.simple_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.simple_pole_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.ScaleForest.final_including' depends on axioms: [propext, Classical.choice, Quot.sound]

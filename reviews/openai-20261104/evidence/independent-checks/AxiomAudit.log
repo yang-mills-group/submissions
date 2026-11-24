@@ -1,0 +1,22 @@
+'YMReview.Acceptance.finite_law_on_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.lattice_and_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.phase_and_os' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.translation_ward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.operator_content' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.leading_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.accepted_of_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.combined_acceptance' depends on axioms: [propext, Classical.choice, Quot.sound]
+YMReview.Acceptance.combined_acceptance (g : YangMills.GaugeGroup) (hg : g.IsSimple) (b : ℝ) (hb : 0 < b) :
+  YMReview.Acceptance.CombinedAcceptance g hg b
+'YMOSBridge.verifiedOS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMOSBridge.verifiedOS_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.public_trace_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.public_kernel_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.public_schwinger_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.public_os' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.public_realizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.November.combined_acceptance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.OPE.from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.Acceptance.source_conclusions' depends on axioms: [propext, Classical.choice, Quot.sound]
+YMReview.November.combined_acceptance (g : YangMills.GaugeGroup) (hg : g.IsSimple) (b : ℝ) (hb : 0 < b) :
+  Nonempty (YMReview.November.ReviewedConstruction g hg b)

@@ -1,0 +1,6 @@
+'YMReview.NovemberMatching.GhostBox.tree_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostBox.tree_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostBox.family_member' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostBox.family_slots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostBox.finite_reading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostBox.actual_pole' depends on axioms: [propext, Classical.choice, Quot.sound]

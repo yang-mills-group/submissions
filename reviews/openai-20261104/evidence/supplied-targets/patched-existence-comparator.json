@@ -1,0 +1,34 @@
+{
+  "stage": "patched-existence-comparator",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/ComparatorChallenges/Existence.json"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "4",
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "started_utc": "2026-11-10T05:30:29.423405+00:00",
+  "status": "passed",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/patched-existence-comparator.log",
+  "resource_wrapper": null,
+  "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+  "pid": 64328,
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T05:43:19.865009+00:00",
+  "elapsed_seconds": 770.44,
+  "log_sha256": "2db951316c8a632abc317dac5ba7f8c3523bb3f76767655b31b113d037e2795d",
+  "resources": {
+    "ru_utime": 711.007594,
+    "ru_stime": 25.632576,
+    "ru_maxrss": 14350761984,
+    "ru_minflt": 1855929,
+    "ru_majflt": 499779,
+    "ru_inblock": 0,
+    "ru_oublock": 0
+  }
+}

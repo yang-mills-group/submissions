@@ -1,0 +1,15 @@
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopVertex.lean:98:59: warning: This simp argument is unused:
+  qnote
+
+Hint: Omit it from the simp argument list.
+  simp [scatter_cons, Motif.leaf, Motif.note, Koszul.mono, q̵n̵o̵t̵e̵,̵ ̵W, GhostTrace.W, vec, onX, Landau.gauge]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopVertex.lean:98:93: warning: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  simp [scatter_cons, Motif.leaf, Motif.note, Koszul.mono, qnote, W, GhostTrace.W, vec, onX,̵ ̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'YMReview.NovemberMatching.GluonVertex.field_W' depends on axioms: [propext, Classical.choice, Quot.sound]

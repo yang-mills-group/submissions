@@ -1,0 +1,32 @@
+{
+  "stage": "existence-axioms",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/audit/ExistenceAxioms.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "4"
+  },
+  "started_utc": "2026-11-10T04:34:54.261638+00:00",
+  "status": "passed",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/existence-axioms.log",
+  "resource_wrapper": null,
+  "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+  "pid": 49896,
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T04:35:49.451960+00:00",
+  "elapsed_seconds": 55.19,
+  "log_sha256": "fe17458cdfe690840fa5372009cf678bf1c9f4dca3e4a7249dd01cbf7f26cdbc",
+  "resources": {
+    "ru_utime": 2.500225,
+    "ru_stime": 17.290346,
+    "ru_maxrss": 8344666112,
+    "ru_minflt": 277389,
+    "ru_majflt": 380251,
+    "ru_inblock": 0,
+    "ru_oublock": 0
+  }
+}

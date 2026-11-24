@@ -1,0 +1,21 @@
+Independent verification of the OpenAI November 4 Yang–Mills construction
+Project license: Apache License, Version 2.0 (see LICENSE).
+
+The review checks originate in the group's October review package identified
+by provenance/october-checks.json. Original copyright and authorship notices
+in those files are retained.
+
+checks/NovemberCombined.lean extends the existence assembly in the November
+submission's lean/Comparators/Existence/Solution.lean. The exact submission
+is identified by provenance/submission.json and retains its own LICENSE,
+NOTICE and third-party notices in the original-submission repository.
+
+checks/RetainedContactProof.lean adapts October's ContactBridge.lean.
+checks/RetainedSourceProof.lean adapts small assembly arguments from October's
+YM/Nonperturbative/Continuum.lean, YM/Nonperturbative/Headlines.lean and
+YM/Pert/Position/Four.lean. These source files were released under Apache-2.0.
+The adaptations are compiled against November's definitions and results.
+
+The OSreconstruction excerpts in checks/NovemberOSRecon/Vendored/ retain their
+ModularPhysics Contributors notices and upstream references. The growth
+formalization and other group additions retain their source notices.

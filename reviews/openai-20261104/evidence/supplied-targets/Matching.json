@@ -1,0 +1,13 @@
+{
+  "challenge_module": "Comparators.Matching.Challenge",
+  "solution_module": "Comparators.Matching.Solution",
+  "theorem_names": [
+    "YangMills.perturbativeMatching"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": false
+}

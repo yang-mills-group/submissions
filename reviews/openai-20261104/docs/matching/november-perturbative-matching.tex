@@ -1,0 +1,2667 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{needspace}
+\usepackage[margin=0.85in]{geometry}
+\PassOptionsToPackage{obeyspaces,spaces}{url}
+\usepackage{amsmath,amssymb,mathtools,booktabs,longtable,array,enumitem,microtype,xcolor,xurl,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
+ pdftitle={Perturbative matching in the November 4 OpenAI Yang-Mills construction},
+ pdfauthor={Working notes for the Yang-Mills group},
+ pdfsubject={Perturbative matching: proof summary, definition glossary, supplied tests and independent test specifications}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{14pt}
+\setlist{leftmargin=1.5em,itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small November Yang--Mills: perturbative matching}
+\fancyhead[R]{\small Working draft, 13 November 2026}
+\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\src}[1]{\textsf{[#1]}}
+\newcommand{\Conf}{\operatorname{Conf}}
+\newcommand{\cO}{\mathcal O}
+\makeatletter
+\newcommand{\compactcontents}{\begingroup\small\setlength{\parskip}{0pt}
+\renewcommand{\l@section}{\@dottedtocline{1}{0em}{1.8em}}
+\tableofcontents\endgroup}
+\makeatother
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Perturbative matching in the November 4\\[3pt]
+OpenAI Yang--Mills construction}\par
+\vspace{7pt}
+{\large What is compared, how the comparison is proved,\\
+and what remains to validate}\par
+Working notes for the Yang--Mills group\quad\textbullet\quad 13 November 2026
+\end{center}
+
+\textbf{Purpose.} This is a first account of the November submission's
+perturbative-matching theorem, separate from our comparison of the October
+and November existence results. It explains the actual objects in the
+statement and traces the main proof connections in the Lean source.
+The intended reader knows quantum field theory but need not know this
+formalization's terminology. The appendix gives a glossary of the principal formal definitions.
+Sections~\ref{sec:inventory} and~\ref{sec:independent} list the supplied
+tests and our independent test specifications, with their current status.
+
+\textbf{Main finding.} The submitted target requires much more than a
+free-Maxwell ultraviolet limit. A single constructed Wilson theory has,
+in prescribed scale-dependent field coordinates, asymptotic expansions
+through every finite order for separated correlations and the full
+finite-degree OPE output. Their coefficients are fixed by a continuum
+graph definition and a specified change of renormalization scheme.
+The estimates include position derivatives and apply to the mixed
+hierarchy and every character phase where the correlation statement
+quantifies over phases. An independently characterized stress-tensor
+series is matched as well.
+
+\textbf{Review status.} The Matching target has already passed the two
+recorded Comparator runs described in Section~\ref{sec:receipts}. This
+document records a source investigation, not a completed independent
+validation of every graph rule, subtraction convention, or analytic
+estimate. In particular, ``the reference is defined independently'' and
+``the reference is the intended standard Yang--Mills perturbation theory''
+are distinct claims. We have traced an all-order identification between
+the explicit graph sums and a separately specified renormalization-flow
+problem, as well as the connection of its seeds to the classical action.
+Section~\ref{sec:graph-audit} explains this evidence and the remaining
+checks of conventions. Additional Lean checks establish the free gauge
+line, both ghost-line orientations, and the cubic ghost--gluon vertex
+in explicit conventions. The full finite ghost-loop benchmark is now
+proved in Lean and has passed a separate Comparator run. It identifies
+the actual submitted, regulator-removed graph in the infinite infrared
+cutoff limit with the explicit $\MS$ answer, including both finite
+constants, for all nonzero momenta, tensor components, colors and positive
+renormalization scales. Appendix~\ref{app:finite-ghost} explains the
+calculation and its formal proof. This is an independent check of one
+gauge-dependent graph contribution; it does not identify every
+renormalized amplitude with a conventional calculation.
+
+\setcounter{tocdepth}{1}
+\compactcontents
+\clearpage
+
+\section{The final theorem and its quantifiers}
+\label{sec:statement}
+
+The public challenge asks for
+\begin{quote}
+\code{YangMills.perturbativeMatching (g : GaugeGroup) (simple : g.IsSimple)}\par
+\code{:}\ $\exists$\ \code{run : Wilson.Construction g, Nonempty (MatchedRun run)}.
+\end{quote}
+The submitted solution supplies \code{WilsonProof.publishedRun} and
+\code{WilsonProof.matchedRun}. The object \code{MatchedRun} contains one
+perturbative reference, one microscopic Wilson family with its native
+insertion coordinates, one family of finite-period continuum kernels,
+and the matching data for its chosen large-volume refinements. The
+reference is chosen before those volume refinements. \src{T}
+
+For each strictly increasing requested sequence of volume indices, the
+construction selects a subsequence and a limiting hierarchy. A
+\code{MatchedRefinement} ties the matching estimates to that same
+hierarchy, its lattice limit, its phase space, and its physical OPE.
+Its field frame and coupling are common to all arities, perturbative
+orders, input fields, output cutoffs, and phases within that refinement.
+One does not choose a different theory or a fresh normalization to make
+each coefficient agree.
+
+There is also a proved implication
+\begin{quote}
+\code{MatchedRun.realizes : run.Realizes (maxwellReference g)}.
+\end{quote}
+Thus the matching witness satisfies November's existence requirements
+for the same run. This is stronger than placing unrelated existence and
+matching assertions next to one another. It does not assert equality
+of every witness that could separately be chosen by the existence proof.
+
+The large-volume quantifier remains subsequential. Neither
+\code{MatchedRun} nor the uniqueness of its perturbative reference proves
+that all large-volume limits are equal. The reference is common across
+the refinements of the run; the measured physical frames and coupling
+are supplied on each limiting hierarchy. \src{T,V}
+
+\section{The fields, the radius, and the two sides of the comparison}
+\label{sec:objects}
+
+Let $B=\texttt{maxwellReference}(g)$ and write $\mathcal V_{\le d}$ for
+\code{B.sector d}. This is the finite-dimensional space of gauge-invariant
+free on-shell curvature-jet polynomials through engineering degree $d$.
+It is a filtered space: membership in $\mathcal V_{\le d}$ need not mean
+that a field is homogeneous of degree exactly $d$. A derivative of order
+$j$ of curvature has weight $j+2$. The same polynomial has compatible
+representations at all larger cutoffs. The physical hierarchy $\mathcal H$
+has corresponding spaces \code{H.Field d}. \src{F,N}
+
+The matching data provide linear isomorphisms
+\begin{equation}\label{eq:frame}
+ J_r^{(d)}:\mathcal V_{\le d}\longrightarrow\mathcal H.\mathrm{Field}(d),
+ \qquad r>0,
+\end{equation}
+and a measured real coupling $g_X(r)$. Here $r$ is a \emph{physical
+short-distance radius in the continuum theory}, not the lattice spacing
+or a volume index. The frame includes the rescaling and field
+renormalization needed for a finite ultraviolet limit. Consequently one
+must not insert an additional factor $r^{\sum d_i}$ into the public
+matching formula below. For homogeneous unrenormalized fields, such
+engineering factors are part of what the frame implements.
+
+For $v_i\in\mathcal V_{\le d_i}$, a center $o\in\R^4$, and a separated
+shape $x=(x_1,\ldots,x_n)$, define
+\begin{equation}\label{eq:measured}
+ S_{\sigma,r}(v;x,o)=
+ S_\sigma\bigl(J_r^{(d_1)}v_1,\ldots,J_r^{(d_n)}v_n;
+                   o+rx_1,\ldots,o+rx_n\bigr).
+\end{equation}
+The index $\sigma$ is either the mixed hierarchy (Lean's \code{none}) or
+a character phase (\code{some character}). Both the positions and the
+inserted fields change with $r$. The operator spaces and their relation
+to the fixed lattice family remain the same.
+
+On the other side are numerical functions
+$C^{\MS}_{n,k}(v;x)$, defined by graphs from the gauge group and the free
+polynomial labels. After the prescribed field and coupling conversion,
+they become $C^X_{n,k}(v;x)$. These reference functions have no phase
+argument and no dependence on the selected Wilson hierarchy. Their
+dependence on $g$ includes the Lie bracket and color contractions, not
+only the dimension of the Lie algebra. \src{G,N}
+
+Four limits must be kept distinct. The physical construction removes
+the lattice ultraviolet cutoff at fixed volume, then takes a selected
+large-volume limit. The matching theorem then sends $r\downarrow0$
+within that continuum hierarchy. The graph definition has its own
+dimensional regulator and infrared cutoff, whose removal is a separate
+perturbative calculation (Section~\ref{sec:graphs}).
+
+\section{How the perturbative reference is defined}
+\label{sec:graphs}
+
+\subsection{Local vertices, propagators, and graph assembly}
+
+The public definition \code{graphCorrelation} first includes all input
+fields in a common finite cutoff, expands them in its graded basis,
+evaluates each basis tuple with \code{YM.MS.Graphical.fullGraph}, and
+extends multilinearly. The local insertion polynomials come from
+\code{OpenAxis.Plot}; the common basis is \code{Press.portDeck}. This
+definition does not take a continuum Wilson correlation as an argument.
+\src{G}
+
+The graph machinery represents families of scale-ordered graphs by
+three operations: a local vertex, joining two connected components by
+an edge, and closing a pair of legs inside a component. A \code{Diagram}
+is therefore not a single fully labelled incidence graph. Its evaluator
+performs the field-index sums, graded permutations, contractions and
+scale integrations. The enumeration includes repeated closures and
+recursively allocates positive coupling order to bulk vertices.
+\src{D}
+
+The bulk input is explicitly
+\[
+ \chi=g B_1+g^2B_2.
+\]
+In \code{Motif/Receipt.lean}, $B_1$ contains the cubic gauge vertex
+\code{top3} and the term \code{cape (blazeV)} in the ghost/source
+formalism; $B_2$ is the quartic gauge vertex \code{top4}. The displayed
+gauge terms carry $-1/4$ times, respectively, the two cross terms
+$F_0[A,A]+[A,A]F_0$ and the term $[A,A][A,A]$. The sign must be read with
+the source's exponent and anti-Hermitian trace conventions. These
+formulas are evidence for the intended Yang--Mills vertices; a human
+validation should still follow their tensor and graded-sign conventions
+down to the kernels.
+
+The propagator operations use \code{Landau.choir} and heat-shell kernels.
+The edge rule includes graded signs for field parity. The distinction
+between a bridge and a loop closure is explicit: only closure increments
+the dimensionally continued loop count. This is a scale-integral
+organization of the calculation, rather than a list of momentum-space
+Feynman integrals in familiar notation. A reader should verify its
+equivalence to the intended gauge-fixed rules, rather than infer it from
+the names of the modules. \src{D}
+
+\subsection{Subtraction and removal of regulators}
+
+At a graph node, \code{integrateRen} first integrates the shell expression,
+including the counterterms of its children. It then adds the negative
+Laurent principal part of the resulting \emph{summed} sector. The
+counterterm is defined by finite Taylor-coefficient extraction after
+multiplication by a sufficient power of the dimensional parameter.
+The code therefore specifies a subtraction operation; it does not leave
+the renormalized answer as an arbitrary parameter. \src{D}
+
+\code{regularPart} takes the dimensional parameter to zero through
+nonzero complex values after the counterterm expressions have been
+assembled. \code{irRemoved} subsequently takes the large infrared-length
+limit. The remaining moment assembly combines connected cluster
+contributions into full moments. The public correlation definition
+uses the logarithmic reference scale
+\begin{equation}\label{eq:ms-scale}
+ y_{\MS}=\log 1+\tfrac12\bigl(\gamma_E-\log(4\pi)\bigr).
+\end{equation}
+Thus the $\MS$ convention is represented by an actual constant in the
+definition. \src{G,D}
+
+There are accompanying theorems, not only totalized limit definitions.
+\code{WilsonGraphNamedGraphForestLimits.physical} states, for separated
+positions at every fixed perturbative order, convergence of the
+dimensionally regulated expression at each positive infrared length,
+followed by convergence as that length tends to infinity to the issued
+graph coefficient. \code{WilsonGraphPublicForestLimits.convertedLimits}
+transports these limits through the finite scheme conversion.
+This is a sequential removal of regulators; it should not be described
+as an unrestricted joint limit. \src{R}
+
+The present investigation has followed these definitions and theorems
+into the matching argument. It has not independently checked every
+graph multiplicity or every estimate used to remove the regulators.
+
+\subsection{Why these graphs are more than a stipulated reference}
+\label{sec:graph-audit}
+
+There is a substantial proof between the graph definitions and the
+matching theorem. The submission does not merely name an array of
+numbers ``Yang--Mills perturbation theory'' and compare against it.
+It specifies a flow equation, its classical input, analytic conditions,
+and pole-subtraction boundary conditions; proves uniqueness; and proves
+that the explicit graph sums solve that problem. This shifts the main
+validation question to a concrete one: do these input data and conditions
+express the intended perturbation theory? \src{B}
+
+Flow equations are an established way to formulate perturbative
+Yang--Mills theory. For relevant mathematical comparisons, see
+Efremov, Guida and Kopper on perturbative renormalization of SU(2),
+and Fr\"ob and Holland on all-order perturbative OPEs.\footnote{
+\href{https://arxiv.org/abs/1704.06799}{A.~N.~Efremov, R.~Guida and C.~Kopper,
+\emph{Renormalization of SU(2) Yang--Mills theory with Flow Equations}}
+(2017);
+\href{https://arxiv.org/abs/1603.08012}{M.~B.~Fr\"ob and J.~Holland,
+\emph{All-order existence of and recursion relations for the operator
+product expansion in Yang--Mills theory}} (2016).}
+These are references for the method and possible comparison targets.
+We have not established that the submitted code follows either paper,
+or that its regulator and renormalization conventions coincide with theirs.
+
+First consider the action. In the graded polynomial algebra the
+curvature and BRST variations are explicitly
+\[
+ F_{\mu\nu}(g)=\partial_\mu A_\nu-\partial_\nu A_\mu
+                 +g[A_\mu,A_\nu],\qquad
+ sA_\mu=\partial_\mu c+g[A_\mu,c],\qquad
+ sc=-\frac g2[c,c].
+\]
+The object \code{Motif.ploy} combines the curvature-squared log density
+with source terms for these variations. Its gauge part is
+$-\frac14\sum_{\mu,\nu,a}(F^a_{\mu\nu})^2$ in the source's component
+conventions. In particular this is a log-density convention, so the
+minus sign should not be silently changed to the sign of a Euclidean
+action in an $e^{-S}$ convention. The theorem \code{Motif.Class_at} proves
+\begin{equation}\label{eq:classical-input}
+ gB_1+g^2 B_2=\mathrm{ploy}(g)-\mathrm{ploy}(0).
+\end{equation}
+Thus the seeds are proved to be the interaction part of that specified
+classical expression. \code{Motif.AllMaster} proves its classical master
+identity on momentum-conserving words. This is a classical identity;
+it should not be presented as, by itself, a proof of every quantum Ward
+identity. \code{Motif.kernel} separately computes the free gauge Hessian
+as $-\delta^{ab}(\delta_{\mu\nu}p^2-p_\mu p_\nu)$. \src{B}
+
+The gauge line has transverse Landau form. Our small additional check
+in \code{DiagramReferenceAudit.lean} proves, directly from the submitted
+line definition and for $p^2\ne0$, that
+\begin{equation}\label{eq:gauge-line-audit}
+ 2\,\mathrm{halfCov}^{ab}_{\mu\nu}(s,p)=
+ \delta^{ab}\,[1-H(e^{2s}p^2)]
+ \left(\frac{\delta_{\mu\nu}}{p^2}
+                   -\frac{p_\mu p_\nu}{(p^2)^2}\right),
+ \qquad H(u)=(1+u)e^{-u}.
+\end{equation}
+The factor two matters: the code uses half-lines for ordered
+contractions. The submitted theorem \code{length_recovers_line}
+then identifies a scale integral of the shell line with the difference
+of these filtered propagators. Our check concerns the free gauge line
+and its color delta. It does not yet prove the position-space curvature
+comparison in test I1 or validate an interacting coefficient.
+
+\paragraph{The ghost and source dictionary.}
+The line table uses a scalar odd ghost $c$ and an odd vector source
+$K_\mu$, called \code{anti} in the code. Their ghost numbers are $+1$
+and $-1$ and their engineering dimensions are one and two. A further
+even source $c^*$ has ghost number $-2$ and no propagator. These are
+BRST source variables; they should not all be interpreted as physical
+fields. The source expression is proved in \code{Halo.Surf.reach} to be
+\begin{equation}\label{eq:ghost-source}
+ \mathrm{cape}(s)=\sum_{a,\mu}K^a_\mu(D_\mu c)^a
+                         -\sum_a c^{*a}(sc)^a.
+\end{equation}
+This displays the connection to a scalar antighost. Choose Fourier
+derivatives $\partial_\mu\mapsto ip_\mu$, ordered free contractions
+$\langle c^a(p)\bar c^b(-p)\rangle=\delta^{ab}/p^2$ and
+$\langle\bar c^a(p)c^b(-p)\rangle=-\delta^{ab}/p^2$, and substitute
+\begin{equation}\label{eq:antighost-dictionary}
+ K^a_\mu=-\partial_\mu\bar c^a,\qquad c^{*a}=0.
+\end{equation}
+The two ghost orientations then give
+\[
+ \langle c(p)K_\mu(-p)\rangle
+   =\frac{1}{p^2}(+ip_\mu),\qquad
+ \langle K_\mu(p)c(-p)\rangle
+   =(-ip_\mu)\left(-\frac{1}{p^2}\right).
+\]
+Both equal $ip_\mu/p^2$, as in the submitted line table; color deltas
+are suppressed here. The sign in the first formula comes from the
+momentum on the second leg; the sign in the second is the exchange of
+two odd fields. These are identities of symbols away from zero momentum,
+not prescriptions for extending singular distributions.
+
+Under the same substitution, equation~\eqref{eq:ghost-source} becomes
+$-\sum_{a,\mu}(\partial_\mu\bar c^a)(D_\mu c)^a$. This is the negative
+of the usual ghost action in an $e^{-S}$ convention, consistent with
+the log-density convention of \code{ploy}. Our
+\code{GhostConventionCheck.lean} proves both uncolored propagator
+identities directly from the submitted definitions. It also proves that
+the full classical log density has the derivative-normalized vertex
+\[
+ (K^a_\mu,A^b_\nu,c^c):\quad
+       g\delta_{\mu\nu}f^{bc}{}_{a},
+\]
+and that substituting~\eqref{eq:antighost-dictionary} gives
+\begin{equation}\label{eq:ghost-vertex-audit}
+ (\bar c^a(q),A^b_\nu(p),c^c(k)):\quad
+       -igq_\nu f^{bc}{}_{a}.
+\end{equation}
+Here $f^{bc}{}_{a}$ means precisely the submitted bracket component
+\code{rune b c a}. No additional factorial is inserted: the rows are
+derivatives in the displayed external-field order. Momentum conservation
+is imposed separately when forming an amplitude. \src{K}
+
+This resolves the free-line and local cubic-vertex signs in an explicit
+scalar-antighost convention. It is not an all-order theorem that the
+renormalized graph systems agree under gauge fixing. In particular,
+the substitution makes $K$ longitudinal and is not an invertible map
+from the unrestricted source space. Source insertions, the BRST
+identities used for composite fields, and their counterterms still
+require a compatible dictionary.
+
+\subsection{The all-order recursion and its uniqueness}
+
+The bulk flow uses two operations: a linear contraction that closes a
+pair of legs, and a bilinear contraction that joins two components.
+Schematically its coefficient equation has the form
+\[
+ \mathcal D X_n=\mathcal L X_n+
+       \frac12\sum_{\substack{a+b=n\\a,b>0}}\mathcal B(X_a,X_b).
+\]
+Here $\mathcal D$ includes the scale and homogeneity bookkeeping,
+and $\mathcal L,\mathcal B$ include the shell kernels and graded signs;
+this display is a description of the recursion, not a replacement for
+its full definition. For one marked insertion the bilinear term is
+$\sum_{a+b=n,\,a>0}\mathcal B(X_a,Y_b)$, without the bulk
+component-order factor $1/2$. Joining components therefore reduces
+coupling order in the unknown factor. Repeated closure is controlled
+by the finite leg-degree bound. These two reductions organize the
+induction. \src{B}
+
+The Lean predicate \code{Dock.Joint} includes the flow equation,
+meromorphic dependence on the regulator, regularity after the
+appropriate assembly, pure-pole counterterms, their homogeneity,
+and a prescribed ultraviolet boundary value. \code{Bob} adds the
+closure term and degree bounds. \code{leader} and \code{comet}
+impose the resulting coefficient equations on the bulk and marked
+series. \code{MS_Data} is the data of such solutions; existence is
+proved in \code{bookedMS}. Uniqueness is proved by
+\code{Dock.uniqueK}, \code{unique_B}, and \code{unique_M}.
+
+On the graph side, \code{bridgeForce_eq} identifies graph joining with
+the bilinear flow operation. \code{closeForce_eq} identifies graph
+closure with the linear operation in the sense of regulator germs.
+\code{ambient_bob} and \code{mark_bob} sum the actual enumerated graph
+families and prove the required equations, including their weights.
+The final consequences are
+\code{Diagram.income_bulk} and \code{Diagram.income_mark}:
+the graph counterterms equal those of any \code{MS_Data} with the same
+input, and every coefficient page agrees as a germ near the punctured
+regulator origin. This last qualification matters: it is not an
+assertion that arbitrary representatives agree at the singular point
+$z=0$. \src{B}
+
+This argument is evidence about multiplicities at every order, not just
+a check of a few low-order diagrams. A weighted graph sum satisfying
+the uniquely specified recursion can establish the correct aggregate
+coefficient without a separate bijection to an incidence-graph list.
+Its physical force still depends on validating the contraction
+operations and boundary conditions themselves.
+
+\subsection{Subtraction, dimensional continuation, and the final bridge}
+
+The graph subtraction also has proved properties. \code{block}
+shows that \code{integrateRen} solves the required response problem;
+\code{ct_polynomial} shows that its counterterm equals its local Taylor
+projection of the specified degree. The pole prescription is applied
+to the assembled scale sector, with counterterm insertions already
+included in its children. These facts justify calling it a local
+pole-subtraction construction. They should not be silently upgraded
+to a separately verified equality with every conventional
+graph-by-graph forest prescription. \src{B}
+
+There is also a useful normalization check on dimensional continuation.
+\code{radialClose_integer} proves that the continued contraction at
+$z=n$ agrees with ordinary integration in $4+2n$ dimensions, on its
+stated admissible kernels and lifted external data.
+\code{pitch_normalization} proves the measure factor
+\[
+ e^{-2yn}(2\pi)^{-(4+2n)}.
+\]
+These are genuine integral identities, including the Fourier and mass
+normalizations. Agreement at the nonnegative integers alone would not
+uniquely determine an analytic continuation near zero: those points
+have no finite accumulation point. Consequently the explicit
+noninteger-dimensional rule and its treatment of evanescent tensors
+must also be reviewed. Terms vanishing at $z=0$ can affect finite
+answers when multiplied by poles.
+
+\paragraph{An actual pole insertion retains the finite regulator term.}
+The source does address this last danger in a concrete example, beyond
+the elementary algebra of multiplying a pole by a Taylor series.
+In \code{ScaleForest.Bubbles}, \code{bubble G true true} is built from
+two cubic interaction vertices and two ghost contractions.
+\code{TwoPoint.poleK} identifies its counterterm with a simple pole;
+\code{TwoPoint.ghost_bill} evaluates its local two-gauge-field tensor
+with the submitted color trace and loop normalization. This is the
+ghost-loop contribution to gauge-field self-energy. It is not a
+two-point function of external ghosts. \src{S}
+
+The subsequent calculation inserts this pole into the specified family
+of graphs with two marked insertions. For admitted separated placements,
+at retained infrared length, \code{Triangle.ghost_input} proves an
+identity of regulator germs of the form
+\begin{equation}\label{eq:actual-pole-complement}
+ H(z)=B(z)+\frac{D(z)}{z},\qquad z=-\varepsilon.
+\end{equation}
+Here $B$ is the actual prepared graph contribution, $D$ is the
+still-regulated surrounding graph with the calculated local pole tensor
+inserted, and $H$ is the resulting renormalized contribution.
+The pole sign is included in $D$; one must not change $z$ to
+$\varepsilon$ without also changing that sign.
+For any of the projected components in the theorem, write $d(z)$
+for the corresponding component of $D(z)$. Then
+\code{Triangle.premature} proves
+\begin{equation}\label{eq:premature-pole}
+ \lim_{z\to0}\left(B(z)+\frac{d(0)}{z}\right)
+       =H(0)-d'(0).
+\end{equation}
+In this display $B$ and $H$ likewise denote the selected scalar
+components. Thus freezing the complement before pole multiplication
+loses the finite derivative term. This statement concerns the defined
+graph integrals, not just a freely specified pair of Taylor coefficients.
+\code{Triangle.DScaleJet} also computes the change of this derivative
+under rescaling the placements and length. Neither result asserts that
+$d'(0)$ is nonzero in every component or that its contribution cannot
+cancel against other graphs in a physical amplitude.
+
+The generic one-loop calculation in \code{ScaleForest.PageOne} makes
+the same issue visible. If $T(z)$ is its divergent Taylor tensor, the
+finite value contains
+\[
+ T'(0)-2(y+s)T(0)
+\]
+in addition to the regular integral, where $y$ and $s$ are its logarithmic
+mass and length parameters. \code{simple_finite} proves that value and
+\code{simple_pole_rule} identifies the pole with the prescribed unique
+counterterm under the stated flow hypotheses. These results support the
+claim that finite regulator terms are retained within the submitted
+prescription. An independent comparison of that prescription with the
+intended $\MS$ amplitudes remains necessary. \src{S}
+
+\paragraph{An independent one-loop benchmark.}
+The ghost-loop contribution to the gluon two-point vertex provides a
+manageable next test. It is a gauge-dependent intermediate contribution,
+not a complete gauge-invariant correlation function. In particular it
+need not be transverse by itself. We strip off $g^2$, retain the color
+factor $C^{ab}=C_A\delta^{ab}$, and define our sign by the Euclidean
+dimensionally continued expression
+\begin{equation}\label{eq:ghost-loop-integral}
+ \mathcal B_{\mu\nu}^{ab}(p)
+ =-C^{ab}\mu_{\rm DR}^{2\varepsilon}
+   \int\frac{d^{4-2\varepsilon}k}{(2\pi)^{4-2\varepsilon}}
+       \frac{k_\mu(k+p)_\nu}{k^2(k+p)^2},\qquad p^2>0.
+\end{equation}
+This fixes the sign before comparison with a counterterm. The minus
+sign is the one obtained for the quadratic log-density contribution
+from expanding the ghost determinant in the conventions above.
+Use $\mu_{\rm DR}^2=\bar\mu^2 e^{\gamma_E}/(4\pi)$ and write
+$\ell=\log(\bar\mu^2/p^2)$.
+
+Here is the independent calculation to be checked. A Feynman parameter
+$x$ and the shift $k\mapsto k-xp$ reduce the even numerator to
+$k_\mu k_\nu-x(1-x)p_\mu p_\nu$. Rotational integration, followed by
+the parameter integral, gives
+\begin{align}
+ \mathcal B_{\mu\nu}^{ab}(p;\varepsilon)
+ &=\frac{C^{ab}}{16\pi^2}\frac{Q(\varepsilon,\ell)}{\varepsilon}
+   \left(\frac{\delta_{\mu\nu}p^2}{2(1-\varepsilon)}
+                         +p_\mu p_\nu\right),
+ \label{eq:ghost-loop-gamma}\\
+ Q(\varepsilon,\ell)
+ &=e^{(\ell+\gamma_E)\varepsilon}\Gamma(1+\varepsilon)
+       \frac{\Gamma(2-\varepsilon)^2}{\Gamma(4-2\varepsilon)}.
+ \nonumber
+\end{align}
+The parameter integral at zero regulator is
+$\int_0^1x(1-x)\,dx=1/6$. The first derivative of $Q$ is
+$(\ell+5/3)/6$. Expanding the additional factor $1/(1-\varepsilon)$
+then gives
+\begin{equation}\label{eq:ghost-loop-benchmark}
+ \mathcal B_{\mu\nu}^{ab}(p;\varepsilon)
+ =\frac{C^{ab}}{16\pi^2}
+ \left\{\frac{\delta_{\mu\nu}p^2}{12}
+       \left(\frac1\varepsilon+\ell+\frac83\right)
+    +\frac{p_\mu p_\nu}{6}
+       \left(\frac1\varepsilon+\ell+\frac53\right)\right\}
+       +O(\varepsilon).
+\end{equation}
+These two finite constants agree with Rodigast's explicit ghost-loop
+calculation, equation~(4.30), after allowing for his Minkowski
+conventions and regulator $4-d=2\varepsilon$.\footnote{
+\href{https://qft.physik.hu-berlin.de/wp-content/uploads/2012/10/DA-andreas.pdf}{
+A.~Rodigast, \emph{One-Loop Divergences of the Yang--Mills Theory Coupled
+to Gravitation}}, diploma thesis, revised 20 August 2008,
+Section~4.3.1, equation~(4.30), printed p.~27. The quoted expression is
+the pure Yang--Mills ghost loop, without gravitational corrections.}
+
+Our \code{GhostLoopBenchmark.lean} defines the Gamma expression without
+using the submitted graph evaluator. It proves its recurrence reduction,
+its value and derivative at zero, and the punctured-regulator limit
+after subtracting the pole. Thus the constants $8/3$ and $5/3$ are
+derived from this independent analytic expression in Lean, rather than
+merely inserted as a proposed answer. The reduction of the dimensional
+momentum integral to that Gamma expression is the human calculation
+above; it has not been formalized in this check.
+
+The same file proves \code{submitted_pole}: the actual submitted
+\code{TwoPoint.poleTensor} agrees with the residue in
+equation~\eqref{eq:ghost-loop-benchmark}, including
+$C_A\delta^{ab}$. The source counterterm is $R/z$ with $z=-\varepsilon$,
+so it contributes $-R/\varepsilon$ and cancels the displayed positive
+bare pole. This checks the full two-index residue, not just a transverse
+projection or a coefficient used to set the coupling. The color
+comparison uses the submission's proved \code{sums_angles} identity;
+it does not depend on a separately chosen SU(2) basis. \src{S}
+
+\paragraph{The completed finite comparison.}
+There is a proved connection to the finite graph, rather than only to its
+pole. Our \code{submitted_finite_reading} applies the submission's
+\code{twoVertex_laurent} theorem and identifies the actual
+\code{Outlook.four} reading with \code{oneLoopFinite}. Write $W(z)$
+for \code{TwoPoint.ratePair G true true}, $T(z)$ for its
+\code{highTensor}, and $\mathcal R_s$ for the regular part, namely
+\code{plow (-4) s (ordinary 4 W 0)}, evaluated on the chosen external
+word. The exact formula is
+\begin{equation}\label{eq:retained-ghost-finite}
+ B_s(y;p)=\mathcal R_s(p)+T'(0;p)-2(y+s)T(0;p).
+\end{equation}
+Here $s=\log\rho$ is the retained infrared length and
+$y=\log\bar\mu+(\gamma_E-\log(4\pi))/2$. The pole comparison already
+identifies $T(0;p)=-C^{ab}R_{\mu\nu}(p)$, where
+\[
+ R_{\mu\nu}(p)=\frac1{16\pi^2}
+        \left(\frac{\delta_{\mu\nu}p^2}{12}
+                          +\frac{p_\mu p_\nu}{6}\right).
+\]
+Consequently \code{submitted_scale_coefficient} proves, for every
+retained $s$,
+\begin{equation}\label{eq:ghost-scale-difference}
+ B_s(y';p)-B_s(y;p)=2(y'-y)C^{ab}R_{\mu\nu}(p).
+\end{equation}
+This is exactly the change of our independent finite reference when
+$\bar\mu$ changes. It checks the coefficient of the renormalization-scale
+logarithm. The following full comparison also checks the momentum
+dependence and the finite constants.
+
+The theorem \code{GhostSolution.acceptance} in
+\code{checks/matching/GhostLoopSolution.lean} proves the exact predicate
+\code{SubmittedFinitePartTest}:
+apply the submission's regulator-removal reader \code{Outlook.four}
+to this bubble, use its $\MS$ logarithmic scale, and let the infrared
+length tend to infinity at fixed nonzero external momentum. The result
+equals the finite part in~\eqref{eq:ghost-loop-benchmark}.
+Our \code{finite_test_iff_reference} proves that this entire requirement
+is equivalent to \code{ReferenceScaleTest}, which fixes $\bar\mu=1$
+in the chosen units and still tests every nonzero momentum and both
+tensor channels. The proof goes directly to the full target: it evaluates
+the actual continued source force and its regulator derivative, solves
+the scale equation with the submitted ultraviolet boundary condition,
+and removes the infrared cutoff. Covariance and momentum rescaling
+extend the unit-momentum calculation to every component and momentum.
+No finite-part identity is assumed. A fresh build and axiom audit of
+15 review modules passed, followed by Comparator on the frozen full
+target on 13 November. The proof and the limits of that check are
+described in Appendix~\ref{app:finite-ghost}.
+
+\paragraph{An alternative route through the integrated propagators.}
+The cutoff is explicit. \code{halfP_components} in
+\code{ScaleForest/HeatScale.lean} identifies
+the integrated line, including the Wick factor $1/2$, as the usual
+free line multiplied by
+\[
+ f_\rho(q)=1-(1+\rho^2q^2)e^{-\rho^2q^2}.
+\]
+Our additional Lean lemmas prove $0\le f_\rho\le1$ and identify the
+pointwise limit of that actual submitted line as $\rho\to\infty$
+at nonzero $q$. This does not permit taking the limit inside the
+ultraviolet-divergent bare bubble.
+
+The following alternative is not a proved source bridge.
+The direct calculation in Appendix~\ref{app:finite-ghost} does not
+require this full two-line identity. First identify the ordered-scale ghost graph with the ordinary
+two-line integral retaining both factors $f_\rho$, with the same
+dimensional continuation and subtraction. At fixed $p\ne0$, its
+difference from the uncut integral should be
+\begin{equation}\label{eq:ghost-cutoff-difference}
+ B_\rho^{\rm ren}(p)-B_\infty^{\MS}(p)
+ = C^{ab}\int\frac{d^4k}{(2\pi)^4}
+   [1-f_\rho(k)f_\rho(k+p)]
+       \frac{k_\mu(k+p)_\nu}{k^2(k+p)^2}.
+\end{equation}
+This difference is ultraviolet convergent. With
+$h_\rho(q)=(1+\rho^2q^2)e^{-\rho^2q^2}$, its absolute integrand is
+bounded by
+\[
+ \frac{h_{\rho_0}(k)+h_{\rho_0}(k+p)}{|k|\,|k+p|},
+ \qquad \rho\ge\rho_0>0,
+\]
+apart from the fixed color and measure factors. This majorant is
+integrable in four dimensions: the singularities at $k=0,-p$ are
+locally integrable and the tails decay exponentially. Pointwise
+convergence and domination would therefore remove the cutoff.
+The outstanding formal work is to prove the integral identity with
+the submitted continuation, justify these integral operations, and
+connect the uncut integral to our Gamma expression. A pointwise
+propagator limit or a correct pole alone does not establish that identity.
+This is an infrared cutoff in a perturbative graph, not a claim about
+uniqueness of the nonperturbative large-volume theory. The completed
+test of this individual graph does not replace a test of a complete
+physical correlation. \src{S}
+
+There is already a precise negative control on the independent formula.
+Freezing $1/(1-\varepsilon)$ to one before multiplying by its pole
+would incorrectly replace $8/3$ by $5/3$ in the first tensor channel.
+The Lean check proves that the lost finite term is
+$\delta_{\mu\nu}p^2/(192\pi^2)$ before the color factor, and that it is
+nonzero when that tensor component is one. This is a proved failure of
+the altered formula, not yet a mutation run against the submission.
+
+For multiple insertions, \code{gauge_cluster} proves the connected
+recursion, and \code{screened} identifies its solution at fixed
+infrared length. After regulator removal,
+\code{Graphical.identification} identifies \code{fullGraph} with the
+full moments of the same \code{MS_Data}. Finally
+\code{calibrated_gates} identifies the graph-derived calibrated table
+with both \code{Reg.State.wall} and \code{FrameConj.Gates.Thaw}, the
+table used on the Wilson side of the asymptotic comparison.
+These equalities connect the independent reference calculation to the
+matching estimates; they do not define the actual physical correlations
+to be graph sums. The latter still come from the lattice and continuum
+limits described in Sections~\ref{sec:statement}--\ref{sec:objects}.
+
+\subsection{What this audit establishes and what remains}
+
+The immediate conclusion is stronger than our initial reading:
+the submission already contains the all-order graph/flow uniqueness
+bridge we wanted to look for. It is therefore inaccurate to describe
+the matching result as agreement with unexplained textbook formulas
+that were simply entered as definitions. At the same time, internal
+agreement does not complete the independent identification of those
+definitions with conventional Yang--Mills perturbation theory.
+
+The most useful remaining checks are the extension of the local
+ghost/source dictionary to renormalized composite insertions,
+the coupling and color conventions, and the identification of the
+sector subtraction and evanescent prescription with the intended
+$\MS$ scheme. Independent coefficients, especially one outside the
+normalization menu, would give a distinct check on this chain.
+The signed cubic diagnostic remains valuable, but its role as a
+coupling calibration must be kept separate from an additional
+prediction. Tests I1--I7 below retain that distinction.
+
+There is a small documentation issue to resolve. Comments in the
+graph modules refer to \code{Coverage}, \code{Centrifuge},
+\code{ConnectCost}, \code{Spinneys}, and \code{SectorsAtCut}, including
+an \code{at_absolute_cut} theorem. We did not locate the corresponding
+graph modules or that declaration in the supplied Lean tree (an
+unrelated \code{RG02/Flat/Coverage.lean} does exist). We therefore do not cite
+the advertised enumeration or unsorting arguments as established
+evidence. The checked recursion and uniqueness theorems above are
+present; missing comment references do not, by themselves, show a
+gap in their proofs.
+
+\code{DiagramReferenceAudit.lean} records twelve submitted theorem
+types and their axiom dependencies, together with the two free-line
+checks described above. Its build record distinguishes this local
+audit against existing compiled submission modules from a new clean
+rebuild or Comparator run. It is supporting evidence for the source
+reading, not a final independent matching acceptance theorem.
+The audit compiled successfully with Lean 4.32.0 and no warnings;
+all fourteen axiom reports list only \code{propext},
+\code{Classical.choice}, and \code{Quot.sound}.
+
+\code{GhostConventionCheck.lean} adds five proved identities: the two
+ghost-line orientations, the cubic source vertex, its equality to the
+vertex of the full classical log density, and its scalar-antighost
+form. \code{CountertermAudit.lean} records the types and axiom
+dependencies of eight submitted pole and finite-part theorems, including
+those behind equations~\eqref{eq:actual-pole-complement} and
+\eqref{eq:premature-pole}. This second file is an inspection of existing
+theorems, not an independent computation of the loop amplitude.
+Both files compiled without warnings and reported only the same three
+standard axioms. Their source hashes, commands and logs are saved with
+the matching verification records.
+
+The subsequent \code{GhostLoopBenchmark.lean} contains eighteen theorem
+reports, also with standard axioms only. Its finite reference calculation,
+pole comparison, finite-reading bridge, scale-dependence check and
+reference-scale reduction pass. It also proves bounds for the heat dressing
+and the pointwise infrared limit of the actual integrated line.
+The original evidence record keeps that stage's helper proofs distinct
+from the then-unproved \code{SubmittedFinitePartTest}.
+\code{GhostLoopFiniteEvaluation.lean} adds the explicit radial and
+finite parameter calculations described in Appendix~\ref{app:finite-ghost}.
+The subsequent modules, ending in \code{GhostLoopSolution.lean}, prove
+the full test and connect these calculations to the actual source
+graph. The new records \code{evidence/matching/ghost-finite-build.json}
+and \code{evidence/matching/ghost-finite-comparator/} certify this
+completed comparison; the earlier helper receipts remain unchanged.
+
+\section{Fixing the fields and measuring the coupling}
+\label{sec:normalization}
+
+An unrestricted change of field coordinates could make a matching
+statement much less informative. The November statement instead fixes
+a position-space prescription from the free sectors and gauge group,
+then requires the actual physical measurements to obey that prescription.
+
+\subsection{Finite normalization equations for the fields}
+
+For each cutoff $d$, a \code{Screen} is a finite list of separated smooth
+compactly supported tests and field tuples, together with a real-linear
+way to combine their complex measured values into an endomorphism of
+$\mathcal V_{\le d}$. The allowed infinitesimal field changes preserve
+the unit and filtration, reality, and signed coordinate permutations.
+The free-theory Jacobian of the screen reads every such allowed change
+faithfully: applying the screen to the variation of the free moments
+returns that change itself. \src{N}
+
+The raw position frame, denoted here by $J_r^{\mathrm{pos}}$, solves
+these finite equations so that its screen values equal the free values.
+It lies on the branch whose separated test moments tend to the free
+Maxwell moments. The statement requires an invertible linearized system
+and local uniqueness against permitted changes tending to zero. It
+also requires consistent cutoff inclusions and a physical unit in
+omitted insertion slots.
+
+This is a local normalization prescription near the ultraviolet
+reference. It does not claim global uniqueness of a field coordinate
+system at arbitrary physical scale. The menu is selected
+noncomputably from admissible menus; the submission does not present
+a short numerical list of profiles ready for a laboratory calculation.
+
+\subsection{The dimension-six cubic diagnostic}
+
+The coupling prescription uses two particular polynomial fields.
+In an oriented orthonormal frame set
+\[
+ F_i^{\pm}=\frac{F_{0,i+1}\pm F_{j+1,k+1}}{\sqrt2},
+ \qquad(i,j,k)\ \hbox{cyclic}.
+\]
+Writing $N_{\rm mat}=g.n+1$ for the matrix representation size, the
+specified cubic and quadratic polynomials are
+\begin{align}
+ \cO_6&=\sum_{i,j,k}\epsilon_{ijk}
+       \frac{-\Re\operatorname{Tr}\bigl(F_i^+[F_j^+,F_k^+]\bigr)}{N_{\rm mat}},
+       \label{eq:dim6}\\
+ \cO_4^-&=\frac12\sum_i\langle F_i^-,F_i^-\rangle.
+       \label{eq:dim4}
+\end{align}
+The superscript $-$ here denotes anti-self-duality. It is not a label
+for charge-conjugation parity. The code's triangle field named
+\code{T} is $\cO_6$, \emph{not} the stress tensor. \src{C}
+
+The three slots are $(\cO_6,\cO_4^-,\cO_4^-)$. Their connected third
+moment is formed by the usual subtraction of all proper faces,
+including the $2\langle1\rangle\langle2\rangle\langle3\rangle$ term.
+Only then is it integrated against one fixed separated profile $\phi$.
+Omitted slots carry the unit, so the different faces use the same
+geometry and prescription. The physical coupling is exactly
+\begin{equation}\label{eq:coupling}
+ g_X(r)=\frac{1}{c_T}\Re\int \phi(x)
+ \bigl\langle J_r^{\mathrm{pos}}\cO_6(x_1r),
+ J_r^{\mathrm{pos}}\cO_4^-(x_2r),
+ J_r^{\mathrm{pos}}\cO_4^-(x_3r)\bigr\rangle_{\!c,\mathrm{mixed}}\,dx.
+\end{equation}
+Here each frame is understood at the appropriate degree; the public
+definition includes all three labels in cutoff six.
+
+The real normalization $c_T$ is computed from \code{bareTriangle}.
+That expression includes both the nonlinear commutator part of the
+inserted curvature and the integrated three-gluon vertex. It contains
+the squared structure-constant sum, the chiral contractions, and a
+factor six for assignments to the cubic insertion. Derivatives at
+the vertex are handled by splitting off cutoff balls and integrating
+by parts, including derivatives of the cutoff. This avoids treating
+singular differentiated kernels as ordinary absolutely integrable
+products without justification. Admissibility requires $c_T<0$.
+\src{C}
+
+The raw first connected graph coefficient must integrate to this
+\emph{signed} value for every admissible triangle. This tests more than
+nonvanishing or the square of a coefficient. The measured coupling is
+eventually positive and satisfies
+\begin{equation}\label{eq:running}
+ g_X(r)\sqrt{2b_0\log(r^{-1})}\longrightarrow1,
+ \qquad b_0=\frac{11C_A}{48\pi^2}.
+\end{equation}
+The Casimir here is defined in the matrix trace normalization
+$\langle X,Y\rangle=-\Re\operatorname{Tr}(XY)/N_{\rm mat}$.
+For an orthonormal basis $E_a$ the code sets
+\[
+ C_A=\frac{1}{\dim\mathfrak g}
+           \sum_{a,b}\|[E_a,E_b]\|^2.
+\]
+Numerical comparison with a conventional generator normalization must
+include this choice. Equation~\eqref{eq:running} alone is a leading
+running law, not a statement of every coefficient of the beta function.
+\src{F,N}
+
+\subsection{A single prescribed conversion from \texorpdfstring{$\MS$}{MS-bar}}
+
+The graph reference is converted to the position prescription by a
+formal coupling substitution $g_{\MS}=f(g_X)$, with $f(0)=0$ and
+$f'(0)=1$, and compatible field series $Z_d(g_X)$ with leading term
+the identity. The conversion is determined by the finite normalization
+equations and formal inversion of the triangle measurement.
+Both orders of the scalar inverse identity and both matrix inverse
+identities are required. \src{F,N}
+
+The raw position frame can mix lower engineering weights. A prescribed
+strictly lowering correction removes that mixing from the formal
+conversion, leaving its equal-weight part. The physical matching frame
+is $J_r=J_r^{\mathrm{pos}}A_d(g_X(r))$, where $A_d$ is a fixed smooth
+realization of the correction series. The public definition gives this
+realization using scaled smooth cutoffs and an explicit sum; it is not
+an assertion that the formal series converges analytically.
+
+For correlations, the converted coefficient is the coefficient of
+$g_X^k$ after applying $Z$ on every input and substituting $f$ into the
+raw graph expansion. For OPEs, one additionally applies $Z^{-1}$ on the
+\emph{output} field. This output transformation is necessary for a
+field-valued OPE comparison.
+
+The formal conversion is unique for the fixed reference and menu.
+The public \code{Reference} is a subsingleton once these requirements
+are imposed, including the fixed smooth realization. That is uniqueness
+of the perturbative comparison data; it is not uniqueness of the
+nonperturbative theory.
+
+\section{The correlation statement in ordinary notation}
+\label{sec:correlations}
+
+Let $K\Subset\Conf_n(\R^4)$ be a compact set disjoint from all pairwise
+coincidence diagonals. At every truncation order $p$, derivative order
+$j$, and fixed collection of degree cutoffs, there is a finite constant
+$A$ and a sufficiently small radius such that
+\begin{equation}\label{eq:corr-bound}
+ \sup_{\substack{x\in K,\ o\in\R^4,\ \sigma\\0\le\ell\le j}}
+ \left\|D_x^\ell\left[
+ S_{\sigma,r}(v;x,o)-\sum_{k=0}^{p}g_X(r)^k C^X_{n,k}(v;x)
+ \right]\right\|
+ \le A\,\prod_i\|v_i\|_{\mathrm{coeff}}\,|g_X(r)|^{p+1}.
+\end{equation}
+The coefficient norm is the finite sum of the absolute values of the
+polynomial coefficients. It vanishes only for the zero polynomial and
+does not change merely because the same field is presented at a larger
+cutoff. The displayed estimate summarizes the stronger
+\code{shapeDerivatives} clause. In particular its eventual radius and
+constant work uniformly over phases, centers, and the input fields
+after the explicit norm factors are included. \src{A}
+
+These are derivatives with respect to the \emph{shape coordinates}
+$x$, holding $r$ and the frame fixed. They are not derivatives of
+$J_r$ or $g_X(r)$ with respect to $r$. Ordinary physical-coordinate
+derivatives introduce the corresponding powers of $r^{-1}$.
+
+The public target also requires smeared expansions: on each fixed
+separated compact, the remainder divided by $g_X(r)^p$ tends to zero
+uniformly over an appropriate bounded family of smooth compact tests.
+Integrability is part of the requirement. The submitted proof obtains
+these from the stronger compact estimates and can supply test order
+zero at this step. No conclusion about a contact term at coincident
+points follows from these separated tests.
+
+Finally, \code{phaseAgreement} gives the additional bound
+\begin{equation}\label{eq:phase}
+ \|D_x^j(S_{\sigma,r}-S_{\tau,r})(v;x,o)\|
+ \le r^\gamma\prod_i\|v_i\|_{\mathrm{coeff}},
+ \qquad 0<\gamma<4,
+\end{equation}
+eventually, uniformly over the indicated phases, centers, fields and
+separated compact. Since $g_X(r)$ decays logarithmically,
+$r^\gamma=o(g_X(r)^q)$ for every fixed $q$. Thus phase differences
+are invisible to every finite coupling order in this simultaneous
+short-distance limit. They may still exist at finite physical
+separations. Equation~\eqref{eq:phase} should not be read as a statement
+about a configuration with arbitrary unscaled distant spectators.
+
+\section{How the correlation proof is assembled}
+\label{sec:proof}
+
+\subsection{The construction supplies controlled finite-order expansions}
+
+The native result \code{SignedWilsonExpansion/Result/Orders.lean}
+packages finite-order estimates for the actual lattice and continuum
+insertions. Its \code{LinePrices} has three parts: a finite-lattice
+estimate against a truncated series; comparison of those lattice values
+with the selected continuum values; and the resulting continuum
+remainder estimate. There are pointwise and smeared forms. The
+\code{ConferencePowers.trueLetters} result handles heterogeneous field
+degrees in one common cutoff and compares with the independently
+nominated subtraction data. \src{P}
+
+The order of limits matters. The native account removes the physical
+ultraviolet cutoff with period held fixed, then passes to the chosen
+period limit, and finally makes the observation radius small. Thresholds
+for the lattice regulators can depend on that radius. This is not a
+bound valid for arbitrary independent removal of all regulators.
+The construction and its limiting hierarchy are fixed while the
+finite perturbative order varies.
+
+This is the analytic input from the renormalization construction.
+The present source map locates its use and its precise output. It
+does not replace a review of the deeper small-field, large-field and
+renormalization estimates that prove this input.
+
+\subsection{The coefficients are identified with an external graph calculation}
+
+Having an expansion into some formal coefficients would not suffice.
+The second connection is a coefficient-by-coefficient equality with
+the graph reference of Section~\ref{sec:graphs}. The source proves that
+the graph calculation and the Wilson-side perturbative calculation,
+after the same position calibration, are limits of a common regulated
+calculation.
+
+In \code{original_calibrated_gate_of_team}, the last step is uniqueness
+of a limit: one convergence theorem gives the continuum graph reading,
+another gives the Wilson-side reading, and the regulated expressions
+are identified using compatible prescriptions. The theorem
+\code{original_filed_calibrated_gates} supplies the compatible choices.
+\code{Graphical.CommonGates.calibrated_gates} identifies the explicit
+graph sum with these calibrated readings. This is an actual equality
+argument, not a definition that calls the coefficients of the Wilson
+answer ``Feynman diagrams.'' \src{E}
+
+The subsequent public bridges include mixed-degree words in a common
+sector and identify each coefficient after the prescribed coupling and
+field substitution. \code{publicMixedPolynomial} identifies the finite
+polynomial used in the analytic estimate with the finite sum of the
+converted graph coefficients. The proof then substitutes this equality
+into the remainder estimate. \src{P}
+
+\subsection{Position derivatives require an additional argument}
+
+A uniform estimate on functions alone does not justify differentiating
+an asymptotic expansion. Here the derivative proof uses the physical
+field derivative maps: differentiating an insertion raises its field
+degree, and the raised insertion can be expressed in the next finite
+field sector. The coefficients of this operation have their own
+controlled stationary expansions.
+
+\code{WilsonGraphCompactCoordinateJets.prices} inducts on a word of
+coordinate derivatives. At each step it combines the expansion of a
+raising coefficient with the expansion of the correlation containing
+the raised field. The accompanying smoothness and
+\code{cropCoordinates} theorems identify the result with derivatives
+of the genuinely truncated coefficient functions. Finite-dimensional
+coordinate estimates are then assembled into the Fr\'echet-derivative
+bound. Translation covariance permits arbitrary physical centers,
+and multilinearity extends basis estimates to all input fields with
+the norm factors in \eqref{eq:corr-bound}. \src{J}
+
+\subsection{One hierarchy, all its phases, and the public theorem}
+
+The native estimates refer to the actual mixed hierarchy and its own
+compression characters. The field identification used by
+\code{WilsonGraphPublishedShapeEstimate.onField} holds on a whole
+separated neighborhood, so it transports derivatives as well as values.
+The stronger phase proximity estimate uses the low-degree field content
+and the short-distance OPE: below degree four the only surviving
+physical field is the unit, whose normalized expectation is the same
+in every phase. Remainders yield positive powers arbitrarily close
+to four; the frame bounds control the cost of changing coordinates.
+\src{J,H}
+
+Finally \code{graphEstimates} transfers these results to the public
+coefficient array, and \code{correlationInFrame} supplies the
+\code{CorrelationExpansion} in \code{MatchedRefinement}. The assembly
+also retains the native lattice coordinates, fixed-period kernel limits,
+and the same selected hierarchy. An additional compatibility condition
+says that, \emph{if} a requested volume sequence already has full tested
+limits, the chosen hierarchy represents those limits. This conditional
+clause does not prove convergence of every requested volume sequence.
+\src{T,V,J}
+
+\section{The OPE: characterization, uniqueness, and matching}
+\label{sec:ope}
+
+\subsection{What determines the reference OPE}
+
+The independent reference OPE is characterized using the graph
+\emph{correlations} and arbitrary exterior fields. For homogeneous
+inputs of total engineering degree $D$, shrink their positions by
+$\lambda=e^{-t}$ while exterior insertions $b$ at positions $y$ remain
+fixed. The defining statement has the form
+\begin{align}\label{eq:exterior}
+ C^{\MS}_{n+m,k}(a,b;e^{-t}x,y)
+ ={}&\sum_{w=0}^{h}\sum_{q=0}^{k}
+ e^{(D-w)t}
+ C^{\MS}_{m+1,k-q}\bigl(p_{w,q}(t,x),b;0,y\bigr)
+ +R_{h,k}(t,x,y),\\[-2pt]
+ |R_{h,k}(t,x,y)|\le{}&c(1+t)^L e^{(D-h-1)t},
+ \qquad t\longrightarrow\infty.\nonumber
+\end{align}
+The bound is uniform on separated compact sets for the inner shape and
+for the exterior configuration, the latter separated from the fusion
+center. Each $p_{w,q}$ is homogeneous of output weight $w$ and
+polynomial in $t$, coordinate by coordinate, with a finite degree bound
+at each order. The public reference output through degree $h$ is
+$\sum_{w\le h}p_{w,k}(0,x)$. Extension to nonhomogeneous inputs is
+multilinear and independent of the cutoff used to present a polynomial.
+\src{O}
+
+The predicate \code{Ordinary.Determined} asserts existence and
+uniqueness of this entire OPE array. The proof does more than choose
+one convenient expansion: \code{GraphOnlyPrice.original} compares two
+candidate exterior expansions, turns their difference into a residual
+in the native exterior system, and uses that system's uniqueness
+result. \code{GraphOrdinary.original} then packages the unique full
+reader. Thus positive-weight output channels are tested by exterior
+correlations, not only by their vacuum expectation. Reviewing the
+exterior system's separation and uniqueness argument remains one of
+the deeper proof-review tasks. \src{O}
+
+\subsection{What physical OPE is compared}
+
+On the constructed hierarchy, the actual OPE has channels of each
+degree with physical channel fields and numerical coefficient
+functions. The public \code{measuredOPE} sums every channel through
+the output cutoff $h$, includes its field in the common physical
+space, and applies $(J_r^{(h)})^{-1}$ to the result. Call this
+$\mathcal C_r^{\le h}(a;x,o)\in\mathcal V_{\le h}$.
+
+The predicate \code{HasChannelBasis} requires these included channel
+fields to form a basis of the \emph{whole} output space through $h$.
+The final matching estimate is
+\begin{equation}\label{eq:ope-bound}
+ \left\|\mathcal C_r^{\le h}(a;x,o)
+       -\sum_{k=0}^{p}g_X(r)^k C^{X,\le h}_{\mathrm{OPE},k}(a;x)
+ \right\|_{\mathrm{coeff}}
+ \le A\prod_i\|a_i\|_{\mathrm{coeff}}|g_X(r)|^{p+1}
+\end{equation}
+on each separated compact. There are corresponding smeared estimates
+against every linear functional of the output and shape-derivative
+estimates uniform over the dual unit ball. The derivative version is
+also uniform in the center. The OPE reader itself has no phase index;
+the correlation hierarchy and the separate exterior estimates explain
+how that reader is used in phases. \src{A}
+
+The two truncations are different. Increasing $p$ improves the
+perturbative expansion at fixed finite output cutoff $h$. Increasing
+$h$ retains more physical fields in an OPE expansion whose geometric
+remainder is controlled separately. Neither statement asserts that
+the perturbative series converges as $p\to\infty$.
+
+\subsection{Why correlation matching alone is not the whole proof}
+
+To recover an OPE output one must distinguish fields by how they pair
+with exterior insertions. The proof therefore controls two kinds of
+correlation: the inner cluster paired with exterior fields, and the
+correlation with a single output field at the fusion center paired
+with the same exterior fields. The latter supplies the finite-dimensional
+comparison needed to read the former as an output field. Errors in
+this comparison must be controlled, not merely its formal invertibility.
+
+The modules culminating in \code{AppointedFlashNumerator.allJets}
+establish this comparison in a window with two relative length scales.
+First they prove estimates on fixed basis words. A finite sum extends
+these to bounded sets of input and exterior fields, with a common
+polynomial logarithmic loss. The source combines the cluster estimates
+with separate centered-field estimates in
+\code{measuredAtPositiveCrops}. \code{AppointedRoundedReader.value}
+then bounds the actual field-valued OPE remainder; further derivative
+arguments give all shape derivatives. \src{Q}
+
+At the final interface,
+\code{WilsonFlashScoredOrdinaryEstimates.estimates} converts the
+uniform bounds against contractive output functionals into a norm
+bound by choosing a functional attaining the norm of the residual.
+\code{ordinaryInFrame} identifies the reference reader with the unique
+public OPE array and supplies \code{OPEExpansion}. This last norm step
+is why a scalar vacuum comparison cannot substitute for the stated
+full output comparison. \src{Q,T}
+
+\section{The stress tensor has its own matching requirement}
+
+The reference contains a unique degree-four field series
+$P_{ab}(g_X)=\sum_{k\ge0}g_X^k P_{ab,k}$. Its leading term is the free
+metric stress tensor. The defining conditions require symmetry,
+signed-axis covariance, vanishing one-point functions, conservation,
+and a translation Ward identity against general field words, with
+the prescribed field and coupling conversion applied to all legs.
+The zero one-point condition fixes the vacuum ambiguity. \src{W}
+
+The translation identity uses a cutoff window and stress flux. It fixes
+the action and sign of the stress insertion on other operators. For
+every finite order~$p$ and linear output functional~$\ell$, matching
+identifies the \emph{actual} physical stress tensor in the same frame:
+\begin{equation}\label{eq:stress}
+ \frac{\ell\bigl((J_r^{(4)})^{-1}(r^4T_{ab})\bigr)
+       -\sum_{k=0}^{p}g_X(r)^k\ell(P_{ab,k})}
+      {g_X(r)^p}\longrightarrow0.
+\end{equation}
+This is the public \code{stressExpansion} clause. Its displayed
+little-$o$ form should not be silently replaced by the stronger
+uniform $O(g_X^{p+1})$ derivative bounds stated for general correlations.
+It also should not be confused with the cubic field used in the
+coupling triangle. \src{A,W}
+
+\section{What this adds, and what still needs human validation}
+\label{sec:validation}
+
+The November matching target materially strengthens the evidence for
+the intended Yang--Mills theory. A free limit tests order zero. A
+leading stress-trace two-point coefficient tests one specific piece
+of short-distance information. The present target fixes a nonabelian
+cubic diagnostic with its sign, all coefficients of all separated
+correlations in the stated local field system, and all finite-degree
+OPE outputs, after one prescribed scheme conversion.
+
+The correct assessment is nevertheless not that every definition has
+already been independently endorsed. The following checks organize the
+next review. ``Traced'' means that the definitions and proof connections
+were located and inspected for this document; it is not a substitute
+for a second mathematical derivation.
+
+The selected definitions are now collected in
+Appendix~\ref{sec:glossary}. Section~\ref{sec:inventory} separates
+the supplied theorem obligations from our proposed independent
+tests in Section~\ref{sec:independent}. A definition being listed
+or a test being specified does not mark that check as completed.
+
+The most useful first independent calculation is the cubic diagnostic
+already built into the public prescription. It directly tests a
+nonabelian interaction, has an explicit signed formula, and addresses
+our earlier interest in a dimension-six curvature operator. A second
+calculation should test a positive-weight OPE output or a low-order
+correlator not used to define the scheme. Agreement for a defining
+normalization observable has a different evidential role from agreement
+for an additional prediction.
+
+There are several limits to the conclusion. The theorem gives an
+asymptotic expansion at each fixed order, with constants and radius
+thresholds allowed to depend on that order. It gives no uniform
+large-order estimate, Borel summability, convergent perturbation
+series, or effective numerical error algorithm. Equal expansions
+permit differences smaller than every power of the coupling; the
+phase bound gives a specific short-distance instance of this
+possibility. Infrared phase uniqueness, a mass gap, and a unique
+large-volume theory are not consequences of the matching result.
+
+The separated-position statements also leave contact terms outside
+their direct scope. Graphs may require subtraction at internal
+coincidences, and the stress Ward statement controls its specified
+flux tests, but these facts do not turn the correlation/OPE matching
+clauses into equality of unrestricted contact extensions. Finally,
+this document does not claim a separate formal no-go theorem excluding
+every possible realization as composites of Gaussian fields. Any
+such conclusion should be tied to a precisely defined alternative
+and a coefficient or structural condition it fails.
+
+
+
+
+
+
+
+
+% BEGIN REVIEW_TESTS
+
+\section{Inventory of the tests supplied by OpenAI}
+\label{sec:inventory}
+
+The submission supplies two public Comparator configurations:
+\code{ComparatorChallenges/Existence.json} checks
+\code{YangMills.jointExistence}, and
+\code{ComparatorChallenges/Matching.json} checks
+\code{YangMills.perturbativeMatching}. Both allow only
+\code{propext}, \code{Quot.sound} and \code{Classical.choice};
+both set \code{enable_nanoda} to \code{false}.
+The matching witness also implies existence for that same run.
+The recorded results of checking the Matching target are in
+Section~\ref{sec:receipts}.
+
+The list below decomposes the Matching target into fifteen review
+groups. These are obligations proved together by the theorem,
+\emph{not fifteen separately executed numerical tests}. A passed
+Comparator check covers the formal definitions of these obligations;
+it does not independently endorse their physical interpretation.
+The adjacent \code{openai-test-inventory.json} indexes the individual
+fields of the selected public structures and preserves the exact
+two configurations. The labels G01--G24 refer to the glossary in
+Appendix~\ref{sec:glossary}.
+
+\subsection*{O01. The specified microscopic theory}
+\code{MatchedRun.lattice}, \code{trajectory} and \code{admissible}
+attach the witness to admissible Wilson data and native insertion coordinates.
+Read G04, G07 and G08 together; the lattice carrier alone is not the full test.
+
+\subsection*{O02. Full fixed-period ultraviolet convergence}
+\code{meshLimit} and \code{fixedPeriodLimits} identify one smooth
+period kernel with the full mesh sequence. All finite difference
+stencils, compact interpolation and suitable smearings are included (G09).
+
+\subsection*{O03. The same hierarchy after the volume limit}
+\code{MatchedRefinement.continuum} includes the lattice-limit,
+field-space, phase, reconstruction, stress and ultraviolet laws.
+\code{testLimits} represents any test table already convergent
+on the requested sequence. It does not assert unconditional full-volume
+convergence (G05--G07, G09).
+
+\subsection*{O04. Actual physical OPE}
+\code{singleCluster} and \code{fusionTrees}, together with the
+continuum OPE and coefficient laws, give the physical single-cluster
+and nested expansions. The matching clauses below concern those
+same physical coefficients, not an auxiliary fitted array.
+
+\subsection*{O05. A reference fixed by the gauge group}
+\code{Reference.opeDetermined} and \code{groupMenu_eq}
+fix the ordinary OPE and normalization menu from the group-only
+graph reference. Reference uniqueness is proved (G10--G11, G21).
+
+\subsection*{O06. The signed cubic coefficient}
+\code{Calibration.signedSlope} requires
+\code{Triangle.RawSlopeAgrees} for every admissible triangle.
+This compares an explicit bare formula with the first connected
+graph coefficient, including all proper-face Leibniz terms (G13--G14).
+
+\subsection*{O07. Formal normalization and inverse transformations}
+\code{Calibration.conversionValid} includes the raw normalization
+equations, vanishing free offset, nonzero signed slope, both inverse
+coupling identities, both inverse field series and the factorization
+of the strictly lowering correction. It determines the conversion
+coefficient by coefficient (G12, G15).
+
+\subsection*{O08. Numerical normalization beyond formal jets}
+\code{adjustmentValue} identifies the numerical correction with
+\code{smoothAdjustment}. The \code{NumericalAdjustment} laws impose
+its smoothness, asymptotic expansion, local invertibility, reality,
+unit and filtration properties (G16).
+
+\subsection*{O09. Calibration on actual continuum observables}
+\code{FrameCalibration} requires physical position normalization,
+local uniqueness, reality, unit and nesting, triangle integrability,
+the exact measured-coupling equation, and the relation between the
+position and measured frames (G17--G18).
+
+\subsection*{O10. One coherent measured field system}
+\code{Measurement} requires compatible fields across cutoffs,
+signed-axis covariance, unit insertion in every phase, compatible
+field inclusions and correlation multilinearity (G18).
+
+\subsection*{O11. Positive coupling and the one-loop law}
+\code{Measurement.coupling_pos} and \code{oneLoop} require
+$g_X(r)>0$ eventually and
+$g_X(r)\sqrt{2b_0\log(1/r)}\to1$.
+\code{oneLoopBeta} computes $b_0$ from trace-normalized
+commutators. This particular clause is a leading-log statement,
+not a differential beta equation.
+
+\subsection*{O12. Free ultraviolet limit at all radii}
+\code{scaling}, \code{sampledFrame}, \code{fixedFields},
+\code{maxwellLimit} and \code{frameBounds} connect the sampled
+Maxwell limit to the same measured fields at all small radii,
+with the additional fixed-field and frame control (G24).
+
+\subsection*{O13. All-order correlation matching and phase proximity}
+The first four fields of \code{CorrelationExpansion} require
+the smeared, compact and derivative expansions and the
+$r^\gamma$ phase-difference estimate. They quantify over
+arbitrary local labels and the stated phases (G19--G20).
+The reference is common; neither the constants nor the expansion
+are required to converge as perturbative order grows.
+
+\subsection*{O14. All-order matching of every finite OPE output}
+\code{channelBasis} and the three \code{OPEExpansion} clauses
+require a full field-space basis and the smeared, norm and
+derivative comparisons after inverse output conversion (G22).
+The physical output has no separately chosen phase argument.
+
+\subsection*{O15. Stress Ward normalization and physical identification}
+\code{Reference.stressUnique} fixes a unique series satisfying
+all six \code{WardStress.Determined} laws.
+\code{CorrelationExpansion.stressExpansion} identifies the
+actual physical stress with that series (G20, G23).
+
+\section{Independent tests: precise first specifications}
+\label{sec:independent}
+
+Our tests should expose a physical observable on the left and an
+independently calculated quantity on the right. Repackaging
+\code{CorrelationExpansion} or evaluating the same graph function
+on both sides would be a useful interface check, but would not
+validate a coefficient. The strategy is to derive a few low-order
+numbers or functions from explicit propagators and interactions,
+translate their conventions to the public fields, and then use
+the submitted matching theorem to identify the actual continuum
+prediction.
+
+The accompanying \code{IndependentMatchingTests.lean} starts this
+work. It defines independent kernel and coefficient specifications,
+an entire-output OPE remainder specification, and a finite-step
+running-coupling test. It also exposes the actual submitted
+correlator through a small adapter. The finite Pauli-matrix
+identities described below are proved. The adapter equality is
+only a definitional sanity check. No combined independent acceptance
+theorem is yet proved, and no new Comparator run on these test
+specifications has been performed. The separate full finite ghost-loop
+benchmark has passed in Lean and Comparator, as described in
+Section~3.5 and Appendix~\ref{app:finite-ghost}.
+
+\subsection{I1. Fix the free kernel and color normalization first}
+
+For $x\ne0$ define independently
+\[
+ G(x)=\frac{1}{4\pi^2|x|^2},\qquad
+ H_{ab}(x)=\frac{1}{4\pi^2}
+ \left(\frac{8x_ax_b}{|x|^6}-\frac{2\delta_{ab}}{|x|^4}\right).
+\]
+The curvature covariance to check is
+\[
+ K_{ab,cd}(x)=\delta_{bc}H_{ad}-\delta_{bd}H_{ac}
+             -\delta_{ac}H_{bd}+\delta_{ad}H_{bc}.
+\]
+This includes the minus sign from differentiating the second
+insertion. \code{expectedHessian}, \code{expectedCurvature} and
+\code{freeKernelTest} state the formulas without calling the
+submitted covariance. The next analytic lemma is that the
+submitted double curl equals $K$ off the origin, followed by
+the comparison of its shell-coordinate derivatives, factorials
+and Wick multiplicities. No claim about a contact extension
+at $x=0$ is implicit here.
+
+There is already a small completed algebra check. Take the
+anti-Hermitian Pauli basis $E_a=-i\sigma_a$, in the displayed
+order in the Lean file. The independent calculation proves
+\[
+ -\tfrac12\operatorname{Re}\operatorname{Tr}(E_aE_b)=\delta_{ab},
+ \qquad [E_a,E_b]=2\epsilon_{abc}E_c.
+\]
+Consequently $\sum_{abc}(2\epsilon_{abc})^2=24$ and
+$C_A=24/3=8$ in this color metric.
+The value is deliberately expressed in the public normalized-trace
+convention, not in the frequently used convention
+$\operatorname{Tr}(T_aT_b)=\delta_{ab}/2$.
+The remaining bridge must identify the actual submitted color
+frame with this convention, up to an orthogonal basis change,
+before substituting the result into \code{oneLoopBeta}.
+
+\textbf{Status:} finite matrix and color identities checked in Lean.
+The separate \code{DiagramReferenceAudit.lean} now also checks the
+momentum-space gauge line and its cutoff factor
+(equation~\ref{eq:gauge-line-audit}). Position-space kernel
+differentiation and the public-frame identification remain open.
+This is a normalization baseline, not yet an independent interaction test.
+
+The ghost-loop benchmark in Section~3.5 is a completed additional
+check: the full submitted finite graph agrees with the independently
+specified expression, including both finite constants. Its Lean proof
+and separate Comparator run passed. Appendix~\ref{app:finite-ghost}
+explains how the source integral and its infrared limit are evaluated.
+This graph test remains separate from the physical correlation tests
+I2--I4.
+
+\subsection{I2. Calculate the signed dimension-six cubic diagnostic}
+
+Use the public polynomials, not just their names:
+\[
+ \cO_6=\sum_{ijk}\epsilon_{ijk}
+ \frac{-\operatorname{Re}\operatorname{Tr}
+       (F_i^+[F_j^+,F_k^+])}{N},
+ \qquad
+ \cO_4^-=\frac12\sum_i\langle F_i^-,F_i^-\rangle .
+\]
+The minus sign in $\cO_4^-$ means anti-self-duality.
+For the convention $\exp(-S_0-gS_3-g^2S_4)$, the first coefficient
+of the connected three-point function has two types of terms:
+\[
+ \left\langle
+   \left.\partial_g
+     \bigl(\cO_6(g)\cO_4^-(g)\cO_4^-(g)\bigr)\right|_{g=0}
+ \right\rangle_{0,c}
+ -
+ \left\langle\cO_6(0)\cO_4^-(0)\cO_4^-(0)\,S_3\right\rangle_{0,c}.
+\]
+Here the notation means the coefficient obtained by differentiating
+the normalized connected expectation, including its proper-face
+terms. The first term matters because the curvature itself
+contains the commutator of gauge potentials. A calculation of
+only the three-gluon vertex would not check the submitted formula.
+The independent calculation must also track the cutoff partition,
+integration by parts, and any subtraction required by its chosen
+intermediate representation.
+
+First compare this explicit Wick calculation with
+\code{bareTriangle} and with the raw first graph coefficient.
+Then perform the independently understood field and coupling
+conversion to compare a physical prediction. The generic
+\code{firstCoefficient} specification asks for
+\[
+ \lim_{r\downarrow0}\frac{A(r)-A_0}{g_X(r)}=A_1^{\rm independent},
+ \qquad g_X(r)>0,\quad g_X(r)\longrightarrow0.
+\]
+The elected triangle itself defines $g_X$ exactly. Its normalized
+first slope is therefore not an additional physical prediction.
+Use another admissible profile or another separated observable
+after checking the raw coefficient and conversion. OpenAI's
+every-admissible-triangle condition is useful here.
+
+\textbf{Status:} the coefficient-extraction and connected-three
+specifications are written in Lean. The independent spacetime
+calculation and its identification with the source are not yet proved.
+
+\subsection{I3. Test an order-two prediction outside the calibration menu}
+
+Choose four separated gauge-invariant quadratic curvature fields,
+in a fixed homogeneous normalization, and compare their connected
+correlation through order $g_X^2$. The intended requirement is
+\[
+ \frac{A(r)-A_0-g_X(r)A_1}{g_X(r)^2}
+       \longrightarrow A_2^{\rm independent}.
+\]
+\code{secondCoefficient} states this limit; the more general
+\code{finiteOrderRemainder} also records a compact uniform
+remainder against an independently supplied coefficient array.
+The actual field labels and a convenient separated configuration
+must still be chosen.
+
+The order-two calculation includes the quartic vertex, the
+$S_3^2/2$ contribution, nonlinear curvature terms, ghost terms
+where they occur, normalization of the expectation, and the
+prescribed counterterms. It is not just a quartic tree amplitude.
+Moreover a connected four-point function of quadratic Gaussian
+composites can already be nonzero at order zero. The test must
+subtract that known Wick contribution, rather than equating
+nonzero connected correlations with a non-Gaussian elementary field.
+
+\textbf{Status:} a precise coefficient-extraction specification is
+formalized; the chosen observable, calculation and physical bridge
+remain to be supplied. This is intended to test a prediction
+not used to set the coupling.
+
+\subsection{I4. Check a nonidentity OPE channel as a field}
+
+Start with two quadratic curvature scalars and the full output
+space through degree four. Compute the free coefficient first,
+then the first nonvanishing interaction correction. Fix exterior
+probe words whose free correlation matrix detects that finite
+output space. Its invertibility must be established; otherwise
+a vanishing reading need not mean a vanishing field.
+
+In the measured frame the proposed test has the form
+\[
+ \sup_{x\in K}
+ \left\|\cO^{\rm actual}_{\le4}(r,x)
+       -\sum_{k=0}^p g_X(r)^k
+           \cO^{\rm independent}_{\le4,k}(x)\right\|
+       \le C_K |g_X(r)|^{p+1}.
+\]
+The generic Lean predicate is \code{finiteOutputRemainder}.
+The expected output includes positive-weight fields, not just
+the identity coefficient. The comparison must apply the inverse
+field conversion on the output as well as the conversions on
+the two inputs. The submission's \code{HasChannelBasis} and
+exterior uniqueness are the natural bridge to its actual OPE.
+
+\textbf{Status:} the field-valued specification is formalized;
+concrete probes, their detecting matrix, the chosen norm bridge
+and independent coefficients remain open.
+
+\subsection{I5. Check stress action, including its sign}
+
+Choose a nonconstant separated field word and a smooth window
+isolating one insertion. Derive its translation identity from the
+chosen Euclidean action and stress convention. In schematic form,
+\[
+ \sum_a\int (\partial_a\chi)(z)
+       \langle T_{ab}(z)\cO(x)\cdots\rangle\,dz
+   =\sigma_{\rm conv}\,\partial_{x_b}
+       \langle\cO(x)\cdots\rangle .
+\]
+The sign $\sigma_{\rm conv}$ is to be fixed in advance by that
+derivation, not fitted to the submitted answer. The actual test
+will smear the other variables and use the source's precise
+window clearance. Comparing it with the two minus signs and
+the derivative of the test function in
+\code{WardStress.Determined.translation} will check the
+integration-by-parts convention as well.
+
+Use the same stress field that appears in physical
+\code{stressExpansion}. A trace two-point function or a
+conservation law by itself does not determine the translation
+generator's sign and normalization on a general operator.
+
+\textbf{Status:} the source obligation and a concrete test plan are
+identified; this independent window identity has not yet been
+written as a Lean theorem.
+
+\subsection{I6. Test running between two physical scales}
+
+For a fixed ratio $s>1$ of physical lengths, ask for
+\[
+ \lim_{r\downarrow0}
+ \frac{g_X(sr)-g_X(r)}{g_X(r)^3}=b_0\log s.
+\]
+\code{oneLoopStepScaling} states this requirement independently.
+The positive sign is for increasing length; it is opposite to
+the energy-scale beta convention. Unlike a mere leading-log
+equivalent, this condition resolves a small difference between
+nearby scales. The law
+$g_X(r)\sqrt{2b_0\log(1/r)}\to1$ alone does not imply it.
+
+The native result \code{ConferencePowers.guideNext} is a promising
+place to look for sufficiently precise step control. Its passage
+to the measured physical coupling still has to be proved.
+This is an additional diagnostic, not a claim that the public
+Matching target explicitly promises this stronger formulation.
+
+\textbf{Status:} the finite-step specification is formalized;
+the theorem connecting it to the construction is open.
+
+\subsection{I7. Check that the independent tests reject deliberate changes}
+
+After the preceding calculations have concrete outputs, make
+small controlled alterations: reverse the cubic sign; change the
+quartic coefficient or omit a ghost contribution where it contributes;
+rescale the color bracket without the corresponding metric and
+coupling change; retain only the identity OPE output; omit
+$Z^{-1}$ on its output; or reverse the stress action. Each
+alteration should fail a named independent equality with a
+visible reason. A consistent change of conventions should pass
+after the documented conversion.
+
+An elementary generalized free field can be tested through its
+higher cumulants. Composites of Gaussian fields require comparison
+with their actual Wick cumulants, not the elementary-field
+criterion. We do not yet have a theorem excluding every possible
+Gaussian-composite realization.
+
+\textbf{Status:} these negative controls are proposed, not run.
+No counterfeit has been shown to pass the November target.
+
+\subsection{Order of work and acceptance status}
+
+Complete I1's bridge to the submitted covariance and color
+normalization first. Then calculate I2's cubic coefficient.
+That gives a controlled nonabelian test with conventions fixed.
+I3 and I4 should provide predictions beyond the defining
+normalization observable, while I5 checks the actual stress
+action. I6 is useful additional running-coupling information.
+Run I7 only after the corresponding expected quantities are fixed.
+
+This is a starting set of independently formulated tests, not a
+claim that passing seven selected examples validates every
+all-order graph definition. They complement a systematic
+definition review and can expose errors that a successful
+Comparator check against a misinterpreted definition would not.
+The adjacent \code{independent-tests-build.json} records the
+small Lean-file check separately from the submission's
+Comparator receipts.
+
+% END REVIEW_TESTS
+
+\section{Mechanical verification already completed}
+\label{sec:receipts}
+
+The Matching challenge passed the release-pinned Comparator on
+10 November at 05:30:13 UTC. It also passed a repeat with the newer
+upstream Comparator at 08:18:57 UTC. Both records have exit code zero.
+The latter is 00:18:57 Pacific time on 10 November. The axiom audit
+reports only \code{propext}, \code{Classical.choice}, and
+\code{Quot.sound} for the checked matching theorem. \src{Z}
+
+The release-pinned Comparator revision was
+\code{07bc4ea40f2266dcb861820a2ec1fa3244ed307f}; the newer revision was
+\code{d03acab154d269c06e60e4de7e4cc85deebff94b}. The submitted proof
+used Lean 4.32.0; the repeat used the Lean 4.34.0 checking kernel and
+a compatible export of the submitted environment. The runs used
+macOS development mode with the \code{fake-landrun.sh} launcher,
+not Linux/Landrun isolation or an independent second kernel.
+
+A separate run on 13 November checked our independent full finite
+ghost-loop target, using the newer Comparator and the same toolchain
+pair. It passed with no definition holes and only the three permitted
+standard axioms. Its evidence is kept separately from the supplied
+Matching target: the former checks one explicit graph value, whereas
+the latter checks the submitted all-order matching statement.
+Appendix~\ref{app:finite-ghost} gives the proof map and frozen-target
+records.
+
+Comparator checks the submitted proof against a frozen target and its
+definitions. Its success is evidence for the formal implication.
+Human review must still decide whether the frozen graph definitions,
+normalization prescription, and quantified estimates express the
+intended physical comparison. The separation between these tasks is
+especially important for this larger target.
+
+\appendix
+
+% BEGIN REVIEW_GLOSSARY
+
+\section{Glossary of the key formal definitions}
+\label{sec:glossary}
+
+The entries follow the flow from the gauge group and lattice
+fields to continuum observables and their perturbative comparison.
+Each gives an informal meaning and the exact formal declaration
+and source location. Paths are relative to the verified November
+source tree recorded in \code{source-map.json}.
+This is a glossary of the principal interfaces, not a count of
+every definition in the proof's dependency closure.
+\code{definition-glossary.json} preserves the same list with
+source hashes and declaration lines.
+
+\Needspace{8\baselineskip}
+\subsection*{G01. Gauge group, representation and spacetime}
+\label{gloss:G01}
+\textbf{Formal:} \code{YangMills.GaugeGroup}.\newline
+\textbf{Source:} \code{YangMills/Geometry.lean:25}.
+
+The input includes a closed subgroup of a unitary matrix group and its exact
+one-parameter Lie algebra. \code{IsSimple} requires real simplicity and
+noncommutativity. Matrix trace conventions enter the free color metric and
+therefore every coupling coefficient. Spacetime has four axes. The distinguished
+\code{timeAxis} is index~3, whereas the chiral formula below uses the oriented
+0123 convention with axis~0 singled out. Tracking that change of convention is
+part of the sign review; it is not by itself an inconsistency.
+
+\Needspace{8\baselineskip}
+\subsection*{G02. Free on-shell curvature coordinates}
+\label{gloss:G02}
+\textbf{Formal:} \code{YangMills.Maxwell.Coordinates}.\newline
+\textbf{Source:} \code{YangMills/FreeFields.lean:30}.
+
+At derivative order $j$, the shell consists of symmetric derivative tensors
+of an antisymmetric two-form satisfying the free Bianchi and divergence equations.
+A basis supplies polynomial coordinates $(j,a)$; $a$ indexes the chosen shell
+basis, not a spacetime index. Each coordinate has engineering weight $j+2$.
+The color map obeys $-\operatorname{Re}\operatorname{Tr}(E_AE_B)=N\delta_{AB}$,
+where $N=g.n+1$. The covariance differentiates the massless double curl and
+includes Taylor factorials and the sign of derivatives on the second insertion.
+
+\Needspace{8\baselineskip}
+\subsection*{G03. Maxwell field reference}
+\label{gloss:G03}
+\textbf{Formal:} \code{YangMills.Maxwell.Reference}.\newline
+\textbf{Source:} \code{YangMills/FreeFields.lean:99}.
+
+The degree-$d$ sector consists exactly of the gauge-invariant polynomials
+of weight at most $d$ in the preceding coordinates. Moments are fixed by all
+complete cross-insertion Wick pairings. Self-pairings at a single insertion
+are excluded. The reference also fixes the free stress field and requires
+that exterior correlations detect every nonzero sector element. This
+\code{Maxwell.Reference} is the free field system; it is distinct from the
+perturbative \code{Reference} in G11.
+
+\Needspace{8\baselineskip}
+\subsection*{G04. Microscopic Wilson family}
+\label{gloss:G04}
+\textbf{Formal:} \code{YangMills.WilsonFamily}.\newline
+\textbf{Source:} \code{YangMills/WilsonLattice.lean:35}.
+
+A family records physical periods, inverse mesh sizes, the bare coupling,
+Haar measure and a token-indexed collection of lattice insertions.
+Its finite moments integrate those insertions with the specified Wilson
+weight. The matching target additionally requires a family arising from
+admissible native lattice data, not an arbitrary assignment of token values.
+The ultraviolet index and the physical-period index are separate parameters.
+
+\Needspace{8\baselineskip}
+\subsection*{G05. Continuum correlation hierarchy}
+\label{gloss:G05}
+\textbf{Formal:} \code{YangMills.Hierarchy}.\newline
+\textbf{Source:} \code{YangMills/CorrelationHierarchy.lean:24}.
+
+This is the common carrier of continuum fields, correlations, phase
+characters, stress tensor and OPE data. A correlation has field labels,
+positions and an optional character argument: \code{none} is the mixed
+hierarchy, and \code{some character} is a selected phase. The carrier alone
+does not prove it is a Wilson limit. The continuum, phase, reconstruction
+and matching laws attached to the same hierarchy provide that connection.
+
+\Needspace{8\baselineskip}
+\subsection*{G06. Construction and volume refinement}
+\label{gloss:G06}
+\textbf{Formal:} \code{YangMills.Wilson.Construction}.\newline
+\textbf{Source:} \code{YangMills/VolumeLimit.lean:14}.
+
+A construction contains one Wilson family and a refinement operation.
+Given a strictly increasing sequence of volume indices, the operation
+returns a strictly increasing subsequence and a hierarchy. Existence and
+matching predicates supply the laws on those choices. This is selection
+from every requested volume sequence, not a claim that the unselected
+large-volume sequence converges or that different phases coincide.
+
+\Needspace{8\baselineskip}
+\subsection*{G07. The full matching witness}
+\label{gloss:G07}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.MatchedRun}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching.lean:44}.
+
+One reference, lattice data, period kernels and trajectory serve all
+requested volume sequences. Each \code{MatchedRefinement} contains the
+continuum laws, measured fields and coupling, calibrated frame, channel
+basis, Maxwell limits, and correlation and OPE expansions on its selected
+hierarchy. The theorem asks for this entire dependent package.
+\code{MatchedRun.realizes} proves that the same run satisfies the existence
+requirements.
+
+\Needspace{8\baselineskip}
+\subsection*{G08. Native insertion coordinates}
+\label{gloss:G08}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.NativeCoordinates}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/NativeLattice.lean:26}.
+
+Raw field coordinates are the coefficient vectors of the original
+graded lattice insertions, in their original order. The width equality
+identifies the finite coefficient spaces, and the token equality identifies
+their actual insertions. \code{AdmissibleLattice} combines this with the
+native family's admissibility laws. These requirements matter when
+checking that the later physical fields remain attached to the specified
+microscopic observables.
+
+\Needspace{8\baselineskip}
+\subsection*{G09. Smooth full-sequence ultraviolet limit}
+\label{gloss:G09}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.SmoothMeshLimit}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/VolumeLimits.lean:67}.
+
+For each fixed period and token word there is one smooth kernel away
+from periodic coincidences. Every finite list of lattice difference
+stencils tends to its corresponding derivative, including evaluation
+along convergent mesh points, compact uniform interpolation and smearing.
+The empty stencil recovers the original moment. Its restriction agrees
+with the period table used for the volume limit. The separate
+\code{RepresentsTestLimits} clause is conditional on a whole test table
+already converging along the requested volume sequence.
+
+\Needspace{8\baselineskip}
+\subsection*{G10. Continuum graph coefficient}
+\label{gloss:G10}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.graphCorrelation}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/GraphCoefficients.lean:43}.
+
+This function supplies the coefficient of a specified perturbative
+order for a word of free polynomial labels at separated positions.
+Its inputs are the gauge group and free labels, not a Wilson hierarchy
+or phase. It is assembled from the continuum graph rules, pole
+subtractions and regulator limits described in Sections~3 and~6.
+The human validation task is to identify those rules with the intended
+Yang--Mills perturbation theory, including signs and normalization.
+
+\Needspace{8\baselineskip}
+\subsection*{G11. Calibrated perturbative reference}
+\label{gloss:G11}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.Reference}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/Reference.lean:35}.
+
+This package requires the graph correlations to determine a unique
+ordinary OPE, chooses the group-only normalization menu, calibrates a
+position scheme and requires a unique Ward-normalized stress series.
+Its OPE is read from the exterior characterization, not freely supplied
+as a second unrelated coefficient array. Any two such references for
+the same gauge group are equal. This uniqueness concerns perturbative
+data, not infrared phases.
+
+\Needspace{8\baselineskip}
+\subsection*{G12. Finite normalization measurements}
+\label{gloss:G12}
+\textbf{Formal:} \code{YangMills.MSbar.Position.Screen}.\newline
+\textbf{Source:} \code{MSPositionScreens.lean:54}.
+
+A screen is a finite list of separated profiles and field words,
+with a real-linear map from their complex readings to field
+endomorphisms. The \code{Prepared} laws require that applying the screen
+to the free first variation recovers every allowed infinitesimal
+field change. Cutoff compatibility and curvature parity are also
+imposed. Thus the screen is a finite determining system for the
+normalization frame, rather than a single normalization number.
+
+\Needspace{8\baselineskip}
+\subsection*{G13. Signed cubic coupling observable}
+\label{gloss:G13}
+\textbf{Formal:} \code{YangMills.MSbar.Position.Triangle}.\newline
+\textbf{Source:} \code{MSPositionLabels.lean:40}.
+
+The labels are a self-dual cubic curvature field of degree six
+and two copies of an anti-self-dual quadratic field of degree four.
+They are read at a common cutoff six, with a unit in omitted slots.
+The profile is applied after forming the third joint cumulant.
+Admissibility requires a real nonnegative, rotation-invariant,
+well-separated profile and a negative bare reading $c_T$.
+The notation $T$ here is the cubic label, not the stress tensor;
+the minus chirality is not charge-conjugation parity.
+
+\Needspace{8\baselineskip}
+\subsection*{G14. Independent bare triangle formula}
+\label{gloss:G14}
+\textbf{Formal:} \code{YangMills.MSbar.Position.bareTriangle}.\newline
+\textbf{Source:} \code{MSPositionCubic.lean:85}.
+
+The explicit reference uses the free covariance, orientation and
+Lie-bracket color contractions to fix the signed first coefficient.
+Both the nonlinear curvature in the insertions and the cubic
+interaction contribute. Its integral defines $c_T$ before any
+interacting hierarchy is consulted. \code{RawSlopeAgrees} compares
+the first connected graph coefficient with this value; the calibration
+requires this for every admissible triangle, not just the elected menu.
+
+\Needspace{8\baselineskip}
+\subsection*{G15. Formal change of coupling and fields}
+\label{gloss:G15}
+\textbf{Formal:} \code{YangMills.Matching.Conversion}.\newline
+\textbf{Source:} \code{FormalConversion.lean:41}.
+
+The scalar series $f$ satisfies $f_0=0$, $f_1=1$. Field series
+$Z$ and $Z^{-1}$ are mutually inverse and preserve homogeneous
+weights, the unit, reality, signed axes and cutoff compatibility.
+Correlation conversion substitutes $f$ and $Z$ on each input leg
+before collecting a coefficient. OPE conversion also applies
+$Z^{-1}$ on the output. Omitting that output transformation would
+compare coefficients in different field coordinates.
+
+\Needspace{8\baselineskip}
+\subsection*{G16. A fixed numerical realization of the field correction}
+\label{gloss:G16}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.smoothAdjustment}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/Calibration.lean:50}.
+
+The formal adjustment removes unequal-weight parts of the raw
+position frame. A specified smooth cutoff sum realizes all its
+Taylor coefficients as a numerical family. Calibration requires
+equality with this particular function, fixing even the freedom
+invisible to its Taylor series. The group-only choice precedes
+the Wilson family. This is different from asking merely for some
+smooth realization with the right asymptotic expansion.
+
+\Needspace{8\baselineskip}
+\subsection*{G17. Physical position normalization}
+\label{gloss:G17}
+\textbf{Formal:} \code{YangMills.MSbar.PositionNormalized}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/PositionFrame.lean:36}.
+
+The actual mixed correlators are smeared at physical length $r$
+in an unadjusted frame. They approach free readings, satisfy the
+finite normalization equations and have an invertible tangent
+response for every permitted infinitesimal change. Separate laws
+assert local uniqueness, unit insertion, nesting and reality.
+These equations use the mixed hierarchy; the physical normalization
+is not independently fitted in each character phase.
+
+\Needspace{8\baselineskip}
+\subsection*{G18. Measured coupling and field frame}
+\label{gloss:G18}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.Measurement}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/Measurement.lean:21}.
+
+One positive coupling and one family of linear field isomorphisms
+serve all phases, words and orders on a hierarchy. The coupling
+obeys the one-loop leading-log law in the public trace convention.
+Field laws include unit insertion, cutoff compatibility, signed-axis
+covariance and multilinearity. \code{FrameCalibration} identifies the
+coupling exactly with the normalized mixed triangle and the measured
+frame with the prescribed adjustment of the position frame.
+
+\Needspace{8\baselineskip}
+\subsection*{G19. Meaning of the remainder estimates}
+\label{gloss:G19}
+\textbf{Formal:} \code{YangMills.Matching.ShapeDerivativeBound}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/Asymptotics.lean:46}.
+
+This predicate requires differentiability through a given order
+and a bound on each position derivative of the difference of two
+functions. The derivatives are with respect to the separated shape,
+not the radius. \code{HasSmearedExpansion} tests all separated
+profiles supported in a compact set with bounded derivatives and
+gives a little-$o$ remainder at every order. The coefficient norm
+is the sum of the absolute polynomial coefficients.
+
+\Needspace{8\baselineskip}
+\subsection*{G20. Correlation and stress matching}
+\label{gloss:G20}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.CorrelationExpansion}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/Correlations.lean:31}.
+
+The five clauses give smeared expansions, compact
+$O(g_X^{p+1})$ bounds, all shape derivatives, short-distance
+agreement between any two phase choices, and matching of the
+actual physical stress field to the unique Ward series. Constants
+have the quantifiers printed in Section~5. In particular the
+phase estimate has $r^\gamma$, $0<\gamma<4$, and the stress clause
+uses a separate little-$o(g_X^p)$ formulation.
+
+\Needspace{8\baselineskip}
+\subsection*{G21. Ordinary OPE characterized by exterior fields}
+\label{gloss:G21}
+\textbf{Formal:} \code{YangMills.MSbar.Ordinary.Valid}.\newline
+\textbf{Source:} \code{MSOrdinaryOPE.lean:69}.
+
+A candidate coefficient array is required to reproduce cluster
+expansions of the reference correlations against arbitrary exterior
+insertions, with the stated polynomial-logarithmic remainder control.
+\code{Determined} says exactly one full array satisfies these laws.
+This tests what the fused field does against spectators, not just
+its vacuum expectation. It identifies every finite output degree
+of the perturbative OPE.
+
+\Needspace{8\baselineskip}
+\subsection*{G22. Actual field-valued OPE output}
+\label{gloss:G22}
+\textbf{Formal:} \code{YangMills.PerturbativeMatching.measuredOPE}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/OperatorProducts.lean:20}.
+
+The physical channel coefficients are multiplied by their
+channel fields and included in the space through the chosen
+output cutoff. Applying the inverse measured frame gives a free
+sector element. \code{HasChannelBasis} requires those included
+channels to form a basis. \code{OPEExpansion} then compares the
+whole element with the converted graph prediction: smeared
+against every output functional, in coefficient norm, and with
+shape derivatives uniform over the dual unit ball.
+
+\Needspace{8\baselineskip}
+\subsection*{G23. Ward characterization of the stress series}
+\label{gloss:G23}
+\textbf{Formal:} \code{YangMills.Matching.WardStress.Determined}.\newline
+\textbf{Source:} \code{YangMills/PerturbativeMatching/WardIdentities.lean:33}.
+
+The series has the specified leading free stress, symmetry,
+signed-axis covariance, vanishing one-point function, conservation
+and a translation identity. Translation is expressed by integrating
+stress flux against a window isolating the first insertion and
+comparing with a derivative of the ordinary correlation test.
+Both sides use the same conversion. The signs of the free stress,
+the cutoff derivative and integration by parts must be reviewed
+together.
+
+\Needspace{8\baselineskip}
+\subsection*{G24. Maxwell scaling and all physical radii}
+\label{gloss:G24}
+\textbf{Formal:} \code{YangMills.Hierarchy.MaxwellScaling}.\newline
+\textbf{Source:} \code{YangMills/ScalingLimits.lean:12}.
+
+The scaling object supplies short-distance frames along a
+sequence. The matching refinement identifies those sampled frames
+with its measured frame and additionally requires
+\code{AllRadii.Laws}, \code{AllRadii.FrameBounds} and
+\code{FixedFields.Laws}. The full public package therefore has
+more content than convergence on a selected sequence of radii.
+These ultraviolet requirements do not remove the subsequence
+in the large-volume construction.
+
+% END REVIEW_GLOSSARY
+
+
+
+\clearpage
+\section{Source guide and reproducible provenance}
+
+All Lean paths below are relative to the locally verified November
+source tree. The adjacent \code{source-map.json} records its absolute
+root, hashes of the cited files, and declaration lines. These are
+local review references, not links to an unpublished GitHub repository.
+The code is the source for this draft; no informal proof PDF was used.
+\code{source-map.json} also records hashes of the verification receipts
+and logs used in Section~\ref{sec:receipts}.
+
+\begin{description}[leftmargin=3em,labelwidth=2.6em,align=left]
+\item[\src{T}] \textbf{Public target and assembly.}
+\code{Comparators/Matching/Challenge.lean};
+\code{Comparators/Matching/Solution.lean};
+\code{YangMills/PerturbativeMatching.lean}:
+\code{MatchedRefinement}, \code{MatchedRun}, \code{MatchedRun.realizes};
+\code{YangMills/WilsonProof/Construction.lean}:
+\code{refinementOnPublishedRun}, \code{matchedRun};
+\code{YangMills/WilsonProof/MeasuredExpansions.lean}.
+
+\item[\src{F}] \textbf{Labels, conversions, and the beta coefficient.}
+\code{FormalConversion.lean}:
+\code{oneLoopBeta}, \code{Conversion},
+\code{Conversion.correlation}, \code{Conversion.ope}.
+
+\item[\src{G}] \textbf{Numerical graph reference.}
+\code{YangMills/PerturbativeMatching/GraphCoefficients.lean}:
+\code{msbarCorrelationForm}, \code{graphCorrelation};
+\code{YangMills/PerturbativeMatching/Reference.lean}:
+\code{msbarCoefficients}, \code{Reference}, \code{Reference.scheme_unique};
+\code{YangMills/WilsonProof/ReferenceElection.lean}.
+
+\item[\src{D}] \textbf{Graph rules and subtraction.}
+\code{YM/MS/Motif/Receipt.lean};
+\code{YM/MS/Graphical/Diagram.lean};
+\code{YM/MS/Graphical/Enumeration.lean};
+\code{YM/MS/Graphical/Lines.lean};
+\code{YM/MS/Graphical/Block.lean};
+\code{YM/MS/Graphical/PricePin.lean};
+\code{YM/MS/Graphical/Panels.lean};
+\code{YM/MS/Puff/State.lean}.
+
+\item[\src{R}] \textbf{Regulator-limit theorems.}
+\code{YM/Integration/WilsonGraphPublicForestLimits.lean};
+\code{YM/Integration/WilsonGraphNamedGraphForestLimits.lean}.
+
+\item[\src{B}] \textbf{Classical input and graph/flow bridges.}
+Proof-bearing modules under
+\code{YangMills/WilsonProof/NativeSupport/YM/MS/}:
+\code{Motif/Pulp.lean}, \code{Motif/Receipt.lean},
+\code{Motif/Warp.lean}, \code{Motif/Sync.lean},
+\code{Dock/Recipes.lean}, \code{Mach/Land.lean},
+\code{Graphical/Lines.lean}, \code{Graphical/Block.lean},
+\code{Graphical/Leading.lean}, \code{Graphical/Panels.lean}.
+Also \code{YM/MS/Dock/Earn.lean}, \code{YM/MS/Dock/Make.lean},
+\code{YM/MS/Dock/Cream.lean}, \code{YM/MS/Swirl/LandLine.lean},
+\code{YM/MS/Graphical/CommonGates.lean}, and
+\code{YM/Integration/FVA1Physical/Exchange/CalibratedExpansionExternalMSRecursion.lean}.
+The prefix matters: several shorter \code{YM/MS/} modules supply
+definitions, while the \code{NativeSupport/} modules extend the same
+namespaces with the proof theorems cited here.
+
+\item[\src{K}] \textbf{Ghost fields and classical source dictionary.}
+\code{YM/MS/Landau.lean}; \code{YM/MS/Properties.lean};
+\code{YM/MS/Swirl/LandLine.lean}; \code{YM/MS/Motif/Pulp.lean};
+\code{YM/MS/Halo/Task.lean}: \code{Halo.Surf.reach};
+\code{YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean}:
+\code{cape_tick}; the \code{Motif/Pulp.lean} and
+\code{Motif/Warp.lean} proof modules under the same prefix.
+Our separate file is \code{checks/matching/GhostConventionCheck.lean}
+in the verification repository.
+
+\item[\src{S}] \textbf{Poles and finite regulator terms.}
+\code{YM/MS/ScaleForest/Bubbles.lean}: \code{TwoPoint.poleK},
+\code{TwoPoint.ghost_bill};
+\code{YM/MS/ScaleForest/SternGroup.lean}: \code{Triangle.ghost_input};
+\code{YM/MS/ScaleForest/TestScale.lean}: \code{Triangle.premature},
+\code{Triangle.DScaleJet};
+\code{YM/MS/ScaleForest/PageOne.lean}: \code{simple_finite},
+\code{simple_pole_rule}; \code{YM/MS/ScaleForest/Entry.lean}:
+\code{final_including}; \code{YM/MS/ScaleForest/QuarticRule.lean}:
+\code{sums_angles}; \code{YM/MS/ScaleForest/TwoVertices.lean}:
+\code{twoVertex_laurent}; \code{YM/MS/ScaleForest/HeatScale.lean}:
+\code{halfP_components}; \code{YM/MS/Image/Seat.lean}:
+\code{Outlook.four}; \code{Pearl/Broach.lean} under the
+\code{NativeSupport/YM/MS/} prefix in [B]: \code{Pearl.chosen}.
+Our files under \code{checks/matching/} are \code{CountertermAudit.lean}
+(type and axiom inspection) and \code{GhostLoopBenchmark.lean}
+(reference calculation and graph comparisons).
+
+\item[\src{N}] \textbf{Normalization and measured fields.}
+\code{MSPositionScreens.lean}; \code{MSPositionPrescription.lean};
+\code{MSConversion.lean};
+\code{YangMills/PerturbativeMatching/Calibration.lean};
+\code{YangMills/PerturbativeMatching/PositionFrame.lean};
+\code{YangMills/PerturbativeMatching/Measurement.lean}.
+
+\item[\src{C}] \textbf{The cubic diagnostic.}
+\code{MSPositionLabels.lean}:
+\code{cubicValue}, \code{quadraticValue}, \code{Triangle},
+\code{Triangle.RawSlopeAgrees};
+\code{MSPositionCubic.lean}: \code{bareTriangle}.
+
+\item[\src{A}] \textbf{Exact asymptotic requirements.}
+\code{YangMills/PerturbativeMatching/Asymptotics.lean};
+\code{YangMills/PerturbativeMatching/Correlations.lean};
+\code{YangMills/PerturbativeMatching/OperatorProducts.lean}.
+
+\item[\src{V}] \textbf{Lattice and volume connections.}
+\code{YangMills/PerturbativeMatching/NativeLattice.lean};
+\code{YangMills/PerturbativeMatching/VolumeLimits.lean}:
+\code{SmoothMeshLimit}, \code{HasTestLimits}, \code{RepresentsTestLimits}.
+
+\item[\src{P}] \textbf{Native expansion and its public identification.}
+\code{YM/SignedWilsonExpansion/Result/Orders.lean}:
+\code{LinePrices}, \code{ConferencePowers}, \code{pricedLines};
+\code{YangMills/WilsonProof/NativeSupport/ContinuumConstruction/StandaloneCorrelation.lean};
+\code{YM/Integration/WilsonGraphMeasuredCompactCorrelation.lean}:
+\code{publicMixedPolynomial}, \code{publicMixedCompact}.
+
+\item[\src{E}] \textbf{Equality of the calibrated graph and Wilson coefficients.}
+\code{YM/MS/Graphical/CommonGates.lean};
+\code{YM/Integration/FVA1Physical/Exchange/CalibratedExpansionCommonCalibratedGates.lean}:
+\code{original_calibrated_gate_of_team},
+\code{original_filed_calibrated_gates}.
+
+\item[\src{J}] \textbf{Derivatives and the correlation assembly.}
+\code{YM/Integration/WilsonGraphCompactCoordinateJets.lean};
+\code{YM/Integration/WilsonGraphAppointedStationaryPrices.lean};
+\code{YM/Integration/WilsonGraphAppointedMixedShapeJets.lean};
+\code{YM/Integration/WilsonGraphAppointedPhysicalShapePrice.lean};
+\code{YM/Integration/WilsonGraphPublishedShapeEstimate.lean};
+\code{YM/Integration/WilsonGraphNamedCorrelationEstimates.lean};
+\code{YangMills/WilsonProof/NativeSupport/CorrelationMatching/Construction/Estimates.lean}.
+
+\item[\src{H}] \textbf{Phase proximity.}
+\code{YM/OPE/Short/Gap.lean};
+\code{YM/PhysMS/Foundation/Readout.lean};
+\code{YM/PhysMS/Foundation/Estimates.lean};
+\code{YM/PhysMS/Frame/Phases.lean}.
+
+\item[\src{O}] \textbf{Reference OPE and uniqueness.}
+\code{MSOrdinaryOPE.lean};
+\code{YangMills/WilsonProof/NativeSupport/IssuedMaxwell/GraphOnlyPrice.lean};
+\code{YangMills/WilsonProof/NativeSupport/IssuedMaxwell/GraphOrdinary.lean};
+\code{YangMills/WilsonProof/NativeSupport/ContinuumConstruction/GroupOrdinaryTarget.lean}.
+
+\item[\src{Q}] \textbf{Full physical OPE output estimates.}
+\code{YM/Integration/WilsonFlashOnThePublishedBasisRows.lean};
+\code{YM/Integration/WilsonFlashRoundedOnTheElectedWindow.lean};
+\code{YM/Integration/WilsonFlashOnBothPublishedRows.lean};
+\code{YangMills/WilsonProof/NativeSupport/CommissionedPublic/AppointedRoundedReader.lean};
+\code{YM/Integration/WilsonGraphAppointedOrdinaryTestedExpansion.lean};
+\code{YangMills/WilsonProof/NativeSupport/WilsonFlashScoredOrdinaryEstimates.lean}.
+
+\item[\src{W}] \textbf{Stress normalization and matching.}
+\code{YangMills/PerturbativeMatching/WardIdentities.lean}:
+\code{WardStress.Determined};
+\code{YangMills/PerturbativeMatching/Correlations.lean}:
+\code{CorrelationExpansion.stressExpansion};
+\code{YangMills/WilsonProof/NativeSupport/WilsonFlashScoredGroupReference.lean}.
+
+\item[\src{Z}] \textbf{Verification records.}
+Under \code{work/ym-nov4-verification/evidence}:
+\code{matching-comparator.json}, \code{matching-comparator.log},
+\code{patched-matching-comparator.json}, \code{patched-matching-comparator.log},
+\code{matching-axioms.json}, \code{matching-axioms.log}.
+The word ``patched'' in the record names identifies the repeat with the
+newer upstream checker; it does not indicate an edited mathematical
+Matching target.
+\end{description}
+
+\clearpage
+\section{Explicit finite ghost-loop calculation}
+\label{app:finite-ghost}
+
+This appendix computes the finite constants from the submission's
+Gaussian and Mellin prescription. It provides a more direct comparison
+than first identifying the entire graph with a dressed two-propagator
+integral. The resulting answer agrees with the independent
+$\MS$ expression in~\eqref{eq:ghost-loop-benchmark}, including both
+finite constants. \emph{The full comparison is now proved in Lean and
+has passed Comparator.} The file
+\code{checks/matching/GhostLoopFiniteEvaluation.lean}
+proves the ordinary source evaluation, the scalar radial integrals,
+the polynomial identities, and the exact parameter integrals used
+below. The subsequent modules connect the actual sector contractions,
+\code{closeG} integral and regulator derivative to this calculation.
+They then determine the finite amplitude from its scale derivative
+and ultraviolet boundary and prove its infrared limit. We first give
+the analytic calculation, then explain the precise route taken by
+the completed Lean proof.
+
+\subsection{The force before the scale integration}
+
+Let $C=C_A\delta^{ab}$, and initially choose units with $p^2=1$.
+Write $u=\delta_{\mu\nu}$ and $v=p_\mu p_\nu$. All formulas retain
+the sign of~\eqref{eq:ghost-loop-integral} and omit the overall
+coupling factor $g^2$. Put $D=4+2z$, so that $z=-\varepsilon$.
+The force $W(z)$ is \code{TwoPoint.ratePair G true true}, evaluated
+on the external two-gauge-field word at momentum $\lambda p$.
+
+At $z=0$, \code{submitted_force_four} identifies the actual submitted
+force, for every diagonal tensor component, with $-8C$ times the
+integral of \code{SquareShift.heatValue} over $0\le t\le1$.
+This uses \code{log_rate}, \code{ghostTensor}, \code{from_integral},
+and \code{payment_line}. The factor includes both ghost orientations
+and the source's contraction conventions; it is not an additional
+choice of a loop sign. The polynomial before Gaussian integration is
+\[
+ q^2(q+\lambda p)^2(q+\lambda p)_\mu q_\nu.
+\]
+The two powers of squared momentum come from the differentiated heat
+lines. They disappear only after the scale integrations; omitting them
+at this stage would change the calculation.
+
+Complete the square and change variables by
+\[
+ x=\frac{t^2}{1+t^2},\qquad r=1-x,\qquad
+ 0\le x\le\tfrac12,\qquad \nu=1+t^2=r^{-1}.
+\]
+The Gaussian covariance is $\sigma=r/2$, and the two momentum shifts
+are $-x\lambda p$ and $r\lambda p$. The continued expression obtained
+from the split-radial integral is
+\begin{equation}\label{eq:continued-force-explicit}
+ W(z;\lambda p)=-\frac{4C}{(4\pi)^{2+z}}
+  \int_0^{1/2}x r^{z-1}e^{-x\lambda^2}
+   \bigl(a_D+b_D\lambda^2+c_D\lambda^4+d_D\lambda^6\bigr)\,dx.
+\end{equation}
+The derivation of its dimensional dependence is given next; agreement
+with the ordinary four-dimensional expression alone would not establish
+this equation or its regulator derivative.
+
+\subsection{Why the split radial integral gives these moments}
+
+In the physical external sector, \code{closeG} integrates a
+four-dimensional momentum $q$ and an auxiliary radial coordinate $R$.
+Its factors \code{gage 0}, \code{pruning 1}, and \code{feeD} give,
+for an even smooth radial function, the normalized operation
+\begin{equation}\label{eq:radial-functional}
+ \mathcal D_z f=-\frac1{\Gamma(1+z)}
+          \int_0^\infty R^{2z} f'(R)\,dR,
+\end{equation}
+together with $(2\pi)^{-4}(4\pi)^{-z}$ and the ordinary $q$ integral.
+Indeed, \code{gage 0} is $-1$ and
+\code{pruning 1} applied to $f$ is $f'(R)/R$ for $R>0$; the latter follows by
+integrating the second derivative and using $f'(0)=0$.
+The defining exponent in \code{closeG} is $R^{2z+1}$.
+
+There is no separate continued polarization trace for this graph.
+Our \code{ghost_vector_line_zero} proves that the selected ghost line
+vanishes on two vector legs in every test sector.
+\code{ghost_yeast_zero} and \code{ghost_innerTrace_no_explicit_z}
+therefore remove the explicit $2(z-m)$ times \code{yeast} term in
+\code{innerTrace}. Our \code{ghost_loopCarpet_regulator} and
+\code{ghost_closeG_physical} also prove that the actual closure uses
+the fixed radial function at $z=0$, weighted by $R^{2z+1}$ and
+\code{feeD}. Regulator dependence still enters through
+\eqref{eq:radial-functional}; removing the polarization term does not
+make $W$ independent of $z$.
+
+For $\operatorname{Re}z>-1$ the three radial moments are
+\begin{align}
+ \mathcal D_z(e^{-\nu R^2})&=\nu^{-z},\nonumber\\
+ \mathcal D_z(R^2e^{-\nu R^2})&=z\nu^{-z-1},\label{eq:three-radial-moments}\\
+ \mathcal D_z(R^4e^{-\nu R^2})&=z(z+1)\nu^{-z-2}.\nonumber
+\end{align}
+They follow by differentiating the displayed functions, substituting
+$w=\nu R^2$, and applying the Gamma recurrence. Our three
+\code{normalized_radial} lemmas prove these scalar integral
+expressions for real $z>-1$, including a neighborhood of zero.
+Their identification with the actual source integral is proved in
+\code{GhostLoopContinuation.lean}; the source analytic germ then fixes
+the complex jet in \code{GhostLoopJet.lean}.
+
+Here is an explicit check that this continuation gives the expected
+Gaussian polynomial. Let $M_D$ denote the moment of
+\[
+ |X+ap|^2|X+bp|^2(X+bp)_\mu(X+ap)_\nu
+\]
+for integer $D$ and an isotropic Gaussian of covariance $\sigma$,
+with $p^2=Q$, then continue the resulting polynomial in $D$. The polynomial \code{momentD} is obtained by Wick
+contraction. Its $D=4$ value is exactly the submission's
+\code{pairValue}, as proved by \code{moment_four}.
+Before integrating $R$, the ordinary Gaussian moment is
+$M_4+R^2E_1+R^4E_2$, where
+\begin{align*}
+ E_1={}&u\bigl(12\sigma^2+(a^2+b^2)Q\sigma\bigr)\\
+ &+v\bigl(2(a+b)^2\sigma+ab(8\sigma+(a^2+b^2)Q)\bigr),\\
+ E_2={}&\sigma u+abv.
+\end{align*}
+The factors of $R^2$ enter only the two squared momenta, because
+the external indices and momenta lie in the physical plane.
+Equation~\eqref{eq:three-radial-moments}, with $\nu^{-1}=2\sigma$,
+then gives
+\[
+ M_{4+2z}=M_4+2z\sigma E_1+4z(z+1)\sigma^2E_2.
+\]
+\code{split_radial_polynomial} proves this polynomial identity.
+Thus the dimension-dependent moment is obtained by evaluating the
+source's radial prescription, rather than interpolating its values
+at integer dimensions.
+
+For this Gaussian integrand the required interchanges have elementary
+bounds. Near $R=0$ the differentiated even polynomial times a Gaussian
+is $O(R)$, so $R^{2z}f'(R)$ and its first $z$ derivative are integrable
+uniformly on compact subsets of $\operatorname{Re}z>-1$.
+At infinity the Gaussian controls every polynomial and logarithm.
+The $t$ integration is over $[0,1]$ with $\nu\ge1$ and a $t^3$
+factor. These bounds justify the Gaussian and radial integrations
+and differentiation at zero in the analytic calculation.
+The corresponding source contraction, measure maps and integral
+exchanges are formalized in \code{GhostLoopTrace.lean},
+\code{GhostLoopRadial.lean} and \code{GhostLoopContinuation.lean}.
+The first regulator derivative is obtained from the resulting compact
+parameter integral in \code{GhostLoopJet.lean}.
+
+\subsection{The coefficients and the local regulator jet}
+
+Expand $M_D$ using $Q=1$, $a=-x\lambda$, $b=r\lambda$,
+and $\sigma=r/2$. The coefficients in
+\eqref{eq:continued-force-explicit} at $D=4$, and their derivatives
+with respect to $z$ through $D=4+2z$, are as follows. Each column
+is the coefficient of the indicated tensor structure.
+\begin{center}
+\begin{tabular}{c|c|c}
+ & $u$ & $v$\\ \hline
+$a$ & $6r^3$ & $0$\\
+$b$ & $\frac{r^2}{2}(3-8x+8x^2)$ & $r^2(3-20x+20x^2)$\\
+$c$ & $\frac{x^2r^3}{2}$ & $-xr^2(3-10x+10x^2)$\\
+$d$ & $0$ & $-x^3r^3$\\
+$a'$ & $\frac72r^3$ & $0$\\
+$b'$ & $\frac{r^2}{2}(1-2x+2x^2)$ & $r^2(1-9x+9x^2)$
+\end{tabular}
+\end{center}
+The declarations \code{coeffA}, \code{coeffB}, \code{coeffC}, and
+\code{coeffD} give the polynomials at general $D$.
+\code{moment_expansion} verifies the expansion and
+\code{local_taylor_derivative} verifies $b'-xa'$.
+
+The quadratic Taylor coefficient of the exponential times the
+polynomial is $b_D-xa_D$. Since
+$T(z)=-\tfrac12\operatorname{Tad}_4W(z)$, differentiating
+\eqref{eq:continued-force-explicit} gives
+\begin{equation}\label{eq:ghost-jet-explicit}
+ T'(0;p)=C R_{\mu\nu}(p)
+                 \left(\frac{11}{24}+\log(2\pi)\right).
+\end{equation}
+For example the $u$ channel at $p^2=1$, after factoring out
+$C/(16\pi^2)$, is
+\[
+ \int_0^{1/2}\!\left\{J(x)+W_\ell(x)
+                 [\log(1-x)-\log(4\pi)]\right\}dx,
+\]
+where $J=xr(1-9xr)$ and $W_\ell=xr(3-20xr)$.
+The three needed integrals are
+\[
+ \int_0^{1/2}J=-\frac1{15},\qquad
+ \int_0^{1/2}W_\ell=-\frac1{12},\qquad
+ \int_0^{1/2}W_\ell\log(1-x)
+                  =\frac{151}{1440}-\frac{\log2}{12}.
+\]
+Our \code{regulator_jet_parameter} proves their combination is
+$11/288+\log(2\pi)/12$. The $v$ channel is twice the $u$ channel.
+The Lean theorem \code{GhostJet.submitted_regulator_jet_test}
+proves \code{SubmittedRegulatorJetTest}, namely
+\eqref{eq:ghost-jet-explicit} for the actual
+\code{ruby (highTensor 4 ratePair) 1}. This is a source-level equality,
+proved using the continued radial integral and the analytic germ;
+it is not a hypothesis of the final finite-part theorem.
+
+\subsection{The Mellin finite part and removal of the infrared cutoff}
+
+For this external word, the scale integral has weight
+$\lambda^{-3-2z}d\lambda$. At a fixed $x$, its continued value is
+\begin{equation}\label{eq:ghost-mellin-polynomial}
+ \frac12\left[
+ a_Dx^{1+z}\Gamma(-1-z)+b_Dx^z\Gamma(-z)
+ +c_Dx^{-1+z}\Gamma(1-z)+d_Dx^{-2+z}\Gamma(2-z)\right].
+\end{equation}
+This is \emph{not} an ordinary convergent integral at $z=0$.
+One subtracts the constant and quadratic Taylor terms at
+$\lambda=0$, integrates the remainder, and adds the corresponding
+meromorphic elementary integrals. This is precisely the decomposition
+into \code{ordinary} and $z^{-1}$ times \code{highTensor} used in
+\code{PageOne.one_loop_germ}.
+With the four coefficients held at their $z=0$ values, the finite
+part of~\eqref{eq:ghost-mellin-polynomial} is
+\[
+ \tfrac12\left[
+ ax(\gamma_E-1+\log x)-b(\gamma_E+\log x)+c/x+d/x^2\right].
+\]
+The derivatives $a',b'$ also contribute through the two pole terms;
+they must not be discarded.
+
+The infrared removal can be done in this same representation.
+For fixed $p\ne0$, equation~\eqref{eq:continued-force-explicit}
+and the table give $W(0;\lambda p)=O(\lambda^{-2})$ as
+$\lambda\to\infty$. For instance the term with $b\lambda^2$
+is bounded by a constant times
+$\lambda^2\int_0^\infty x e^{-c\lambda^2x}dx=O(\lambda^{-2})$;
+the other terms obey the same or a stronger bound. Here $c=p^2>0$.
+The bound also holds uniformly for the regulator in a small compact
+neighborhood of zero, since $1/2\le r\le1$.
+Consequently the upper Mellin tail is $O(\rho^{-4})$ at $z=0$.
+
+More explicitly, write $A_0=W(0;0)$ and let $A_2(p)$ be the
+coefficient of $\lambda^2$ in $W(0;\lambda p)$. Then
+$A_2=-2T(0)$, and the source's regular part is
+\[
+ \mathcal R_{\log\rho}(p)=
+  \int_0^\rho\!\frac{W(0;\lambda p)-A_0-\lambda^2A_2(p)}{\lambda^3}
+          \,d\lambda-\frac{A_0}{2\rho^2}.
+\]
+The logarithm from the subtracted quadratic term is canceled by
+$-2\log\rho\,T(0)$ in~\eqref{eq:retained-ghost-finite}.
+After cancellation, differentiating the finite expression with
+respect to $\log\rho$ gives $\rho^{-2}W(0;\rho p)$.
+Its integrable tail proves convergence and the stated error estimate.
+This also explains why pointwise convergence of a propagator was
+insufficient on its own: the Taylor subtractions and their finite
+regulator term must be carried through the limit.
+
+At $\bar\mu=1$ and $p^2=1$, combining the Mellin finite part,
+$T'(0)$, and $y=(\gamma_E-\log(4\pi))/2$ cancels $\gamma_E$
+and $\log(4\pi)$. The remaining integrand, before $C/(16\pi^2)$,
+is
+\[
+ \frac{2x}{r}\left[xa+b'-xa'-c/x-d/x^2
+                       +(b-xa)\{\log x+\log r\}\right].
+\]
+\code{finite_integrand_reduction} identifies it with
+\[
+ u\{P_\delta+W_\ell\log(xr)\}
+   +v\{P_p+2W_\ell\log(xr)\},
+\]
+where $P_\delta=xr(1+2xr)$ and $P_p=2xr(4-18xr)$.
+Each combined integrand is symmetric under $x\mapsto1-x$.
+Exact elementary integrals give
+\[
+ \int_0^1P_\delta=\frac7{30},\quad
+ \int_0^1P_p=\frac2{15},\quad
+ \int_0^1W_\ell\log x=\frac{19}{180}.
+\]
+Thus the two half-interval values are
+\begin{equation}\label{eq:finite-ghost-constants}
+ \frac7{60}+\frac{19}{180}=\frac29
+       =\frac1{12}\frac83,\qquad
+ \frac1{15}+\frac{19}{90}=\frac5{18}
+       =\frac16\frac53.
+\end{equation}
+These are exact Lean integral equalities
+\code{finite_delta_half} and \code{finite_pair_half}, not numerical
+quadrature. The endpoint logarithms are handled through continuous
+$x^n\log x$ and an endpoint-safe primitive.
+
+Momentum rescaling restores $p^2$ and changes the logarithm to
+$-\log p^2$. Adding the already proved renormalization-scale change
+then gives the full analytic answer
+\begin{equation}\label{eq:finite-ghost-answer}
+ B^{ab}_{\mu\nu,\MS}(p)=\frac{C_A\delta^{ab}}{16\pi^2}
+ \left[
+ \frac{\delta_{\mu\nu}p^2}{12}
+       \left(\log\frac{\bar\mu^2}{p^2}+\frac83\right)
+ +\frac{p_\mu p_\nu}{6}
+       \left(\log\frac{\bar\mu^2}{p^2}+\frac53\right)
+ \right],\qquad p^2>0.
+\end{equation}
+It agrees with the independent Gamma-function benchmark and the
+finite constants in the cited calculation of Rodigast.
+
+\subsection{How the Lean proof fixes the finite amplitude}
+\label{sec:finite-proof}
+
+The formal proof does not require exchanging a regulator derivative
+with the full improper scale integral. It first evaluates the continued
+force and its local Taylor coefficient, then solves the scale equation
+at $z=0$ with the source's ultraviolet boundary condition. This route
+keeps the subtraction constant visible and proves an equality at every
+retained infrared cutoff, before taking its limit.
+
+For a diagonal component at $p^2=1$, put $v=p_i^2$ and $X=\rho^2$.
+The actual source force is
+\[
+ W(0;\rho p)=-\frac{4C}{16\pi^2} f_v(X),
+\]
+where the compact parameter integral evaluates to
+\begin{align*}
+ f_v(X)={}&e^{-X/2}\left[
+ \frac{2-8v}{X^2}+\frac{-1/2-v}{X}-\frac5{32}+\frac v2
+ +\left(-\frac1{64}+\frac v8\right)X+\frac v{64}X^2\right]\\
+ &+\frac{-2+8v}{X^2}+\frac{3/2-3v}{X}.
+\end{align*}
+The theorem \code{GhostInfrared.submitted_force_unit} proves this
+identity for the submitted \code{ratePair}; it is not a new definition
+of that force.
+
+Define $k_v=(1+2v)/48$ and the explicit primitive
+\begin{align*}
+ P_v(X)={}&e^{-X/2}\left[
+ \frac{-1+4v}{3X^3}+\frac{5/24-v/12}{X^2}
+ +\frac{-5/192-5v/24}{X}-\frac v{64}\right]\\
+ &-\frac{-1+4v}{3X^3}+\frac{-3/8+3v/4}{X^2}
+       +k_v E_1(X/2),
+\end{align*}
+where $E_1$ is the usual exponential tail. In Lean it is represented by
+\[
+ E_1(X)=-\gamma_E-\int_0^X\log t\,e^{-t}\,dt-e^{-X}\log X
+ \qquad(X>0).
+\]
+The integral over $(0,\infty)$ of $\log t\,e^{-t}$ is proved to be
+$-\gamma_E$ using the derivative of the Gamma function. The derivative
+and both endpoint limits of $P_v$ are then established:
+\begin{align*}
+ P_v'(X)&=\frac{f_v(X)}{2X^2},\qquad
+ \lim_{X\to\infty}P_v(X)=0,\\
+ \lim_{X\downarrow0}\left(P_v(X)+\frac{11}{64X}+k_v\log X\right)
+ &=c_v:=\frac{53}{1152}+\frac{29v}{576}
+                     +k_v(\log2-\gamma_E).
+\end{align*}
+The small-$X$ limit uses a controlled Taylor remainder for the
+exponential; none of these constants is inferred from numerical data.
+
+On the source side, \code{GhostFlow.finite_derivative} differentiates
+\eqref{eq:retained-ghost-finite} with respect to $s=\log\rho$.
+The quadratic Taylor subtraction cancels the explicit logarithmic
+term, leaving $e^{-2s}W(0;e^sp)$. The separate theorem
+\code{ordinary_boundary} proves the ultraviolet normalization
+\[
+ \mathcal R_s(p)-\frac{11C}{16(16\pi^2)}e^{-2s}\longrightarrow0
+ \qquad(s\to-\infty).
+\]
+Together with the small-$X$ expansion, this fixes the integration
+constant. Equality of derivatives and this boundary value give the
+exact identity \code{GhostUnit.finite_unit_exact}:
+\begin{equation}\label{eq:finite-cutoff-primitive}
+ B_s(y;p)=-\frac{4C}{16\pi^2}P_v(e^{2s})
+          +\frac{4C}{16\pi^2}c_v+T'(0;p)-2yT(0;p).
+\end{equation}
+The large-$X$ limit removes the first term. Inserting the proved
+regulator jet and the prescribed $\MS$ scale gives the two constants
+in~\eqref{eq:finite-ghost-answer}.
+
+The remaining quantifiers are also proved. Rotational covariance
+recovers all tensor components from the two diagonal probes. The exact
+scaling law
+\[
+ B_s(y;xp)=x^2 B_{s+\log x}(y-\log x;p),\qquad x>0,
+\]
+reduces any $p^2>0$ to unit momentum and produces $\log(\bar\mu^2/p^2)$.
+The color contraction is identified with $C_A\delta^{ab}$ using the
+submission's simple-gauge-group identity. Finally the previously
+proved finite-reader bridge replaces $B_s$ with the actual
+\code{Outlook.four} value in the frozen target.
+
+\subsection{Proof files and verification records}
+
+All proof files below are in \code{checks/matching/}. The names in the
+second column are declarations to start reading, with namespace
+prefixes omitted where the file supplies them.
+\begin{longtable}{@{}p{0.31\linewidth}p{0.65\linewidth}@{}}
+\toprule
+File & Role in the completed proof\\\midrule\endhead
+\code{GhostLoopBenchmark.lean} & Independent finite reference, actual
+reader, pole and scale checks; definition of
+\code{SubmittedFinitePartTest}.\\
+\code{GhostLoopTrace.lean} & Actual ghost contractions in all auxiliary
+sectors: \code{trace_value} and \code{inside_loop}.\\
+\code{GhostLoopRadial.lean} & Sector lifts, Gaussian moments and justified
+integral exchanges: \code{actual_carpet_evaluated}.\\
+\code{GhostLoopContinuation.lean} & Continued radial measure and actual
+source force: \code{actual_force_real}, \code{actual_force_scaled}.\\
+\code{GhostLoopJet.lean} & First regulator derivative of the actual local
+term: \code{submitted_regulator_jet_test}.\\
+\code{GhostLoopInfrared.lean} & Explicit physical force:
+\code{submitted_force_unit}.\\
+\code{GhostLoopMellin.lean} & Logarithmic exponential integral, tail
+derivative and endpoint limits.\\
+\code{GhostLoopPrimitive.lean} & Primitive derivative and the two
+endpoint limits \code{primitive_small}, \code{primitive_large}.\\
+\code{GhostLoopFlow.lean} & Submitted scale derivative and ultraviolet
+normalization: \code{finite_derivative}, \code{ordinary_boundary}.\\
+\code{GhostLoopUnit.lean} & Equality at every cutoff and its limit:
+\code{finite_unit_exact}, \code{finite_unit_limit}.\\
+\code{GhostLoopTensor.lean} & Tensor covariance and momentum scaling:
+\code{unit_tensor}, \code{finite_scale_word}.\\
+\code{GhostLoopSolution.lean} & All nonzero momenta and the complete
+acceptance theorem \code{GhostSolution.acceptance}.\\
+\bottomrule
+\end{longtable}
+The earlier \code{GhostConventionCheck.lean} and
+\code{GhostLoopFiniteEvaluation.lean} supply the vertex conventions
+and elementary integrals; \code{GhostFiniteAudit.lean} prints the
+final theorem and seven principal axiom reports.
+
+On 13 November, all 15 review modules compiled in a fresh overlay
+against the pinned, already-built November source. The seven principal
+reports listed only \code{propext}, \code{Classical.choice} and
+\code{Quot.sound}. One review-code warning suggested a simpler tactic
+sequence; there were no build errors. The source files and logs are
+hashed in \code{evidence/matching/ghost-finite-build.json}.
+
+\Needspace{6\baselineskip}
+The subsequent Comparator run checked
+\begin{quote}
+\code{YMReview.NovemberMatching.GhostSolution.acceptance (G : YM.Gauge)}\par
+\code{: YMReview.NovemberMatching.GhostLoop.SubmittedFinitePartTest G}.
+\end{quote}
+The reference imports the benchmark, not the solution. There are no
+definition holes. Comparator exported and rechecked the proof,
+reported that Lean's default kernel accepted it, and finished with
+\texttt{Your solution is okay!} in about 147 seconds. All 37,673
+submission files were checked against the pinned manifest before and
+after the run, as were the frozen review inputs. The run uses Comparator
+revision \code{d03acab154d269c06e60e4de7e4cc85deebff94b} and the Lean
+4.34.0 checking kernel, exporting the proof from Lean 4.32.0.
+The full log, configuration and stability records are retained under
+\code{evidence/matching/ghost-finite-comparator/}; reproduction commands
+are in \code{docs/matching/ghost-finite-check.md}.
+
+This was a macOS development-mode run with the upstream
+\code{fake-landrun.sh} launcher. It did not provide Linux sandbox
+isolation, the optional second kernel, or a Palomar check. The reference's
+intentional theorem placeholder produces a \code{sorry} warning while
+building the challenge; the exported solution and the audited final
+theorem do not depend on \code{sorryAx}. The log also replays warnings
+from the already-built submitted modules.
+
+\subsection{Scope of the conclusion}
+
+The full finite-value test passes without a finite-part hypothesis.
+It checks a concrete contribution beyond its pole or the coefficient
+of its scale logarithm, including the finite effect of the regulator
+derivative. It does not validate every graph, composite insertion,
+or complete gauge-invariant correlation. The conventional integral's
+reduction to the independent Gamma expression in Section~3.5 is still
+a human calculation; the formal theorem identifies the actual source
+graph with the explicit finite expression stated there. Thus it is
+substantial evidence for the finite subtraction conventions in this
+example, while the physical coefficient tests I2--I4 and the wider
+matching review remain separate work.
+
+\end{document}

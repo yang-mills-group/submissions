@@ -1,0 +1,207 @@
+{
+  "prepared_utc": "2026-11-13T14:48:50.792292+00:00",
+  "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "project": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-comparator-20261113/project",
+  "review_modules": [
+    {
+      "module": "GhostConventionCheck",
+      "path": "GhostConventionCheck.lean",
+      "repository_source": "checks/matching/GhostConventionCheck.lean",
+      "sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7"
+    },
+    {
+      "module": "GhostLoopBenchmark",
+      "path": "GhostLoopBenchmark.lean",
+      "repository_source": "checks/matching/GhostLoopBenchmark.lean",
+      "sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8"
+    },
+    {
+      "module": "GhostLoopFiniteEvaluation",
+      "path": "GhostLoopFiniteEvaluation.lean",
+      "repository_source": "checks/matching/GhostLoopFiniteEvaluation.lean",
+      "sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33"
+    },
+    {
+      "module": "GhostLoopTrace",
+      "path": "GhostLoopTrace.lean",
+      "repository_source": "checks/matching/GhostLoopTrace.lean",
+      "sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de"
+    },
+    {
+      "module": "GhostLoopRadial",
+      "path": "GhostLoopRadial.lean",
+      "repository_source": "checks/matching/GhostLoopRadial.lean",
+      "sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60"
+    },
+    {
+      "module": "GhostLoopContinuation",
+      "path": "GhostLoopContinuation.lean",
+      "repository_source": "checks/matching/GhostLoopContinuation.lean",
+      "sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b"
+    },
+    {
+      "module": "GhostLoopJet",
+      "path": "GhostLoopJet.lean",
+      "repository_source": "checks/matching/GhostLoopJet.lean",
+      "sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36"
+    },
+    {
+      "module": "GhostLoopInfrared",
+      "path": "GhostLoopInfrared.lean",
+      "repository_source": "checks/matching/GhostLoopInfrared.lean",
+      "sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3"
+    },
+    {
+      "module": "GhostLoopMellin",
+      "path": "GhostLoopMellin.lean",
+      "repository_source": "checks/matching/GhostLoopMellin.lean",
+      "sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261"
+    },
+    {
+      "module": "GhostLoopPrimitive",
+      "path": "GhostLoopPrimitive.lean",
+      "repository_source": "checks/matching/GhostLoopPrimitive.lean",
+      "sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399"
+    },
+    {
+      "module": "GhostLoopFlow",
+      "path": "GhostLoopFlow.lean",
+      "repository_source": "checks/matching/GhostLoopFlow.lean",
+      "sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455"
+    },
+    {
+      "module": "GhostLoopUnit",
+      "path": "GhostLoopUnit.lean",
+      "repository_source": "checks/matching/GhostLoopUnit.lean",
+      "sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8"
+    },
+    {
+      "module": "GhostLoopTensor",
+      "path": "GhostLoopTensor.lean",
+      "repository_source": "checks/matching/GhostLoopTensor.lean",
+      "sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80"
+    },
+    {
+      "module": "GhostLoopSolution",
+      "path": "GhostLoopSolution.lean",
+      "repository_source": "checks/matching/GhostLoopSolution.lean",
+      "sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3"
+    },
+    {
+      "module": "GhostFiniteAudit",
+      "path": "GhostFiniteAudit.lean",
+      "repository_source": "checks/matching/GhostFiniteAudit.lean",
+      "sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9"
+    }
+  ],
+  "project_files": [
+    {
+      "path": "GhostConventionCheck.lean",
+      "sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7"
+    },
+    {
+      "path": "GhostFiniteAudit.lean",
+      "sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9"
+    },
+    {
+      "path": "GhostFiniteChallenge.lean",
+      "sha256": "98ed8f656641fdef4c5855b3c85e1ad1d07d6b5bd5b4b7cba7ac73078c0dcbc0"
+    },
+    {
+      "path": "GhostLoopBenchmark.lean",
+      "sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8"
+    },
+    {
+      "path": "GhostLoopContinuation.lean",
+      "sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b"
+    },
+    {
+      "path": "GhostLoopFiniteEvaluation.lean",
+      "sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33"
+    },
+    {
+      "path": "GhostLoopFlow.lean",
+      "sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455"
+    },
+    {
+      "path": "GhostLoopInfrared.lean",
+      "sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3"
+    },
+    {
+      "path": "GhostLoopJet.lean",
+      "sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36"
+    },
+    {
+      "path": "GhostLoopMellin.lean",
+      "sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261"
+    },
+    {
+      "path": "GhostLoopPrimitive.lean",
+      "sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399"
+    },
+    {
+      "path": "GhostLoopRadial.lean",
+      "sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60"
+    },
+    {
+      "path": "GhostLoopSolution.lean",
+      "sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3"
+    },
+    {
+      "path": "GhostLoopTensor.lean",
+      "sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80"
+    },
+    {
+      "path": "GhostLoopTrace.lean",
+      "sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de"
+    },
+    {
+      "path": "GhostLoopUnit.lean",
+      "sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8"
+    },
+    {
+      "path": "comparator.json",
+      "sha256": "281f19c8c6fa540feea17330c17540f05ab14eee1779a64cc311885d3f71e367"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "8f80d8419acfffd79b0daf029fb91adb44e4bde2759e567c8d5589993576197f"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "c6885665b4bdb67a2ac2adb490559f6aa9321908d2c3e562114fcb0e250ddbe0"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+    }
+  ],
+  "tools": [
+    {
+      "name": "comparator",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "binary_sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738"
+    },
+    {
+      "name": "lean4export",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export",
+      "binary_sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e"
+    }
+  ],
+  "target": "YMReview.NovemberMatching.GhostSolution.acceptance",
+  "target_predicate": "YMReview.NovemberMatching.GhostLoop.SubmittedFinitePartTest",
+  "audit_receipt_sha256": "9308737f3bc12796ef6af6b823f713d66993db2bfbe6fcd4852a6263c292dba7",
+  "submission_before": {
+    "files_checked": 37673,
+    "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+    "checked_utc": "2026-11-13T14:48:50.658628+00:00"
+  },
+  "submission_build_reused": true,
+  "project_build_initially_absent": true,
+  "definition_holes": [],
+  "mode": "macOS development; upstream fake-landrun; no optional second kernel"
+}

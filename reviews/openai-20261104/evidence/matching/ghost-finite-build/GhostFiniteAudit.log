@@ -1,0 +1,11 @@
+YMReview.NovemberMatching.GhostSolution.acceptance (G : YM.Gauge) :
+  YMReview.NovemberMatching.GhostLoop.SubmittedFinitePartTest G
+'YMReview.NovemberMatching.GhostSolution.acceptance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostUnit.finite_unit_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostSolution.nonzero_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostJet.submitted_regulator_jet_test' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostMellin.logExp_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostPrimitive.primitive_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostPrimitive.primitive_large' depends on axioms: [propext, Classical.choice, Quot.sound]

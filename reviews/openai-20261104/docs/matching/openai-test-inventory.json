@@ -1,0 +1,883 @@
+{
+  "source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "scope": "Review grouping of obligations in the public matching target; not separate executed tests.",
+  "groups": [
+    {
+      "id": "O01",
+      "title": "The specified microscopic theory",
+      "description_latex": "\\code{MatchedRun.lattice}, \\code{trajectory} and \\code{admissible}\nattach the witness to admissible Wilson data and native insertion coordinates.\nRead G04, G07 and G08 together; the lattice carrier alone is not the full test."
+    },
+    {
+      "id": "O02",
+      "title": "Full fixed-period ultraviolet convergence",
+      "description_latex": "\\code{meshLimit} and \\code{fixedPeriodLimits} identify one smooth\nperiod kernel with the full mesh sequence. All finite difference\nstencils, compact interpolation and suitable smearings are included (G09)."
+    },
+    {
+      "id": "O03",
+      "title": "The same hierarchy after the volume limit",
+      "description_latex": "\\code{MatchedRefinement.continuum} includes the lattice-limit,\nfield-space, phase, reconstruction, stress and ultraviolet laws.\n\\code{testLimits} represents any test table already convergent\non the requested sequence. It does not assert unconditional full-volume\nconvergence (G05--G07, G09)."
+    },
+    {
+      "id": "O04",
+      "title": "Actual physical OPE",
+      "description_latex": "\\code{singleCluster} and \\code{fusionTrees}, together with the\ncontinuum OPE and coefficient laws, give the physical single-cluster\nand nested expansions. The matching clauses below concern those\nsame physical coefficients, not an auxiliary fitted array."
+    },
+    {
+      "id": "O05",
+      "title": "A reference fixed by the gauge group",
+      "description_latex": "\\code{Reference.opeDetermined} and \\code{groupMenu_eq}\nfix the ordinary OPE and normalization menu from the group-only\ngraph reference. Reference uniqueness is proved (G10--G11, G21)."
+    },
+    {
+      "id": "O06",
+      "title": "The signed cubic coefficient",
+      "description_latex": "\\code{Calibration.signedSlope} requires\n\\code{Triangle.RawSlopeAgrees} for every admissible triangle.\nThis compares an explicit bare formula with the first connected\ngraph coefficient, including all proper-face Leibniz terms (G13--G14)."
+    },
+    {
+      "id": "O07",
+      "title": "Formal normalization and inverse transformations",
+      "description_latex": "\\code{Calibration.conversionValid} includes the raw normalization\nequations, vanishing free offset, nonzero signed slope, both inverse\ncoupling identities, both inverse field series and the factorization\nof the strictly lowering correction. It determines the conversion\ncoefficient by coefficient (G12, G15)."
+    },
+    {
+      "id": "O08",
+      "title": "Numerical normalization beyond formal jets",
+      "description_latex": "\\code{adjustmentValue} identifies the numerical correction with\n\\code{smoothAdjustment}. The \\code{NumericalAdjustment} laws impose\nits smoothness, asymptotic expansion, local invertibility, reality,\nunit and filtration properties (G16)."
+    },
+    {
+      "id": "O09",
+      "title": "Calibration on actual continuum observables",
+      "description_latex": "\\code{FrameCalibration} requires physical position normalization,\nlocal uniqueness, reality, unit and nesting, triangle integrability,\nthe exact measured-coupling equation, and the relation between the\nposition and measured frames (G17--G18)."
+    },
+    {
+      "id": "O10",
+      "title": "One coherent measured field system",
+      "description_latex": "\\code{Measurement} requires compatible fields across cutoffs,\nsigned-axis covariance, unit insertion in every phase, compatible\nfield inclusions and correlation multilinearity (G18)."
+    },
+    {
+      "id": "O11",
+      "title": "Positive coupling and the one-loop law",
+      "description_latex": "\\code{Measurement.coupling_pos} and \\code{oneLoop} require\n$g_X(r)>0$ eventually and\n$g_X(r)\\sqrt{2b_0\\log(1/r)}\\to1$.\n\\code{oneLoopBeta} computes $b_0$ from trace-normalized\ncommutators. This particular clause is a leading-log statement,\nnot a differential beta equation."
+    },
+    {
+      "id": "O12",
+      "title": "Free ultraviolet limit at all radii",
+      "description_latex": "\\code{scaling}, \\code{sampledFrame}, \\code{fixedFields},\n\\code{maxwellLimit} and \\code{frameBounds} connect the sampled\nMaxwell limit to the same measured fields at all small radii,\nwith the additional fixed-field and frame control (G24)."
+    },
+    {
+      "id": "O13",
+      "title": "All-order correlation matching and phase proximity",
+      "description_latex": "The first four fields of \\code{CorrelationExpansion} require\nthe smeared, compact and derivative expansions and the\n$r^\\gamma$ phase-difference estimate. They quantify over\narbitrary local labels and the stated phases (G19--G20).\nThe reference is common; neither the constants nor the expansion\nare required to converge as perturbative order grows."
+    },
+    {
+      "id": "O14",
+      "title": "All-order matching of every finite OPE output",
+      "description_latex": "\\code{channelBasis} and the three \\code{OPEExpansion} clauses\nrequire a full field-space basis and the smeared, norm and\nderivative comparisons after inverse output conversion (G22).\nThe physical output has no separately chosen phase argument."
+    },
+    {
+      "id": "O15",
+      "title": "Stress Ward normalization and physical identification",
+      "description_latex": "\\code{Reference.stressUnique} fixes a unique series satisfying\nall six \\code{WardStress.Determined} laws.\n\\code{CorrelationExpansion.stressExpansion} identifies the\nactual physical stress with that series (G20, G23)."
+    }
+  ],
+  "selected_structure_fields": [
+    {
+      "path": "YangMills/PerturbativeMatching.lean",
+      "declaration": "MatchedRun",
+      "line": 44,
+      "sha256": "651df8a1d59699550a7352e893082d57daae299e8d61ab7c60f84c37291e68ec",
+      "fields": [
+        {
+          "name": "reference",
+          "line": 45
+        },
+        {
+          "name": "lattice",
+          "line": 46
+        },
+        {
+          "name": "kernels",
+          "line": 47
+        },
+        {
+          "name": "trajectory",
+          "line": 48
+        },
+        {
+          "name": "admissible",
+          "line": 49
+        },
+        {
+          "name": "meshLimit",
+          "line": 50
+        },
+        {
+          "name": "fixedPeriodLimits",
+          "line": 51
+        },
+        {
+          "name": "refinement",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching.lean",
+      "declaration": "MatchedRefinement",
+      "line": 20,
+      "sha256": "651df8a1d59699550a7352e893082d57daae299e8d61ab7c60f84c37291e68ec",
+      "fields": [
+        {
+          "name": "continuum",
+          "line": 23
+        },
+        {
+          "name": "testLimits",
+          "line": 24
+        },
+        {
+          "name": "singleCluster",
+          "line": 25
+        },
+        {
+          "name": "fusionTrees",
+          "line": 26
+        },
+        {
+          "name": "measurement",
+          "line": 28
+        },
+        {
+          "name": "positionFrame",
+          "line": 29
+        },
+        {
+          "name": "calibration",
+          "line": 30
+        },
+        {
+          "name": "channelBasis",
+          "line": 31
+        },
+        {
+          "name": "scaling",
+          "line": 33
+        },
+        {
+          "name": "sampledFrame",
+          "line": 34
+        },
+        {
+          "name": "fixedFields",
+          "line": 35
+        },
+        {
+          "name": "maxwellLimit",
+          "line": 36
+        },
+        {
+          "name": "frameBounds",
+          "line": 37
+        },
+        {
+          "name": "correlations",
+          "line": 39
+        },
+        {
+          "name": "operatorProducts",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Reference.lean",
+      "declaration": "Reference",
+      "line": 35,
+      "sha256": "ddc92d6dccd75fa9d0890dd5236807b64f400912b5540d8e202179a6bce597b3",
+      "fields": [
+        {
+          "name": "opeDetermined",
+          "line": 36
+        },
+        {
+          "name": "scheme",
+          "line": 37
+        },
+        {
+          "name": "groupMenu_eq",
+          "line": 38
+        },
+        {
+          "name": "calibration",
+          "line": 39
+        },
+        {
+          "name": "stressUnique",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Calibration.lean",
+      "declaration": "PositionScheme",
+      "line": 22,
+      "sha256": "5b42de5dadd816459f835eb213e12457a6c025289ab268c36e9254735dca71e0",
+      "fields": [
+        {
+          "name": "prescription",
+          "line": 23
+        },
+        {
+          "name": "series",
+          "line": 24
+        },
+        {
+          "name": "adjustment",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Calibration.lean",
+      "declaration": "Calibration",
+      "line": 65,
+      "sha256": "5b42de5dadd816459f835eb213e12457a6c025289ab268c36e9254735dca71e0",
+      "fields": [
+        {
+          "name": "admissible",
+          "line": 67
+        },
+        {
+          "name": "signedSlope",
+          "line": 68
+        },
+        {
+          "name": "conversionValid",
+          "line": 70
+        },
+        {
+          "name": "adjustmentValue",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Measurement.lean",
+      "declaration": "Measurement",
+      "line": 21,
+      "sha256": "4b5360ddf1e779506be4ac647c3dcb0bc6d3d3385c18acc277b03468c03519ce",
+      "fields": [
+        {
+          "name": "coupling",
+          "line": 22
+        },
+        {
+          "name": "coupling_pos",
+          "line": 23
+        },
+        {
+          "name": "oneLoop",
+          "line": 24
+        },
+        {
+          "name": "frame",
+          "line": 26
+        },
+        {
+          "name": "frameCompatible",
+          "line": 27
+        },
+        {
+          "name": "frameEquivariant",
+          "line": 29
+        },
+        {
+          "name": "unitInsertion",
+          "line": 35
+        },
+        {
+          "name": "includeField",
+          "line": 40
+        },
+        {
+          "name": "label_includeField",
+          "line": 41
+        },
+        {
+          "name": "correlation_includeField",
+          "line": 43
+        },
+        {
+          "name": "correlationMultilinear",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Measurement.lean",
+      "declaration": "FrameCalibration",
+      "line": 60,
+      "sha256": "4b5360ddf1e779506be4ac647c3dcb0bc6d3d3385c18acc277b03468c03519ce",
+      "fields": [
+        {
+          "name": "normalized",
+          "line": 63
+        },
+        {
+          "name": "locallyUnique",
+          "line": 64
+        },
+        {
+          "name": "unit",
+          "line": 65
+        },
+        {
+          "name": "nested",
+          "line": 66
+        },
+        {
+          "name": "real",
+          "line": 67
+        },
+        {
+          "name": "triangleIntegrable",
+          "line": 68
+        },
+        {
+          "name": "coupling",
+          "line": 72
+        },
+        {
+          "name": "fields",
+          "line": 75
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Correlations.lean",
+      "declaration": "CorrelationExpansion",
+      "line": 31,
+      "sha256": "29303e27ef6020a87eaf56a620cf58c1aafbf016dde3b7af4a436ebe4c118a69",
+      "fields": [
+        {
+          "name": "smeared",
+          "line": 33
+        },
+        {
+          "name": "uniformOnCompact",
+          "line": 39
+        },
+        {
+          "name": "shapeDerivatives",
+          "line": 47
+        },
+        {
+          "name": "phaseAgreement",
+          "line": 56
+        },
+        {
+          "name": "stressExpansion",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/OperatorProducts.lean",
+      "declaration": "OPEExpansion",
+      "line": 45,
+      "sha256": "a8db0f3b627ff99cb5594131a070c34893913e5429ccb997c5c7fc1055833e82",
+      "fields": [
+        {
+          "name": "smeared",
+          "line": 47
+        },
+        {
+          "name": "uniformOnCompact",
+          "line": 53
+        },
+        {
+          "name": "shapeDerivatives",
+          "line": 61
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/WardIdentities.lean",
+      "declaration": "Determined",
+      "line": 33,
+      "sha256": "e232114b3c89bfbbe7c74dc90e500a81b7bfcf33fa6162c11e4a780d19940af5",
+      "fields": [
+        {
+          "name": "leading",
+          "line": 34
+        },
+        {
+          "name": "symmetric",
+          "line": 35
+        },
+        {
+          "name": "signedAxes",
+          "line": 36
+        },
+        {
+          "name": "vacuum",
+          "line": 43
+        },
+        {
+          "name": "conservation",
+          "line": 46
+        },
+        {
+          "name": "translation",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "path": "MSConversion.lean",
+      "declaration": "ConversionValid",
+      "line": 90,
+      "sha256": "a6fc8a9e853f7e01722ee0d7fc2581c29eb664cb2aae8955fc48feedade9177e",
+      "fields": [
+        {
+          "name": "raw",
+          "line": 92
+        },
+        {
+          "name": "integrable",
+          "line": 93
+        },
+        {
+          "name": "freeOffset",
+          "line": 95
+        },
+        {
+          "name": "rawSlope",
+          "line": 96
+        },
+        {
+          "name": "signedTree",
+          "line": 97
+        },
+        {
+          "name": "nonzeroTree",
+          "line": 98
+        },
+        {
+          "name": "real",
+          "line": 99
+        },
+        {
+          "name": "slope",
+          "line": 100
+        },
+        {
+          "name": "coupling",
+          "line": 101
+        },
+        {
+          "name": "inverseReading",
+          "line": 102
+        },
+        {
+          "name": "fields",
+          "line": 107
+        },
+        {
+          "name": "inverseFields",
+          "line": 108
+        },
+        {
+          "name": "correction",
+          "line": 110
+        },
+        {
+          "name": "factorization",
+          "line": 111
+        },
+        {
+          "name": "startsAtIdentity",
+          "line": 113
+        },
+        {
+          "name": "strictlyLowering",
+          "line": 114
+        }
+      ]
+    },
+    {
+      "path": "FormalConversion.lean",
+      "declaration": "Conversion",
+      "line": 41,
+      "sha256": "3b8e10d527240493ccc2f981d735077fe80647c73fd7cb8aa37e890baedf5bfb",
+      "fields": [
+        {
+          "name": "f",
+          "line": 42
+        },
+        {
+          "name": "f_zero",
+          "line": 43
+        },
+        {
+          "name": "f_one",
+          "line": 44
+        },
+        {
+          "name": "Z",
+          "line": 45
+        },
+        {
+          "name": "Zinv",
+          "line": 46
+        },
+        {
+          "name": "leading",
+          "line": 47
+        },
+        {
+          "name": "nested",
+          "line": 48
+        },
+        {
+          "name": "preservesGrade",
+          "line": 50
+        },
+        {
+          "name": "preservesUnit",
+          "line": 52
+        },
+        {
+          "name": "real",
+          "line": 53
+        },
+        {
+          "name": "signedAxes",
+          "line": 55
+        },
+        {
+          "name": "leftInverse",
+          "line": 61
+        },
+        {
+          "name": "rightInverse",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "path": "MSNumericalAdjustment.lean",
+      "declaration": "NumericalAdjustment",
+      "line": 17,
+      "sha256": "2982c51fe7f9d5c931989f4c872d99de6651baa32a405d11e79bc5e5ac715dad",
+      "fields": [
+        {
+          "name": "value",
+          "line": 19
+        },
+        {
+          "name": "at_zero",
+          "line": 20
+        },
+        {
+          "name": "smooth",
+          "line": 21
+        },
+        {
+          "name": "invertible",
+          "line": 23
+        },
+        {
+          "name": "unit",
+          "line": 24
+        },
+        {
+          "name": "nested",
+          "line": 26
+        },
+        {
+          "name": "triangular",
+          "line": 28
+        },
+        {
+          "name": "real",
+          "line": 32
+        },
+        {
+          "name": "signedAxes",
+          "line": 35
+        },
+        {
+          "name": "expansion",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "path": "MSPositionPrescription.lean",
+      "declaration": "PositionPrescription",
+      "line": 12,
+      "sha256": "d7ff9cfcae2cc4af809ba1a48c791bf19e3ee1e36d9577a2bf937f080d88e282",
+      "fields": [
+        {
+          "name": "screen",
+          "line": 13
+        },
+        {
+          "name": "triangle",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "MSPositionPrescription.lean",
+      "declaration": "Admissible",
+      "line": 18,
+      "sha256": "d7ff9cfcae2cc4af809ba1a48c791bf19e3ee1e36d9577a2bf937f080d88e282",
+      "fields": [
+        {
+          "name": "calibration",
+          "line": 20
+        },
+        {
+          "name": "screenClearance",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "MSPositionScreens.lean",
+      "declaration": "Prepared",
+      "line": 72,
+      "sha256": "d4f0e46ae11499b2e20945dd21d9e5b916c926bdf8a0922016d67dda92f52ec1",
+      "fields": [
+        {
+          "name": "range",
+          "line": 73
+        },
+        {
+          "name": "tangent",
+          "line": 75
+        },
+        {
+          "name": "nested",
+          "line": 77
+        },
+        {
+          "name": "parity",
+          "line": 83
+        }
+      ]
+    },
+    {
+      "path": "MSPositionLabels.lean",
+      "declaration": "Admissible",
+      "line": 86,
+      "sha256": "79a865cd37302f01faa125f75c7ba53948b1a55ea167ddf17fa99492a41dabea",
+      "fields": [
+        {
+          "name": "nonnegative",
+          "line": 87
+        },
+        {
+          "name": "realValue",
+          "line": 88
+        },
+        {
+          "name": "turns",
+          "line": 89
+        },
+        {
+          "name": "separated",
+          "line": 91
+        },
+        {
+          "name": "negative",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "path": "YangMills/Existence.lean",
+      "declaration": "ContinuumLimit",
+      "line": 20,
+      "sha256": "19ac8b8e3f682dcd423b1b6215a4b30adfa25ab0d010ca66e4b94ad7fe635480",
+      "fields": [
+        {
+          "name": "smeared",
+          "line": 23
+        },
+        {
+          "name": "pointwise",
+          "line": 24
+        },
+        {
+          "name": "reconstruction",
+          "line": 27
+        },
+        {
+          "name": "fieldSpace",
+          "line": 28
+        },
+        {
+          "name": "vacuumSectors",
+          "line": 29
+        },
+        {
+          "name": "adjoints",
+          "line": 30
+        },
+        {
+          "name": "phaseCorrelations",
+          "line": 31
+        },
+        {
+          "name": "ope",
+          "line": 32
+        },
+        {
+          "name": "coefficients",
+          "line": 33
+        },
+        {
+          "name": "fusionTrees",
+          "line": 34
+        },
+        {
+          "name": "ward",
+          "line": 35
+        },
+        {
+          "name": "trace",
+          "line": 36
+        },
+        {
+          "name": "ultraviolet",
+          "line": 37
+        }
+      ]
+    },
+    {
+      "path": "YangMills/LatticeFields.lean",
+      "declaration": "WilsonData",
+      "line": 50,
+      "sha256": "2cb992ddc5e75993c0a4fbfb4e9a032475078533b9abb0b850d3f3bd0bc05d40",
+      "fields": [
+        {
+          "name": "regular",
+          "line": 51
+        },
+        {
+          "name": "positive",
+          "line": 52
+        },
+        {
+          "name": "running",
+          "line": 53
+        },
+        {
+          "name": "translate",
+          "line": 55
+        },
+        {
+          "name": "conjugate",
+          "line": 58
+        },
+        {
+          "name": "conjugate_involutive",
+          "line": 59
+        },
+        {
+          "name": "starToken",
+          "line": 60
+        },
+        {
+          "name": "star_involutive",
+          "line": 61
+        },
+        {
+          "name": "reality",
+          "line": 62
+        },
+        {
+          "name": "reflection",
+          "line": 64
+        },
+        {
+          "name": "raw",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "path": "YangMills/CutoffTrajectory.lean",
+      "declaration": "WilsonTrajectory",
+      "line": 30,
+      "sha256": "a79e6621529bca492c654740eae86ede5ef385f176010d12074313b459446614",
+      "fields": [
+        {
+          "name": "denominatorZero",
+          "line": 31
+        },
+        {
+          "name": "divides",
+          "line": 32
+        },
+        {
+          "name": "blockOdd",
+          "line": 33
+        },
+        {
+          "name": "blockLarge",
+          "line": 34
+        },
+        {
+          "name": "periodFour",
+          "line": 35
+        },
+        {
+          "name": "gentle",
+          "line": 36
+        },
+        {
+          "name": "bare",
+          "line": 37
+        }
+      ]
+    }
+  ],
+  "comparator_configs": [
+    {
+      "path": "ComparatorChallenges/Existence.json",
+      "sha256": "2bcc1cc761ca71c1a3f563e06bd210b044f12569c22289b3d8cd7b928cea20bd",
+      "configuration": {
+        "challenge_module": "Comparators.Existence.Challenge",
+        "solution_module": "Comparators.Existence.Solution",
+        "theorem_names": [
+          "YangMills.jointExistence"
+        ],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      }
+    },
+    {
+      "path": "ComparatorChallenges/Matching.json",
+      "sha256": "dc90369b0fa583f1efe6424431510965cf50b2ece84045521784378f2605393c",
+      "configuration": {
+        "challenge_module": "Comparators.Matching.Challenge",
+        "solution_module": "Comparators.Matching.Solution",
+        "theorem_names": [
+          "YangMills.perturbativeMatching"
+        ],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+'YMReview.NovemberMatching.GhostCheck.ghost_to_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostCheck.vector_to_ghost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostCheck.source_ghost_gluon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostCheck.classical_ghost_gluon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostCheck.scalar_antighost_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

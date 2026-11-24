@@ -1,0 +1,458 @@
+{
+  "checked_utc": "2026-11-16T19:39:35.461130+00:00",
+  "scope": "Additional anchors for the seven convention checks; hashes and locations do not independently validate proof meanings.",
+  "source_revision": "b5e288edeac43ac088a2a291ac3841bdda9f20b8",
+  "source_root": "submission/lean",
+  "files": [
+    {
+      "path": "YM/Gauge/Colors.lean",
+      "sha256": "4fe9536a0f382fc63e5c40895d7e457ef37b1bbafa345b3bab1bb8ce93bd2353",
+      "anchors": [
+        {
+          "name": "colorIso",
+          "declaration_lines": [
+            52
+          ]
+        },
+        {
+          "name": "trace_color",
+          "declaration_lines": [
+            71
+          ]
+        },
+        {
+          "name": "ad",
+          "declaration_lines": [
+            136
+          ]
+        },
+        {
+          "name": "casimir",
+          "declaration_lines": [
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/Gauge/Casimir.lean",
+      "sha256": "d5b75b1c1e143c4d5d32faa1583379d6c530c66ec7c9c1667ee2770be691a4ac",
+      "anchors": [
+        {
+          "name": "trace_adjoint",
+          "declaration_lines": [
+            140
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Motif/Matrix.lean",
+      "sha256": "ca4d6f8816b3f2c0ae586de52c60a72b01123970ab3be0ebd97938abff4a46f0",
+      "anchors": [
+        {
+          "name": "rune",
+          "declaration_lines": [
+            16
+          ]
+        },
+        {
+          "name": "bite",
+          "declaration_lines": [
+            22
+          ]
+        },
+        {
+          "name": "jaw",
+          "declaration_lines": [
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Motif/Receipt.lean",
+      "sha256": "c34dcf6373f04689d1458a7ee57f63cf810ff8de1a1c3a5068d84360d23dc151",
+      "anchors": [
+        {
+          "name": "top3",
+          "declaration_lines": [
+            14
+          ]
+        },
+        {
+          "name": "top4",
+          "declaration_lines": [
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Receipt.lean",
+      "sha256": "c465eb30ea9616906592a754cdf87100b60649582565c5991573f26031b41889",
+      "anchors": [
+        {
+          "name": "energetic",
+          "declaration_lines": [
+            19
+          ]
+        },
+        {
+          "name": "Class_at",
+          "declaration_lines": [
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/KoszulAllocate.lean",
+      "sha256": "a2adc5d153c35e7f703e15c89b1774c4c58a6678abbcd405acaa142c6adc13d4",
+      "anchors": [
+        {
+          "name": "scatter",
+          "declaration_lines": [
+            23
+          ]
+        },
+        {
+          "name": "scattered",
+          "declaration_lines": [
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Block.lean",
+      "sha256": "1239b041f25f3b4fef67f6b057d3995a041c8d6f4b9d9ce035e84526addb5341",
+      "anchors": [
+        {
+          "name": "selectCT",
+          "declaration_lines": [
+            24
+          ]
+        },
+        {
+          "name": "integrateRen",
+          "declaration_lines": [
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Quotients.lean",
+      "sha256": "8b47af6d4fa9f10f620f322ea9c9fb40cf442fd6cf2283ad7c94a0c972452873",
+      "anchors": [
+        {
+          "name": "quotients",
+          "declaration_lines": [
+            37
+          ]
+        },
+        {
+          "name": "forest_prepared",
+          "declaration_lines": [
+            148
+          ]
+        },
+        {
+          "name": "forest_germ",
+          "declaration_lines": [
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Glue.lean",
+      "sha256": "2bc2a7b81d98f585e7e2fc01cce4be7d3ac61b4d969cfd4fc10fc46dc8331369",
+      "anchors": [
+        {
+          "name": "innerTrace",
+          "declaration_lines": [
+            65
+          ]
+        },
+        {
+          "name": "closeG",
+          "declaration_lines": [
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Optics.lean",
+      "sha256": "542f045f5b2143d4db6bce762ee18c5aa56ad2a42ed9788d4af14d1a9f4e598e",
+      "anchors": [
+        {
+          "name": "common_label",
+          "declaration_lines": [
+            52
+          ]
+        },
+        {
+          "name": "common_column",
+          "declaration_lines": [
+            58
+          ]
+        },
+        {
+          "name": "common_native",
+          "declaration_lines": [
+            73
+          ]
+        },
+        {
+          "name": "across_decks",
+          "declaration_lines": [
+            87
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Reaching.lean",
+      "sha256": "442586f59361785b30e1bb5e0e618e0783b5ae72314411ae8133e63a95a19f02",
+      "anchors": [
+        {
+          "name": "germ_ones",
+          "declaration_lines": [
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/FVA2/Position/Table.lean",
+      "sha256": "c295521d5412675d18a077796afeced95a799872804fed28b5d23260c74770fe",
+      "anchors": [
+        {
+          "name": "Plot",
+          "declaration_lines": [
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/GraphCoefficients.lean",
+      "sha256": "51c7275566f0b075bfaf1c28c74e8e5e134f55405fb24c533c43c961b8f3114a",
+      "anchors": [
+        {
+          "name": "msbarCorrelationForm",
+          "declaration_lines": [
+            19
+          ]
+        },
+        {
+          "name": "graphCorrelation",
+          "declaration_lines": [
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/OperatorProducts.lean",
+      "sha256": "a8db0f3b627ff99cb5594131a070c34893913e5429ccb997c5c7fc1055833e82",
+      "anchors": [
+        {
+          "name": "measuredOPE",
+          "declaration_lines": [
+            20
+          ]
+        },
+        {
+          "name": "HasChannelBasis",
+          "declaration_lines": [
+            29
+          ]
+        },
+        {
+          "name": "OPEExpansion",
+          "declaration_lines": [
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Measurement.lean",
+      "sha256": "4b5360ddf1e779506be4ac647c3dcb0bc6d3d3385c18acc277b03468c03519ce",
+      "anchors": [
+        {
+          "name": "Measurement",
+          "declaration_lines": [
+            21,
+            54
+          ]
+        },
+        {
+          "name": "FrameCalibration",
+          "declaration_lines": [
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/NativeLattice.lean",
+      "sha256": "9a715003fd6dd2419a077385eba1dbe215246b5cb47a76201f665da2defa2d66",
+      "anchors": [
+        {
+          "name": "NativeCoordinates",
+          "declaration_lines": [
+            26
+          ]
+        },
+        {
+          "name": "AdmissibleLattice",
+          "declaration_lines": [
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Reference.lean",
+      "sha256": "ddc92d6dccd75fa9d0890dd5236807b64f400912b5540d8e202179a6bce597b3",
+      "anchors": [
+        {
+          "name": "Reference.scheme_unique",
+          "declaration_lines": [
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonLattice.lean",
+      "sha256": "4837b8c59f46fd5b812493c5909ca8042eea189bbe948a70b4796155cbc95090",
+      "anchors": [
+        {
+          "name": "wilsonEnergy",
+          "declaration_lines": [
+            25
+          ]
+        },
+        {
+          "name": "wilsonLaw",
+          "declaration_lines": [
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/WilsonBridge.lean",
+      "sha256": "2b4d2fe5d406b8831d9616791ef9f782088ef2efa7e72d2f4794e97026398277",
+      "anchors": [
+        {
+          "name": "energy_eq",
+          "declaration_lines": [
+            13
+          ]
+        },
+        {
+          "name": "law_eq",
+          "declaration_lines": [
+            24
+          ]
+        },
+        {
+          "name": "moment_eq",
+          "declaration_lines": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/High/Drive.lean",
+      "sha256": "8b7b72dc6cdd4ed4e83f9f2be55a57c566ee3c009d3438bc58ae91c6801aeffe",
+      "anchors": [
+        {
+          "name": "Knobs",
+          "declaration_lines": [
+            19
+          ]
+        },
+        {
+          "name": "Fixed",
+          "declaration_lines": [
+            41
+          ]
+        },
+        {
+          "name": "Stroke",
+          "declaration_lines": [
+            26,
+            30,
+            31,
+            33
+          ]
+        },
+        {
+          "name": "Move",
+          "declaration_lines": [
+            35,
+            38,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Motif/Pulp.lean",
+      "sha256": "82fe44a6617b4ca2192cec726bf2fde8fde1eb977d6bcb32de7ea1ee29c9a256",
+      "anchors": [
+        {
+          "name": "\u03b4",
+          "declaration_lines": [
+            10
+          ]
+        },
+        {
+          "name": "axisP",
+          "declaration_lines": [
+            12
+          ]
+        },
+        {
+          "name": "F\u2080",
+          "declaration_lines": [
+            17
+          ]
+        },
+        {
+          "name": "cur",
+          "declaration_lines": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Wilson/LieWords.lean",
+      "sha256": "16c42c31e4af2ef06afd6c4fe1da131d57ec2fa41601258f16767e4322a864fb",
+      "anchors": [
+        {
+          "name": "letterLie",
+          "declaration_lines": [
+            11
+          ]
+        },
+        {
+          "name": "scaled_tensor",
+          "declaration_lines": [
+            13
+          ]
+        }
+      ]
+    }
+  ]
+}

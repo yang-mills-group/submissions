@@ -1,0 +1,29 @@
+'YMReview.NovemberMatching.Section23.cubic_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.Section23.quartic_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Gauge.trace_color (G : Gauge) (c d : G.Color) : -(G.colorMat c * G.colorMat d).trace.re = ↑G.repDim * inner ℝ c d
+'YM.Gauge.trace_color' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Gauge.trace_adjoint {G : Gauge} (h : G.Simple) (x y : G.Color) :
+  -(LinearMap.trace ℝ G.Color) (G.ad x * G.ad y) = G.casimir * inner ℝ x y
+'YM.Gauge.trace_adjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.Motif.Class_at (G : Gauge) (z : ℂ) : (Literal.value (Mob G) z) (χ G) = ploy G z - ploy G 0
+'YM.MS.Motif.Class_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.ScaleForest.GraphSum.forest_germ {G : Gauge} {b : Bool} {h : ℕ} (F : ScaleForest.GraphSum G b h) :
+  ∀ᶠ (z : ℂ) in Shine.dotty,
+    ∀ (y s : ℝ),
+      (List.map (fun X => Pearl.Parade X h y s z) F.quotients).sum = Pearl.Parade F.instructions.renorm h y s z
+'YM.MS.ScaleForest.GraphSum.forest_germ' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.ScaleForest.common_native (G : Gauge) :
+  ⋯ ▸ FVA2.Position.OpenAxis.Plot (FVA2.Press.portDeck G) = WilsonMS.JRad.book G
+'YM.MS.ScaleForest.common_native' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.energy_eq {g : YangMills.GaugeGroup} {l : ℕ+} (U : YangMills.Configuration g l) :
+  YangMills.wilsonEnergy U = Wilson.energy U
+'YangMills.energy_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.law_eq {g : YangMills.GaugeGroup} (l : ℕ+) (β : ℝ) :
+  YangMills.wilsonLaw g l β g.core.probHaar = Wilson.law g.core l β
+'YangMills.law_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.moment_eq {g : YangMills.GaugeGroup} (C : Family g.core) (N p : ℕ) {n : ℕ} (v : Fin n → C.book.Token)
+  (x : Fin n → Lattice.Site (C.side N p)) : (YangMills.wilsonFamily C).finiteMoment N p v x = C.numeric N p v x
+'YangMills.moment_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.PerturbativeMatching.Reference.scheme_unique {g : YangMills.GaugeGroup}
+  (left right : YangMills.PerturbativeMatching.Reference g) : left.scheme = right.scheme
+'YangMills.PerturbativeMatching.Reference.scheme_unique' depends on axioms: [propext, Classical.choice, Quot.sound]

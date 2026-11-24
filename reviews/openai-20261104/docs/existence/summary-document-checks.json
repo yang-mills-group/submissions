@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-11-12T01:04:21.054274+00:00",
+  "compile": "passed",
+  "pages": 2,
+  "latex_warnings": 0,
+  "visual_inspection": "Both pages rendered and inspected; no clipping, overlap or unreadable text.",
+  "source_basis": [
+    "october-november-existence-comparison.tex",
+    "../november-port.md",
+    "../../evidence/combined-targets/combined-comparator.json",
+    "../../evidence/independent-checks/AxiomAudit.json"
+  ],
+  "sha256": {
+    "november-existence-summary.tex": "62bf2f98dcd0da2366a092d4dd3e12bb4d7a9411c57c48b26df5218c138e638c",
+    "november-existence-summary.pdf": "1e87564aba681bd8cf21c8d4cc35030477f4a3a968db7af4c11f09f3910f8603"
+  }
+}

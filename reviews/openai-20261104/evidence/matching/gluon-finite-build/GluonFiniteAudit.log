@@ -1,0 +1,18 @@
+YMReview.NovemberMatching.GluonSolution.acceptance (G : YM.Gauge) :
+  YMReview.NovemberMatching.GluonLoop.SubmittedFinitePartTest G
+'YMReview.NovemberMatching.GluonSolution.acceptance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonUnit.finite_unit_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonSolution.nonzero_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonYeast.actual_yeast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonRadial.actual_carpet_evaluated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GluonContinuation.actual_force_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GluonJetParameter.submitted_jet_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GluonInfrared.submitted_force_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

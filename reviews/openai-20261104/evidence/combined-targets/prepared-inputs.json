@@ -1,0 +1,495 @@
+{
+  "prepared_utc": "2026-11-11T23:16:32.411289+00:00",
+  "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "project": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/combined-comparator-20261111/project",
+  "review_modules": [
+    {
+      "module": "ClusterCore",
+      "path": "ClusterCore.lean",
+      "sha256": "8ad237a735261da37012470880e91e713891eef682d703ed443a58c67f81d7ff"
+    },
+    {
+      "module": "ClusterCones",
+      "path": "ClusterCones.lean",
+      "sha256": "4492d6f336246a82585b0d3538bea6284679ddb3822755a9c7cd6b2cdb677b9f"
+    },
+    {
+      "module": "SourceScalar",
+      "path": "SourceScalar.lean",
+      "sha256": "8c39b1a21513d5270c2dacf27857614b2e282dd292b8afe09cafa808dc39be37"
+    },
+    {
+      "module": "ClusterKernel",
+      "path": "ClusterKernel.lean",
+      "sha256": "dc25d6d7dc572fecdf2fabccbef8cfcd2861ef497799044259cfb791a01b4c66"
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.Spacetime",
+      "path": "NovemberOSRecon/Vendored/Spacetime.lean",
+      "sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668"
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.TensorProduct",
+      "path": "NovemberOSRecon/Vendored/TensorProduct.lean",
+      "sha256": "25dd74dc54878a46e30cddf52f58c1203ca046aaafdd7872c5983eda1913bfdc"
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.ZeroDiagonal",
+      "path": "NovemberOSRecon/Vendored/ZeroDiagonal.lean",
+      "sha256": "a9419bf5eef65969bb01e9f0ffbbed1ebb8cd47946eeff81bd059fc59f71eae0"
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.OSConj",
+      "path": "NovemberOSRecon/Vendored/OSConj.lean",
+      "sha256": "66e873d6a80fdfb3521507b61dceb30accbf4c230beae10f1db087155166484f"
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.Axioms",
+      "path": "NovemberOSRecon/Vendored/Axioms.lean",
+      "sha256": "894166296660b1a77161fb73a238722059f549f785d384b028fd3100f966d940"
+    },
+    {
+      "module": "Coordinates",
+      "path": "Coordinates.lean",
+      "sha256": "ce992c3565446cb2578796c539c54caa728d1de8f9d6d8c4b1cf6d9bec4cecba"
+    },
+    {
+      "module": "ImportedCenterWeights",
+      "path": "ImportedCenterWeights.lean",
+      "sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961"
+    },
+    {
+      "module": "ImportedDiagonalFlatBounds",
+      "path": "ImportedDiagonalFlatBounds.lean",
+      "sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb"
+    },
+    {
+      "module": "TargetKernel",
+      "path": "TargetKernel.lean",
+      "sha256": "e8510fa51b8dd8bf19696fa8003042ecd0b1a3205088dbddee445fd6b842d685"
+    },
+    {
+      "module": "ClusterTarget",
+      "path": "ClusterTarget.lean",
+      "sha256": "fa4330a75ad94b410324fb943f5d7cee59164ae11c9b23995e614a85cfca9ee3"
+    },
+    {
+      "module": "Temperedness",
+      "path": "Temperedness.lean",
+      "sha256": "cdc87faf64a63b8070a2dcbb55097c2a4d35bee84fdcb34cfc9a7ce60fd6913a"
+    },
+    {
+      "module": "ClusterDomination",
+      "path": "ClusterDomination.lean",
+      "sha256": "03a2d2c42b486907a9b068d3c2c07334e2b366c143941ff3481c165d792e49c1"
+    },
+    {
+      "module": "ImportedSchwartzDomain",
+      "path": "ImportedSchwartzDomain.lean",
+      "sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11"
+    },
+    {
+      "module": "ImportedSchwartzProduct",
+      "path": "ImportedSchwartzProduct.lean",
+      "sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51"
+    },
+    {
+      "module": "ClusterSchwartz",
+      "path": "ClusterSchwartz.lean",
+      "sha256": "9ac62c789edac0662fe1ebbe7af9dd16781ddf5fe4330ff6cc724869b69307f5"
+    },
+    {
+      "module": "Invariance",
+      "path": "Invariance.lean",
+      "sha256": "2a0e8864657b99c66e0a0e864e201e71b6a70f92fcf69e087e0e53ce03599f8d"
+    },
+    {
+      "module": "ReflectionTransport",
+      "path": "ReflectionTransport.lean",
+      "sha256": "21c7c59a934a1eb5988d33b5b977bc39c21f6f8c9a34c08586f42c6e8b665d9c"
+    },
+    {
+      "module": "ImportedSchwartzCutoffs",
+      "path": "ImportedSchwartzCutoffs.lean",
+      "sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad"
+    },
+    {
+      "module": "ImportedReflectionApproximation",
+      "path": "ImportedReflectionApproximation.lean",
+      "sha256": "71f6688c51564b64b910e207ea6305dcf5b23063ca8cbae44098b6327f993d41"
+    },
+    {
+      "module": "ReflectionPositivity",
+      "path": "ReflectionPositivity.lean",
+      "sha256": "a6ebf02f2c9d06d804829d1918f7e84a597c12898d82f340690e1c9a98dea4eb"
+    },
+    {
+      "module": "NovemberOSRecon.Growth",
+      "path": "NovemberOSRecon/Growth.lean",
+      "sha256": "1057786eb5d4f5474ae8d416c0fcde3150f5ae4b5fc3125096d1311e44cd299c"
+    },
+    {
+      "module": "ArityGrowth",
+      "path": "ArityGrowth.lean",
+      "sha256": "aa896e79fdd0650d8c61fcfa156de817697b6d0a454ed6922a2cd87d957fc9a3"
+    },
+    {
+      "module": "RemainingObligations",
+      "path": "RemainingObligations.lean",
+      "sha256": "9d80987819b0e8e10a7ca6169519dbdb7bb9ed9f8450962a10d97fdebebea5dd"
+    },
+    {
+      "module": "CompleteOS",
+      "path": "CompleteOS.lean",
+      "sha256": "9168bea28abcc52634fa7272aedfaf38786b41d65f2a76a21663d4593af6625c"
+    },
+    {
+      "module": "ImportedAFGauge",
+      "path": "ImportedAFGauge.lean",
+      "sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7"
+    },
+    {
+      "module": "ImportedAFSpecification",
+      "path": "ImportedAFSpecification.lean",
+      "sha256": "a80bf741dd9f71a7ee465601f253a6d09fd2ade88dd4acae2d0446013cab86eb"
+    },
+    {
+      "module": "AFSourceBridge",
+      "path": "AFSourceBridge.lean",
+      "sha256": "d95e7a06f402471de50d240090b674bd1232e45bb2c0f6d1709f0799a700e694"
+    },
+    {
+      "module": "CommonScaleAudit",
+      "path": "CommonScaleAudit.lean",
+      "sha256": "ac9b14ad7532a98156eecd33a29ee05647f5798f2ea0c5f3d13a2d6c711d41d5"
+    },
+    {
+      "module": "NonzeroPhysicalObservable",
+      "path": "NonzeroPhysicalObservable.lean",
+      "sha256": "84d63157051a2f610c54eb8ec54917931781af77690fcd6d4898a7688ae95ec1"
+    },
+    {
+      "module": "TwoPointPhysicalObservable",
+      "path": "TwoPointPhysicalObservable.lean",
+      "sha256": "fbee2e2a403458626b7f8e464a59110a8eda18fc8e486bcc8215e81d7d4cdc98"
+    },
+    {
+      "module": "CompletenessAudit",
+      "path": "CompletenessAudit.lean",
+      "sha256": "36c15bb8b5e360610afb3eb18dc5d597abc2bbe231a9b6588c23467840f6b3a9"
+    },
+    {
+      "module": "WardFormulationAudit",
+      "path": "WardFormulationAudit.lean",
+      "sha256": "5943d1d891f931404368d63a5b75e86e07b2c8a0c85b7df79aa2cb6056b48682"
+    },
+    {
+      "module": "ImportedLGTData",
+      "path": "ImportedLGTData.lean",
+      "sha256": "7e1ff512f0112e0d355033bdc84a49c7b19c1b92b029a4c2cc2a45a8ada47b04"
+    },
+    {
+      "module": "LGTWilsonBridge",
+      "path": "LGTWilsonBridge.lean",
+      "sha256": "1cb91e87086dca5244240df0a6af54f85363ec69dcc1d1b458d5fd0163b85a0c"
+    },
+    {
+      "module": "RetainedSourceSpec",
+      "path": "RetainedSourceSpec.lean",
+      "sha256": "81d90e0107862e889ebefb34efc5e1417ba319362df8c9c2f4fe96c5238b0d0e"
+    },
+    {
+      "module": "AcceptanceSpec",
+      "path": "AcceptanceSpec.lean",
+      "sha256": "e9b7862eef81d64dd1ee50cb8c8dcb3489e0fb8a090c427b8da9f7e269fa5bf6"
+    },
+    {
+      "module": "OPESpec",
+      "path": "OPESpec.lean",
+      "sha256": "037a780a58a02ababfe2473e093fe5cf5b40ede82b1f44556b487f25eb043e39"
+    },
+    {
+      "module": "NovemberAcceptanceSpec",
+      "path": "NovemberAcceptanceSpec.lean",
+      "sha256": "f073a8180ec15b1d112926525f27ba45686fcb09cd6084cae1e56c735e8b9b6d"
+    },
+    {
+      "module": "NovemberOS",
+      "path": "NovemberOS.lean",
+      "sha256": "9b3f4bf0251e5a93d66bc1c4307434e984a56b622b9782d37c83cb72ae5af4ce"
+    },
+    {
+      "module": "CombinedAcceptance",
+      "path": "CombinedAcceptance.lean",
+      "sha256": "5737543125b52906c12220301aece4dc57fb379a7eb7d34f52b8e2c48e266e90"
+    },
+    {
+      "module": "RetainedContactProof",
+      "path": "RetainedContactProof.lean",
+      "sha256": "a7c860f3b2535effc1c79476de1ea69cd41bad3e47cc7e1ab9509aeda7f586bd"
+    },
+    {
+      "module": "RetainedSourceProof",
+      "path": "RetainedSourceProof.lean",
+      "sha256": "3859ff7787092833595f4609ce9a099ead48cfaeb47227402225e8306326e56f"
+    },
+    {
+      "module": "OPECheck",
+      "path": "OPECheck.lean",
+      "sha256": "62263ce95347596a3e8e14fe77414718d91d676d7ba9b8b4a3c2a0b38e3690cf"
+    },
+    {
+      "module": "NovemberCombined",
+      "path": "NovemberCombined.lean",
+      "sha256": "67ae58c8bc77305b6a2474ac46596b69a2db78aa143c42e8e6b0aac9f1fc71c5"
+    },
+    {
+      "module": "AxiomAudit",
+      "path": "AxiomAudit.lean",
+      "sha256": "d8a5250e495c4add2d270b7adeef12db4784dcd4f99089053b7b765975036d0d"
+    }
+  ],
+  "project_files": [
+    {
+      "path": "AFSourceBridge.lean",
+      "sha256": "d95e7a06f402471de50d240090b674bd1232e45bb2c0f6d1709f0799a700e694"
+    },
+    {
+      "path": "AcceptanceSpec.lean",
+      "sha256": "e9b7862eef81d64dd1ee50cb8c8dcb3489e0fb8a090c427b8da9f7e269fa5bf6"
+    },
+    {
+      "path": "ArityGrowth.lean",
+      "sha256": "aa896e79fdd0650d8c61fcfa156de817697b6d0a454ed6922a2cd87d957fc9a3"
+    },
+    {
+      "path": "AxiomAudit.lean",
+      "sha256": "d8a5250e495c4add2d270b7adeef12db4784dcd4f99089053b7b765975036d0d"
+    },
+    {
+      "path": "ClusterCones.lean",
+      "sha256": "4492d6f336246a82585b0d3538bea6284679ddb3822755a9c7cd6b2cdb677b9f"
+    },
+    {
+      "path": "ClusterCore.lean",
+      "sha256": "8ad237a735261da37012470880e91e713891eef682d703ed443a58c67f81d7ff"
+    },
+    {
+      "path": "ClusterDomination.lean",
+      "sha256": "03a2d2c42b486907a9b068d3c2c07334e2b366c143941ff3481c165d792e49c1"
+    },
+    {
+      "path": "ClusterKernel.lean",
+      "sha256": "dc25d6d7dc572fecdf2fabccbef8cfcd2861ef497799044259cfb791a01b4c66"
+    },
+    {
+      "path": "ClusterSchwartz.lean",
+      "sha256": "9ac62c789edac0662fe1ebbe7af9dd16781ddf5fe4330ff6cc724869b69307f5"
+    },
+    {
+      "path": "ClusterTarget.lean",
+      "sha256": "fa4330a75ad94b410324fb943f5d7cee59164ae11c9b23995e614a85cfca9ee3"
+    },
+    {
+      "path": "CombinedAcceptance.lean",
+      "sha256": "5737543125b52906c12220301aece4dc57fb379a7eb7d34f52b8e2c48e266e90"
+    },
+    {
+      "path": "CommonScaleAudit.lean",
+      "sha256": "ac9b14ad7532a98156eecd33a29ee05647f5798f2ea0c5f3d13a2d6c711d41d5"
+    },
+    {
+      "path": "CompleteOS.lean",
+      "sha256": "9168bea28abcc52634fa7272aedfaf38786b41d65f2a76a21663d4593af6625c"
+    },
+    {
+      "path": "CompletenessAudit.lean",
+      "sha256": "36c15bb8b5e360610afb3eb18dc5d597abc2bbe231a9b6588c23467840f6b3a9"
+    },
+    {
+      "path": "Coordinates.lean",
+      "sha256": "ce992c3565446cb2578796c539c54caa728d1de8f9d6d8c4b1cf6d9bec4cecba"
+    },
+    {
+      "path": "ImportedAFGauge.lean",
+      "sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7"
+    },
+    {
+      "path": "ImportedAFSpecification.lean",
+      "sha256": "a80bf741dd9f71a7ee465601f253a6d09fd2ade88dd4acae2d0446013cab86eb"
+    },
+    {
+      "path": "ImportedCenterWeights.lean",
+      "sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961"
+    },
+    {
+      "path": "ImportedDiagonalFlatBounds.lean",
+      "sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb"
+    },
+    {
+      "path": "ImportedLGTData.lean",
+      "sha256": "7e1ff512f0112e0d355033bdc84a49c7b19c1b92b029a4c2cc2a45a8ada47b04"
+    },
+    {
+      "path": "ImportedReflectionApproximation.lean",
+      "sha256": "71f6688c51564b64b910e207ea6305dcf5b23063ca8cbae44098b6327f993d41"
+    },
+    {
+      "path": "ImportedSchwartzCutoffs.lean",
+      "sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad"
+    },
+    {
+      "path": "ImportedSchwartzDomain.lean",
+      "sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11"
+    },
+    {
+      "path": "ImportedSchwartzProduct.lean",
+      "sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51"
+    },
+    {
+      "path": "Invariance.lean",
+      "sha256": "2a0e8864657b99c66e0a0e864e201e71b6a70f92fcf69e087e0e53ce03599f8d"
+    },
+    {
+      "path": "LGTWilsonBridge.lean",
+      "sha256": "1cb91e87086dca5244240df0a6af54f85363ec69dcc1d1b458d5fd0163b85a0c"
+    },
+    {
+      "path": "NonzeroPhysicalObservable.lean",
+      "sha256": "84d63157051a2f610c54eb8ec54917931781af77690fcd6d4898a7688ae95ec1"
+    },
+    {
+      "path": "NovemberAcceptanceSpec.lean",
+      "sha256": "f073a8180ec15b1d112926525f27ba45686fcb09cd6084cae1e56c735e8b9b6d"
+    },
+    {
+      "path": "NovemberChallenge.lean",
+      "sha256": "9fd535d45a0dac8960c358dc78f5d95c1fd40ed311c8f370fe44d75ccbb9e06e"
+    },
+    {
+      "path": "NovemberCombined.lean",
+      "sha256": "67ae58c8bc77305b6a2474ac46596b69a2db78aa143c42e8e6b0aac9f1fc71c5"
+    },
+    {
+      "path": "NovemberOS.lean",
+      "sha256": "9b3f4bf0251e5a93d66bc1c4307434e984a56b622b9782d37c83cb72ae5af4ce"
+    },
+    {
+      "path": "NovemberOSRecon/Growth.lean",
+      "sha256": "1057786eb5d4f5474ae8d416c0fcde3150f5ae4b5fc3125096d1311e44cd299c"
+    },
+    {
+      "path": "NovemberOSRecon/Vendored/Axioms.lean",
+      "sha256": "894166296660b1a77161fb73a238722059f549f785d384b028fd3100f966d940"
+    },
+    {
+      "path": "NovemberOSRecon/Vendored/OSConj.lean",
+      "sha256": "66e873d6a80fdfb3521507b61dceb30accbf4c230beae10f1db087155166484f"
+    },
+    {
+      "path": "NovemberOSRecon/Vendored/Spacetime.lean",
+      "sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668"
+    },
+    {
+      "path": "NovemberOSRecon/Vendored/TensorProduct.lean",
+      "sha256": "25dd74dc54878a46e30cddf52f58c1203ca046aaafdd7872c5983eda1913bfdc"
+    },
+    {
+      "path": "NovemberOSRecon/Vendored/ZeroDiagonal.lean",
+      "sha256": "a9419bf5eef65969bb01e9f0ffbbed1ebb8cd47946eeff81bd059fc59f71eae0"
+    },
+    {
+      "path": "OPECheck.lean",
+      "sha256": "62263ce95347596a3e8e14fe77414718d91d676d7ba9b8b4a3c2a0b38e3690cf"
+    },
+    {
+      "path": "OPESpec.lean",
+      "sha256": "037a780a58a02ababfe2473e093fe5cf5b40ede82b1f44556b487f25eb043e39"
+    },
+    {
+      "path": "ReflectionPositivity.lean",
+      "sha256": "a6ebf02f2c9d06d804829d1918f7e84a597c12898d82f340690e1c9a98dea4eb"
+    },
+    {
+      "path": "ReflectionTransport.lean",
+      "sha256": "21c7c59a934a1eb5988d33b5b977bc39c21f6f8c9a34c08586f42c6e8b665d9c"
+    },
+    {
+      "path": "RemainingObligations.lean",
+      "sha256": "9d80987819b0e8e10a7ca6169519dbdb7bb9ed9f8450962a10d97fdebebea5dd"
+    },
+    {
+      "path": "RetainedContactProof.lean",
+      "sha256": "a7c860f3b2535effc1c79476de1ea69cd41bad3e47cc7e1ab9509aeda7f586bd"
+    },
+    {
+      "path": "RetainedSourceProof.lean",
+      "sha256": "3859ff7787092833595f4609ce9a099ead48cfaeb47227402225e8306326e56f"
+    },
+    {
+      "path": "RetainedSourceSpec.lean",
+      "sha256": "81d90e0107862e889ebefb34efc5e1417ba319362df8c9c2f4fe96c5238b0d0e"
+    },
+    {
+      "path": "SourceScalar.lean",
+      "sha256": "8c39b1a21513d5270c2dacf27857614b2e282dd292b8afe09cafa808dc39be37"
+    },
+    {
+      "path": "TargetKernel.lean",
+      "sha256": "e8510fa51b8dd8bf19696fa8003042ecd0b1a3205088dbddee445fd6b842d685"
+    },
+    {
+      "path": "Temperedness.lean",
+      "sha256": "cdc87faf64a63b8070a2dcbb55097c2a4d35bee84fdcb34cfc9a7ce60fd6913a"
+    },
+    {
+      "path": "TwoPointPhysicalObservable.lean",
+      "sha256": "fbee2e2a403458626b7f8e464a59110a8eda18fc8e486bcc8215e81d7d4cdc98"
+    },
+    {
+      "path": "WardFormulationAudit.lean",
+      "sha256": "5943d1d891f931404368d63a5b75e86e07b2c8a0c85b7df79aa2cb6056b48682"
+    },
+    {
+      "path": "comparator.json",
+      "sha256": "1758d0d6be7f5ad9b8f4b5ec5905cd470afb8ac2cb4d5aa37d7de016c6de6936"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "e0305e8442cabdb2e57eb694a069a25fd00c4fc2063c717c1e1704fe9fbfb249"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "8f3d5342d16f882a2aae92a6970931c6deb234ae1c8a68ed0df32bd531a8718a"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+    }
+  ],
+  "tools": [
+    {
+      "name": "comparator",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "binary_sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738"
+    },
+    {
+      "name": "lean4export",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export",
+      "binary_sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e"
+    }
+  ],
+  "submission_before": {
+    "files_checked": 37673,
+    "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+    "checked_utc": "2026-11-11T23:16:32.266879+00:00"
+  },
+  "submission_build_reused": true,
+  "project_build_initially_absent": true,
+  "definition_holes": [],
+  "mode": "macOS development; upstream fake-landrun; no optional second kernel"
+}

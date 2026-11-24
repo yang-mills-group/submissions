@@ -1,0 +1,12 @@
+.DS_Store
+.lake/
+.build/
+work-cache/
+vendor/
+__pycache__/
+*.olean
+*.ilean
+*.aux
+*.toc
+*.out
+*.synctex.gz

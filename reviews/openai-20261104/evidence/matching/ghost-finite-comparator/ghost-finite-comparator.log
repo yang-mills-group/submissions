@@ -1,0 +1,3406 @@
+Building GhostFiniteChallenge
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build GhostFiniteChallenge
+ℹ [3842/4706] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Local.Coh
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Local/Coh.lean:92:163: Try this:
+  [apply] abel_nf
+⚠ [3917/4706] Replayed YM.SectorNext.GAUSSIAN_SECTOR_CHANGE.Contraction
+warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Contraction.lean:111:13: This simp argument is unused:
+  LinearMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵i̵d̵_̵c̵o̵e̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲i̲d̲_̲c̲o̲e̲,̲ id_eq, map_smul, map_add,
+  ̲  ̲ ̲ ̲G.mat_adjoint, Gauge.conjugate, mul_smul_comm, s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵s̵m̵u̵l̵_̵a̵d̵d̵,̵s̲m̲u̲l̲_̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ ̲s̲m̲u̲l̲_̲a̲d̲d̲,̲ Y]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [4233/4706] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Motif.Beat
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean:27:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean:27:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [4266/4706] Replayed YM.MS.Wind.Realized
+info: YM/MS/Wind/Realized.lean:34:123: Try this:
+  [apply] abel_nf
+ℹ [4301/4706] Replayed YM.MS.Latch.Bin
+info: YM/MS/Latch/Bin.lean:40:82: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [4304/4706] Replayed YM.MS.Theater.Scale
+warning: YM/MS/Theater/Scale.lean:50:310: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: YM/MS/Theater/Scale.lean:51:34: This simp argument is unused:
+  ht.symm
+
+Hint: Omit it from the simp argument list.
+  simp [̵ ̵c̵l̵,̵h̵t̵,̵ ̵h̵t̵.̵s̵y̵m̵m̵ ̵]̵[̲c̲l̲,̲ ̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4305/4706] Replayed YM.MS.Theater.Pave
+warning: YM/MS/Theater/Pave.lean:23:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.workL`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Theater/Pave.lean:29:49: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: YM/MS/Theater/Pave.lean:29:85: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: YM/MS/Theater/Pave.lean:25:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.rot`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Theater/Pave.lean:28:17: 'change _ = inner ℝ p u • ((planeC i h p v).val i _)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Pave.lean:31:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.plane_x`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4306/4706] Replayed YM.MS.Theater.Radium
+warning: YM/MS/Theater/Radium.lean:23:13: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:23:15: Variable name `Y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:24:14: Variable name `c` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:24:16: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:30:13: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:31:14: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:47:45: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:47:47: Variable name `y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4307/4706] Replayed YM.MS.Theater.Eq
+warning: YM/MS/Theater/Eq.lean:37:331: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+⚠ [4308/4706] Replayed YM.MS.Theater.Life
+warning: YM/MS/Theater/Life.lean:21:129: This simp argument is unused:
+  valueC
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵v̵a̵l̵u̵e̵C̵ ̵]̵[̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Theater/Life.lean:22:130: This simp argument is unused:
+  valueC
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵v̵a̵l̵u̵e̵C̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲P̲i̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Theater/Life.lean:37:175: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:40:175: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:44:251: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:50:142: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:51:307: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4310/4706] Replayed YM.MS.Theater.RakeA
+warning: YM/MS/Theater/RakeA.lean:19:91: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4314/4706] Replayed YM.MS.Theater.Value
+warning: YM/MS/Theater/Value.lean:38:22: Variable name `he` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4330/4706] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Theater.Place
+warning: YangMills/WilsonProof/NativeSupport/YM/MS/Theater/Place.lean:31:13: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4334/4706] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Theater.Horizon
+warning: YangMills/WilsonProof/NativeSupport/YM/MS/Theater/Horizon.lean:20:13: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4378/4706] Replayed YM.MS.Awning.Cap
+warning: YM/MS/Awning/Cap.lean:15:0: automatically included section variable(s) unused in theorem `YM.MS.Awning.price_M`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Awning/Cap.lean:22:14: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:22:16: Variable name `Y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:23:14: Variable name `c` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:28:14: Try this: intro I L _ f F H he m E _ _ _ W x v
+warning: YM/MS/Awning/Cap.lean:31:6: Try this: intro u t ht hU m E _ _ _ W x v
+⚠ [4379/4706] Replayed YM.MS.Awning.Burn
+warning: YM/MS/Awning/Burn.lean:15:0: automatically included section variable(s) unused in theorem `YM.MS.Awning.core_sum`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4529/5320] Replayed YM.MS.Swirl.Plane
+warning: YM/MS/Swirl/Plane.lean:24:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.readSym`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Swirl/Plane.lean:33:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.lore`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Swirl/Plane.lean:41:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.P_exp`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4578/5320] Replayed YM.MS.Swirl.LandLine
+warning: YM/MS/Swirl/LandLine.lean:39:226: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/MS/Swirl/LandLine.lean:39:226: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4583/5320] Replayed YM.MS.Puff.Rescale
+warning: YM/MS/Puff/Rescale.lean:45:128: This simp argument is unused:
+  α
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_singleton,
+  ̲  ̲ ̲ ̲ ̲ ̲cloak, α̵,̵( ̵P.zeroC _ ̵).mpr rfl, ̲Nat.cast_zero, ̲zero_smul, ̲map_zero, ̲LinearMap.zero_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4585/5320] Replayed YM.MS.Breeze.North
+warning: YM/MS/Breeze/North.lean:23:99: Variable name `E` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Breeze/North.lean:28:14: Variable name `f` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Breeze/North.lean:28:19: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4586/5320] Replayed YM.MS.Breeze.Bulb
+warning: YM/MS/Breeze/Bulb.lean:28:60: Variable name `hu` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4590/5320] Replayed YM.MS.Drops.Hear
+warning: YM/MS/Drops/Hear.lean:20:37: Variable name `hr` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Drops/Hear.lean:21:189: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵]̵ ̵a̵t̵ ̵h̵x̵s̲i̲m̲p̲ ̲a̲t̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲x̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Drops/Hear.lean:22:375: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵o̵f̵R̵e̵a̵l̵_̵m̵u̵l̵,̵i̵d̵_̵e̵q̵ ̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲o̲f̲R̲e̲a̲l̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲i̲d̲_̲e̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Drops/Hear.lean:28:191: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵]̵ ̵a̵t̵ ̵h̵x̵s̲i̲m̲p̲ ̲a̲t̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲x̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4592/5320] Replayed YM.MS.Drops.Shadow
+warning: YM/MS/Drops/Shadow.lean:32:246: 'change (↑(((-2 : ℝ) * _) * q) : ℂ) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: YM/MS/Drops/Shadow.lean:37:208: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: YM/MS/Drops/Shadow.lean:43:50: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Drops/Shadow.lean:43:50: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/MS/Drops/Shadow.lean:37:204: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [4595/5320] Replayed YM.MS.Drops.Month
+warning: YM/MS/Drops/Month.lean:26:123: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Drops/Month.lean:26:123: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4599/5320] Replayed YM.MS.Drops.Catch
+warning: YM/MS/Drops/Catch.lean:24:21: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4602/5320] Replayed YM.MS.Milk.Honey
+warning: YM/MS/Milk/Honey.lean:22:12: Variable name `L` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:42:9: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:50:43: Variable name `w` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:50:57: Variable name `k` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:51:42: Variable name `w` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:51:44: Variable name `k` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:54:80: Variable name `z` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4603/5320] Replayed YM.MS.Milk.Basil
+warning: YM/MS/Milk/Basil.lean:27:27: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵l̵i̵c̵k̵,̵h̵s̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲f̲l̲i̲c̲k̲,̲ ̲h̲s̲]̲ at hp ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Milk/Basil.lean:28:182: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵l̵i̵c̵k̵,̵h̵v̵,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲f̲l̲i̲c̲k̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲v̲]̲ at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4607/5320] Replayed YM.MS.Milk.Mural
+warning: YM/MS/Milk/Mural.lean:39:0: automatically included section variable(s) unused in theorem `YM.MS.Milk.pure_b`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Milk/Mural.lean:46:0: automatically included section variable(s) unused in theorem `YM.MS.Milk.zero_field`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Milk/Mural.lean:46:18: Variable name `v` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4608/5320] Replayed YM.MS.Milk.Magic
+warning: YM/MS/Milk/Magic.lean:34:60: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:35:110: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:35:112: Variable name `hx'` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:36:130: Variable name `t` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4611/5320] Replayed YM.MS.Milk.Key
+warning: YM/MS/Milk/Key.lean:25:43: 'change _ = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4646/5320] Replayed YM.MS.Tide.Coi
+warning: YM/MS/Tide/Coi.lean:35:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.zeroZ`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Coi.lean:36:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.payTune`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4648/5320] Replayed YM.MS.Tide.Lion
+warning: YM/MS/Tide/Lion.lean:27:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.re_n`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Lion.lean:29:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.scaleF`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Lion.lean:33:48: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [f̵ra̵m̵e̵F̵,̵r̵oots, ̲Pi.zero_apply, ̲exp_zero, ̲mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Tide/Lion.lean:41:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.dealP`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4650/5320] Replayed YM.MS.Tide.Stated
+warning: YM/MS/Tide/Stated.lean:34:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.qualifies`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4655/5320] Replayed YM.MS.Dial.Wake
+warning: YM/MS/Dial/Wake.lean:36:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.washT`:
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Wake.lean:38:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.washSum`:
+  [LinearOrder W]
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Wake.lean:46:38: This simp argument is unused:
+  Src
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵,̵S̵r̵c̵,̵m̵u̵l̵t̵i̵,̵l̵o̵n̵e̵l̵y̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵ ̵]̵[̲L̲,̲ ̲m̲u̲l̲t̲i̲,̲ ̲l̲o̲n̲e̲l̲y̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4656/5320] Replayed YM.MS.Dial.Paint
+warning: YM/MS/Dial/Paint.lean:34:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.ultimate`:
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4657/5320] Replayed YM.MS.Dial.Frame
+warning: YM/MS/Dial/Frame.lean:27:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.Architect`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4658/5320] Replayed YM.MS.Dial.Slope
+warning: YM/MS/Dial/Slope.lean:17:140: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp [̵f̵r̵a̵m̵e̵F̵,̵r̵o̵o̵t̵s̵]̵[̲r̲o̲o̲t̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4659/5320] Replayed YM.MS.Dial.Loom
+warning: YM/MS/Dial/Loom.lean:22:116: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [roots,
+  ̲  ̲ ̲ ̲ ̲ ̲f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4660/5320] Replayed YM.MS.Dial.Set
+warning: YM/MS/Dial/Set.lean:17:61: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵[̲r̲o̲o̲t̲s̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲ at hB hP
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4661/5320] Replayed YM.MS.Dial.Reg
+warning: YM/MS/Dial/Reg.lean:24:76: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Dial/Reg.lean:33:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.filmed`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Reg.lean:42:272: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵]̵[̲r̲o̲o̲t̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4662/5320] Replayed YM.MS.Dial.Watch
+warning: YM/MS/Dial/Watch.lean:18:28: Variable name `t` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Dial/Watch.lean:31:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.agrees`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Watch.lean:37:204: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵G̵e̵o̵.̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵[̲G̲e̲o̲.̲r̲o̲o̲t̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5130/5320] Replayed YM.Pert.Lattice.Action
+warning: YM/Pert/Lattice/Action.lean:57:2: 'change _ = _ + fixing a' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5133/5320] Replayed YM.PertExtension.Series
+warning: YM/PertExtension/Series.lean:40:13: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/Series.lean:52:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.bounded`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:53:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.weaken`:
+  [NormedSpace ℝ E]
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:59:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.add`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:66:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:84:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.zero`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:85:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.shift_a`:
+  [NormedSpace ℝ E]
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:99:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.add`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:113:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.degrade`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:126:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:148:77: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵e̵v̵a̵l̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵i̵t̵e̵,̵s̵m̵u̵l̵_̵z̵e̵r̵o̵,̵ ̵i̵t̵e̵_̵t̵r̵u̵e̵]̵[̲e̲v̲a̲l̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲i̲t̲e̲,̲ ̲s̲m̲u̲l̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5134/5320] Replayed YM.PertExtension.Uniform
+warning: YM/PertExtension/Uniform.lean:58:63: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [5135/5320] Replayed YM.PertExtension.Exponent
+warning: YM/PertExtension/Exponent.lean:28:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.cancellation`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:58:8: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.layers_zero`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:94:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.expsum_limit`:
+  [NormedAddCommGroup E]
+  [NormedSpace ℝ E]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:116:168: Try this: intro _ _
+⚠ [5136/5320] Replayed YM.PertExtension.Tails
+warning: YM/PertExtension/Tails.lean:37:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.bill_nonneg`:
+  [NormedSpace ℝ E]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:56:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Smooth.continuousJet`:
+  [MeasurableSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:60:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Smooth.continuousCoeff`:
+  [FiniteDimensional ℝ E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:67:37: This simp argument is unused:
+  Zone.mul
+
+Hint: Omit it from the simp argument list.
+  simp only [TaylorPow,̵ ̵Z̵o̵n̵e̵.̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/Tails.lean:84:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.kernel_pos`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:85:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.kernel_bound`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:114:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.coeffBound`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5137/5320] Replayed YM.PertExtension.Interior
+warning: YM/PertExtension/Interior.lean:14:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.disc_meas`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:15:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.disc_mem`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:29:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.projection_eq`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:30:83: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Interior.lean:73:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [n̵o̵r̵m̵_̵m̵u̵l̵,̵Real.norm_eq_abs (kernel ..), ̲abs_of_nonneg kernel_pos.le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5138/5320] Replayed YM.PertExtension.GaussianScore
+warning: YM/PertExtension/GaussianScore.lean:27:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.continuous_kern`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianScore.lean:29:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.GaussianScore.0.YM.PertExtension.GaussianScore.Law.inject`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianScore.lean:50:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.translation_bound`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5139/5320] Replayed YM.PertExtension.GaussianIBP
+warning: YM/PertExtension/GaussianIBP.lean:41:115: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵Γ̵.̵t̵u̵r̵n̵s̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲Γ̲.̲t̲u̲r̲n̲s̲ x v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:41:123: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵Γ̵.̵t̵u̵r̵n̵s̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲Γ̲.̲t̲u̲r̲n̲s̲ x v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:48:25: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵d̵_̵e̵q̵,̵ ̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:61:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.product_bound`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:72:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.diffSum_on`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:75:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.product_cont`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:76:107: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5167/5320] Replayed YM.PertExtension.OrbGeometry
+warning: YM/PertExtension/OrbGeometry.lean:109:131: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [5168/5320] Replayed YM.PertExtension.OrbTree
+warning: YM/PertExtension/OrbTree.lean:119:38: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbTree.lean:125:37: This simp argument is unused:
+  dite_true
+
+Hint: Omit it from the simp argument list.
+  simp only [if_neg ht, ̲index, eR_eR, d̵ite_true,i̵t̵e̵_̵t̵r̵u̵e̵,̵ mul_inv_rev, inv_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbTree.lean:166:17: Variable name `he` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbTree.lean:197:87: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbTree.lean:216:85: This simp argument is unused:
+  sub_add
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵a̵s̵h̵,̵S̵t̵e̵p̵.̵v̵e̵c̵,̵S̵t̵e̵p̵.̵u̵s̵e̵d̵,̵ ̵h̵m̵,̵s̵u̵b̵_̵a̵d̵d̵,̵s̵u̵b̵_̵e̵q̵_̵a̵d̵d̵_̵n̵e̵g̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲a̲s̲h̲,̲ ̲S̲t̲e̲p̲.̲v̲e̲c̲,̲ ̲S̲t̲e̲p̲.̲u̲s̲e̲d̲,̲ ̲h̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲e̲q̲_̲a̲d̲d̲_̲n̲e̲g̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5169/5320] Replayed YM.PertExtension.OrbFlat
+warning: YM/PertExtension/OrbFlat.lean:150:34: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [̵v̵,̵h̵x̵,̵h̵h̵]̵[̲v̲,̲ ̲h̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbFlat.lean:150:78: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵x̵,̵h̵h̵]̵[̲h̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbFlat.lean:180:49: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbFlat.lean:180:0: Definition `closed_face` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+⚠ [5170/5320] Replayed YM.PertExtension.OrbHessian
+warning: YM/PertExtension/OrbHessian.lean:84:45: This simp argument is unused:
+  add_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵r̵a̵v̵e̵l̵,̵l̵i̵n̵e̵,̵G̵.̵m̵a̵t̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲t̲r̲a̲v̲e̲l̲,̲ ̲l̲i̲n̲e̲,̲ ̲G̲.̲m̲a̲t̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbHessian.lean:125:44: This simp argument is unused:
+  contribution
+
+Hint: Omit it from the simp argument list.
+  simp only [(fun i̵=̵>̵(̵f̵a̵c̵e̵_̵g̵r̵a̵d̵e̵s̵ ̵i z̵)̵.̵1̵)̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵=̲>̲ ̲(̲f̲a̲c̲e̲_̲g̲r̲a̲d̲e̲s̲ ̲i̲ ̲z̲)̲.̲1̲)̲,̲ division_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbHessian.lean:125:58: This simp argument is unused:
+  division_def
+
+Hint: Omit it from the simp argument list.
+  simp only [(fun i̵=̵>̵(̵f̵a̵c̵e̵_̵g̵r̵a̵d̵e̵s̵ ̵i z̵)̵.̵1̵)̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵ ̵d̵i̵v̵i̵s̵i̵o̵n̵_̵d̵e̵f̵]̵=̲>̲ ̲(̲f̲a̲c̲e̲_̲g̲r̲a̲d̲e̲s̲ ̲i̲ ̲z̲)̲.̲1̲)̲,̲ ̲c̲o̲n̲t̲r̲i̲b̲u̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5171/5320] Replayed YM.PertExtension.BareChart
+warning: YM/PertExtension/BareChart.lean:26:12: automatically included section variable(s) unused in theorem `YM.PertExtension.Chart.expLinks_meas`:
+  [Fintype U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/BareChart.lean:49:76: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/BareChart.lean:57:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Chart.Ratio.chamber_open`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5173/5320] Replayed YM.PertExtension.OrbHaar
+warning: YM/PertExtension/OrbHaar.lean:1:0: 'Mathlib.Topology.Algebra.Module.WeakDual' has been deprecated: please replace this import by
+
+import Mathlib.Topology.Algebra.Module.Spaces.WeakDual
+warning: YM/PertExtension/OrbHaar.lean:31:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbHaar.0.YM.PertExtension.Orb.assembly_meas`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbHaar.lean:47:20: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbHaar.0.YM.PertExtension.Orb.assembly_cont`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbHaar.lean:63:34: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5175/5320] Replayed YM.PertExtension.Aspiration
+warning: YM/PertExtension/Aspiration.lean:28:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.of_bill`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Aspiration.lean:38:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_of`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Aspiration.lean:44:103: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:45:136: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:52:149: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:53:127: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:76:37: This simp argument is unused:
+  Nat.lt_succ_iff
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵N̵a̵t̵.̵l̵t̵_̵s̵u̵c̵c̵_̵i̵f̵f̵]̵[̲s̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/Aspiration.lean:130:24: Variable name `a` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5176/5320] Replayed YM.PertExtension.OrbExpansion
+warning: YM/PertExtension/OrbExpansion.lean:75:78: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbExpansion.lean:75:80: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5177/5320] Replayed YM.PertExtension.Normalized
+warning: YM/PertExtension/Normalized.lean:72:129: This simp argument is unused:
+  Pi.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵P̵i̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5208/5320] Replayed YM.PertExtension.PTBills
+warning: YM/PertExtension/PTBills.lean:14:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_const`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/PTBills.lean:69:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5235/5320] Replayed YM.PertExtension.OrbLaurent
+warning: YM/PertExtension/OrbLaurent.lean:34:12: This simp argument is unused:
+  J
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵J̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbLaurent.lean:55:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbLaurent.0.YM.PertExtension.Orb.hPivot`:
+  h
+  H
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h H in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbLaurent.lean:55:48: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbLaurent.lean:99:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Orb.unit_expectation`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5683/5977] Replayed YM.PertExtension.OrbCovariance
+warning: YM/PertExtension/OrbCovariance.lean:44:131: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/OrbCovariance.lean:63:50: This simp argument is unused:
+  Finsupp.single_eq_same
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.one_apply, Finsupp.single_eq_s̵a̵m̵e̵,̵ ̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵e̵q̵_̵of_ne, Finsupp.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbCovariance.lean:63:74: This simp argument is unused:
+  Finsupp.single_eq_of_ne
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.one_apply, Finsupp.single_eq_same, Finsupp.single_e̵q̵_̵o̵f̵_̵n̵e̵,̵ ̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbCovariance.lean:69:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Orb.gaussian_recursion`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5709/5977] Replayed YM.Pert.Lattice.GaugeFix
+warning: YM/Pert/Lattice/GaugeFix.lean:20:19: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:137: 'rw [image_image]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:155: 'abel' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:137: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:155: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [5828/5977] Replayed YM.XSpace.Trials
+warning: YM/XSpace/Trials.lean:57:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.chosen`:
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5829/5977] Replayed YM.XSpace.Sandal
+warning: YM/XSpace/Sandal.lean:59:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.shares`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5830/5977] Replayed YM.XSpace.Soles
+warning: YM/XSpace/Soles.lean:24:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Soles.0.YM.XSpace.Litter.sole`:
+  [NormedSpace ℝ F]
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ F] [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Soles.lean:57:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.sole_walk`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5833/5977] Replayed YM.XSpace.ScorePad
+warning: YM/XSpace/ScorePad.lean:50:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.ScorePad.0.YM.XSpace.Scale.known`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5834/5977] Replayed YM.XSpace.Concord
+warning: YM/XSpace/Concord.lean:17:0: automatically included section variable(s) unused in theorem `YM.XSpace.Scale.rode`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Concord.lean:65:30: 'change 0 = _ • crack _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Concord.lean:70:18: 'change b⁻¹ ^ l.length • _ = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5866/5977] Replayed YM.XSpace.Stylus
+warning: YM/XSpace/Stylus.lean:30:72: 'change d - g i = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5867/5977] Replayed YM.XSpace.Reverb
+warning: YM/XSpace/Reverb.lean:13:153: This simp argument is unused:
+  deposited
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵,̵d̵e̵p̵o̵s̵i̵t̵e̵d̵,̵d̵o̵t̵t̵e̵r̵,̵[̲L̲,̲
+  ̲ ̲ ̲ ̲ ̲d̲o̲t̲t̲e̲r̲,̲ needle, d̵e̵p̵o̵s̵i̵t̵,̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵d̲e̲p̲o̲s̲i̲t̲,̲ ̲F̲i̲n̲s̲u̲p̲p̲.̲s̲i̲n̲g̲l̲e̲_̲a̲p̲p̲l̲y̲,̲ eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5869/5977] Replayed YM.XSpace.Encore
+warning: YM/XSpace/Encore.lean:67:302: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp only [̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵m̵a̵p̵_̵s̵u̵b̵]̵[̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5871/5977] Replayed YM.XSpace.Marque
+warning: YM/XSpace/Marque.lean:43:0: automatically included section variable(s) unused in theorem `YM.XSpace.Tide.coiled`:
+  H
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit H in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Marque.lean:56:50: 'change _ * (C * _ ^ n) ≤ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5873/5977] Replayed YM.XSpace.Mu
+warning: YM/XSpace/Mu.lean:51:26: Variable name `q` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5874/5977] Replayed YM.XSpace.Avenue
+warning: YM/XSpace/Avenue.lean:14:23: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Avenue.lean:30:318: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5876/5977] Replayed YM.XSpace.Lows
+warning: YM/XSpace/Lows.lean:49:103: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5878/5977] Replayed YM.XSpace.Premiere
+warning: YM/XSpace/Premiere.lean:42:119: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [5879/5977] Replayed YM.XSpace.Arenas
+warning: YM/XSpace/Arenas.lean:33:17: Variable name `hz` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Arenas.lean:33:27: Variable name `n` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Arenas.lean:78:217: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [5881/5977] Replayed YM.XSpace.Fore
+warning: YM/XSpace/Fore.lean:26:26: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5882/5977] Replayed YM.XSpace.Recess
+warning: YM/XSpace/Recess.lean:36:215: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5884/5977] Replayed YM.XSpace.Crush
+warning: YM/XSpace/Crush.lean:26:12: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Crush.lean:26:21: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5885/5977] Replayed YM.XSpace.Drum
+warning: YM/XSpace/Drum.lean:36:63: This simp argument is unused:
+  PiLp.add_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵r̵a̵c̵k̵l̵e̵_̵a̵p̵,̵P̵i̵L̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵L̵p̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵R̵C̵L̵i̵k̵e̵.̵i̵n̵n̵e̵r̵_̵a̵p̵p̵l̵y̵,̵s̵t̵a̵r̵R̵i̵n̵g̵E̵n̵d̵_̵a̵p̵p̵l̵y̵,̵s̵t̵a̵r̵_̵t̵r̵i̵v̵i̵a̵l̵]̵[̲c̲r̲a̲c̲k̲l̲e̲_̲a̲p̲,̲ ̲P̲i̲L̲p̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲R̲C̲L̲i̲k̲e̲.̲i̲n̲n̲e̲r̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲s̲t̲a̲r̲R̲i̲n̲g̲E̲n̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲t̲a̲r̲_̲t̲r̲i̲v̲i̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5929/5977] Replayed YM.XSpace.Hoists
+warning: YM/XSpace/Hoists.lean:40:37: This simp argument is unused:
+  terms
+
+Hint: Omit it from the simp argument list.
+  simp [he, t̵e̵r̵m̵s,̵ ̵s̵wing, spins, Step.used, Step.rotate, posDir,
+  ̲  ̲ ̲ ̲← Signed.act_sub, cloud]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Hoists.lean:48:229: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [5930/5977] Replayed YM.XSpace.Hook
+warning: YM/XSpace/Hook.lean:21:105: Variable name `e` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Hook.lean:24:68: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5941/5977] Replayed YM.XSpace.Aura
+warning: YM/XSpace/Aura.lean:15:37: Variable name `H` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5943/6206] Replayed YM.XSpace.Molo
+warning: YM/XSpace/Molo.lean:53:4: 'change _ • release (gen p v p).val = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5945/6206] Replayed YM.XSpace.Inbox
+warning: YM/XSpace/Inbox.lean:48:30: Variable name `v` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5946/6206] Replayed YM.XSpace.Reason
+warning: YM/XSpace/Reason.lean:15:89: This simp argument is unused:
+  Nat.sub_ne_zero_of_lt (?_ : n < k)
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵N̵a̵t̵.̵s̵u̵b̵_̵n̵e̵_̵z̵e̵r̵o̵_̵o̵f̵_̵l̵t̵ ̵(̵?̵_̵ ̵:̵ ̵n̵<̵k̵)̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Reason.lean:29:102: This simp argument is unused:
+  tendsto_const_nhds
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵t̵e̵n̵d̵s̵t̵o̵_̵c̵o̵n̵s̵t̵_̵n̵h̵d̵s̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Reason.lean:38:13: 'change Tendsto _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Reason.lean:46:15: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5953/6206] Replayed YM.XSpace.Bazaar
+warning: YM/XSpace/Bazaar.lean:57:149: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵e̵n̵d̵i̵n̵g̵,̵c̵h̵a̵i̵n̵,̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵,̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵[̲p̲e̲n̲d̲i̲n̲g̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲h̲a̲i̲n̲,̲ ̲s̲m̲u̲l̲_̲m̲u̲l̲_̲a̲s̲s̲o̲c̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Bazaar.lean:57:163: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵e̵n̵d̵i̵n̵g̵,̵c̵h̵a̵i̵n̵,̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵,̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵[̲p̲e̲n̲d̲i̲n̲g̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲h̲a̲i̲n̲,̲ ̲m̲u̲l̲_̲s̲m̲u̲l̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5954/6206] Replayed YM.XSpace.Credence
+warning: YM/XSpace/Credence.lean:31:0: automatically included section variable(s) unused in theorem `YM.XSpace.Stall.secures`:
+  h
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Credence.lean:59:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Credence.0.YM.XSpace.Stall.oneAdd`:
+  h
+  S
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h S in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Credence.lean:65:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Credence.0.YM.XSpace.Stall.tint`:
+  h
+  S
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h S in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5956/6206] Replayed YM.XSpace.Suburbs
+info: YM/XSpace/Suburbs.lean:66:690: Try this:
+  [apply] abel_nf
+warning: YM/XSpace/Suburbs.lean:78:181: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5957/6206] Replayed YM.XSpace.Embank
+warning: YM/XSpace/Embank.lean:31:0: automatically included section variable(s) unused in theorem `YM.XSpace.Foundation.pill`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Embank.lean:55:0: automatically included section variable(s) unused in theorem `YM.XSpace.Foundation.stage_plus`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5977/6206] Replayed YM.XSpace.OffAxis
+warning: YM/XSpace/OffAxis.lean:32:35: Variable name `R` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5978/6206] Replayed YM.XSpace.Fertile
+warning: YM/XSpace/Fertile.lean:24:169: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  simp only [W̵i̵t̵h̵L̵p̵.̵o̵f̵L̵p̵_̵t̵o̵L̵p̵,̵Signed.act_at]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5985/6206] Replayed YM.XSpace.TiltRank
+warning: YM/XSpace/TiltRank.lean:58:10: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: YM/XSpace/TiltRank.lean:58:98: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [5987/6206] Replayed YM.XSpace.Output1
+warning: YM/XSpace/Output1.lean:49:204: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Output1.lean:58:100: 'change (0 : MoveSpace G d) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5991/6206] Replayed YM.XSpace.Pointer
+warning: YM/XSpace/Pointer.lean:41:42: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵e̵d̵g̵e̵,̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵s̵i̵x̵,̵e̵n̵d̵r̵,̵v̵.̵p̵r̵o̵p̵e̵r̵t̵y̵.̵n̵e̵,̵[̲w̲e̲d̲g̲e̲,̲ ̲s̲i̲x̲,̲ ̲e̲n̲d̲r̲,̲ ̲v̲.̲p̲r̲o̲p̲e̲r̲t̲y̲.̲n̲e̲,̲ v.property.ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5997/6206] Replayed YM.XSpace.Canary
+warning: YM/XSpace/Canary.lean:35:193: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul,
+  ̲  ̲map_add, map_mul, ̲ξ_harp, ̲ξ_zero, ̲zero_mul, ̲mul_zero, ̲peek_C,m̵a̵p̵_̵ ̲zero,̵z̵e̵r̵o̵_add, ̲add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5998/6206] Replayed YM.XSpace.Ciphers
+warning: YM/XSpace/Ciphers.lean:22:56: This simp argument is unused:
+  LinearMap.add_apply
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵h̵a̵n̵d̵s̵h̵a̵k̵e̵,̵m̵a̵p̵_̵a̵d̵d̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲h̲a̲n̲d̲s̲h̲a̲k̲e̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Ciphers.lean:23:58: This simp argument is unused:
+  LinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵h̵a̵n̵d̵s̵h̵a̵k̵e̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵z̵e̵r̵o̵]̵[̲h̲a̲n̲d̲s̲h̲a̲k̲e̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6005/6206] Replayed YM.XSpace.Verse
+warning: YM/XSpace/Verse.lean:27:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/XSpace/Verse.lean:40:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/XSpace/Verse.lean:49:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6008/6206] Replayed YM.XSpace.Perch
+warning: YM/XSpace/Perch.lean:23:156: This simp argument is unused:
+  smul_sub
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵m̵u̵l̵_̵s̵u̵b̵,̵ ̵s̵u̵b̵_̵e̵q̵_̵a̵d̵d̵_̵n̵e̵g̵]̵[̲s̲u̲b̲_̲e̲q̲_̲a̲d̲d̲_̲n̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6009/6206] Replayed YM.XSpace.Liken
+warning: YM/XSpace/Liken.lean:22:0: automatically included section variable(s) unused in theorem `YM.XSpace.Relief.no_cost_zero`:
+  s
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit s in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Liken.lean:22:165: 'change actual _ _ = 0' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Liken.lean:24:295: 'change _ ≤ p * (1 + ↑(reach v))' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6010/6206] Replayed YM.XSpace.Salsa
+warning: YM/XSpace/Salsa.lean:45:404: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6015/6206] Replayed YM.XSpace.Chrome
+warning: YM/XSpace/Chrome.lean:49:116: Variable name `f` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6016/6206] Replayed YM.XSpace.Banter
+warning: YM/XSpace/Banter.lean:19:77: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6019/6206] Replayed YM.XSpace.Screening
+warning: YM/XSpace/Screening.lean:12:112: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6020/6206] Replayed YM.XSpace.Requite
+warning: YM/XSpace/Requite.lean:24:394: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Requite.lean:24:394: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [6026/6206] Replayed YM.XSpace.Painter
+warning: YM/XSpace/Painter.lean:23:16: Variable name `hx` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Painter.lean:33:107: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6027/6206] Replayed YM.XSpace.Nacre
+warning: YM/XSpace/Nacre.lean:13:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Nacre.0.YM.XSpace.Season.near_zone`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Nacre.lean:30:122: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+warning: YM/XSpace/Nacre.lean:30:152: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [6030/6206] Replayed YM.XSpace.Musette
+warning: YM/XSpace/Musette.lean:41:0: automatically included section variable(s) unused in theorem `YM.XSpace.Angle.wherewithal`:
+  M
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit M in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [6031/6206] Replayed YM.XSpace.Tabloid
+warning: YM/XSpace/Tabloid.lean:43:31: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [6032/6206] Replayed YM.XSpace.Tulip
+warning: YM/XSpace/Tulip.lean:28:59: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Tulip.lean:28:63: Variable name `y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Tulip.lean:28:67: Variable name `z` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6033/6206] Replayed YM.XSpace.Topaz
+warning: YM/XSpace/Topaz.lean:31:121: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6038/6206] Replayed YM.XSpace.Whist
+warning: YM/XSpace/Whist.lean:28:134: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Whist.lean:43:163: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6040/6206] Replayed YM.XSpace.Camellia
+warning: YM/XSpace/Camellia.lean:29:18: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Camellia.lean:29:31: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Camellia.lean:29:63: Variable name `H` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6045/6206] Replayed YM.XSpace.Organ
+warning: YM/XSpace/Organ.lean:26:62: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul, ξ̵_̵h̵a̵r̵p̵,̵ξ̵_̵z̵e̵r̵o̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵p̵e̵e̵k̵_̵C̵,̵p̵e̵e̵k̵_̵l̵e̵g̵]̵ξ̲_̲h̲a̲r̲p̲,̲ ̲ξ̲_̲z̲e̲r̲o̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲p̲e̲e̲k̲_̲C̲,̲ ̲p̲e̲e̲k̲_̲l̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Organ.lean:26:71: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul, ξ̵_̵h̵a̵r̵p̵,̵ξ̵_̵z̵e̵r̵o̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵p̵e̵e̵k̵_̵C̵,̵p̵e̵e̵k̵_̵l̵e̵g̵]̵ξ̲_̲h̲a̲r̲p̲,̲ ̲ξ̲_̲z̲e̲r̲o̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲p̲e̲e̲k̲_̲C̲,̲ ̲p̲e̲e̲k̲_̲l̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6046/6206] Replayed YM.XSpace.Oblate
+warning: YM/XSpace/Oblate.lean:17:142: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6051/6206] Replayed YM.XSpace.Tornado
+warning: YM/XSpace/Tornado.lean:49:32: 'unfold Tuk at *' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6133/6206] Replayed YM.XSpace.Eventide
+warning: YM/XSpace/Eventide.lean:53:229: 'change _ ≤ 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6192/6206] Replayed YM.MS.ScaleForest.TracedCubic
+warning: YM/MS/ScaleForest/TracedCubic.lean:124:139: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [6205/6206] Built GhostLoopBenchmark (3.7s)
+info: GhostLoopBenchmark.lean:313:0: 'YMReview.NovemberMatching.GhostLoop.numerator_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:314:0: 'YMReview.NovemberMatching.GhostLoop.numerator_gamma_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:315:0: 'YMReview.NovemberMatching.GhostLoop.numerator_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:316:0: 'YMReview.NovemberMatching.GhostLoop.tensor_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:317:0: 'YMReview.NovemberMatching.GhostLoop.tensor_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:318:0: 'YMReview.NovemberMatching.GhostLoop.finite_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:319:0: 'YMReview.NovemberMatching.GhostLoop.parameter_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:320:0: 'YMReview.NovemberMatching.GhostLoop.submitted_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:321:0: 'YMReview.NovemberMatching.GhostLoop.premature_tensor_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:322:0: 'YMReview.NovemberMatching.GhostLoop.premature_tensor_error_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:323:0: 'YMReview.NovemberMatching.GhostLoop.submitted_finite_reading' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:324:0: 'YMReview.NovemberMatching.GhostLoop.submitted_scale_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:325:0: 'YMReview.NovemberMatching.GhostLoop.submitted_scale_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:326:0: 'YMReview.NovemberMatching.GhostLoop.finitePart_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:327:0: 'YMReview.NovemberMatching.GhostLoop.finite_test_iff_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:328:0: 'YMReview.NovemberMatching.GhostLoop.heatDressing_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:329:0: 'YMReview.NovemberMatching.GhostLoop.heatDressing_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:330:0: 'YMReview.NovemberMatching.GhostLoop.submitted_line_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [6206/6206] Built GhostFiniteChallenge (3.1s)
+warning: GhostFiniteChallenge.lean:8:8: declaration uses `sorry`
+Build completed successfully (6206 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export GhostFiniteChallenge -- Quot Quot.mk Quot.lift Quot.ind YMReview.NovemberMatching.GhostSolution.acceptance propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, YMReview.NovemberMatching.GhostSolution.acceptance, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from GhostFiniteChallenge
+Building GhostLoopSolution
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build GhostLoopSolution
+ℹ [3915/4467] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Local.Coh
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Local/Coh.lean:92:163: Try this:
+  [apply] abel_nf
+⚠ [3990/4467] Replayed YM.SectorNext.GAUSSIAN_SECTOR_CHANGE.Contraction
+warning: YM/SectorNext/GAUSSIAN_SECTOR_CHANGE/Contraction.lean:111:13: This simp argument is unused:
+  LinearMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵i̵d̵_̵c̵o̵e̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲i̲d̲_̲c̲o̲e̲,̲ id_eq, map_smul, map_add,
+  ̲  ̲ ̲ ̲G.mat_adjoint, Gauge.conjugate, mul_smul_comm, s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵s̵m̵u̵l̵_̵a̵d̵d̵,̵s̲m̲u̲l̲_̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ ̲s̲m̲u̲l̲_̲a̲d̲d̲,̲ Y]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [4244/4467] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Motif.Beat
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean:27:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean:27:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [4277/4467] Replayed YM.MS.Wind.Realized
+info: YM/MS/Wind/Realized.lean:34:123: Try this:
+  [apply] abel_nf
+ℹ [4310/4467] Replayed YM.MS.Latch.Bin
+info: YM/MS/Latch/Bin.lean:40:82: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [4393/5198] Replayed YM.MS.Swirl.Plane
+warning: YM/MS/Swirl/Plane.lean:24:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.readSym`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Swirl/Plane.lean:33:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.lore`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Swirl/Plane.lean:41:0: automatically included section variable(s) unused in theorem `YM.MS.Swirl.P_exp`:
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4437/5198] Replayed YM.MS.Swirl.LandLine
+warning: YM/MS/Swirl/LandLine.lean:39:226: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/MS/Swirl/LandLine.lean:39:226: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4442/5198] Replayed YM.MS.Breeze.North
+warning: YM/MS/Breeze/North.lean:23:99: Variable name `E` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Breeze/North.lean:28:14: Variable name `f` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Breeze/North.lean:28:19: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4443/5198] Replayed YM.MS.Breeze.Bulb
+warning: YM/MS/Breeze/Bulb.lean:28:60: Variable name `hu` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4465/5198] Replayed YM.MS.Puff.Rescale
+warning: YM/MS/Puff/Rescale.lean:45:128: This simp argument is unused:
+  α
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_singleton,
+  ̲  ̲ ̲ ̲ ̲ ̲cloak, α̵,̵( ̵P.zeroC _ ̵).mpr rfl, ̲Nat.cast_zero, ̲zero_smul, ̲map_zero, ̲LinearMap.zero_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4468/5198] Replayed YM.MS.Theater.Scale
+warning: YM/MS/Theater/Scale.lean:50:310: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: YM/MS/Theater/Scale.lean:51:34: This simp argument is unused:
+  ht.symm
+
+Hint: Omit it from the simp argument list.
+  simp [̵ ̵c̵l̵,̵h̵t̵,̵ ̵h̵t̵.̵s̵y̵m̵m̵ ̵]̵[̲c̲l̲,̲ ̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4469/5198] Replayed YM.MS.Theater.Pave
+warning: YM/MS/Theater/Pave.lean:23:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.workL`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Theater/Pave.lean:29:49: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: YM/MS/Theater/Pave.lean:29:85: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: YM/MS/Theater/Pave.lean:25:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.rot`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Theater/Pave.lean:28:17: 'change _ = inner ℝ p u • ((planeC i h p v).val i _)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Pave.lean:31:0: automatically included section variable(s) unused in theorem `YM.MS.Theater.plane_x`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4470/5198] Replayed YM.MS.Theater.Radium
+warning: YM/MS/Theater/Radium.lean:23:13: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:23:15: Variable name `Y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:24:14: Variable name `c` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:24:16: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:30:13: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:31:14: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:47:45: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Theater/Radium.lean:47:47: Variable name `y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4471/5198] Replayed YM.MS.Theater.Eq
+warning: YM/MS/Theater/Eq.lean:37:331: `ContinuousMultilinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+⚠ [4472/5198] Replayed YM.MS.Theater.Life
+warning: YM/MS/Theater/Life.lean:21:129: This simp argument is unused:
+  valueC
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵v̵a̵l̵u̵e̵C̵ ̵]̵[̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Theater/Life.lean:22:130: This simp argument is unused:
+  valueC
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵v̵a̵l̵u̵e̵C̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲P̲i̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Theater/Life.lean:37:175: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:40:175: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:44:251: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:50:142: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Theater/Life.lean:51:307: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4474/5198] Replayed YM.MS.Theater.RakeA
+warning: YM/MS/Theater/RakeA.lean:19:91: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4478/5198] Replayed YM.MS.Theater.Value
+warning: YM/MS/Theater/Value.lean:38:22: Variable name `he` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4494/5198] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Theater.Place
+warning: YangMills/WilsonProof/NativeSupport/YM/MS/Theater/Place.lean:31:13: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4498/5198] Replayed YangMills.WilsonProof.NativeSupport.YM.MS.Theater.Horizon
+warning: YangMills/WilsonProof/NativeSupport/YM/MS/Theater/Horizon.lean:20:13: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4542/5198] Replayed YM.MS.Drops.Hear
+warning: YM/MS/Drops/Hear.lean:20:37: Variable name `hr` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Drops/Hear.lean:21:189: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵]̵ ̵a̵t̵ ̵h̵x̵s̲i̲m̲p̲ ̲a̲t̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲x̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Drops/Hear.lean:22:375: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵o̵f̵R̵e̵a̵l̵_̵m̵u̵l̵,̵i̵d̵_̵e̵q̵ ̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲o̲f̲R̲e̲a̲l̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲i̲d̲_̲e̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Drops/Hear.lean:28:191: This simp argument is unused:
+  Landau.gauge
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵L̵a̵n̵d̵a̵u̵.̵g̵a̵u̵g̵e̵]̵ ̵a̵t̵ ̵h̵x̵s̲i̲m̲p̲ ̲a̲t̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲x̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4544/5198] Replayed YM.MS.Drops.Shadow
+warning: YM/MS/Drops/Shadow.lean:32:246: 'change (↑(((-2 : ℝ) * _) * q) : ℂ) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: YM/MS/Drops/Shadow.lean:37:208: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: YM/MS/Drops/Shadow.lean:43:50: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Drops/Shadow.lean:43:50: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/MS/Drops/Shadow.lean:37:204: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [4547/5198] Replayed YM.MS.Drops.Month
+warning: YM/MS/Drops/Month.lean:26:123: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/MS/Drops/Month.lean:26:123: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4551/5198] Replayed YM.MS.Drops.Catch
+warning: YM/MS/Drops/Catch.lean:24:21: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4553/5198] Replayed YM.MS.Awning.Cap
+warning: YM/MS/Awning/Cap.lean:15:0: automatically included section variable(s) unused in theorem `YM.MS.Awning.price_M`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Awning/Cap.lean:22:14: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:22:16: Variable name `Y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:23:14: Variable name `c` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Awning/Cap.lean:28:14: Try this: intro I L _ f F H he m E _ _ _ W x v
+warning: YM/MS/Awning/Cap.lean:31:6: Try this: intro u t ht hU m E _ _ _ W x v
+⚠ [4554/5198] Replayed YM.MS.Awning.Burn
+warning: YM/MS/Awning/Burn.lean:15:0: automatically included section variable(s) unused in theorem `YM.MS.Awning.core_sum`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4558/5198] Replayed YM.MS.Milk.Honey
+warning: YM/MS/Milk/Honey.lean:22:12: Variable name `L` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:42:9: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:50:43: Variable name `w` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:50:57: Variable name `k` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:51:42: Variable name `w` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:51:44: Variable name `k` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Honey.lean:54:80: Variable name `z` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4559/5198] Replayed YM.MS.Milk.Basil
+warning: YM/MS/Milk/Basil.lean:27:27: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵l̵i̵c̵k̵,̵h̵s̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲f̲l̲i̲c̲k̲,̲ ̲h̲s̲]̲ at hp ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Milk/Basil.lean:28:182: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵l̵i̵c̵k̵,̵h̵v̵,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲f̲l̲i̲c̲k̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲v̲]̲ at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4563/5198] Replayed YM.MS.Milk.Mural
+warning: YM/MS/Milk/Mural.lean:39:0: automatically included section variable(s) unused in theorem `YM.MS.Milk.pure_b`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Milk/Mural.lean:46:0: automatically included section variable(s) unused in theorem `YM.MS.Milk.zero_field`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Milk/Mural.lean:46:18: Variable name `v` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4564/5198] Replayed YM.MS.Milk.Magic
+warning: YM/MS/Milk/Magic.lean:34:60: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:35:110: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:35:112: Variable name `hx'` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Milk/Magic.lean:36:130: Variable name `t` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4567/5198] Replayed YM.MS.Milk.Key
+warning: YM/MS/Milk/Key.lean:25:43: 'change _ = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4602/5198] Replayed YM.MS.Tide.Coi
+warning: YM/MS/Tide/Coi.lean:35:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.zeroZ`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Coi.lean:36:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.payTune`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4604/5198] Replayed YM.MS.Tide.Lion
+warning: YM/MS/Tide/Lion.lean:27:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.re_n`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Lion.lean:29:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.scaleF`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Tide/Lion.lean:33:48: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [f̵ra̵m̵e̵F̵,̵r̵oots, ̲Pi.zero_apply, ̲exp_zero, ̲mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/MS/Tide/Lion.lean:41:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.dealP`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4606/5198] Replayed YM.MS.Tide.Stated
+warning: YM/MS/Tide/Stated.lean:34:0: automatically included section variable(s) unused in theorem `YM.MS.Tide.qualifies`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4611/5198] Replayed YM.MS.Dial.Wake
+warning: YM/MS/Dial/Wake.lean:36:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.washT`:
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Wake.lean:38:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.washSum`:
+  [LinearOrder W]
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Wake.lean:46:38: This simp argument is unused:
+  Src
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵,̵S̵r̵c̵,̵m̵u̵l̵t̵i̵,̵l̵o̵n̵e̵l̵y̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵ ̵]̵[̲L̲,̲ ̲m̲u̲l̲t̲i̲,̲ ̲l̲o̲n̲e̲l̲y̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4612/5198] Replayed YM.MS.Dial.Paint
+warning: YM/MS/Dial/Paint.lean:34:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.ultimate`:
+  [l.IsCountablyGenerated]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [l.IsCountablyGenerated] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4613/5198] Replayed YM.MS.Dial.Frame
+warning: YM/MS/Dial/Frame.lean:27:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.Architect`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4614/5198] Replayed YM.MS.Dial.Slope
+warning: YM/MS/Dial/Slope.lean:17:140: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp [̵f̵r̵a̵m̵e̵F̵,̵r̵o̵o̵t̵s̵]̵[̲r̲o̲o̲t̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4709/5198] Replayed YM.Pert.Lattice.Action
+warning: YM/Pert/Lattice/Action.lean:57:2: 'change _ = _ + fixing a' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4712/5198] Replayed YM.PertExtension.Series
+warning: YM/PertExtension/Series.lean:40:13: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/Series.lean:52:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.bounded`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:53:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.weaken`:
+  [NormedSpace ℝ E]
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:59:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.add`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:66:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Invoice.mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:84:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.zero`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:85:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.shift_a`:
+  [NormedSpace ℝ E]
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:99:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.add`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:113:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.degrade`:
+  [NormedSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:126:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Zone.Fits.mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Series.lean:148:77: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵e̵v̵a̵l̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵i̵t̵e̵,̵s̵m̵u̵l̵_̵z̵e̵r̵o̵,̵ ̵i̵t̵e̵_̵t̵r̵u̵e̵]̵[̲e̲v̲a̲l̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲i̲t̲e̲,̲ ̲s̲m̲u̲l̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4713/5198] Replayed YM.PertExtension.Uniform
+warning: YM/PertExtension/Uniform.lean:58:63: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4714/5198] Replayed YM.PertExtension.Exponent
+warning: YM/PertExtension/Exponent.lean:28:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.cancellation`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:58:8: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.layers_zero`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:94:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.expsum_limit`:
+  [NormedAddCommGroup E]
+  [NormedSpace ℝ E]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Exponent.lean:116:168: Try this: intro _ _
+⚠ [4715/5198] Replayed YM.PertExtension.Tails
+warning: YM/PertExtension/Tails.lean:37:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.bill_nonneg`:
+  [NormedSpace ℝ E]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ E] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:56:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Smooth.continuousJet`:
+  [MeasurableSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:60:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Smooth.continuousCoeff`:
+  [FiniteDimensional ℝ E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:67:37: This simp argument is unused:
+  Zone.mul
+
+Hint: Omit it from the simp argument list.
+  simp only [TaylorPow,̵ ̵Z̵o̵n̵e̵.̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/Tails.lean:84:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.kernel_pos`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:85:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.kernel_bound`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Tails.lean:114:10: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.Stationary.coeffBound`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4716/5198] Replayed YM.PertExtension.Interior
+warning: YM/PertExtension/Interior.lean:14:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.disc_meas`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:15:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.disc_mem`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:29:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Radial.projection_eq`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Interior.lean:30:83: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Interior.lean:73:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [n̵o̵r̵m̵_̵m̵u̵l̵,̵Real.norm_eq_abs (kernel ..), ̲abs_of_nonneg kernel_pos.le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4717/5198] Replayed YM.PertExtension.GaussianScore
+warning: YM/PertExtension/GaussianScore.lean:27:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.continuous_kern`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianScore.lean:29:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.GaussianScore.0.YM.PertExtension.GaussianScore.Law.inject`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianScore.lean:50:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.translation_bound`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4718/5198] Replayed YM.PertExtension.GaussianIBP
+warning: YM/PertExtension/GaussianIBP.lean:41:115: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵Γ̵.̵t̵u̵r̵n̵s̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲Γ̲.̲t̲u̲r̲n̲s̲ x v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:41:123: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵Γ̵.̵t̵u̵r̵n̵s̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲Γ̲.̲t̲u̲r̲n̲s̲ x v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:48:25: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵d̵_̵e̵q̵,̵ ̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/GaussianIBP.lean:61:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.product_bound`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:72:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.diffSum_on`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:75:0: automatically included section variable(s) unused in theorem `YM.PertExtension.GaussianScore.Law.product_cont`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/GaussianIBP.lean:76:107: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4749/5198] Replayed YM.PertExtension.OrbGeometry
+warning: YM/PertExtension/OrbGeometry.lean:109:131: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [4750/5198] Replayed YM.PertExtension.OrbTree
+warning: YM/PertExtension/OrbTree.lean:119:38: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbTree.lean:125:37: This simp argument is unused:
+  dite_true
+
+Hint: Omit it from the simp argument list.
+  simp only [if_neg ht, ̲index, eR_eR, d̵ite_true,i̵t̵e̵_̵t̵r̵u̵e̵,̵ mul_inv_rev, inv_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbTree.lean:166:17: Variable name `he` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbTree.lean:197:87: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbTree.lean:216:85: This simp argument is unused:
+  sub_add
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵a̵s̵h̵,̵S̵t̵e̵p̵.̵v̵e̵c̵,̵S̵t̵e̵p̵.̵u̵s̵e̵d̵,̵ ̵h̵m̵,̵s̵u̵b̵_̵a̵d̵d̵,̵s̵u̵b̵_̵e̵q̵_̵a̵d̵d̵_̵n̵e̵g̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲a̲s̲h̲,̲ ̲S̲t̲e̲p̲.̲v̲e̲c̲,̲ ̲S̲t̲e̲p̲.̲u̲s̲e̲d̲,̲ ̲h̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲e̲q̲_̲a̲d̲d̲_̲n̲e̲g̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4751/5198] Replayed YM.PertExtension.OrbFlat
+warning: YM/PertExtension/OrbFlat.lean:150:34: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [̵v̵,̵h̵x̵,̵h̵h̵]̵[̲v̲,̲ ̲h̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbFlat.lean:150:78: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵x̵,̵h̵h̵]̵[̲h̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbFlat.lean:180:49: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbFlat.lean:180:0: Definition `closed_face` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+⚠ [4752/5198] Replayed YM.PertExtension.OrbHessian
+warning: YM/PertExtension/OrbHessian.lean:84:45: This simp argument is unused:
+  add_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵r̵a̵v̵e̵l̵,̵l̵i̵n̵e̵,̵G̵.̵m̵a̵t̵_̵m̵u̵l̵,̵m̵a̵p̵_̵a̵d̵d̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲t̲r̲a̲v̲e̲l̲,̲ ̲l̲i̲n̲e̲,̲ ̲G̲.̲m̲a̲t̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbHessian.lean:125:44: This simp argument is unused:
+  contribution
+
+Hint: Omit it from the simp argument list.
+  simp only [(fun i̵=̵>̵(̵f̵a̵c̵e̵_̵g̵r̵a̵d̵e̵s̵ ̵i z̵)̵.̵1̵)̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵=̲>̲ ̲(̲f̲a̲c̲e̲_̲g̲r̲a̲d̲e̲s̲ ̲i̲ ̲z̲)̲.̲1̲)̲,̲ division_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbHessian.lean:125:58: This simp argument is unused:
+  division_def
+
+Hint: Omit it from the simp argument list.
+  simp only [(fun i̵=̵>̵(̵f̵a̵c̵e̵_̵g̵r̵a̵d̵e̵s̵ ̵i z̵)̵.̵1̵)̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵ ̵d̵i̵v̵i̵s̵i̵o̵n̵_̵d̵e̵f̵]̵=̲>̲ ̲(̲f̲a̲c̲e̲_̲g̲r̲a̲d̲e̲s̲ ̲i̲ ̲z̲)̲.̲1̲)̲,̲ ̲c̲o̲n̲t̲r̲i̲b̲u̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4753/5198] Replayed YM.PertExtension.BareChart
+warning: YM/PertExtension/BareChart.lean:26:12: automatically included section variable(s) unused in theorem `YM.PertExtension.Chart.expLinks_meas`:
+  [Fintype U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/BareChart.lean:49:76: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/BareChart.lean:57:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Chart.Ratio.chamber_open`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4755/5198] Replayed YM.PertExtension.OrbHaar
+warning: YM/PertExtension/OrbHaar.lean:1:0: 'Mathlib.Topology.Algebra.Module.WeakDual' has been deprecated: please replace this import by
+
+import Mathlib.Topology.Algebra.Module.Spaces.WeakDual
+warning: YM/PertExtension/OrbHaar.lean:31:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbHaar.0.YM.PertExtension.Orb.assembly_meas`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbHaar.lean:47:20: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbHaar.0.YM.PertExtension.Orb.assembly_cont`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbHaar.lean:63:34: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4757/5198] Replayed YM.PertExtension.Aspiration
+warning: YM/PertExtension/Aspiration.lean:28:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.of_bill`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Aspiration.lean:38:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_of`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/Aspiration.lean:44:103: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:45:136: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:52:149: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:53:127: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/Aspiration.lean:76:37: This simp argument is unused:
+  Nat.lt_succ_iff
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵N̵a̵t̵.̵l̵t̵_̵s̵u̵c̵c̵_̵i̵f̵f̵]̵[̲s̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/Aspiration.lean:130:24: Variable name `a` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4758/5198] Replayed YM.PertExtension.OrbExpansion
+warning: YM/PertExtension/OrbExpansion.lean:75:78: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbExpansion.lean:75:80: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4759/5198] Replayed YM.PertExtension.Normalized
+warning: YM/PertExtension/Normalized.lean:72:129: This simp argument is unused:
+  Pi.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵P̵i̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4790/5198] Replayed YM.PertExtension.PTBills
+warning: YM/PertExtension/PTBills.lean:14:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_const`:
+  [NormedSpace ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/PTBills.lean:69:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Series.Tested.bill_mul`:
+  [NormedAlgebra ℝ R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAlgebra ℝ R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4907/5198] Replayed YM.PertExtension.OrbLaurent
+warning: YM/PertExtension/OrbLaurent.lean:34:12: This simp argument is unused:
+  J
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵J̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbLaurent.lean:55:8: automatically included section variable(s) unused in theorem `_private.YM.PertExtension.OrbLaurent.0.YM.PertExtension.Orb.hPivot`:
+  h
+  H
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h H in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/PertExtension/OrbLaurent.lean:55:48: Variable name `hi` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/PertExtension/OrbLaurent.lean:99:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Orb.unit_expectation`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5355/6170] Replayed YM.PertExtension.OrbCovariance
+warning: YM/PertExtension/OrbCovariance.lean:44:131: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/PertExtension/OrbCovariance.lean:63:50: This simp argument is unused:
+  Finsupp.single_eq_same
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.one_apply, Finsupp.single_eq_s̵a̵m̵e̵,̵ ̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵e̵q̵_̵of_ne, Finsupp.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbCovariance.lean:63:74: This simp argument is unused:
+  Finsupp.single_eq_of_ne
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.one_apply, Finsupp.single_eq_same, Finsupp.single_e̵q̵_̵o̵f̵_̵n̵e̵,̵ ̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/PertExtension/OrbCovariance.lean:69:0: automatically included section variable(s) unused in theorem `YM.PertExtension.Orb.gaussian_recursion`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5381/6170] Replayed YM.Pert.Lattice.GaugeFix
+warning: YM/Pert/Lattice/GaugeFix.lean:20:19: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:137: 'rw [image_image]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:155: 'abel' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:137: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: YM/Pert/Lattice/GaugeFix.lean:20:155: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [5753/6170] Replayed YM.MS.Dial.Loom
+warning: YM/MS/Dial/Loom.lean:22:116: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [roots,
+  ̲  ̲ ̲ ̲ ̲ ̲f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5754/6170] Replayed YM.MS.Dial.Set
+warning: YM/MS/Dial/Set.lean:17:61: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵[̲r̲o̲o̲t̲s̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲ at hB hP
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5755/6170] Replayed YM.MS.Dial.Reg
+warning: YM/MS/Dial/Reg.lean:24:76: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Dial/Reg.lean:33:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.filmed`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Reg.lean:42:272: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵]̵[̲r̲o̲o̲t̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5756/6170] Replayed YM.MS.Dial.Watch
+warning: YM/MS/Dial/Watch.lean:18:28: Variable name `t` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/MS/Dial/Watch.lean:31:0: automatically included section variable(s) unused in theorem `YM.MS.Dial.agrees`:
+  [LinearOrder W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/MS/Dial/Watch.lean:37:204: This simp argument is unused:
+  frameF
+
+Hint: Omit it from the simp argument list.
+  simp only [̵ ̵G̵e̵o̵.̵r̵o̵o̵t̵s̵,̵f̵r̵a̵m̵e̵F̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵e̵x̵p̵_̵z̵e̵r̵o̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵m̵u̵l̵_̵o̵n̵e̵ ̵]̵[̲G̲e̲o̲.̲r̲o̲o̲t̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲e̲x̲p̲_̲z̲e̲r̲o̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5763/6170] Replayed YM.X.Gauss.Plausible
+warning: YM/X/Gauss/Plausible.lean:73:56: This simp argument is unused:
+  _root_.zero_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [fderiv_fun_const,̵_̵r̵o̵o̵t̵_̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/X/Gauss/Plausible.lean:78:265: This simp argument is unused:
+  _root_.mul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵_̵r̵o̵o̵t̵_̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵_̵r̵o̵o̵t̵_̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵_̵r̵o̵o̵t̵_̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵[̲_̲r̲o̲o̲t̲_̲.̲s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲_̲r̲o̲o̲t̲_̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5764/6170] Replayed YM.X.Gauss.Expect
+warning: YM/X/Gauss/Expect.lean:21:0: automatically included section variable(s) unused in theorem `YM.PositionX.Gauss.average_scale`:
+  [FiniteDimensional ℝ E]
+  [BorelSpace E]
+  [μ.IsAddHaarMeasure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [BorelSpace E] [μ.IsAddHaarMeasure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/X/Gauss/Expect.lean:48:15: This simp argument is unused:
+  Law.product
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵a̵w̵.̵p̵r̵o̵d̵u̵c̵t̵,̵ ̵s̵h̵o̵w̵[̲s̲h̲o̲w̲ (Law.product _ ∅̵)̵=̵1̵∅̲)̲ ̲=̲ ̲1̲ from r̵f̵l̵,̵L̵a̵w̵.̵e̵m̵p̵t̵y̵,̵g̵l̵y̵p̵h̵s̵,̵a̵v̵e̵r̵a̵g̵e̵_̵c̵o̵n̵s̵t̵]̵r̲f̲l̲,̲ ̲L̲a̲w̲.̲e̲m̲p̲t̲y̲,̲ ̲g̲l̲y̲p̲h̲s̲,̲ ̲a̲v̲e̲r̲a̲g̲e̲_̲c̲o̲n̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/X/Gauss/Expect.lean:48:79: This simp argument is unused:
+  average_const
+
+Hint: Omit it from the simp argument list.
+  simp [Law.product, show (Law.product _ ∅̵)̵=̵1̵∅̲)̲ ̲=̲ ̲1̲ from r̵f̵l̵,̵L̵a̵w̵.̵e̵m̵p̵t̵y̵,̵g̵l̵y̵p̵h̵s̵,̵a̵v̵e̵r̵a̵g̵e̵_̵c̵o̵n̵s̵t̵]̵r̲f̲l̲,̲ ̲L̲a̲w̲.̲e̲m̲p̲t̲y̲,̲ ̲g̲l̲y̲p̲h̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5825/6170] Replayed YM.XSpace.Trials
+warning: YM/XSpace/Trials.lean:57:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.chosen`:
+  [NormedSpace ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5826/6170] Replayed YM.XSpace.Sandal
+warning: YM/XSpace/Sandal.lean:59:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.shares`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5827/6170] Replayed YM.XSpace.Soles
+warning: YM/XSpace/Soles.lean:24:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Soles.0.YM.XSpace.Litter.sole`:
+  [NormedSpace ℝ F]
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ F] [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Soles.lean:57:0: automatically included section variable(s) unused in theorem `YM.XSpace.Litter.sole_walk`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5830/6170] Replayed YM.XSpace.ScorePad
+warning: YM/XSpace/ScorePad.lean:50:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.ScorePad.0.YM.XSpace.Scale.known`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5831/6170] Replayed YM.XSpace.Concord
+warning: YM/XSpace/Concord.lean:17:0: automatically included section variable(s) unused in theorem `YM.XSpace.Scale.rode`:
+  [FiniteDimensional ℝ F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Concord.lean:65:30: 'change 0 = _ • crack _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Concord.lean:70:18: 'change b⁻¹ ^ l.length • _ = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5863/6170] Replayed YM.XSpace.Stylus
+warning: YM/XSpace/Stylus.lean:30:72: 'change d - g i = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5864/6170] Replayed YM.XSpace.Reverb
+warning: YM/XSpace/Reverb.lean:13:153: This simp argument is unused:
+  deposited
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵,̵d̵e̵p̵o̵s̵i̵t̵e̵d̵,̵d̵o̵t̵t̵e̵r̵,̵[̲L̲,̲
+  ̲ ̲ ̲ ̲ ̲d̲o̲t̲t̲e̲r̲,̲ needle, d̵e̵p̵o̵s̵i̵t̵,̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵d̲e̲p̲o̲s̲i̲t̲,̲ ̲F̲i̲n̲s̲u̲p̲p̲.̲s̲i̲n̲g̲l̲e̲_̲a̲p̲p̲l̲y̲,̲ eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5866/6170] Replayed YM.XSpace.Encore
+warning: YM/XSpace/Encore.lean:67:302: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp only [̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵m̵a̵p̵_̵s̵u̵b̵]̵[̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5868/6170] Replayed YM.XSpace.Marque
+warning: YM/XSpace/Marque.lean:43:0: automatically included section variable(s) unused in theorem `YM.XSpace.Tide.coiled`:
+  H
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit H in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Marque.lean:56:50: 'change _ * (C * _ ^ n) ≤ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5870/6170] Replayed YM.XSpace.Mu
+warning: YM/XSpace/Mu.lean:51:26: Variable name `q` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5871/6170] Replayed YM.XSpace.Avenue
+warning: YM/XSpace/Avenue.lean:14:23: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Avenue.lean:30:318: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5873/6170] Replayed YM.XSpace.Lows
+warning: YM/XSpace/Lows.lean:49:103: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5875/6170] Replayed YM.XSpace.Premiere
+warning: YM/XSpace/Premiere.lean:42:119: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [5876/6170] Replayed YM.XSpace.Arenas
+warning: YM/XSpace/Arenas.lean:33:17: Variable name `hz` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Arenas.lean:33:27: Variable name `n` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Arenas.lean:78:217: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [5878/6170] Replayed YM.XSpace.Fore
+warning: YM/XSpace/Fore.lean:26:26: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5884/6170] Replayed YM.XSpace.Aura
+warning: YM/XSpace/Aura.lean:15:37: Variable name `H` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5887/6170] Replayed YM.XSpace.Recess
+warning: YM/XSpace/Recess.lean:36:215: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5889/6170] Replayed YM.XSpace.Crush
+warning: YM/XSpace/Crush.lean:26:12: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Crush.lean:26:21: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5890/6170] Replayed YM.XSpace.Drum
+warning: YM/XSpace/Drum.lean:36:63: This simp argument is unused:
+  PiLp.add_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵r̵a̵c̵k̵l̵e̵_̵a̵p̵,̵P̵i̵L̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵L̵p̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵,̵R̵C̵L̵i̵k̵e̵.̵i̵n̵n̵e̵r̵_̵a̵p̵p̵l̵y̵,̵s̵t̵a̵r̵R̵i̵n̵g̵E̵n̵d̵_̵a̵p̵p̵l̵y̵,̵s̵t̵a̵r̵_̵t̵r̵i̵v̵i̵a̵l̵]̵[̲c̲r̲a̲c̲k̲l̲e̲_̲a̲p̲,̲ ̲P̲i̲L̲p̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲,̲ ̲R̲C̲L̲i̲k̲e̲.̲i̲n̲n̲e̲r̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲s̲t̲a̲r̲R̲i̲n̲g̲E̲n̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲s̲t̲a̲r̲_̲t̲r̲i̲v̲i̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5894/6170] Replayed YM.XSpace.Molo
+warning: YM/XSpace/Molo.lean:53:4: 'change _ • release (gen p v p).val = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5936/6170] Replayed YM.XSpace.Inbox
+warning: YM/XSpace/Inbox.lean:48:30: Variable name `v` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5937/6170] Replayed YM.XSpace.Reason
+warning: YM/XSpace/Reason.lean:15:89: This simp argument is unused:
+  Nat.sub_ne_zero_of_lt (?_ : n < k)
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵N̵a̵t̵.̵s̵u̵b̵_̵n̵e̵_̵z̵e̵r̵o̵_̵o̵f̵_̵l̵t̵ ̵(̵?̵_̵ ̵:̵ ̵n̵<̵k̵)̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Reason.lean:29:102: This simp argument is unused:
+  tendsto_const_nhds
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵t̵e̵n̵d̵s̵t̵o̵_̵c̵o̵n̵s̵t̵_̵n̵h̵d̵s̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Reason.lean:38:13: 'change Tendsto _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Reason.lean:46:15: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5944/6170] Replayed YM.XSpace.Bazaar
+warning: YM/XSpace/Bazaar.lean:57:149: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵e̵n̵d̵i̵n̵g̵,̵c̵h̵a̵i̵n̵,̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵,̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵[̲p̲e̲n̲d̲i̲n̲g̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲h̲a̲i̲n̲,̲ ̲s̲m̲u̲l̲_̲m̲u̲l̲_̲a̲s̲s̲o̲c̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Bazaar.lean:57:163: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵p̵e̵n̵d̵i̵n̵g̵,̵c̵h̵a̵i̵n̵,̵m̵u̵l̵_̵s̵m̵u̵l̵_̵c̵o̵m̵m̵,̵s̵m̵u̵l̵_̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]̵[̲p̲e̲n̲d̲i̲n̲g̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲h̲a̲i̲n̲,̲ ̲m̲u̲l̲_̲s̲m̲u̲l̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5945/6170] Replayed YM.XSpace.Credence
+warning: YM/XSpace/Credence.lean:31:0: automatically included section variable(s) unused in theorem `YM.XSpace.Stall.secures`:
+  h
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Credence.lean:59:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Credence.0.YM.XSpace.Stall.oneAdd`:
+  h
+  S
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h S in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Credence.lean:65:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Credence.0.YM.XSpace.Stall.tint`:
+  h
+  S
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h S in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5947/6170] Replayed YM.XSpace.Suburbs
+info: YM/XSpace/Suburbs.lean:66:690: Try this:
+  [apply] abel_nf
+warning: YM/XSpace/Suburbs.lean:78:181: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5948/6170] Replayed YM.XSpace.Embank
+warning: YM/XSpace/Embank.lean:31:0: automatically included section variable(s) unused in theorem `YM.XSpace.Foundation.pill`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Embank.lean:55:0: automatically included section variable(s) unused in theorem `YM.XSpace.Foundation.stage_plus`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [5950/6170] Replayed YM.XSpace.Hoists
+warning: YM/XSpace/Hoists.lean:40:37: This simp argument is unused:
+  terms
+
+Hint: Omit it from the simp argument list.
+  simp [he, t̵e̵r̵m̵s,̵ ̵s̵wing, spins, Step.used, Step.rotate, posDir,
+  ̲  ̲ ̲ ̲← Signed.act_sub, cloud]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Hoists.lean:48:229: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [5951/6170] Replayed YM.XSpace.Hook
+warning: YM/XSpace/Hook.lean:21:105: Variable name `e` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Hook.lean:24:68: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5975/6170] Replayed YM.XSpace.Fertile
+warning: YM/XSpace/Fertile.lean:24:169: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  simp only [W̵i̵t̵h̵L̵p̵.̵o̵f̵L̵p̵_̵t̵o̵L̵p̵,̵Signed.act_at]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5984/6170] Replayed YM.XSpace.Output1
+warning: YM/XSpace/Output1.lean:49:204: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Output1.lean:58:100: 'change (0 : MoveSpace G d) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [5988/6170] Replayed YM.XSpace.OffAxis
+warning: YM/XSpace/OffAxis.lean:32:35: Variable name `R` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [5989/6170] Replayed YM.XSpace.TiltRank
+warning: YM/XSpace/TiltRank.lean:58:10: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+warning: YM/XSpace/TiltRank.lean:58:98: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [5993/6170] Replayed YM.XSpace.Pointer
+warning: YM/XSpace/Pointer.lean:41:42: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵e̵d̵g̵e̵,̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵s̵i̵x̵,̵e̵n̵d̵r̵,̵v̵.̵p̵r̵o̵p̵e̵r̵t̵y̵.̵n̵e̵,̵[̲w̲e̲d̲g̲e̲,̲ ̲s̲i̲x̲,̲ ̲e̲n̲d̲r̲,̲ ̲v̲.̲p̲r̲o̲p̲e̲r̲t̲y̲.̲n̲e̲,̲ v.property.ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5999/6170] Replayed YM.XSpace.Canary
+warning: YM/XSpace/Canary.lean:35:193: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul,
+  ̲  ̲map_add, map_mul, ̲ξ_harp, ̲ξ_zero, ̲zero_mul, ̲mul_zero, ̲peek_C,m̵a̵p̵_̵ ̲zero,̵z̵e̵r̵o̵_add, ̲add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6000/6170] Replayed YM.XSpace.Ciphers
+warning: YM/XSpace/Ciphers.lean:22:56: This simp argument is unused:
+  LinearMap.add_apply
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵h̵a̵n̵d̵s̵h̵a̵k̵e̵,̵m̵a̵p̵_̵a̵d̵d̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲h̲a̲n̲d̲s̲h̲a̲k̲e̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Ciphers.lean:23:58: This simp argument is unused:
+  LinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵h̵a̵n̵d̵s̵h̵a̵k̵e̵,̵m̵a̵p̵_̵s̵m̵u̵l̵,̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵s̵m̵u̵l̵_̵z̵e̵r̵o̵]̵[̲h̲a̲n̲d̲s̲h̲a̲k̲e̲,̲ ̲m̲a̲p̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6007/6170] Replayed YM.XSpace.Verse
+warning: YM/XSpace/Verse.lean:27:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/XSpace/Verse.lean:40:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: YM/XSpace/Verse.lean:49:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6010/6170] Replayed YM.XSpace.Perch
+warning: YM/XSpace/Perch.lean:23:156: This simp argument is unused:
+  smul_sub
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵m̵u̵l̵_̵s̵u̵b̵,̵ ̵s̵u̵b̵_̵e̵q̵_̵a̵d̵d̵_̵n̵e̵g̵]̵[̲s̲u̲b̲_̲e̲q̲_̲a̲d̲d̲_̲n̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6011/6170] Replayed YM.XSpace.Liken
+warning: YM/XSpace/Liken.lean:22:0: automatically included section variable(s) unused in theorem `YM.XSpace.Relief.no_cost_zero`:
+  s
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit s in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Liken.lean:22:165: 'change actual _ _ = 0' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Liken.lean:24:295: 'change _ ≤ p * (1 + ↑(reach v))' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6012/6170] Replayed YM.XSpace.Salsa
+warning: YM/XSpace/Salsa.lean:45:404: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6017/6170] Replayed YM.XSpace.Chrome
+warning: YM/XSpace/Chrome.lean:49:116: Variable name `f` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6018/6170] Replayed YM.XSpace.Banter
+warning: YM/XSpace/Banter.lean:19:77: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6021/6170] Replayed YM.XSpace.Screening
+warning: YM/XSpace/Screening.lean:12:112: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6022/6170] Replayed YM.XSpace.Requite
+warning: YM/XSpace/Requite.lean:24:394: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: YM/XSpace/Requite.lean:24:394: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [6028/6170] Replayed YM.XSpace.Painter
+warning: YM/XSpace/Painter.lean:23:16: Variable name `hx` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Painter.lean:33:107: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6029/6170] Replayed YM.XSpace.Nacre
+warning: YM/XSpace/Nacre.lean:13:8: automatically included section variable(s) unused in theorem `_private.YM.XSpace.Nacre.0.YM.XSpace.Season.near_zone`:
+  R
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit R in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: YM/XSpace/Nacre.lean:30:122: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+warning: YM/XSpace/Nacre.lean:30:152: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [6032/6170] Replayed YM.XSpace.Musette
+warning: YM/XSpace/Musette.lean:41:0: automatically included section variable(s) unused in theorem `YM.XSpace.Angle.wherewithal`:
+  M
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit M in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [6033/6170] Replayed YM.XSpace.Tabloid
+warning: YM/XSpace/Tabloid.lean:43:31: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [6034/6170] Replayed YM.XSpace.Tulip
+warning: YM/XSpace/Tulip.lean:28:59: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Tulip.lean:28:63: Variable name `y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Tulip.lean:28:67: Variable name `z` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6035/6170] Replayed YM.XSpace.Topaz
+warning: YM/XSpace/Topaz.lean:31:121: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [6040/6170] Replayed YM.XSpace.Whist
+warning: YM/XSpace/Whist.lean:28:134: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Whist.lean:43:163: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6042/6170] Replayed YM.XSpace.Camellia
+warning: YM/XSpace/Camellia.lean:29:18: Variable name `s` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Camellia.lean:29:31: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: YM/XSpace/Camellia.lean:29:63: Variable name `H` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6047/6170] Replayed YM.XSpace.Organ
+warning: YM/XSpace/Organ.lean:26:62: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul, ξ̵_̵h̵a̵r̵p̵,̵ξ̵_̵z̵e̵r̵o̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵p̵e̵e̵k̵_̵C̵,̵p̵e̵e̵k̵_̵l̵e̵g̵]̵ξ̲_̲h̲a̲r̲p̲,̲ ̲ξ̲_̲z̲e̲r̲o̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲p̲e̲e̲k̲_̲C̲,̲ ̲p̲e̲e̲k̲_̲l̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: YM/XSpace/Organ.lean:26:71: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [ξ_mul, ξ̵_̵h̵a̵r̵p̵,̵ξ̵_̵z̵e̵r̵o̵,̵m̵a̵p̵_̵a̵d̵d̵,̵m̵a̵p̵_̵m̵u̵l̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵p̵e̵e̵k̵_̵C̵,̵p̵e̵e̵k̵_̵l̵e̵g̵]̵ξ̲_̲h̲a̲r̲p̲,̲ ̲ξ̲_̲z̲e̲r̲o̲,̲ ̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲m̲a̲p̲_̲m̲u̲l̲,̲ ̲m̲a̲p̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲p̲e̲e̲k̲_̲C̲,̲ ̲p̲e̲e̲k̲_̲l̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [6048/6170] Replayed YM.XSpace.Oblate
+warning: YM/XSpace/Oblate.lean:17:142: Variable name `p` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [6053/6170] Replayed YM.XSpace.Tornado
+warning: YM/XSpace/Tornado.lean:49:32: 'unfold Tuk at *' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6057/6170] Replayed YM.XSpace.Eventide
+warning: YM/XSpace/Eventide.lean:53:229: 'change _ ≤ 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [6270/6295] Replayed YM.MS.ScaleForest.TracedCubic
+warning: YM/MS/ScaleForest/TracedCubic.lean:124:139: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [6282/6295] Replayed GhostLoopBenchmark
+info: GhostLoopBenchmark.lean:313:0: 'YMReview.NovemberMatching.GhostLoop.numerator_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:314:0: 'YMReview.NovemberMatching.GhostLoop.numerator_gamma_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:315:0: 'YMReview.NovemberMatching.GhostLoop.numerator_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:316:0: 'YMReview.NovemberMatching.GhostLoop.tensor_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:317:0: 'YMReview.NovemberMatching.GhostLoop.tensor_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:318:0: 'YMReview.NovemberMatching.GhostLoop.finite_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:319:0: 'YMReview.NovemberMatching.GhostLoop.parameter_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:320:0: 'YMReview.NovemberMatching.GhostLoop.submitted_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:321:0: 'YMReview.NovemberMatching.GhostLoop.premature_tensor_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:322:0: 'YMReview.NovemberMatching.GhostLoop.premature_tensor_error_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:323:0: 'YMReview.NovemberMatching.GhostLoop.submitted_finite_reading' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:324:0: 'YMReview.NovemberMatching.GhostLoop.submitted_scale_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:325:0: 'YMReview.NovemberMatching.GhostLoop.submitted_scale_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:326:0: 'YMReview.NovemberMatching.GhostLoop.finitePart_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:327:0: 'YMReview.NovemberMatching.GhostLoop.finite_test_iff_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopBenchmark.lean:328:0: 'YMReview.NovemberMatching.GhostLoop.heatDressing_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:329:0: 'YMReview.NovemberMatching.GhostLoop.heatDressing_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopBenchmark.lean:330:0: 'YMReview.NovemberMatching.GhostLoop.submitted_line_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [6283/6295] Built GhostConventionCheck (4.3s)
+info: GhostConventionCheck.lean:109:0: 'YMReview.NovemberMatching.GhostCheck.ghost_to_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostConventionCheck.lean:110:0: 'YMReview.NovemberMatching.GhostCheck.vector_to_ghost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostConventionCheck.lean:111:0: 'YMReview.NovemberMatching.GhostCheck.source_ghost_gluon' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostConventionCheck.lean:112:0: 'YMReview.NovemberMatching.GhostCheck.classical_ghost_gluon' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostConventionCheck.lean:113:0: 'YMReview.NovemberMatching.GhostCheck.scalar_antighost_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [6284/6295] Built GhostLoopFiniteEvaluation (4.3s)
+info: GhostLoopFiniteEvaluation.lean:526:0: 'YMReview.NovemberMatching.GhostLoopFinite.moment_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:527:0: 'YMReview.NovemberMatching.GhostLoopFinite.integral_pow_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:528:0: 'YMReview.NovemberMatching.GhostLoopFinite.integral_Pdelta' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:529:0: 'YMReview.NovemberMatching.GhostLoopFinite.integral_Ppair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:530:0: 'YMReview.NovemberMatching.GhostLoopFinite.integral_Wlog_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:531:0: 'YMReview.NovemberMatching.GhostLoopFinite.submitted_force_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:532:0: 'YMReview.NovemberMatching.GhostLoopFinite.finite_delta_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:533:0: 'YMReview.NovemberMatching.GhostLoopFinite.finite_pair_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:534:0: 'YMReview.NovemberMatching.GhostLoopFinite.finite_delta_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:535:0: 'YMReview.NovemberMatching.GhostLoopFinite.finite_pair_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:536:0: 'YMReview.NovemberMatching.GhostLoopFinite.moment_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:537:0: 'YMReview.NovemberMatching.GhostLoopFinite.local_taylor_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:538:0: 'YMReview.NovemberMatching.GhostLoopFinite.finite_integrand_reduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:539:0: 'YMReview.NovemberMatching.GhostLoopFinite.ghost_yeast_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:540:0: 'YMReview.NovemberMatching.GhostLoopFinite.ghost_innerTrace_no_explicit_z' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:542:0: 'YMReview.NovemberMatching.GhostLoopFinite.split_radial_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:543:0: 'YMReview.NovemberMatching.GhostLoopFinite.gaussian_radial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:544:0: 'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:545:0: 'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:546:0: 'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:547:0: 'YMReview.NovemberMatching.GhostLoopFinite.regulator_jet_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:549:0: 'YMReview.NovemberMatching.GhostLoopFinite.ghost_loopCarpet_regulator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: GhostLoopFiniteEvaluation.lean:550:0: 'YMReview.NovemberMatching.GhostLoopFinite.ghost_closeG_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [6285/6295] Built GhostLoopTrace (6.7s)
+✔ [6286/6295] Built GhostLoopRadial (4.4s)
+✔ [6287/6295] Built GhostLoopContinuation (4.2s)
+ℹ [6288/6295] Built GhostLoopJet (3.0s)
+info: GhostLoopJet.lean:186:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [6289/6295] Built GhostLoopInfrared (4.3s)
+✔ [6290/6295] Built GhostLoopMellin (3.8s)
+⚠ [6291/6295] Built GhostLoopFlow (4.2s)
+info: GhostLoopFlow.lean:144:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: GhostLoopFlow.lean:169:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [6292/6295] Built GhostLoopPrimitive (3.9s)
+info: GhostLoopPrimitive.lean:116:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [6293/6295] Built GhostLoopUnit (3.7s)
+✔ [6294/6295] Built GhostLoopTensor (3.6s)
+✔ [6295/6295] Built GhostLoopSolution (3.7s)
+Build completed successfully (6295 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export GhostLoopSolution -- Quot Quot.mk Quot.lift Quot.ind YMReview.NovemberMatching.GhostSolution.acceptance propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, YMReview.NovemberMatching.GhostSolution.acceptance, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from GhostLoopSolution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

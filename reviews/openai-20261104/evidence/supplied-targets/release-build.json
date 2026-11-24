@@ -1,0 +1,24 @@
+{
+  "stage": "release-build",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "--no-cache",
+    "build"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "6"
+  },
+  "started_utc": "2026-11-05T06:33:35.090493+00:00",
+  "status": "failed",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/release-build.log",
+  "resource_wrapper": [
+    "/usr/bin/time",
+    "-l"
+  ],
+  "pid": 68785,
+  "exit_code": 1,
+  "finished_utc": "2026-11-10T04:34:31.574841+00:00",
+  "elapsed_seconds": 113986.942,
+  "log_sha256": "1fdc35b9e9ee615765c4f435f3c17197a0685d119956324d02562e1c959dd204"
+}

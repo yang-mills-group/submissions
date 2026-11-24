@@ -1,0 +1,23 @@
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopGaussian.lean:22:76: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp [TwoPoint.primary, ̲spray, ̲Pi.single_apply, ̲TwoPoint.zeroDirection, ̲rises,̵e̵q̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopGaussian.lean:66:67: warning: This simp argument is unused:
+  TwoPoint.primary_sq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵m̵a̵p̵_̵a̵d̵d̵,̵f̵r̵o̵m̵_̵c̵o̵n̵s̵t̵,̵p̵h̵i̵_̵p̵e̵t̵a̵l̵,̵p̵a̵y̵m̵e̵n̵t̵_̵f̵i̵r̵s̵t̵,̵p̵a̵n̵e̵_̵f̵i̵r̵s̵t̵,̵T̵w̵o̵P̵o̵i̵n̵t̵.̵p̵r̵i̵m̵a̵r̵y̵_̵s̵q̵]̵[̲m̲a̲p̲_̲a̲d̲d̲,̲ ̲f̲r̲o̲m̲_̲c̲o̲n̲s̲t̲,̲ ̲p̲h̲i̲_̲p̲e̲t̲a̲l̲,̲ ̲p̲a̲y̲m̲e̲n̲t̲_̲f̲i̲r̲s̲t̲,̲ ̲p̲a̲n̲e̲_̲f̲i̲r̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopGaussian.lean:99:85: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵q̵P̵a̵n̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵p̵o̵w̵[̲s̲q̲P̲a̲n̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲p̲o̲w̲ (by decide : 2̵≠̵0̵)̵,̵m̵a̵p̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵k̵k̵_̵s̵e̵l̵f̵,̵m̵u̵l̵_̵o̵n̵e̵]̵2̲ ̲≠̲ ̲0̲)̲,̲ ̲m̲a̲p̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲k̲k̲_̲s̲e̲l̲f̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲]̲ at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'YMReview.NovemberMatching.GluonGaussian.numerator_value' depends on axioms: [propext, Classical.choice, Quot.sound]

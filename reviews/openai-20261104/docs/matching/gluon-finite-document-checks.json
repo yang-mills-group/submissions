@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-11-16T21:33:33.266992+00:00",
+  "status": "passed",
+  "tex": "docs/matching/gluon-bubble-finite-identity.tex",
+  "pdf": "docs/matching/gluon-bubble-finite-identity.pdf",
+  "tex_sha256": "54eefeb377e8f047a1b81f8197b1a3af15e532dccfa7c4921be8b99c939f70bc",
+  "pdf_sha256": "8d71c8acd9f26b73d2618b28ef2d77f47127bf1e6ce1d973ffcdfd4515731f45",
+  "pages": 6,
+  "rendered_and_visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "layout_warnings": [],
+  "qpdf_check": "passed",
+  "scope": "Full submitted infrared finite-value identity proved in Lean and accepted by frozen-target Comparator; exact retained-cutoff identity proved for the two unit probes. Minimal human review; conventional all-orders identification remains under review.",
+  "build_receipt_sha256": "8217a4b3cefff70d4f71905e62e780e3525a4dc9c945f708ac9e117710dc27d7",
+  "comparator_receipt_sha256": "d8819e6b0264cd6dd91185352376663db87da4175c947d92ec7c2b2c2821be4a",
+  "previous_tex_sha256": "980d83344d7deed6fafb9658fe76ef51a6214cc0e27efc4d6e98ec56dc6e96bb",
+  "editor": "Native editor and compiler tools unavailable; used existing local TeX installation.",
+  "visual_review": "All six pages rendered with Poppler and inspected. After the table edit, only page 6 pixels changed; page 6 re-inspected. No clipping or unresolved references."
+}

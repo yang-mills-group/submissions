@@ -1,0 +1,112 @@
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:43:57: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Q, ̲Bool.false_eq_true, ̲if_false,i̵f̵_̵t̵r̵u̵e̵,̵ ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:43:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵Q̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲Q̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:46:29: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵Q̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲Q̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:46:48: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Q, ̲Bool.false_eq_true, ̲if_f̵a̵l̵s̵e̵,̵i̵f̵_̵true, ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:46:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵Q̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲Q̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:52:57: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [J, ̲Bool.false_eq_true, ̲if_false,i̵f̵_̵t̵r̵u̵e̵,̵ ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:52:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵J̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲J̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:55:29: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵J̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲J̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:55:48: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [J, ̲Bool.false_eq_true, ̲if_f̵a̵l̵s̵e̵,̵i̵f̵_̵true, ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:55:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵J̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲J̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:61:57: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [R, ̲Bool.false_eq_true, ̲if_false,i̵f̵_̵t̵r̵u̵e̵,̵ ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:61:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵R̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲R̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:64:29: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵R̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲R̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲,̲ ̲P̲i̲.̲s̲u̲b̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:64:48: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [R, ̲Bool.false_eq_true, ̲if_f̵a̵l̵s̵e̵,̵i̵f̵_̵true, ̲Pi.add_apply, ̲Pi.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopJetParameter.lean:64:78: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵R̵,̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵P̵i̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵,̵P̵i̵.̵s̵u̵b̵_̵a̵p̵p̵l̵y̵]̵[̲R̲,̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲P̲i̲.̲a̲d̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'YMReview.NovemberMatching.GluonJetParameter.integral_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonJetParameter.submitted_jet_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GluonJetParameter.source_high_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

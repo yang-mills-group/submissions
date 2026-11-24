@@ -1,0 +1,37 @@
+{
+  "checked_utc": "2026-11-13T14:59:18.411728+00:00",
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-outdir=/private/tmp/ym-finite-pdf-20261113",
+    "november-perturbative-matching.tex"
+  ],
+  "exit_code": 0,
+  "pages": 39,
+  "warnings": [],
+  "source_sha256": "afd43f025cceb1786a6e908184884aa85e21783e74b85cd393cc9b791092ef6c",
+  "pdf_sha256": "0463cf9f136ae755147b82dc31d3c9081a82fab6461d0b4bc74b93195b2c19a1",
+  "source_map_sha256": "31a891676151f48d2311202b86785268cfa1236da7eef73747b0789f9915394b",
+  "source_files_verified": 118,
+  "visual_review": {
+    "pages": [
+      1,
+      9,
+      10,
+      11,
+      21,
+      24,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "method": "Poppler rendering and direct image inspection. Checked new equations, source-status paragraphs, proof table and Comparator account; kept the target introduction with its theorem. No clipping or unresolved references."
+  },
+  "editor": "Native LaTeX editor tools unavailable in this session; compiled with the existing local TeX installation."
+}

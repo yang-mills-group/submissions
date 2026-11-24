@@ -1,0 +1,170 @@
+{
+  "started_utc": "2026-11-10T02:46:56.264418+00:00",
+  "pid": 17972,
+  "status": "passed",
+  "results": [
+    {
+      "selector": "Existence",
+      "theorem": "YangMills.jointExistence",
+      "config": {
+        "challenge_module": "Comparators.Existence.Challenge",
+        "solution_module": "Comparators.Existence.Solution",
+        "theorem_names": [
+          "YangMills.jointExistence"
+        ],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      },
+      "config_sha256": "2bcc1cc761ca71c1a3f563e06bd210b044f12569c22289b3d8cd7b928cea20bd",
+      "run": {
+        "stage": "patched-existence-comparator",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/ComparatorChallenges/Existence.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+        "environment_overrides": {
+          "LEAN_NUM_THREADS": "4",
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-10T05:30:29.423405+00:00",
+        "status": "passed",
+        "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/patched-existence-comparator.log",
+        "resource_wrapper": null,
+        "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+        "pid": 64328,
+        "exit_code": 0,
+        "finished_utc": "2026-11-10T05:43:19.865009+00:00",
+        "elapsed_seconds": 770.44,
+        "log_sha256": "2db951316c8a632abc317dac5ba7f8c3523bb3f76767655b31b113d037e2795d",
+        "resources": {
+          "ru_utime": 711.007594,
+          "ru_stime": 25.632576,
+          "ru_maxrss": 14350761984,
+          "ru_minflt": 1855929,
+          "ru_majflt": 499779,
+          "ru_inblock": 0,
+          "ru_oublock": 0
+        }
+      },
+      "passed": true
+    },
+    {
+      "selector": "Matching",
+      "theorem": "YangMills.perturbativeMatching",
+      "config": {
+        "challenge_module": "Comparators.Matching.Challenge",
+        "solution_module": "Comparators.Matching.Solution",
+        "theorem_names": [
+          "YangMills.perturbativeMatching"
+        ],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      },
+      "config_sha256": "dc90369b0fa583f1efe6424431510965cf50b2ece84045521784378f2605393c",
+      "run": {
+        "stage": "patched-matching-comparator",
+        "command": [
+          "/Users/oai/.elan/bin/lake",
+          "env",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+          "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/ComparatorChallenges/Matching.json"
+        ],
+        "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+        "environment_overrides": {
+          "LEAN_NUM_THREADS": "4",
+          "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+          "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+        },
+        "started_utc": "2026-11-10T05:43:19.969053+00:00",
+        "status": "passed",
+        "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/patched-matching-comparator.log",
+        "resource_wrapper": null,
+        "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+        "pid": 67648,
+        "exit_code": 0,
+        "finished_utc": "2026-11-10T08:18:57.132529+00:00",
+        "elapsed_seconds": 9337.16,
+        "log_sha256": "8145d25417c8f1d5904bf78ab46b11e7fac6f5e6140d88d7ff974c45527a8a6f",
+        "resources": {
+          "ru_utime": 8439.884271,
+          "ru_stime": 738.233029,
+          "ru_maxrss": 80911237120,
+          "ru_minflt": 221949602,
+          "ru_majflt": 1067087,
+          "ru_inblock": 0,
+          "ru_oublock": 0
+        }
+      },
+      "passed": true
+    }
+  ],
+  "comparison_scope": "Same submitted configurations, newer checker kernel; no independent kernel or Landrun isolation.",
+  "heartbeat_utc": "2026-11-10T05:29:58.310467+00:00",
+  "source_before": {
+    "checked_utc": "2026-11-10T05:30:29.156208+00:00",
+    "files_checked": 37673,
+    "changed": [],
+    "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9"
+  },
+  "tools_before": {
+    "checkouts": [
+      {
+        "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator",
+        "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+        "tracked_changes": ""
+      },
+      {
+        "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+        "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+        "tracked_changes": ""
+      }
+    ],
+    "binary_hashes": {
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b"
+    },
+    "checker_kernel": "4.34.0",
+    "exporter_toolchain": "4.32.0"
+  },
+  "source_after": {
+    "checked_utc": "2026-11-10T08:19:01.013555+00:00",
+    "files_checked": 37673,
+    "changed": [],
+    "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9"
+  },
+  "tools_after": {
+    "checkouts": [
+      {
+        "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator",
+        "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+        "tracked_changes": ""
+      },
+      {
+        "checkout": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export",
+        "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+        "tracked_changes": ""
+      }
+    ],
+    "binary_hashes": {
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e",
+      "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh": "167507c89d8b3c7667ad78b50df7b19f89883751a01efd1457404fa34a994e8b"
+    },
+    "checker_kernel": "4.34.0",
+    "exporter_toolchain": "4.32.0"
+  },
+  "finished_utc": "2026-11-10T08:19:01.179112+00:00"
+}

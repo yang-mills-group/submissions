@@ -1,0 +1,428 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,array,microtype,xcolor,xurl,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
+ pdftitle={Finite value of the submitted gluon bubble},pdfauthor={Yang--Mills review working draft}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Submitted gluon bubble}
+\fancyhead[R]{\small Finite identity verified in Lean}\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}
+\newcommand{\code}[1]{\ifmmode\text{\small\nolinkurl{#1}}\else{\small\nolinkurl{#1}}\fi}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Finite value of the submitted gluon bubble}\par
+\vspace{4pt}
+November 4 Yang--Mills submission\par
+Working draft \quad\textbullet\quad 16 November 2026
+\end{center}
+
+This note derives the finite value of the actual gauge/gauge bubble,
+\texttt{TwoPoint.bubble G false false}, including its dependence on the retained
+infrared cutoff. It uses the submitted heat kernels, dimensional continuation
+and Taylor subtraction. The resulting infrared limit agrees with the earlier
+conventional integral calculation.
+
+\textbf{Verification status.} The full infrared finite-value identity is
+now proved in Lean. The theorem \code{GluonSolution.acceptance} discharges
+\code{GluonLoop.SubmittedFinitePartTest} for the actual submitted evaluator,
+for every nonzero physical momentum, tensor component and color, and every
+positive $\bar\mu$, under the submitted simple-group hypothesis. Its proof
+includes the extra polarization trace, radial continuation, regulator
+coefficient and ultraviolet subtraction. The retained-cutoff equality is
+also proved for the two unit-momentum probes. The proof uses only
+\code{propext}, \code{Classical.choice} and \code{Quot.sound}; it assumes
+no finite-part identity. Human review remains minimal. These checks concern
+this graph contribution, within the submitted definitions, and form part
+of the continuing review.
+
+\section{The identity}
+
+Strip off the overall coupling $g^2$. Let $Q=p^2>0$,
+$C^{ab}=\delta^{ab}C_A$, and
+\[
+ P^{\rm T}_{ij}=\delta_{ij}-\frac{p_i p_j}{Q},\qquad
+ P^{\rm L}_{ij}=\frac{p_i p_j}{Q},\qquad
+ L=\log\frac{\bar\mu^2}{Q},\qquad X=Qe^{2s}.
+\]
+The conventions are Euclidean Landau gauge and the submitted \emph{log-density}
+sign. The induced effective-action kernel has the opposite sign.
+Set $y=\log\bar\mu+(\gamma-\log(4\pi))/2$, and write
+\begin{equation}
+ \begin{aligned}
+ \mathcal B_G&=(\code{TwoPoint.bubble}\ G\ \code{false}\ \code{false}).
+ \code{instructions.renorm},\\
+ \mathcal F^{ab}_{ij}(s,\bar\mu;p)&=
+ [\code{Outlook.four}\ 4\,\mathcal B_G\ (y,s)]
+ (\code{TwoPoint.word}\ i\ j\ a\ b\ p).
+ \end{aligned}
+ \label{eq:target}
+\end{equation}
+For the submitted simple-group hypothesis, the calculation gives
+\begin{equation}
+ \boxed{\displaystyle
+ \mathcal F^{ab}_{ij}
+ =\frac{C^{ab}Q}{16\pi^2}
+ \left[
+ \left(\mathcal P_{\rm T}(X)+\frac{25}{12}L+\frac{89}{36}\right)P^{\rm T}_{ij}
+ +\left(\mathcal P_{\rm L}(X)-\frac14 L-\frac12\right)P^{\rm L}_{ij}
+ \right].}
+ \label{eq:cutoff}
+\end{equation}
+Here $E_1(x)=\int_x^\infty e^{-t}\dd t/t$, and the cutoff terms are
+\begin{align}
+ \mathcal P_{\rm T}(X)
+ &=\frac{14}{3X^3}-\frac{25}{2X^2}-\frac6X
+ +e^{-X/2}\left(-\frac{14}{3X^3}+\frac{61}{6X^2}+\frac{181}{24X}\right)
+ -\frac{25}{12}E_1(X/2),\label{eq:PT}\\
+ \mathcal P_{\rm L}(X)
+ &=-\frac{14}{X^3}+\frac{9}{2X^2}-\frac{9}{2X}
+ +e^{-X/2}\left(\frac{14}{X^3}+\frac{5}{2X^2}-\frac{1}{8X}\right)
+ +\frac14 E_1(X/2).\label{eq:PL}
+\end{align}
+Both tend to zero as $X\to\infty$. Thus, with dimensional subtraction taken
+first as in \eqref{eq:target}, the full finite-value limit is
+\begin{equation}
+ \boxed{\displaystyle
+ \lim_{s\to\infty}\mathcal F^{ab}_{ij}
+ =\frac{C^{ab}}{16\pi^2}
+ \left[
+ \delta_{ij}Q\left(\frac{25}{12}L+\frac{89}{36}\right)
+ -p_i p_j\left(\frac73 L+\frac{107}{36}\right)
+ \right].}
+ \label{eq:limit}
+\end{equation}
+This concerns the gluon bubble alone. It includes neither the ghost bubble
+nor a tadpole. No cancellation of a retained-cutoff tadpole is assumed.
+
+\section{What is being contracted}
+
+The source cubic vertex is evaluated in
+\code{YM/WilsonMS/Beta/Flash.lean}, \code{field_W}.
+The review extends that evaluation to every auxiliary sector.
+In ordinary tensor notation the vertex, with its common
+color and imaginary factors removed, is
+\[
+ V_{e,\alpha\beta}
+ =e_\alpha(p-k)_\beta+(2e\cdot k+e\cdot p)\delta_{\alpha\beta}
+ -(k+2p)_\alpha e_\beta .
+\]
+The source uses $\operatorname{precision}_{\alpha\beta}(k)
+=k^2\delta_{\alpha\beta}-k_\alpha k_\beta$ and the shell weight
+$t^3e^{-t^2k^2}$. Put $A=k^2$, $B=(k+p)^2$. The heated numerator is the
+contraction of two copies of $V$ with $\operatorname{precision}(k)$ and
+$\operatorname{precision}(k+p)$, so it is $AB$ times the corresponding
+projector numerator.
+
+Use a unit vector $e$ and first take $p=x e_1$. For a transverse probe
+$e=e_2$, put $K=k^2-k_1^2$; for the longitudinal probe use $e=e_1$.
+The finite index sums reduce to
+\begin{align}
+ N_{\rm T}&=4\{x^2(A+B-k_2^2)K+(H-1)ABk_2^2\},\label{eq:NT}\\
+ N_{\rm L}&=(2k_1+x)^2\{(H-1)AB-x^2K\}.\label{eq:NL}
+\end{align}
+$H$ denotes the vector-trace dimension, kept separate from the Gaussian
+integration dimension until the continuation is performed. The source
+sewing supplies a factor $2$ and two orientations. After the even momentum
+integral their combined factor is $4C^{ab}$. This normalization follows
+from \code{gauge_hit}, \code{exchangeW} and \code{gauge_half}; the review's
+\code{GluonLoopTrace.trace_value} proves their combined trace formula in
+arbitrary sectors. It is not an inserted conventional symmetry factor.
+
+\subsection{The extra polarization}
+
+If both momenta and the external polarization have zero component along a
+new axis, that axis contributes
+\begin{equation}
+ AB(2e\cdot k+e\cdot p)^2
+ \label{eq:spectator}
+\end{equation}
+to the heated numerator. Indeed, the two vertex indices must both equal
+the new axis; the surviving vertex entry is $2e\cdot k+e\cdot p$, and the
+two precision entries are $A$ and $B$. This is precisely the extra-axis
+contraction called \code{yeast}.
+
+The physical external sector has four axes. Inside \code{loopCarpet}, the
+extra radius is placed in sector 1, which has six test axes. Consequently
+the source prescription is
+\[
+ \code{innerTrace}=\text{six-axis trace}+2(z-1)\,\code{yeast},
+ \qquad H=6+2(z-1)=4+2z.
+\]
+Replacing the coefficient by $2z$ at this stage would count two extra
+polarizations. The remaining closing operation is the source's radial
+integral and radial derivative; agreement at integer dimensions alone is
+not being used to infer its continuation.
+
+\section{Evaluation of the submitted heat integral}
+
+Take a unit reference momentum $e_1$ and vary the external ray $p=xe_1$.
+Introduce
+\[
+ u=\frac{t^2}{1+t^2}\in[0,\tfrac12],\quad
+ a=-u,\quad b=1-u,\quad c=a+b=1-2u,\quad
+ \rho=\frac{1-u}{2},\quad X=x^2.
+\]
+Completing the square shifts $k$ to $\ell+a x e_1$. The normalized
+Gaussian has covariance $\rho\delta_{ij}$; its integration dimension is
+denoted by $D$. For compactness define
+\begin{align*}
+ U_0&=D(D+2)\rho^2+[D(a^2+b^2)+4ab]X\rho+a^2b^2X^2,\\
+ U_{\rm T}&=(D+2)(D+4)\rho^3+
+ [(D+2)(a^2+b^2)+4ab]X\rho^2+a^2b^2X^2\rho,\\
+ U_{\rm L}&=(D+2)(D+4)\rho^3+
+ [(D+2)(a^2+b^2)+12ab]X\rho^2+a^2b^2X^2\rho.
+\end{align*}
+These are respectively $\E[AB]$, $\E[AB\ell_2^2]$ and
+$\E[AB\ell_1^2]$. Wick contraction of \eqref{eq:NT}--\eqref{eq:NL} gives
+\begin{align}
+ M_{\rm T}(D,H)&=4\{X[(2D^2+D-5)\rho^2+
+ (a^2+b^2)X(D-1)\rho]+(H-1)U_{\rm T}\},\label{eq:MT}\\
+ M_{\rm L}(D,H)&=(H-1)\{4U_{\rm L}+8c^2(D+2)X\rho^2
+ +8abc^2X^2\rho+c^2XU_0\}\notag\\[-2pt]
+ &\hspace{1cm}-X\{4(D-1)\rho^2+c^2X(D-1)\rho\}.\label{eq:ML}
+\end{align}
+
+\subsection{Why these moments give the source continuation}
+
+In split coordinates the physical Gaussian integral gives
+$M_r(4,H)+R^2B_r+R^4C_r$, where $r\in\{{\rm T},{\rm L}\}$ and
+\begin{align*}
+ B_{\rm T}&=4\{X[13\rho+(a^2+b^2)X]+(H-1)[12\rho^2+(a^2+b^2)X\rho]\},\\
+ C_{\rm T}&=4[2X+(H-1)\rho],\\
+ B_{\rm L}&=(H-1)\{48\rho^2+[16c^2+4(a^2+b^2)]X\rho+
+ c^2(a^2+b^2)X^2\}-X(4\rho+c^2X),\\
+ C_{\rm L}&=(H-1)(4\rho+c^2X).
+\end{align*}
+With $\nu=1+t^2$, the normalized source radial operation is
+\begin{multline}
+ -\frac1{\Gamma(z+1)}\int_0^\infty R^{2z+1}
+ \frac1R\frac{\mathrm d}{\mathrm dR}
+ \left[e^{-\nu R^2}(A_0+B_0R^2+C_0R^4)\right]\dd R\\
+ =\nu^{-z}\left[A_0+\frac{z}{\nu}B_0+
+ \frac{z(z+1)}{\nu^2}C_0\right],\qquad \Re z>-1.
+ \label{eq:radial}
+\end{multline}
+Since $\rho=(2\nu)^{-1}$, the bracket equals
+$M_r(4,H)+2z\rho B_r+4z(z+1)\rho^2C_r=M_r(4+2z,H)$.
+The last two polynomial identities are proved in
+\code{GluonHeat.split_radial_T} and \code{split_radial_L}; the integral
+identity \eqref{eq:radial} uses the same Gaussian/Gamma calculation as the
+already verified ghost continuation. The extra trace then sets $H=4+2z$.
+
+The measure factor from \code{tenorK} is $(4\pi)^{-z}$ at $y=0$.
+Also $t^3(1+t^2)^{-2}\dd t=u\dd u/[2(1-u)]$.
+Including the factor $4$ from sewing, the coefficient of
+$C^{ab}/(16\pi^2)$ in the source force is therefore
+\begin{equation}
+ w_r(z,X)=(4\pi)^{-z}\int_0^{1/2}(1-u)^z e^{-uX}
+ \frac{2u}{1-u}M_r(4+2z,4+2z)\dd u.
+ \label{eq:continued}
+\end{equation}
+This derivation evaluates the specified radial continuation, rather than
+substituting $D$ into a four-dimensional answer. All exchanges of the
+Gaussian and compact heat integrals, and the derivatives at $z=0$ and
+$x=0$, are justified by polynomial Gaussian bounds. Here $1\le\nu\le2$;
+the radial integrand is locally bounded by a constant times
+$R^{2\Re z+1}$ at zero and decays exponentially at infinity. These bounds
+are uniform for $z$ in a compact neighborhood of zero and bounded $x$.
+
+\subsection{The force at zero regulator}
+
+Let $h_r(u,X)=2uM_r(4,4)/(1-u)$. Directly from the moments,
+\begin{align*}
+ h_{\rm T}&=144u(1-u)^2+(98u-194u^2+192u^3-96u^4)X\\
+ &\hspace{1cm}+(12u-24u^2+36u^3-24u^4+12u^5)X^2,\\
+ h_{\rm L}&=144u(1-u)^2+(138u-714u^2+1152u^3-576u^4)X\\
+ &\hspace{1cm}+(9u-96u^2+348u^3-504u^4+252u^5)X^2\\
+ &\hspace{1cm}+(6u^3-30u^4+48u^5-24u^6)X^3.
+\end{align*}
+Thus $f_r(X)=w_r(0,X)=\int_0^{1/2}e^{-uX}h_r(u,X)\dd u$ is
+\begin{align}
+ f_{\rm T}(X)&=-\frac{28}{X^2}+\frac{50}{X}+12
+ +e^{-X/2}\left(\frac{28}{X^2}-\frac{36}{X}-\frac{101}{4}-\frac{27X}{8}\right),\\
+ f_{\rm L}(X)&=\frac{84}{X^2}-\frac{18}{X}+9
+ +e^{-X/2}\left(-\frac{84}{X^2}-\frac{24}{X}-\frac94-\frac{3X}{8}\right).
+\end{align}
+The apparent singularities at zero are removable. Both constant terms
+are $33/4$; their linear coefficients are $25/6$ and $-1/2$.
+The elementary integral equality for both channels, and any linear
+combination of them, is proved in \code{GluonHeat.heatPolynomial_integral}.
+
+\section{The regulator derivative fixes the finite subtraction}
+
+The source \code{highTensor} is minus one half of the quadratic external
+momentum Taylor coefficient of the force. At unit momentum, after stripping
+the common factor $C^{ab}/(16\pi^2)$, its values at zero are
+\[
+ H_{\rm T}(0)=-\frac{25}{12},\qquad H_{\rm L}(0)=\frac14.
+\]
+To compute $J_r=H'_r(0)$, let $j_r(u)$ be the coefficient of $X$ in
+$e^{-uX}h_r(u,X)$, and let $\dot j_r(u)$ be the derivative of this
+coefficient through $D=H=4+2z$, before differentiating $(1-u)^z$.
+The polynomials are
+\begin{align*}
+ j_{\rm T}&=98u-338u^2+480u^3-240u^4,&
+ \dot j_{\rm T}&=104u-372u^2+536u^3-268u^4,\\
+ j_{\rm L}&=138u-858u^2+1440u^3-720u^4,&
+ \dot j_{\rm L}&=158u-962u^2+1608u^3-804u^4.
+\end{align*}
+Their integrals are
+\[
+\setlength{\arraycolsep}{12pt}
+\begin{array}{c|cc}
+ &\displaystyle\int_0^{1/2}j_r\dd u
+ &\displaystyle\int_0^{1/2}[\dot j_r+j_r\log(1-u)]\dd u\\[3pt]\hline
+ {\rm T}&25/6&-5/36+(25/6)\log2\\[3pt]
+ {\rm L}&-1/2&5/6-(1/2)\log2
+\end{array}
+\]
+In particular, differentiating the measure factor in \eqref{eq:continued}
+gives
+\begin{align}
+ J_{\rm T}&=\frac5{72}-\frac{25}{12}\log2+\frac{25}{12}\log(4\pi),\\
+ J_{\rm L}&=-\frac5{12}+\frac14\log2-\frac14\log(4\pi).
+ \label{eq:jet}
+\end{align}
+These constants are derived from the regulated tensor; they are not chosen
+to produce the conventional answer. The source's holomorphic coefficient
+\texttt{ruby ... 1} equals this real-axis derivative, by the regularity of
+the continued force near zero.
+
+For reproducibility, polynomial/logarithmic integration uses only
+\[
+ \int v^n\log v\dd v=
+ v^{n+1}\left(\frac{\log v}{n+1}-\frac1{(n+1)^2}\right)
+\]
+after $v=1-u$. The exact rational script checks the displayed polynomials
+and constants. The source identification is now proved in
+\code{GluonJetParameter.submitted_jet_unit}; its logarithmic integral is
+proved by differentiating an explicit primitive on $[0,1/2]$.
+
+\section{Fixing the integration constant and removing the cutoff}
+
+The source identity \code{twoVertex_laurent} identifies
+\eqref{eq:target} with \code{oneLoopFinite}. The source scale derivative
+is proved for this gluon force in \code{GluonLoop.submitted_finite_derivative}.
+Combining that result with the source-connected Lean force evaluation gives
+\[
+ \frac{\mathrm d F_r(s,y)}{\mathrm ds}=e^{-2s}f_r(e^{2s})
+ \quad(Q=1),
+\]
+where $F_r$ denotes the coefficient of $C^{ab}/(16\pi^2)$. The functions
+\eqref{eq:PT}--\eqref{eq:PL} satisfy
+\[
+ \mathcal P'_r(X)=\frac{f_r(X)}{2X^2},\qquad
+ \lim_{X\to\infty}\mathcal P_r(X)=0.
+\]
+Their behavior at zero is
+\begin{align*}
+ \mathcal P_{\rm T}(X)&=-\frac{33}{8X}+\frac{25}{12}\log X+c_{\rm T}+o(1),
+ &c_{\rm T}&=-\frac{173}{72}-\frac{25}{12}(\log2-\gamma),\\
+ \mathcal P_{\rm L}(X)&=-\frac{33}{8X}-\frac14\log X+c_{\rm L}+o(1),
+ &c_{\rm L}&=\frac1{12}+\frac14(\log2-\gamma).
+\end{align*}
+The derivative and both endpoint statements are proved in Lean. The
+logarithmic constant uses $E_1(x)=-\gamma-\log x+o(1)$, with the Euler
+constant retained.
+
+The source's lower Taylor subtraction gives
+$-33/(8X)$ in the ultraviolet boundary of the ordinary part.
+There is no linear external-momentum term, since the force is even in $x$.
+The remaining, degree-at-least-three Taylor remainder tends to zero after
+rescaling: a smooth $O(x^3)$ remainder becomes $O(x)$ when multiplied by
+$x^{-2}$. This is the boundary encoded by \code{ordinary} and
+\code{frame_lim}. The resonant quadratic term is handled separately in
+\code{oneLoopFinite}. Consequently
+\[
+ F_r(s,y)=\mathcal P_r(e^{2s})-c_r+J_r-2yH_r(0).
+\]
+Indeed, the two sides have the same derivative in $s$; their difference
+has zero ultraviolet limit, so their additive constants agree. Inserting
+the values above gives
+\begin{align*}
+ -c_{\rm T}+J_{\rm T}-2yH_{\rm T}(0)
+ &=\frac{25}{12}[2y-\gamma+\log(4\pi)]+\frac{89}{36},\\
+ -c_{\rm L}+J_{\rm L}-2yH_{\rm L}(0)
+ &=-\frac14[2y-\gamma+\log(4\pi)]-\frac12.
+\end{align*}
+The $\log2$ terms cancel. This cancellation and the finite rational
+constants are checked in the Lean lemma \code{finite_constants}.
+
+The source rotation law reconstructs the two tensor projectors from these
+two probes. Its scale law replaces $X$ by $Qe^{2s}$, $y$ by
+$y-\tfrac12\log Q$, and multiplies the unit-momentum tensor by $Q$.
+The review checks both covariance and this scale law for the actual gluon
+finite reading in \code{GluonLoopTensor.lean}. Setting the stated value of
+$y$ proves the analytic identity \eqref{eq:cutoff}, and the large-$X$
+limits yield \eqref{eq:limit}. The full limit, including covariance and
+rescaling, is the conclusion of \code{GluonSolution.acceptance}. No interchange of an infrared limit with
+a Laurent expansion is needed.
+
+\section{The vector-trace check and formal verification}
+
+Freezing only $H=4$ leaves the physical force $f_r$ and its primitive
+unchanged. The error appears in the regulator derivative. The contribution
+of $2\partial_H$ to the integrated quadratic force coefficient is $-2/3$
+in the transverse channel and zero in the longitudinal channel. Since
+$H_r$ is minus one half of that coefficient, keeping the continued vector
+trace adds
+\[
+ \frac{C^{ab}}{16\pi^2}\,\frac13
+ (Q\delta_{ij}-p_i p_j)
+\]
+to the finite value. Freezing it gives $77/36$ instead of $89/36$ in the
+gluon transverse constant. The pole is unchanged. Adding the previously
+verified ghost bubble gives the transverse finite coefficient
+$(13/6)L+97/36$; the longitudinal terms cancel. These statements do not
+evaluate a source tadpole, and the frozen trace is only a diagnostic
+replacement, not a specification of an alternative scheme.
+
+The proof follows the submitted evaluator through the following stages:
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.35\linewidth}p{0.57\linewidth}}
+\toprule
+Review modules & What is proved\\\midrule
+\mbox{\code{Vertex}}, \mbox{\code{Trace}}, \mbox{\code{Contraction}}, \mbox{\code{Yeast}} & Actual cubic sewing, six-axis contractions and the extra-axis trace.\\[3pt]
+\mbox{\code{Gaussian}}, \mbox{\code{Carpet}}, \mbox{\code{Radial}}, \mbox{\code{Continuation}} & Physical Gaussian integration and the submitted radial continuation, on a real neighborhood of $z=0$.\\[3pt]
+\mbox{\code{Jet}}, \mbox{\code{JetParameter}}, \mbox{\code{Infrared}} & The actual regulator coefficient and the explicit physical force.\\[3pt]
+\mbox{\code{Flow}}, \mbox{\code{Unit}}, \mbox{\code{Tensor}}, \mbox{\code{Solution}} & Ultraviolet boundary, exact unit-probe cutoff value, covariance, rescaling and the full finite limit.\\[3pt]
+\mbox{\code{Finite}}, \mbox{\code{Heat}} & Fixed target, primitive and endpoints, polynomial reduction and compact heat integral.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every module name in the table has the prefix \code{GluonLoop} and
+extension \code{.lean}. The full acceptance theorem uses the same target
+definition as the earlier component checks. A fresh 33-module review build
+and a frozen-target Comparator run check it with the standard Lean axioms
+and no permitted definition holes. The received libraries are reused;
+this is not a new build of the entire submission. All 37,673 received
+source files are checked against the pinned manifest before and after
+Comparator. The run uses upstream's macOS development wrapper and the
+Lean default kernel; it is not a sandboxed run or a second-kernel check.
+
+Reproduce the review build with \code{scripts/build_gluon_finite.py}
+and the frozen-target comparison with
+\code{scripts/run_gluon_finite_comparator.py}. Their receipts are
+\code{evidence/matching/gluon-finite-build.json} and the files in
+\code{evidence/matching/gluon-finite-comparator/}.
+The earlier 13 component audits are retained as historical evidence.
+The exact-rational heat calculation remains an independent cross-check;
+it is not a premise of the Lean theorem.
+
+\smallskip
+\textbf{Source provenance.} This calculation uses the November source
+revision \code{b5e288edeac43ac088a2a291ac3841bdda9f20b8}.
+The main source anchors are
+\code{YM/MS/ScaleForest/Glue.lean} (\code{innerTrace}, \code{loopCarpet},
+\code{closeG}); \code{TracedCubic.lean} and \code{LoadB.lean}
+(actual gauge sewing); \code{Bubbles.lean} (\code{ratePair}, \code{bubble});
+and \code{PageOne.lean} (\code{ordinary}, \code{highTensor},
+\code{oneLoopFinite}). The source files are unchanged. This is a review of
+the specified perturbative evaluator, not an assessment of the complete
+Yang--Mills or QCD existence argument.
+\end{document}

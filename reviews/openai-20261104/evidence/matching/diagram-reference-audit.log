@@ -1,0 +1,50 @@
+YM.MS.Motif.Class_at (G : Gauge) (z : ℂ) :
+  (Motif.Literal.value (Arts.Mob G) z) (Motif.χ G) = Motif.ploy G z - Motif.ploy G 0
+YM.MS.Motif.AllMaster {G : Gauge} {n : ℕ} (z : ℂ) {l : Koszul.Legs (Arts.Shore G n)} (ht : Plane.net l = 0) :
+  Plane.Flux.tree Landau.parity (Garment.Wick.D0 G n) (Motif.ploy G z n) (Motif.ploy G z n) l = 0
+YM.MS.Motif.kernel {G : Gauge} {n : ℕ} (i j : G.ColorIndex) (a b : Arts.L n) (p : Arts.SectorP n) :
+  Motif.core G n 0 [(Motif.at_g a i, -p), (Motif.at_g b j, p)] = if i = j then -↑(Landau.precision a b p) else 0
+'YM.MS.Motif.Class_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Motif.AllMaster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Motif.kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.Graphical.length_recovers_line {G : Gauge} {m : ℕ} (s cut : ℝ) (i j : Arts.Cfield G m) (p : Arts.SectorP m) :
+  ∫ (t : ℝ) in cut..s, Graphical.halfD t m i j p = Graphical.halfCov s m i j p - Graphical.halfCov cut m i j p
+YM.MS.Graphical.radialClose_integer {G : Gauge} {b : Bool} {m n : ℕ} {F : Arts.Mob G} {U : Arts.Rip G}
+  (hf : Rock.Form0 b F) (hu : Rock.Knot b U) (he : m ≤ n) (y : ℝ) (w : Koszul.Legs (Arts.Shore G m)) :
+  Graphical.radialClose U (↑n) y F m w =
+    Train.tenorK (↑n) y *
+      (↑(Arc.pitch n) *
+        ∫ (q : Arts.SectorP n), ∑ i, ∑ j, U n i j q * F n ((i, q) :: (j, -q) :: Arts.lift he w) ∂Rock.Path.Px n)
+YM.MS.Graphical.pitch_normalization (n : ℕ) (y : ℝ) :
+  Train.tenorK (↑n) y * ↑(Arc.pitch n) = Complex.exp (-↑y * 2 * ↑n) * ↑((2 * Real.pi) ^ (4 + 2 * n))⁻¹
+'YM.MS.Graphical.length_recovers_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.radialClose_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.pitch_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.Graphical.block {G : Gauge} {V : Pearl.Flats G} {h : ℕ} {b : Bool} {q r : ℤ} (hv : Dock.Coal b h q r V) :
+  have R := Graphical.integrateRen h V;
+  Dock.Joint h V R.pages 0 R.ct ∧ Dock.ClockD b q r R.pages ∧ Dock.Cap0 b q r R.ct
+YM.MS.Graphical.ct_polynomial {G : Gauge} {V : Pearl.Flats G} {h : ℕ} {b : Bool} {q r : ℤ} (hv : Dock.Coal b h q r V)
+  (z : ℂ) : (Graphical.integrateRen h V).ct z = Hem.Tad ((Graphical.integrateRen h V).ct z) h
+YM.MS.Graphical.Diagram.income_bulk {G : Gauge} {D : Local.Physical.Deck G} {A : Land.Booked D} (T : Land.MS_Data G A) :
+  Graphical.Diagram.bulkCT G = T.poleS ∧ ∀ (i : ℕ), Train.Pact (Graphical.Diagram.bulk G i) (T.bulk i)
+YM.MS.Graphical.Diagram.income_mark {G : Gauge} {D : Local.Physical.Deck G} {A : Land.Booked D} (T : Land.MS_Data G A)
+  (h : ℕ) (v : Land.Plaid D h) :
+  have s := Graphical.Diagram.sectorSeed A h v;
+  Graphical.Diagram.sectorCT G h s = T.poles h v ∧
+    ∀ (i : ℕ), Train.Pact (Graphical.Diagram.sectorMark G h s i) (T.marks h v i)
+'YM.MS.Graphical.block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.ct_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.Diagram.income_bulk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.Diagram.income_mark' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.Graphical.identification {I : Type} [LinearOrder I] {G : Gauge} {x : I → Tone.QP} {B : Local.Physical.Deck G}
+  (X : Land.Booked B) (u : I → Rake.Label B) (y : ℝ) (T : Land.MS_Data G X) (hx : Function.Injective x) :
+  Graphical.irRemoved X u y x = Dial.book T u y x ∧ Graphical.fullGraph X u y x = Dial.tour T u y x
+YM.MS.Graphical.calibrated_gates {G : Gauge} {n d : ℕ} (y : ℝ) (W : XSpace.Initialize G) (V : XSpace.Normalize.Store G)
+  (T : Land.MS_Data G (FVA2.Position.OpenAxis.Plot (FVA2.Press.portDeck G))) (F : Land.MS_Data G (WilsonMS.JRad.book G))
+  (h : G.Simple) (x : Points n) (hx : x ∈ conf n) :
+  Graphical.plotted y V x d = FVA2.Reg.State.wall y V T d x ∧
+    Graphical.plotted y V x d = WilsonMS.FrameConj.Gates.Thaw V F y d x
+'YM.MS.Graphical.identification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YM.MS.Graphical.calibrated_gates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.DiagramAudit.gauge_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.DiagramAudit.filtered_gauge_line' depends on axioms: [propext, Classical.choice, Quot.sound]

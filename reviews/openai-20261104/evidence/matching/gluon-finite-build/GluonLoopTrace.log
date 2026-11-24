@@ -1,0 +1,9 @@
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopTrace.lean:55:135: warning: This simp argument is unused:
+  qnote
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵t̵,̵G̵h̵o̵s̵t̵T̵r̵a̵c̵e̵.̵W̵,̵q̵n̵o̵t̵e̵]̵[̲n̲e̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲h̲o̲s̲t̲T̲r̲a̲c̲e̲.̲W̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'YMReview.NovemberMatching.GluonTrace.trace_value' depends on axioms: [propext, Classical.choice, Quot.sound]

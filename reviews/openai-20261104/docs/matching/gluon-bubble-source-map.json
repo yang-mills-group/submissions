@@ -1,0 +1,150 @@
+{
+  "checked_utc": "2026-11-16T20:22:49.874867+00:00",
+  "scope": "Trace and gauge-sewing anchors. Hashes/locations do not establish the final finite evaluator identity.",
+  "source_revision": "b5e288edeac43ac088a2a291ac3841bdda9f20b8",
+  "source_root": "submission/lean",
+  "files": [
+    {
+      "path": "YM/MS/Landau.lean",
+      "sha256": "dcb321d68919073410b75992bbf485832e80b49f4b183cd416929fc3c588099f",
+      "anchors": [
+        {
+          "declaration": "precision",
+          "line": 27
+        },
+        {
+          "declaration": "line",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arts/Par.lean",
+      "sha256": "3fd01d7b03588ba6417a860b8a5cb31ef7ae39687181fb02d20a9b5a37710652",
+      "anchors": [
+        {
+          "declaration": "Zed",
+          "line": 9
+        },
+        {
+          "declaration": "L",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arts/Meter.lean",
+      "sha256": "d2065e2da202f370e59b98c80ebb69315ab27b18bc52281041d63ed597e33ccf",
+      "anchors": [
+        {
+          "declaration": "fleck",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arts/Tall.lean",
+      "sha256": "43c927f7e02e333e39f8b1d7e1c8d608169295769fea2359de70ce5a0c15ec01",
+      "anchors": [
+        {
+          "declaration": "token",
+          "line": 12
+        },
+        {
+          "declaration": "yeast",
+          "line": 13
+        },
+        {
+          "declaration": "Wtr",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Glue.lean",
+      "sha256": "2bc2a7b81d98f585e7e2fc01cce4be7d3ac61b4d969cfd4fc10fc46dc8331369",
+      "anchors": [
+        {
+          "declaration": "innerTrace",
+          "line": 65
+        },
+        {
+          "declaration": "closeG",
+          "line": 80
+        },
+        {
+          "declaration": "closeG_integer",
+          "line": 143
+        }
+      ]
+    },
+    {
+      "path": "YM/WilsonMS/Beta/Flash.lean",
+      "sha256": "b61c245b5c3bca6154b4c39d83a4cc4a7325ca43c1c4231f378a77b7b7302ae1",
+      "anchors": [
+        {
+          "declaration": "trident",
+          "line": 174
+        },
+        {
+          "declaration": "field_W",
+          "line": 177
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/TracedCubic.lean",
+      "sha256": "3a26db0cdefb629dcff6c73f56f5ce08ddf4a20aee8176ce301571c23f7b8593",
+      "anchors": [
+        {
+          "declaration": "gauge_hit",
+          "line": 85
+        },
+        {
+          "declaration": "exchangeW",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/LoadB.lean",
+      "sha256": "883ece22e2cc122c274f04bfe61be30956488f094f0d946e03c153c5ea8ae508",
+      "anchors": [
+        {
+          "declaration": "tireG",
+          "line": 24
+        },
+        {
+          "declaration": "gaugeTensor",
+          "line": 27
+        },
+        {
+          "declaration": "gauge_half",
+          "line": 42
+        },
+        {
+          "declaration": "trace_value",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Bubbles.lean",
+      "sha256": "fa979e13821c4d972815bb086cab2b5e2fc61b2785addcd14ee024f430c3a561",
+      "anchors": [
+        {
+          "declaration": "bubble",
+          "line": 29
+        },
+        {
+          "declaration": "ratePair",
+          "line": 31
+        },
+        {
+          "declaration": "poleK",
+          "line": 37
+        }
+      ]
+    }
+  ]
+}

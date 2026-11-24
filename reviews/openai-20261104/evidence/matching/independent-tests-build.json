@@ -1,0 +1,49 @@
+{
+  "finished_utc": "2026-11-11T17:53:39.057159+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/outputs/november-perturbative-matching/IndependentMatchingTests.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "file_sha256": "6a29ed6cd7ccf04d7371467c20eb9d7a8f153a996fa97caf637794812a869f03",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/outputs/november-perturbative-matching/tmp/independent-tests-build.log",
+  "log_sha256": "ac2093b99913abaca9b5bf02714a4a11625e96c53724e4c325e755c5e0660d4b",
+  "printed_axioms": {
+    "YMReview.NovemberMatching.colorSquare_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.adjointCasimir_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.doubledBracket_values": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.pauli_trace_normalization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.pauli_bracket": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.SubmissionAdapter.observed_eq_public": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Elaboration of independent specifications and finite algebra lemmas against existing submission objects; not a clean whole-submission rebuild, not a Comparator run, and not a proof that the new physical tests hold."
+}

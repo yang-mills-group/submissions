@@ -1,0 +1,5354 @@
+{
+  "review_date": "2026-11-13",
+  "scope": "Source-based matching account and test inventory; graph/flow, free-line, ghost-convention and counterterm audits. The independent full finite ghost-loop target is proved in Lean and passed a separate frozen-target Comparator. Complete physical coefficients and the wider matching review remain separate work.",
+  "source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "sources": [
+    {
+      "path": "ComparatorChallenges/Existence.json",
+      "sha256": "2bcc1cc761ca71c1a3f563e06bd210b044f12569c22289b3d8cd7b928cea20bd",
+      "bytes": 283,
+      "declarations": []
+    },
+    {
+      "path": "ComparatorChallenges/Matching.json",
+      "sha256": "dc90369b0fa583f1efe6424431510965cf50b2ece84045521784378f2605393c",
+      "bytes": 287,
+      "declarations": []
+    },
+    {
+      "path": "Comparators/Matching/Challenge.lean",
+      "sha256": "5ad900414a9d17284baff05f3fc5fb4837c19d7336d5b7424cb13a8070175a06",
+      "bytes": 402,
+      "declarations": [
+        {
+          "name_as_written": "perturbativeMatching",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "Comparators/Matching/Solution.lean",
+      "sha256": "a449f018f8731031b3d2747089954e4bfbe0cf51e590180a2e112b40225c262a",
+      "bytes": 517,
+      "declarations": [
+        {
+          "name_as_written": "perturbativeMatching",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "FormalConversion.lean",
+      "sha256": "3b8e10d527240493ccc2f981d735077fe80647c73fd7cb8aa37e890baedf5bfb",
+      "bytes": 4687,
+      "declarations": [
+        {
+          "name_as_written": "oneLoopBeta",
+          "line": 15
+        },
+        {
+          "name_as_written": "Label",
+          "line": 22
+        },
+        {
+          "name_as_written": "Homogeneous",
+          "line": 25
+        },
+        {
+          "name_as_written": "RelatedByAxes",
+          "line": 31
+        },
+        {
+          "name_as_written": "Conversion",
+          "line": 41
+        },
+        {
+          "name_as_written": "couplingPower",
+          "line": 67
+        },
+        {
+          "name_as_written": "inputs",
+          "line": 76
+        },
+        {
+          "name_as_written": "correlation",
+          "line": 81
+        },
+        {
+          "name_as_written": "ope",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "path": "MSConversion.lean",
+      "sha256": "a6fc8a9e853f7e01722ee0d7fc2581c29eb664cb2aae8955fc48feedade9177e",
+      "bytes": 6669,
+      "declarations": [
+        {
+          "name_as_written": "triangleKernel",
+          "line": 25
+        },
+        {
+          "name_as_written": "triangleAmplitude",
+          "line": 31
+        },
+        {
+          "name_as_written": "measuredCoupling",
+          "line": 36
+        },
+        {
+          "name_as_written": "positionReading",
+          "line": 40
+        },
+        {
+          "name_as_written": "msCoupling",
+          "line": 43
+        },
+        {
+          "name_as_written": "reparametrizedFrame",
+          "line": 48
+        },
+        {
+          "name_as_written": "composeAt",
+          "line": 53
+        },
+        {
+          "name_as_written": "reversion",
+          "line": 62
+        },
+        {
+          "name_as_written": "correction_factorizes",
+          "line": 71
+        },
+        {
+          "name_as_written": "PositionConversion",
+          "line": 83
+        },
+        {
+          "name_as_written": "ConversionValid",
+          "line": 90
+        },
+        {
+          "name_as_written": "conversionValid_unique",
+          "line": 120
+        }
+      ]
+    },
+    {
+      "path": "MSNumericalAdjustment.lean",
+      "sha256": "2982c51fe7f9d5c931989f4c872d99de6651baa32a405d11e79bc5e5ac715dad",
+      "bytes": 2327,
+      "declarations": [
+        {
+          "name_as_written": "NumericalAdjustment",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "MSOrdinaryOPE.lean",
+      "sha256": "13cf61e51fb2d62d5b8a3ae118418089d75b380e9b3bad3d4a312dd0ad619dd1",
+      "bytes": 5391,
+      "declarations": [
+        {
+          "name_as_written": "Label",
+          "line": 16
+        },
+        {
+          "name_as_written": "Correlation",
+          "line": 17
+        },
+        {
+          "name_as_written": "OPE",
+          "line": 18
+        },
+        {
+          "name_as_written": "WilsonCoefficients",
+          "line": 22
+        },
+        {
+          "name_as_written": "homogeneous",
+          "line": 24
+        },
+        {
+          "name_as_written": "appendPoints",
+          "line": 27
+        },
+        {
+          "name_as_written": "truncation",
+          "line": 33
+        },
+        {
+          "name_as_written": "ExteriorExpansion",
+          "line": 43
+        },
+        {
+          "name_as_written": "Valid",
+          "line": 69
+        },
+        {
+          "name_as_written": "Determined",
+          "line": 86
+        },
+        {
+          "name_as_written": "read",
+          "line": 89
+        },
+        {
+          "name_as_written": "read_valid",
+          "line": 92
+        },
+        {
+          "name_as_written": "eq_read",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "path": "MSPositionCubic.lean",
+      "sha256": "a7063da8b35151df6205b28ec11ff507ddf03ef4ee79f2d3750c9f9f603b0744",
+      "bytes": 4184,
+      "declarations": [
+        {
+          "name_as_written": "Polarization",
+          "line": 17
+        },
+        {
+          "name_as_written": "Kernel",
+          "line": 18
+        },
+        {
+          "name_as_written": "Cut",
+          "line": 19
+        },
+        {
+          "name_as_written": "wedge",
+          "line": 21
+        },
+        {
+          "name_as_written": "chiral",
+          "line": 25
+        },
+        {
+          "name_as_written": "orientation",
+          "line": 30
+        },
+        {
+          "name_as_written": "potentialLine",
+          "line": 33
+        },
+        {
+          "name_as_written": "oneCurl",
+          "line": 36
+        },
+        {
+          "name_as_written": "contract",
+          "line": 39
+        },
+        {
+          "name_as_written": "twoCurls",
+          "line": 42
+        },
+        {
+          "name_as_written": "derivativeVertex",
+          "line": 49
+        },
+        {
+          "name_as_written": "vertex",
+          "line": 66
+        },
+        {
+          "name_as_written": "colorNorm",
+          "line": 74
+        },
+        {
+          "name_as_written": "bareTriangle",
+          "line": 85
+        }
+      ]
+    },
+    {
+      "path": "MSPositionLabels.lean",
+      "sha256": "79a865cd37302f01faa125f75c7ba53948b1a55ea167ddf17fa99492a41dabea",
+      "bytes": 4589,
+      "declarations": [
+        {
+          "name_as_written": "chiralField",
+          "line": 19
+        },
+        {
+          "name_as_written": "cubicValue",
+          "line": 28
+        },
+        {
+          "name_as_written": "quadraticValue",
+          "line": 35
+        },
+        {
+          "name_as_written": "Triangle",
+          "line": 40
+        },
+        {
+          "name_as_written": "connectedThree",
+          "line": 55
+        },
+        {
+          "name_as_written": "labels",
+          "line": 62
+        },
+        {
+          "name_as_written": "face",
+          "line": 64
+        },
+        {
+          "name_as_written": "missing",
+          "line": 67
+        },
+        {
+          "name_as_written": "connected",
+          "line": 69
+        },
+        {
+          "name_as_written": "measure",
+          "line": 72
+        },
+        {
+          "name_as_written": "cT",
+          "line": 76
+        },
+        {
+          "name_as_written": "firstConnected",
+          "line": 80
+        },
+        {
+          "name_as_written": "Admissible",
+          "line": 86
+        },
+        {
+          "name_as_written": "RawSlopeAgrees",
+          "line": 97
+        }
+      ]
+    },
+    {
+      "path": "MSPositionPrescription.lean",
+      "sha256": "d7ff9cfcae2cc4af809ba1a48c791bf19e3ee1e36d9577a2bf937f080d88e282",
+      "bytes": 1338,
+      "declarations": [
+        {
+          "name_as_written": "PositionPrescription",
+          "line": 12
+        },
+        {
+          "name_as_written": "Admissible",
+          "line": 18
+        },
+        {
+          "name_as_written": "nominatedMenu",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "path": "MSPositionScreens.lean",
+      "sha256": "d4f0e46ae11499b2e20945dd21d9e5b916c926bdf8a0922016d67dda92f52ec1",
+      "bytes": 4391,
+      "declarations": [
+        {
+          "name_as_written": "Report",
+          "line": 15
+        },
+        {
+          "name_as_written": "Lawful",
+          "line": 20
+        },
+        {
+          "name_as_written": "free",
+          "line": 25
+        },
+        {
+          "name_as_written": "variation",
+          "line": 28
+        },
+        {
+          "name_as_written": "IsChange",
+          "line": 34
+        },
+        {
+          "name_as_written": "Window",
+          "line": 47
+        },
+        {
+          "name_as_written": "Screen",
+          "line": 54
+        },
+        {
+          "name_as_written": "Screen.read",
+          "line": 59
+        },
+        {
+          "name_as_written": "Mirrored",
+          "line": 65
+        },
+        {
+          "name_as_written": "Prepared",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/FVA1Physical/Exchange/CalibratedExpansionCommonCalibratedGates.lean",
+      "sha256": "7a0254ac95bf7ec9a0a5f2d6349e931e7e3771d5c0f95784a668198fd6e94560",
+      "bytes": 6144,
+      "declarations": [
+        {
+          "name_as_written": "senses_of_vitals",
+          "line": 14
+        },
+        {
+          "name_as_written": "original_calibrated_gate_of_team",
+          "line": 41
+        },
+        {
+          "name_as_written": "original_filed_calibrated_gates",
+          "line": 56
+        },
+        {
+          "name_as_written": "original_filed_calibrated_reports",
+          "line": 70
+        },
+        {
+          "name_as_written": "original_first_triple_income",
+          "line": 80
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/FVA1Physical/Exchange/CalibratedExpansionExternalMSRecursion.lean",
+      "sha256": "74b8a70f5c15db98c6d2572ca7dcfebf2a0f16256800b6f1deacfa78dd62ebc8",
+      "bytes": 1243,
+      "declarations": [
+        {
+          "name_as_written": "original_external_bulk_germ",
+          "line": 15
+        },
+        {
+          "name_as_written": "original_external_marked_germ",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonFlashOnBothPublishedRows.lean",
+      "sha256": "9f0ab6c643e8a3fdaa00ab4809b9405e013ab35c8154d643059d32bf3ad55aae",
+      "bytes": 4076,
+      "declarations": [
+        {
+          "name_as_written": "issuedDatum",
+          "line": 16
+        },
+        {
+          "name_as_written": "selectedVision",
+          "line": 17
+        },
+        {
+          "name_as_written": "electedPerspective",
+          "line": 18
+        },
+        {
+          "name_as_written": "filedFrame",
+          "line": 19
+        },
+        {
+          "name_as_written": "numerator",
+          "line": 21
+        },
+        {
+          "name_as_written": "measured",
+          "line": 30
+        },
+        {
+          "name_as_written": "receives",
+          "line": 43
+        },
+        {
+          "name_as_written": "allJets",
+          "line": 50
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonFlashOnThePublishedBasisRows.lean",
+      "sha256": "081a94fb54237af91a7a1a8fbddd41c1b5d8023d9b7b1b34e3793be6dedebeac",
+      "bytes": 2504,
+      "declarations": [
+        {
+          "name_as_written": "issuedDatum",
+          "line": 15
+        },
+        {
+          "name_as_written": "selectedVision",
+          "line": 16
+        },
+        {
+          "name_as_written": "electedPerspective",
+          "line": 17
+        },
+        {
+          "name_as_written": "basisRows",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonFlashRoundedOnTheElectedWindow.lean",
+      "sha256": "b8fc1045b68489c0d4aaf74bc1223697394e89a1c61e4dbc0223fce354159a45",
+      "bytes": 6424,
+      "declarations": [
+        {
+          "name_as_written": "issuedDatum",
+          "line": 16
+        },
+        {
+          "name_as_written": "selectedVision",
+          "line": 17
+        },
+        {
+          "name_as_written": "electedPerspective",
+          "line": 18
+        },
+        {
+          "name_as_written": "filedFrame",
+          "line": 19
+        },
+        {
+          "name_as_written": "onWindow",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphAppointedMixedShapeJets.lean",
+      "sha256": "88f1d8859e2ca910ef4ab8ab32399774211d65e9c1f051b50b1eaa109a3baba0",
+      "bytes": 8629,
+      "declarations": [
+        {
+          "name_as_written": "included",
+          "line": 28
+        },
+        {
+          "name_as_written": "centers",
+          "line": 47
+        },
+        {
+          "name_as_written": "cropSmooth",
+          "line": 72
+        },
+        {
+          "name_as_written": "coordinate",
+          "line": 84
+        },
+        {
+          "name_as_written": "original",
+          "line": 115
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphAppointedOrdinaryTestedExpansion.lean",
+      "sha256": "f9b77700a529b986832e1512387899fb7eedbfe0fcbb7fd3fc63eaf7161723d7",
+      "bytes": 5876,
+      "declarations": [
+        {
+          "name_as_written": "elected",
+          "line": 48
+        },
+        {
+          "name_as_written": "reader",
+          "line": 49
+        },
+        {
+          "name_as_written": "conversion",
+          "line": 51
+        },
+        {
+          "name_as_written": "scaleValue",
+          "line": 53
+        },
+        {
+          "name_as_written": "tested",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphAppointedPhysicalShapePrice.lean",
+      "sha256": "716b7fcb914892321dc7924b0ca63f43d21f46c2c0382bdae1c368439b75cf3e",
+      "bytes": 10083,
+      "declarations": [
+        {
+          "name_as_written": "series",
+          "line": 35
+        },
+        {
+          "name_as_written": "transfer",
+          "line": 46
+        },
+        {
+          "name_as_written": "fixed",
+          "line": 58
+        },
+        {
+          "name_as_written": "appointed",
+          "line": 78
+        },
+        {
+          "name_as_written": "uniform",
+          "line": 102
+        },
+        {
+          "name_as_written": "capped",
+          "line": 118
+        },
+        {
+          "name_as_written": "original",
+          "line": 141
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphAppointedStationaryPrices.lean",
+      "sha256": "5c2f62e4e7f9000f6f53dfe7362fa90eb91595d9c6d27af51615521583044c92",
+      "bytes": 6641,
+      "declarations": [
+        {
+          "name_as_written": "frame",
+          "line": 33
+        },
+        {
+          "name_as_written": "polynomialAt",
+          "line": 40
+        },
+        {
+          "name_as_written": "adjacent",
+          "line": 50
+        },
+        {
+          "name_as_written": "timeNonzero",
+          "line": 63
+        },
+        {
+          "name_as_written": "value",
+          "line": 68
+        },
+        {
+          "name_as_written": "stationary",
+          "line": 93
+        },
+        {
+          "name_as_written": "original",
+          "line": 104
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphCompactCoordinateJets.lean",
+      "sha256": "01365827df3a8510d5cb42b12936badc3245d6627d1ccebca70166d984634bd6",
+      "bytes": 17005,
+      "declarations": [
+        {
+          "name_as_written": "lastDirection",
+          "line": 13
+        },
+        {
+          "name_as_written": "orderedEntries",
+          "line": 23
+        },
+        {
+          "name_as_written": "enteredDirection",
+          "line": 53
+        },
+        {
+          "name_as_written": "finiteCoefficientBounds",
+          "line": 63
+        },
+        {
+          "name_as_written": "paidValue",
+          "line": 115
+        },
+        {
+          "name_as_written": "stationaryFromValues",
+          "line": 141
+        },
+        {
+          "name_as_written": "prices",
+          "line": 163
+        },
+        {
+          "name_as_written": "smoothCoefficients",
+          "line": 202
+        },
+        {
+          "name_as_written": "formalCosts",
+          "line": 212
+        },
+        {
+          "name_as_written": "cropCoordinates",
+          "line": 228
+        },
+        {
+          "name_as_written": "compact",
+          "line": 245
+        },
+        {
+          "name_as_written": "coordinates",
+          "line": 275
+        },
+        {
+          "name_as_written": "original",
+          "line": 284
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphMeasuredCompactCorrelation.lean",
+      "sha256": "1c761ebcf3bc9d70cab2acbecc1c7e46c37edaf9988b9107dc565cc25b126bfe",
+      "bytes": 7853,
+      "declarations": [
+        {
+          "name_as_written": "publicDegree",
+          "line": 51
+        },
+        {
+          "name_as_written": "publicWithin",
+          "line": 53
+        },
+        {
+          "name_as_written": "publicLetters",
+          "line": 56
+        },
+        {
+          "name_as_written": "publicTruncation",
+          "line": 60
+        },
+        {
+          "name_as_written": "publicMixedPolynomial",
+          "line": 65
+        },
+        {
+          "name_as_written": "MeasuredMixedCompact",
+          "line": 89
+        },
+        {
+          "name_as_written": "publicMixedCompact",
+          "line": 104
+        },
+        {
+          "name_as_written": "publicMeasuredOnGroup",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphNamedCorrelationEstimates.lean",
+      "sha256": "6110088214637bf399873a8ca37c87c14748d0dfdf7e587accce8b4f035e5bc5",
+      "bytes": 1987,
+      "declarations": [
+        {
+          "name_as_written": "atPeriods",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphNamedGraphForestLimits.lean",
+      "sha256": "c598fc25058754e2d161dc38963b8bf183333b6fbee5c13faef121423f51be55",
+      "bytes": 1136,
+      "declarations": [
+        {
+          "name_as_written": "physical",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphPublicForestLimits.lean",
+      "sha256": "be2466b9f9be508e5f40cd2a38ff29e83bf8e6bc4c78054ebb21f41fd54e15c0",
+      "bytes": 3819,
+      "declarations": [
+        {
+          "name_as_written": "dimensional",
+          "line": 17
+        },
+        {
+          "name_as_written": "releasedAt",
+          "line": 21
+        },
+        {
+          "name_as_written": "physical",
+          "line": 24
+        },
+        {
+          "name_as_written": "weighted",
+          "line": 31
+        },
+        {
+          "name_as_written": "weightedTendsto",
+          "line": 39
+        },
+        {
+          "name_as_written": "convertedLimits",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "path": "YM/Integration/WilsonGraphPublishedShapeEstimate.lean",
+      "sha256": "389d3c457d70b0015bae37389e01440896a6566a2bfcc6616cd1ac0dd4208b89",
+      "bytes": 20184,
+      "declarations": [
+        {
+          "name_as_written": "sum",
+          "line": 37
+        },
+        {
+          "name_as_written": "jetTransport",
+          "line": 46
+        },
+        {
+          "name_as_written": "onField",
+          "line": 56
+        },
+        {
+          "name_as_written": "shapeFromField",
+          "line": 86
+        },
+        {
+          "name_as_written": "published",
+          "line": 99
+        },
+        {
+          "name_as_written": "onClockFrame",
+          "line": 122
+        },
+        {
+          "name_as_written": "group",
+          "line": 142
+        },
+        {
+          "name_as_written": "referenceSum",
+          "line": 170
+        },
+        {
+          "name_as_written": "ReferenceShape",
+          "line": 177
+        },
+        {
+          "name_as_written": "referenceCapped",
+          "line": 190
+        },
+        {
+          "name_as_written": "groupReference",
+          "line": 203
+        },
+        {
+          "name_as_written": "CompactReference",
+          "line": 216
+        },
+        {
+          "name_as_written": "TestedReference",
+          "line": 228
+        },
+        {
+          "name_as_written": "referenceCompact",
+          "line": 235
+        },
+        {
+          "name_as_written": "referenceTested",
+          "line": 241
+        },
+        {
+          "name_as_written": "groupComplete",
+          "line": 251
+        },
+        {
+          "name_as_written": "atOneMatch",
+          "line": 262
+        },
+        {
+          "name_as_written": "beforeConstruction",
+          "line": 270
+        },
+        {
+          "name_as_written": "beforeVolumeChoice",
+          "line": 291
+        },
+        {
+          "name_as_written": "tested",
+          "line": 310
+        },
+        {
+          "name_as_written": "compact",
+          "line": 323
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arc/Leaves.lean",
+      "sha256": "3493990f63b1f34e010162daae85ca7bfb2bdd47030bf17357459406aabb4b43",
+      "bytes": 492,
+      "declarations": [
+        {
+          "name_as_written": "Tree",
+          "line": 11
+        },
+        {
+          "name_as_written": "d",
+          "line": 12
+        },
+        {
+          "name_as_written": "chop",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arc/Pumps.lean",
+      "sha256": "18bb8aeeeb8d10b53efc21786064f611ff223d614c738e04887572a21d381a1e",
+      "bytes": 806,
+      "declarations": [
+        {
+          "name_as_written": "ups",
+          "line": 9
+        },
+        {
+          "name_as_written": "gage",
+          "line": 11
+        },
+        {
+          "name_as_written": "carpet",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arc/R1.lean",
+      "sha256": "5e385c78376dd4ec34d7828a47ead80e38e8b765e1017e84b8d0e18f4d7aede0",
+      "bytes": 373,
+      "declarations": [
+        {
+          "name_as_written": "pruning",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arts/Meter.lean",
+      "sha256": "d2065e2da202f370e59b98c80ebb69315ab27b18bc52281041d63ed597e33ccf",
+      "bytes": 719,
+      "declarations": [
+        {
+          "name_as_written": "fleck",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Arts/Tall.lean",
+      "sha256": "43c927f7e02e333e39f8b1d7e1c8d608169295769fea2359de70ce5a0c15ec01",
+      "bytes": 846,
+      "declarations": [
+        {
+          "name_as_written": "token",
+          "line": 12
+        },
+        {
+          "name_as_written": "yeast",
+          "line": 13
+        },
+        {
+          "name_as_written": "Wtr",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Dock/Cream.lean",
+      "sha256": "970fc41265c2ff3b677b2fde20d46e79b230ccf9f7358e8016a9d932c623d586",
+      "bytes": 2005,
+      "declarations": [
+        {
+          "name_as_written": "pact_sub_zero",
+          "line": 13
+        },
+        {
+          "name_as_written": "robe",
+          "line": 14
+        },
+        {
+          "name_as_written": "uniqueK",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Dock/Earn.lean",
+      "sha256": "0493e7d198b7d2c438cc89df4a403dac4a2766c1e2d967c9e8434ac40061520c",
+      "bytes": 4477,
+      "declarations": [
+        {
+          "name_as_written": "Return",
+          "line": 15
+        },
+        {
+          "name_as_written": "Count",
+          "line": 16
+        },
+        {
+          "name_as_written": "Joint",
+          "line": 17
+        },
+        {
+          "name_as_written": "vibe_plus",
+          "line": 26
+        },
+        {
+          "name_as_written": "vibe_trans",
+          "line": 27
+        },
+        {
+          "name_as_written": "vibe_static",
+          "line": 28
+        },
+        {
+          "name_as_written": "vibe_zero",
+          "line": 29
+        },
+        {
+          "name_as_written": "vibe_root",
+          "line": 30
+        },
+        {
+          "name_as_written": "vibe_sub",
+          "line": 33
+        },
+        {
+          "name_as_written": "sip_static",
+          "line": 34
+        },
+        {
+          "name_as_written": "sip_plus",
+          "line": 35
+        },
+        {
+          "name_as_written": "sip_sub",
+          "line": 36
+        },
+        {
+          "name_as_written": "sip_root",
+          "line": 37
+        },
+        {
+          "name_as_written": "zero",
+          "line": 39
+        },
+        {
+          "name_as_written": "plus",
+          "line": 41
+        },
+        {
+          "name_as_written": "scale",
+          "line": 49
+        },
+        {
+          "name_as_written": "sub",
+          "line": 50
+        },
+        {
+          "name_as_written": "via",
+          "line": 51
+        },
+        {
+          "name_as_written": "VU",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Dock/Make.lean",
+      "sha256": "1d8d883dd8480e06b7f0ad72fc2454f2c9d93b95bab1ccdb0d44560682537695",
+      "bytes": 4247,
+      "declarations": [
+        {
+          "name_as_written": "Coal",
+          "line": 14
+        },
+        {
+          "name_as_written": "engine",
+          "line": 18
+        },
+        {
+          "name_as_written": "run",
+          "line": 23
+        },
+        {
+          "name_as_written": "step0",
+          "line": 26
+        },
+        {
+          "name_as_written": "mine",
+          "line": 27
+        },
+        {
+          "name_as_written": "Cycle_t",
+          "line": 29
+        },
+        {
+          "name_as_written": "coalGather",
+          "line": 30
+        },
+        {
+          "name_as_written": "Bob",
+          "line": 32
+        },
+        {
+          "name_as_written": "pact_sym",
+          "line": 33
+        },
+        {
+          "name_as_written": "factory'",
+          "line": 34
+        },
+        {
+          "name_as_written": "factory",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Block.lean",
+      "sha256": "1239b041f25f3b4fef67f6b057d3995a041c8d6f4b9d9ce035e84526addb5341",
+      "bytes": 1751,
+      "declarations": [
+        {
+          "name_as_written": "integrateShell",
+          "line": 16
+        },
+        {
+          "name_as_written": "poleBound",
+          "line": 20
+        },
+        {
+          "name_as_written": "selectCT",
+          "line": 24
+        },
+        {
+          "name_as_written": "SectorFamily",
+          "line": 26
+        },
+        {
+          "name_as_written": "integrateRen",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/CommonGates.lean",
+      "sha256": "fd81c97120fcb3e129afcabc8e6c8722d20eef79d4892a9794d1b21b80993183",
+      "bytes": 7135,
+      "declarations": [
+        {
+          "name_as_written": "separatedGraphSum",
+          "line": 35
+        },
+        {
+          "name_as_written": "identification_screen",
+          "line": 39
+        },
+        {
+          "name_as_written": "raw_continuum",
+          "line": 44
+        },
+        {
+          "name_as_written": "measurablePanels",
+          "line": 48
+        },
+        {
+          "name_as_written": "changes",
+          "line": 51
+        },
+        {
+          "name_as_written": "plotted",
+          "line": 52
+        },
+        {
+          "name_as_written": "charted",
+          "line": 53
+        },
+        {
+          "name_as_written": "predictions",
+          "line": 56
+        },
+        {
+          "name_as_written": "charts_guard",
+          "line": 58
+        },
+        {
+          "name_as_written": "applied_wall",
+          "line": 60
+        },
+        {
+          "name_as_written": "applied_author",
+          "line": 62
+        },
+        {
+          "name_as_written": "real_price",
+          "line": 63
+        },
+        {
+          "name_as_written": "calibrated_gates",
+          "line": 75
+        },
+        {
+          "name_as_written": "calibrated_reports",
+          "line": 80
+        },
+        {
+          "name_as_written": "cubic_normalization",
+          "line": 84
+        },
+        {
+          "name_as_written": "cost_at_regulator",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Diagram.lean",
+      "sha256": "415f70bca27c8d4590fb33bcf4af02ed022aac9df0272b34acc637b11c16d369",
+      "bytes": 2186,
+      "declarations": [
+        {
+          "name_as_written": "Diagram",
+          "line": 17
+        },
+        {
+          "name_as_written": "dimTarget",
+          "line": 26
+        },
+        {
+          "name_as_written": "top",
+          "line": 27
+        },
+        {
+          "name_as_written": "fee",
+          "line": 29
+        },
+        {
+          "name_as_written": "evaluate",
+          "line": 34
+        },
+        {
+          "name_as_written": "rankRoom",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Enumeration.lean",
+      "sha256": "fe5f09930e7bc015913bac46965354c583ce2434c3e15d85d48c66d33346f2c5",
+      "bytes": 1472,
+      "declarations": [
+        {
+          "name_as_written": "distributeS",
+          "line": 12
+        },
+        {
+          "name_as_written": "tower",
+          "line": 14
+        },
+        {
+          "name_as_written": "truncateD",
+          "line": 17
+        },
+        {
+          "name_as_written": "ambient",
+          "line": 19
+        },
+        {
+          "name_as_written": "insertions",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Lines.lean",
+      "sha256": "80442f9e8324d70d62c5d3620a74977ffb3c7f5aa3c69261059208000c89db31",
+      "bytes": 2287,
+      "declarations": [
+        {
+          "name_as_written": "halfD",
+          "line": 18
+        },
+        {
+          "name_as_written": "bridgeTerm",
+          "line": 22
+        },
+        {
+          "name_as_written": "bridging",
+          "line": 29
+        },
+        {
+          "name_as_written": "bridgeForce",
+          "line": 34
+        },
+        {
+          "name_as_written": "radialClose",
+          "line": 37
+        },
+        {
+          "name_as_written": "closeForce",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/Panels.lean",
+      "sha256": "2c1c57b0334c9dfbd7946fbbdb0988f0dfab900e0166eda72949ac45a95c971f",
+      "bytes": 1192,
+      "declarations": [
+        {
+          "name_as_written": "bulkSchedule",
+          "line": 15
+        },
+        {
+          "name_as_written": "markerPage",
+          "line": 19
+        },
+        {
+          "name_as_written": "singleSchedule",
+          "line": 22
+        },
+        {
+          "name_as_written": "allScale",
+          "line": 25
+        },
+        {
+          "name_as_written": "irRemoved",
+          "line": 27
+        },
+        {
+          "name_as_written": "fullGraph",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Graphical/PricePin.lean",
+      "sha256": "98408e8c86bc4f2f40af62a296da26bcffcfa88457eef8aa6f27edeab7e4e8ab",
+      "bytes": 620,
+      "declarations": [
+        {
+          "name_as_written": "regularPart",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Halo/Task.lean",
+      "sha256": "745912e1d35cc2129bf7d2370a808c9335b47856cb918043b15619ec47d1f798",
+      "bytes": 6670,
+      "declarations": [
+        {
+          "name_as_written": "pass",
+          "line": 15
+        },
+        {
+          "name_as_written": "air",
+          "line": 19
+        },
+        {
+          "name_as_written": "onAir",
+          "line": 23
+        },
+        {
+          "name_as_written": "jaw",
+          "line": 24
+        },
+        {
+          "name_as_written": "vect",
+          "line": 26
+        },
+        {
+          "name_as_written": "\u03b3c",
+          "line": 27
+        },
+        {
+          "name_as_written": "runA",
+          "line": 28
+        },
+        {
+          "name_as_written": "axis",
+          "line": 29
+        },
+        {
+          "name_as_written": "grip",
+          "line": 30
+        },
+        {
+          "name_as_written": "earth",
+          "line": 34
+        },
+        {
+          "name_as_written": "right",
+          "line": 39
+        },
+        {
+          "name_as_written": "printZ",
+          "line": 41
+        },
+        {
+          "name_as_written": "rim",
+          "line": 42
+        },
+        {
+          "name_as_written": "forward",
+          "line": 43
+        },
+        {
+          "name_as_written": "sunk",
+          "line": 44
+        },
+        {
+          "name_as_written": "reach",
+          "line": 47
+        },
+        {
+          "name_as_written": "merit",
+          "line": 49
+        },
+        {
+          "name_as_written": "levy",
+          "line": 52
+        },
+        {
+          "name_as_written": "eu",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Image/Front.lean",
+      "sha256": "edef3d86fc9606ffb4722af36fa61d5e0e5f7b1d732e0412b07fc0e9343b51f4",
+      "bytes": 4018,
+      "declarations": [
+        {
+          "name_as_written": "hereZ",
+          "line": 15
+        },
+        {
+          "name_as_written": "NumX",
+          "line": 16
+        },
+        {
+          "name_as_written": "live0",
+          "line": 17
+        },
+        {
+          "name_as_written": "vertical",
+          "line": 18
+        },
+        {
+          "name_as_written": "rise",
+          "line": 20
+        },
+        {
+          "name_as_written": "just_bright",
+          "line": 22
+        },
+        {
+          "name_as_written": "valueC",
+          "line": 25
+        },
+        {
+          "name_as_written": "sees_some",
+          "line": 27
+        },
+        {
+          "name_as_written": "pose_white",
+          "line": 28
+        },
+        {
+          "name_as_written": "view_head",
+          "line": 30
+        },
+        {
+          "name_as_written": "tree\u2084",
+          "line": 31
+        },
+        {
+          "name_as_written": "Q\u2084",
+          "line": 33
+        },
+        {
+          "name_as_written": "pulsePose",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Image/Seat.lean",
+      "sha256": "7a66307a6a3f7e0c429514108b8e697132ed58b5de3f686d648e7035bb19e353",
+      "bytes": 3708,
+      "declarations": [
+        {
+          "name_as_written": "four",
+          "line": 13
+        },
+        {
+          "name_as_written": "Archive",
+          "line": 14
+        },
+        {
+          "name_as_written": "no0",
+          "line": 15
+        },
+        {
+          "name_as_written": "\u03bccanon",
+          "line": 16
+        },
+        {
+          "name_as_written": "card_Z",
+          "line": 20
+        },
+        {
+          "name_as_written": "corner_all",
+          "line": 22
+        },
+        {
+          "name_as_written": "corner_mark",
+          "line": 23
+        },
+        {
+          "name_as_written": "blade0",
+          "line": 25
+        },
+        {
+          "name_as_written": "archive0",
+          "line": 26
+        },
+        {
+          "name_as_written": "dayB",
+          "line": 27
+        },
+        {
+          "name_as_written": "dayM",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Landau.lean",
+      "sha256": "dcb321d68919073410b75992bbf485832e80b49f4b183cd416929fc3c588099f",
+      "bytes": 5415,
+      "declarations": [
+        {
+          "name_as_written": "Atom",
+          "line": 17
+        },
+        {
+          "name_as_written": "Leg",
+          "line": 18
+        },
+        {
+          "name_as_written": "p",
+          "line": 19
+        },
+        {
+          "name_as_written": "parity",
+          "line": 20
+        },
+        {
+          "name_as_written": "dim",
+          "line": 21
+        },
+        {
+          "name_as_written": "gauge",
+          "line": 22
+        },
+        {
+          "name_as_written": "ghost",
+          "line": 23
+        },
+        {
+          "name_as_written": "anti",
+          "line": 24
+        },
+        {
+          "name_as_written": "gaugeC",
+          "line": 25
+        },
+        {
+          "name_as_written": "delta",
+          "line": 26
+        },
+        {
+          "name_as_written": "precision",
+          "line": 27
+        },
+        {
+          "name_as_written": "realK",
+          "line": 28
+        },
+        {
+          "name_as_written": "k_times",
+          "line": 32
+        },
+        {
+          "name_as_written": "bare",
+          "line": 41
+        },
+        {
+          "name_as_written": "stamp",
+          "line": 48
+        },
+        {
+          "name_as_written": "line",
+          "line": 53
+        },
+        {
+          "name_as_written": "laplace",
+          "line": 61
+        },
+        {
+          "name_as_written": "low",
+          "line": 68
+        },
+        {
+          "name_as_written": "dotLow",
+          "line": 69
+        },
+        {
+          "name_as_written": "k_scale",
+          "line": 71
+        },
+        {
+          "name_as_written": "corners",
+          "line": 72
+        },
+        {
+          "name_as_written": "identity",
+          "line": 74
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/LandauCost.lean",
+      "sha256": "21ec49a9fe04cd4b1c50a7d2515832d1c51581e2a214ecdd818bd5dccc6b5f15",
+      "bytes": 3846,
+      "declarations": [
+        {
+          "name_as_written": "choir",
+          "line": 13
+        },
+        {
+          "name_as_written": "wfield",
+          "line": 14
+        },
+        {
+          "name_as_written": "cut",
+          "line": 16
+        },
+        {
+          "name_as_written": "zone'",
+          "line": 18
+        },
+        {
+          "name_as_written": "coatSharp",
+          "line": 25
+        },
+        {
+          "name_as_written": "precision_propagated",
+          "line": 28
+        },
+        {
+          "name_as_written": "line_meter",
+          "line": 32
+        },
+        {
+          "name_as_written": "lap_meter",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Motif/Pulp.lean",
+      "sha256": "82fe44a6617b4ca2192cec726bf2fde8fde1eb977d6bcb32de7ea1ee29c9a256",
+      "bytes": 3207,
+      "declarations": [
+        {
+          "name_as_written": "\u03b4",
+          "line": 10
+        },
+        {
+          "name_as_written": "rowP",
+          "line": 11
+        },
+        {
+          "name_as_written": "axisP",
+          "line": 12
+        },
+        {
+          "name_as_written": "lip",
+          "line": 13
+        },
+        {
+          "name_as_written": "A",
+          "line": 14
+        },
+        {
+          "name_as_written": "cwave",
+          "line": 15
+        },
+        {
+          "name_as_written": "convoke",
+          "line": 16
+        },
+        {
+          "name_as_written": "F\u2080",
+          "line": 17
+        },
+        {
+          "name_as_written": "cur",
+          "line": 18
+        },
+        {
+          "name_as_written": "Sc",
+          "line": 19
+        },
+        {
+          "name_as_written": "applyS",
+          "line": 20
+        },
+        {
+          "name_as_written": "sume",
+          "line": 24
+        },
+        {
+          "name_as_written": "realA",
+          "line": 27
+        },
+        {
+          "name_as_written": "ghMd",
+          "line": 28
+        },
+        {
+          "name_as_written": "heatSA",
+          "line": 30
+        },
+        {
+          "name_as_written": "curs",
+          "line": 31
+        },
+        {
+          "name_as_written": "Shc",
+          "line": 32
+        },
+        {
+          "name_as_written": "application",
+          "line": 33
+        },
+        {
+          "name_as_written": "S_action",
+          "line": 36
+        },
+        {
+          "name_as_written": "comm_d",
+          "line": 38
+        },
+        {
+          "name_as_written": "deriv_v",
+          "line": 39
+        },
+        {
+          "name_as_written": "S_D",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Motif/Receipt.lean",
+      "sha256": "c34dcf6373f04689d1458a7ee57f63cf810ff8de1a1c3a5068d84360d23dc151",
+      "bytes": 1123,
+      "declarations": [
+        {
+          "name_as_written": "quill",
+          "line": 13
+        },
+        {
+          "name_as_written": "top3",
+          "line": 14
+        },
+        {
+          "name_as_written": "top4",
+          "line": 15
+        },
+        {
+          "name_as_written": "blazeV",
+          "line": 16
+        },
+        {
+          "name_as_written": "B\u2081",
+          "line": 19
+        },
+        {
+          "name_as_written": "B\u2082",
+          "line": 20
+        },
+        {
+          "name_as_written": "\u03c7",
+          "line": 21
+        },
+        {
+          "name_as_written": "pulseX",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Properties.lean",
+      "sha256": "78f289a5e6e5e8932b56ecc4ea175558eb606c2aa0ee17e7490ce6ef4aeb0ab9",
+      "bytes": 3619,
+      "declarations": [
+        {
+          "name_as_written": "Note",
+          "line": 25
+        },
+        {
+          "name_as_written": "Score",
+          "line": 26
+        },
+        {
+          "name_as_written": "ghostChannel",
+          "line": 28
+        },
+        {
+          "name_as_written": "ghostNo",
+          "line": 33
+        },
+        {
+          "name_as_written": "weight",
+          "line": 35
+        },
+        {
+          "name_as_written": "solo",
+          "line": 37
+        },
+        {
+          "name_as_written": "invertMom",
+          "line": 44
+        },
+        {
+          "name_as_written": "net_invert",
+          "line": 46
+        },
+        {
+          "name_as_written": "Solid",
+          "line": 48
+        },
+        {
+          "name_as_written": "Lane4",
+          "line": 54
+        },
+        {
+          "name_as_written": "permute",
+          "line": 57
+        },
+        {
+          "name_as_written": "negateField",
+          "line": 58
+        },
+        {
+          "name_as_written": "SignedScope",
+          "line": 62
+        },
+        {
+          "name_as_written": "real_color",
+          "line": 66
+        },
+        {
+          "name_as_written": "color_sum",
+          "line": 67
+        },
+        {
+          "name_as_written": "tint",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Puff/State.lean",
+      "sha256": "1cbf572a5e93f2d4048ec5d5fecfc7970581d2825bb9783c43531ef43c53a5c7",
+      "bytes": 693,
+      "declarations": [
+        {
+          "name_as_written": "Toy",
+          "line": 12
+        },
+        {
+          "name_as_written": "Trunk",
+          "line": 22
+        },
+        {
+          "name_as_written": "bouquet",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Bubbles.lean",
+      "sha256": "fa979e13821c4d972815bb086cab2b5e2fc61b2785addcd14ee024f430c3a561",
+      "bytes": 8236,
+      "declarations": [
+        {
+          "name_as_written": "beamPair",
+          "line": 27
+        },
+        {
+          "name_as_written": "stemPair",
+          "line": 28
+        },
+        {
+          "name_as_written": "bubble",
+          "line": 29
+        },
+        {
+          "name_as_written": "ratePair",
+          "line": 31
+        },
+        {
+          "name_as_written": "poleTensor",
+          "line": 33
+        },
+        {
+          "name_as_written": "poleK",
+          "line": 37
+        },
+        {
+          "name_as_written": "rank_pole",
+          "line": 40
+        },
+        {
+          "name_as_written": "sum_pole",
+          "line": 46
+        },
+        {
+          "name_as_written": "stem_form",
+          "line": 51
+        },
+        {
+          "name_as_written": "inside_loop",
+          "line": 58
+        },
+        {
+          "name_as_written": "log_rate",
+          "line": 73
+        },
+        {
+          "name_as_written": "pole_slice",
+          "line": 84
+        },
+        {
+          "name_as_written": "cast_price",
+          "line": 88
+        },
+        {
+          "name_as_written": "traceAd",
+          "line": 95
+        },
+        {
+          "name_as_written": "ghost_diag",
+          "line": 97
+        },
+        {
+          "name_as_written": "crossed_pole",
+          "line": 107
+        },
+        {
+          "name_as_written": "counterScale",
+          "line": 112
+        },
+        {
+          "name_as_written": "dotProbe",
+          "line": 114
+        },
+        {
+          "name_as_written": "primary_sq",
+          "line": 116
+        },
+        {
+          "name_as_written": "along_gh",
+          "line": 118
+        },
+        {
+          "name_as_written": "across_gh",
+          "line": 122
+        },
+        {
+          "name_as_written": "ghost_residue",
+          "line": 126
+        },
+        {
+          "name_as_written": "ghost_bill",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Entry.lean",
+      "sha256": "8f217883472b7f21ce4aa1d0b8a076bdd73abc73acf286cb81c2d62f14951e49",
+      "bytes": 4597,
+      "declarations": [
+        {
+          "name_as_written": "stay_history",
+          "line": 20
+        },
+        {
+          "name_as_written": "finite_read",
+          "line": 28
+        },
+        {
+          "name_as_written": "afterTaking",
+          "line": 33
+        },
+        {
+          "name_as_written": "including",
+          "line": 35
+        },
+        {
+          "name_as_written": "final_including",
+          "line": 45
+        },
+        {
+          "name_as_written": "closed_mem",
+          "line": 50
+        },
+        {
+          "name_as_written": "loop_mem",
+          "line": 52
+        },
+        {
+          "name_as_written": "every_mem",
+          "line": 55
+        },
+        {
+          "name_as_written": "convolution_mem",
+          "line": 58
+        },
+        {
+          "name_as_written": "bulk_node",
+          "line": 61
+        },
+        {
+          "name_as_written": "bulk_branch",
+          "line": 64
+        },
+        {
+          "name_as_written": "mark_node",
+          "line": 68
+        },
+        {
+          "name_as_written": "mark_branch",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Glue.lean",
+      "sha256": "2bc2a7b81d98f585e7e2fc01cce4be7d3ac61b4d969cfd4fc10fc46dc8331369",
+      "bytes": 10623,
+      "declarations": [
+        {
+          "name_as_written": "bridgeG",
+          "line": 56
+        },
+        {
+          "name_as_written": "innerTrace",
+          "line": 65
+        },
+        {
+          "name_as_written": "loopCarpet",
+          "line": 72
+        },
+        {
+          "name_as_written": "closeG",
+          "line": 80
+        },
+        {
+          "name_as_written": "bridgeG_eq",
+          "line": 84
+        },
+        {
+          "name_as_written": "innerTrace_eq",
+          "line": 89
+        },
+        {
+          "name_as_written": "loopCarpet_eq",
+          "line": 92
+        },
+        {
+          "name_as_written": "closeG_eq",
+          "line": 99
+        },
+        {
+          "name_as_written": "loopCarpet_integrable",
+          "line": 103
+        },
+        {
+          "name_as_written": "loop_converges",
+          "line": 111
+        },
+        {
+          "name_as_written": "feeD_pitch",
+          "line": 129
+        },
+        {
+          "name_as_written": "closeG_integer",
+          "line": 143
+        },
+        {
+          "name_as_written": "bridgePages",
+          "line": 156
+        },
+        {
+          "name_as_written": "closePages",
+          "line": 158
+        },
+        {
+          "name_as_written": "bridgePages_eq",
+          "line": 161
+        },
+        {
+          "name_as_written": "bridge_meter",
+          "line": 166
+        },
+        {
+          "name_as_written": "closeG_valid",
+          "line": 171
+        },
+        {
+          "name_as_written": "closeG_swamp",
+          "line": 175
+        },
+        {
+          "name_as_written": "closePages_pact",
+          "line": 180
+        },
+        {
+          "name_as_written": "close_meter",
+          "line": 194
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/Halves.lean",
+      "sha256": "829214f986e69125106c4c7be0ac8e714c7e3c98a6af4231e8c549d251a586dc",
+      "bytes": 9267,
+      "declarations": [
+        {
+          "name_as_written": "pickLine",
+          "line": 17
+        },
+        {
+          "name_as_written": "travels_line",
+          "line": 21
+        },
+        {
+          "name_as_written": "pulse_line",
+          "line": 33
+        },
+        {
+          "name_as_written": "halves",
+          "line": 36
+        },
+        {
+          "name_as_written": "pick_quality",
+          "line": 39
+        },
+        {
+          "name_as_written": "cursor",
+          "line": 58
+        },
+        {
+          "name_as_written": "bicolor",
+          "line": 60
+        },
+        {
+          "name_as_written": "line_smul",
+          "line": 64
+        },
+        {
+          "name_as_written": "pick_zero",
+          "line": 67
+        },
+        {
+          "name_as_written": "selected_deriv",
+          "line": 69
+        },
+        {
+          "name_as_written": "continuous_half",
+          "line": 73
+        },
+        {
+          "name_as_written": "diff_pick",
+          "line": 76
+        },
+        {
+          "name_as_written": "continuous_pick",
+          "line": 88
+        },
+        {
+          "name_as_written": "integrated_pick",
+          "line": 99
+        },
+        {
+          "name_as_written": "aux_pick",
+          "line": 110
+        },
+        {
+          "name_as_written": "selected_radial",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/HeatScale.lean",
+      "sha256": "b1dacf67849d28bf871853dd0c68420f8c5df3bd02221cf5484637caf3647ffd",
+      "bytes": 8959,
+      "declarations": [
+        {
+          "name_as_written": "halfP",
+          "line": 27
+        },
+        {
+          "name_as_written": "radial",
+          "line": 28
+        },
+        {
+          "name_as_written": "halfP_components",
+          "line": 30
+        },
+        {
+          "name_as_written": "radial_log",
+          "line": 37
+        },
+        {
+          "name_as_written": "radial_atOne",
+          "line": 42
+        },
+        {
+          "name_as_written": "continuous_radial",
+          "line": 44
+        },
+        {
+          "name_as_written": "shell_deriv",
+          "line": 52
+        },
+        {
+          "name_as_written": "propagator",
+          "line": 58
+        },
+        {
+          "name_as_written": "halfP_nil",
+          "line": 67
+        },
+        {
+          "name_as_written": "bridgeG_smul",
+          "line": 71
+        },
+        {
+          "name_as_written": "diff_bridge",
+          "line": 85
+        },
+        {
+          "name_as_written": "continuous_bridge",
+          "line": 97
+        },
+        {
+          "name_as_written": "integrated_bridge",
+          "line": 108
+        },
+        {
+          "name_as_written": "aux_bridge",
+          "line": 119
+        },
+        {
+          "name_as_written": "first_radial",
+          "line": 146
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/LoadB.lean",
+      "sha256": "883ece22e2cc122c274f04bfe61be30956488f094f0d946e03c153c5ea8ae508",
+      "bytes": 6303,
+      "declarations": [
+        {
+          "name_as_written": "tireG",
+          "line": 24
+        },
+        {
+          "name_as_written": "gaugeTensor",
+          "line": 27
+        },
+        {
+          "name_as_written": "ghostTensor",
+          "line": 28
+        },
+        {
+          "name_as_written": "bothTensor",
+          "line": 30
+        },
+        {
+          "name_as_written": "flipG",
+          "line": 33
+        },
+        {
+          "name_as_written": "ghost_half",
+          "line": 39
+        },
+        {
+          "name_as_written": "gauge_half",
+          "line": 42
+        },
+        {
+          "name_as_written": "connective",
+          "line": 50
+        },
+        {
+          "name_as_written": "written",
+          "line": 52
+        },
+        {
+          "name_as_written": "ghost_flip",
+          "line": 58
+        },
+        {
+          "name_as_written": "charge_r",
+          "line": 64
+        },
+        {
+          "name_as_written": "ghost_sum",
+          "line": 68
+        },
+        {
+          "name_as_written": "gaugeSum",
+          "line": 81
+        },
+        {
+          "name_as_written": "trace_value",
+          "line": 90
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/OpenTensor.lean",
+      "sha256": "c974d50d5424e6f761f4c1f10ce4ded6e5d3ae3b9e74cc2f28bac87d35bd0008",
+      "bytes": 7128,
+      "declarations": [
+        {
+          "name_as_written": "sqPane",
+          "line": 25
+        },
+        {
+          "name_as_written": "sqD",
+          "line": 27
+        },
+        {
+          "name_as_written": "moved_sq",
+          "line": 29
+        },
+        {
+          "name_as_written": "at_pane",
+          "line": 32
+        },
+        {
+          "name_as_written": "deriv_pane",
+          "line": 34
+        },
+        {
+          "name_as_written": "deriv_D",
+          "line": 39
+        },
+        {
+          "name_as_written": "squarePoly",
+          "line": 44
+        },
+        {
+          "name_as_written": "squareD",
+          "line": 46
+        },
+        {
+          "name_as_written": "squareDD",
+          "line": 48
+        },
+        {
+          "name_as_written": "Dpoly",
+          "line": 51
+        },
+        {
+          "name_as_written": "DDpoly",
+          "line": 54
+        },
+        {
+          "name_as_written": "bothPoly",
+          "line": 57
+        },
+        {
+          "name_as_written": "tensorPol",
+          "line": 60
+        },
+        {
+          "name_as_written": "at_both",
+          "line": 62
+        },
+        {
+          "name_as_written": "squareValue",
+          "line": 73
+        },
+        {
+          "name_as_written": "firstValue",
+          "line": 75
+        },
+        {
+          "name_as_written": "pairValue",
+          "line": 77
+        },
+        {
+          "name_as_written": "from_const",
+          "line": 82
+        },
+        {
+          "name_as_written": "to_const",
+          "line": 84
+        },
+        {
+          "name_as_written": "payment_square",
+          "line": 86
+        },
+        {
+          "name_as_written": "payment_first",
+          "line": 94
+        },
+        {
+          "name_as_written": "payment_second",
+          "line": 103
+        },
+        {
+          "name_as_written": "payment_both",
+          "line": 112
+        },
+        {
+          "name_as_written": "slope",
+          "line": 120
+        },
+        {
+          "name_as_written": "volume4",
+          "line": 122
+        },
+        {
+          "name_as_written": "moveDensity",
+          "line": 124
+        },
+        {
+          "name_as_written": "heatValue",
+          "line": 129
+        },
+        {
+          "name_as_written": "two_rank",
+          "line": 132
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/PageOne.lean",
+      "sha256": "c0c5ae27da7bffc8d61de978665714b341cdb6edcb962359e2c70e76321d0964",
+      "bytes": 8165,
+      "declarations": [
+        {
+          "name_as_written": "pageOne",
+          "line": 24
+        },
+        {
+          "name_as_written": "integrate_single",
+          "line": 26
+        },
+        {
+          "name_as_written": "lowerTaylor",
+          "line": 35
+        },
+        {
+          "name_as_written": "ordinary",
+          "line": 38
+        },
+        {
+          "name_as_written": "highTensor",
+          "line": 42
+        },
+        {
+          "name_as_written": "taylorPole",
+          "line": 45
+        },
+        {
+          "name_as_written": "oneLoopFinite",
+          "line": 51
+        },
+        {
+          "name_as_written": "Taylor_lift",
+          "line": 55
+        },
+        {
+          "name_as_written": "small_lift",
+          "line": 61
+        },
+        {
+          "name_as_written": "prog_lift",
+          "line": 76
+        },
+        {
+          "name_as_written": "ordinary_lift",
+          "line": 87
+        },
+        {
+          "name_as_written": "high_lift",
+          "line": 90
+        },
+        {
+          "name_as_written": "pole_local",
+          "line": 93
+        },
+        {
+          "name_as_written": "one_loop_germ",
+          "line": 97
+        },
+        {
+          "name_as_written": "weight_forest",
+          "line": 105
+        },
+        {
+          "name_as_written": "weight_here",
+          "line": 108
+        },
+        {
+          "name_as_written": "simple_expansion",
+          "line": 114
+        },
+        {
+          "name_as_written": "first_jet",
+          "line": 131
+        },
+        {
+          "name_as_written": "slope_value",
+          "line": 142
+        },
+        {
+          "name_as_written": "simple_finite",
+          "line": 149
+        },
+        {
+          "name_as_written": "simple_pole_rule",
+          "line": 160
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/QuarticRule.lean",
+      "sha256": "b6b06663b1d1c1b98eb45dccd709770198990cfb989a4e7c3ef60a22db8995c2",
+      "bytes": 7888,
+      "declarations": [
+        {
+          "name_as_written": "vec",
+          "line": 21
+        },
+        {
+          "name_as_written": "isA",
+          "line": 22
+        },
+        {
+          "name_as_written": "GaugeLegs",
+          "line": 23
+        },
+        {
+          "name_as_written": "A_order",
+          "line": 25
+        },
+        {
+          "name_as_written": "pair_order",
+          "line": 27
+        },
+        {
+          "name_as_written": "A_gauge",
+          "line": 31
+        },
+        {
+          "name_as_written": "quill_gauge",
+          "line": 40
+        },
+        {
+          "name_as_written": "top_gauge",
+          "line": 44
+        },
+        {
+          "name_as_written": "one_A",
+          "line": 47
+        },
+        {
+          "name_as_written": "bracket_rule",
+          "line": 53
+        },
+        {
+          "name_as_written": "quartic_splits",
+          "line": 70
+        },
+        {
+          "name_as_written": "wedge",
+          "line": 83
+        },
+        {
+          "name_as_written": "pair_sum",
+          "line": 86
+        },
+        {
+          "name_as_written": "wedge_price",
+          "line": 94
+        },
+        {
+          "name_as_written": "angle",
+          "line": 113
+        },
+        {
+          "name_as_written": "top_pair",
+          "line": 115
+        },
+        {
+          "name_as_written": "angle_eq",
+          "line": 129
+        },
+        {
+          "name_as_written": "sums_angles",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/SternGroup.lean",
+      "sha256": "3b9e483d2d98a3c4eeb4047fd9517144ba7529b444991cf275f66787ee832dda",
+      "bytes": 7886,
+      "declarations": [
+        {
+          "name_as_written": "pol",
+          "line": 31
+        },
+        {
+          "name_as_written": "proton",
+          "line": 32
+        },
+        {
+          "name_as_written": "start_single",
+          "line": 34
+        },
+        {
+          "name_as_written": "start_proton",
+          "line": 36
+        },
+        {
+          "name_as_written": "Arm_fixed",
+          "line": 39
+        },
+        {
+          "name_as_written": "Arm_vertex",
+          "line": 41
+        },
+        {
+          "name_as_written": "plantVert",
+          "line": 43
+        },
+        {
+          "name_as_written": "uVal",
+          "line": 45
+        },
+        {
+          "name_as_written": "pVal",
+          "line": 47
+        },
+        {
+          "name_as_written": "bVal",
+          "line": 52
+        },
+        {
+          "name_as_written": "coal_seal",
+          "line": 53
+        },
+        {
+          "name_as_written": "roll",
+          "line": 60
+        },
+        {
+          "name_as_written": "priceCo",
+          "line": 63
+        },
+        {
+          "name_as_written": "x_light",
+          "line": 67
+        },
+        {
+          "name_as_written": "y_light",
+          "line": 71
+        },
+        {
+          "name_as_written": "b_light",
+          "line": 75
+        },
+        {
+          "name_as_written": "lighting",
+          "line": 80
+        },
+        {
+          "name_as_written": "combined",
+          "line": 87
+        },
+        {
+          "name_as_written": "ghostV",
+          "line": 94
+        },
+        {
+          "name_as_written": "ghostT",
+          "line": 95
+        },
+        {
+          "name_as_written": "ghostR",
+          "line": 97
+        },
+        {
+          "name_as_written": "ghost_input",
+          "line": 101
+        },
+        {
+          "name_as_written": "prep_no_pole_mark",
+          "line": 105
+        },
+        {
+          "name_as_written": "in_page1",
+          "line": 106
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/TestScale.lean",
+      "sha256": "f47a8607d4aeb5028768b5a9706790bc2ad1fc1edda0edbde199801b27b0c076",
+      "bytes": 9525,
+      "declarations": [
+        {
+          "name_as_written": "D",
+          "line": 19
+        },
+        {
+          "name_as_written": "H",
+          "line": 20
+        },
+        {
+          "name_as_written": "BareG",
+          "line": 21
+        },
+        {
+          "name_as_written": "eps_pay",
+          "line": 23
+        },
+        {
+          "name_as_written": "admittedSurge",
+          "line": 29
+        },
+        {
+          "name_as_written": "Bare_era",
+          "line": 33
+        },
+        {
+          "name_as_written": "D_era",
+          "line": 35
+        },
+        {
+          "name_as_written": "Dval",
+          "line": 40
+        },
+        {
+          "name_as_written": "arrives",
+          "line": 41
+        },
+        {
+          "name_as_written": "priceJet",
+          "line": 44
+        },
+        {
+          "name_as_written": "premature",
+          "line": 50
+        },
+        {
+          "name_as_written": "\u03b1",
+          "line": 57
+        },
+        {
+          "name_as_written": "\u03b2",
+          "line": 58
+        },
+        {
+          "name_as_written": "z_surge",
+          "line": 59
+        },
+        {
+          "name_as_written": "amtD",
+          "line": 69
+        },
+        {
+          "name_as_written": "differ",
+          "line": 72
+        },
+        {
+          "name_as_written": "alarm_H",
+          "line": 78
+        },
+        {
+          "name_as_written": "alarm_D",
+          "line": 83
+        },
+        {
+          "name_as_written": "DScale",
+          "line": 88
+        },
+        {
+          "name_as_written": "DScaleJet",
+          "line": 90
+        },
+        {
+          "name_as_written": "limit_s",
+          "line": 94
+        },
+        {
+          "name_as_written": "IR_s",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/TracedCubic.lean",
+      "sha256": "3a26db0cdefb629dcff6c73f56f5ce08ddf4a20aee8176ce301571c23f7b8593",
+      "bytes": 7339,
+      "declarations": [
+        {
+          "name_as_written": "Km",
+          "line": 27
+        },
+        {
+          "name_as_written": "selected_closed",
+          "line": 31
+        },
+        {
+          "name_as_written": "selected_rev",
+          "line": 34
+        },
+        {
+          "name_as_written": "Km0",
+          "line": 41
+        },
+        {
+          "name_as_written": "ghost_degrees",
+          "line": 47
+        },
+        {
+          "name_as_written": "cube_parity",
+          "line": 58
+        },
+        {
+          "name_as_written": "hit_parity",
+          "line": 63
+        },
+        {
+          "name_as_written": "tridentMu",
+          "line": 76
+        },
+        {
+          "name_as_written": "twoG",
+          "line": 78
+        },
+        {
+          "name_as_written": "use_color",
+          "line": 82
+        },
+        {
+          "name_as_written": "gauge_hit",
+          "line": 85
+        },
+        {
+          "name_as_written": "ghost_hit",
+          "line": 95
+        },
+        {
+          "name_as_written": "angle_comm",
+          "line": 105
+        },
+        {
+          "name_as_written": "exchangeW",
+          "line": 107
+        },
+        {
+          "name_as_written": "exchangeC",
+          "line": 118
+        },
+        {
+          "name_as_written": "exchangeSym",
+          "line": 128
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/ScaleForest/TwoVertices.lean",
+      "sha256": "34beff55793c81c73b43b91d6efed55017987997a7430c93ffeb5f092b77ede2",
+      "bytes": 7552,
+      "declarations": [
+        {
+          "name_as_written": "classicalPage",
+          "line": 23
+        },
+        {
+          "name_as_written": "bridge_single",
+          "line": 25
+        },
+        {
+          "name_as_written": "closeG_zero",
+          "line": 33
+        },
+        {
+          "name_as_written": "close_single",
+          "line": 44
+        },
+        {
+          "name_as_written": "scaleZero_invariant",
+          "line": 50
+        },
+        {
+          "name_as_written": "collapsed_kernel",
+          "line": 53
+        },
+        {
+          "name_as_written": "ct_blind",
+          "line": 57
+        },
+        {
+          "name_as_written": "firstSew",
+          "line": 73
+        },
+        {
+          "name_as_written": "firstForce",
+          "line": 75
+        },
+        {
+          "name_as_written": "firstSymbol",
+          "line": 77
+        },
+        {
+          "name_as_written": "first_force",
+          "line": 79
+        },
+        {
+          "name_as_written": "first_prep",
+          "line": 85
+        },
+        {
+          "name_as_written": "first_pole",
+          "line": 93
+        },
+        {
+          "name_as_written": "firstResult",
+          "line": 96
+        },
+        {
+          "name_as_written": "first_integral",
+          "line": 99
+        },
+        {
+          "name_as_written": "close_form",
+          "line": 129
+        },
+        {
+          "name_as_written": "primitive_laurent",
+          "line": 140
+        },
+        {
+          "name_as_written": "twoVertex_laurent",
+          "line": 152
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Swirl/LandLine.lean",
+      "sha256": "5f92aa3ec6f95e694d4b6af0c4c460bd1becd032d39e8a69d284c4f4cb093498",
+      "bytes": 5110,
+      "declarations": [
+        {
+          "name_as_written": "Tail",
+          "line": 17
+        },
+        {
+          "name_as_written": "lown",
+          "line": 23
+        },
+        {
+          "name_as_written": "ohLow",
+          "line": 25
+        },
+        {
+          "name_as_written": "lowers",
+          "line": 27
+        },
+        {
+          "name_as_written": "Fuel",
+          "line": 30
+        },
+        {
+          "name_as_written": "zeroShift",
+          "line": 31
+        },
+        {
+          "name_as_written": "NoWave",
+          "line": 33
+        },
+        {
+          "name_as_written": "bruC",
+          "line": 34
+        },
+        {
+          "name_as_written": "swing",
+          "line": 35
+        },
+        {
+          "name_as_written": "swingL",
+          "line": 40
+        },
+        {
+          "name_as_written": "bank",
+          "line": 45
+        },
+        {
+          "name_as_written": "uni",
+          "line": 46
+        },
+        {
+          "name_as_written": "Bass",
+          "line": 51
+        },
+        {
+          "name_as_written": "Forest",
+          "line": 52
+        },
+        {
+          "name_as_written": "FinalK",
+          "line": 54
+        },
+        {
+          "name_as_written": "clave",
+          "line": 56
+        },
+        {
+          "name_as_written": "essence",
+          "line": 58
+        },
+        {
+          "name_as_written": "and_here",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "path": "YM/MS/Train/MeasureD.lean",
+      "sha256": "a74869b9827079c8df93029fc9b018714189e2fce78428abb7a2b3c1669e5a92",
+      "bytes": 619,
+      "declarations": [
+        {
+          "name_as_written": "room",
+          "line": 11
+        },
+        {
+          "name_as_written": "feeD",
+          "line": 12
+        },
+        {
+          "name_as_written": "tenorK",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "YM/OPE/Short/Gap.lean",
+      "sha256": "91068fac8163f6d8ce6f083efdcfaf71a4688352acd2bbb049c3d4450c5e36ee",
+      "bytes": 7160,
+      "declarations": [
+        {
+          "name_as_written": "unit_field",
+          "line": 22
+        },
+        {
+          "name_as_written": "low_annihilator",
+          "line": 30
+        },
+        {
+          "name_as_written": "no_channels",
+          "line": 35
+        },
+        {
+          "name_as_written": "fewer",
+          "line": 42
+        },
+        {
+          "name_as_written": "unchanged",
+          "line": 51
+        },
+        {
+          "name_as_written": "Below",
+          "line": 56
+        },
+        {
+          "name_as_written": "Moderated",
+          "line": 58
+        },
+        {
+          "name_as_written": "annular",
+          "line": 61
+        },
+        {
+          "name_as_written": "residue",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "path": "YM/PhysMS/Foundation/Estimates.lean",
+      "sha256": "e372fac470a3eb025baff612a4decee57c7ea60c551a4fd703a86b2c754814dd",
+      "bytes": 4623,
+      "declarations": [
+        {
+          "name_as_written": "compact_within",
+          "line": 15
+        },
+        {
+          "name_as_written": "to_log_zoom",
+          "line": 23
+        },
+        {
+          "name_as_written": "length_rate",
+          "line": 24
+        },
+        {
+          "name_as_written": "coupling_rate",
+          "line": 29
+        },
+        {
+          "name_as_written": "subpower_payment",
+          "line": 40
+        },
+        {
+          "name_as_written": "phase_jets_flat",
+          "line": 49
+        },
+        {
+          "name_as_written": "identity_flat",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "path": "YM/PhysMS/Foundation/Readout.lean",
+      "sha256": "265dd2fe45cbe6452778e680b2966e464f2ec1778a44871483d084f160aaef23",
+      "bytes": 10245,
+      "declarations": [
+        {
+          "name_as_written": "charge",
+          "line": 32
+        },
+        {
+          "name_as_written": "charge_eq",
+          "line": 33
+        },
+        {
+          "name_as_written": "phase_values",
+          "line": 40
+        },
+        {
+          "name_as_written": "Word",
+          "line": 56
+        },
+        {
+          "name_as_written": "value",
+          "line": 59
+        },
+        {
+          "name_as_written": "conf_room",
+          "line": 62
+        },
+        {
+          "name_as_written": "scale_room",
+          "line": 65
+        },
+        {
+          "name_as_written": "point_moment",
+          "line": 70
+        },
+        {
+          "name_as_written": "value_tied",
+          "line": 74
+        },
+        {
+          "name_as_written": "raised",
+          "line": 83
+        },
+        {
+          "name_as_written": "raised_charge",
+          "line": 86
+        },
+        {
+          "name_as_written": "value_gradient",
+          "line": 93
+        },
+        {
+          "name_as_written": "scalar_read",
+          "line": 114
+        },
+        {
+          "name_as_written": "phase_jets",
+          "line": 126
+        }
+      ]
+    },
+    {
+      "path": "YM/PhysMS/Frame/Phases.lean",
+      "sha256": "d6935872a6eef1b03aee732678db2bcbc61e0ca55bf1109c67336bee8794950a",
+      "bytes": 8239,
+      "declarations": [
+        {
+          "name_as_written": "jet",
+          "line": 22
+        },
+        {
+          "name_as_written": "jet_rises",
+          "line": 25
+        },
+        {
+          "name_as_written": "jet_from_measure",
+          "line": 33
+        },
+        {
+          "name_as_written": "jet_values",
+          "line": 36
+        },
+        {
+          "name_as_written": "domain",
+          "line": 43
+        },
+        {
+          "name_as_written": "jets_points",
+          "line": 49
+        },
+        {
+          "name_as_written": "dynamic",
+          "line": 68
+        },
+        {
+          "name_as_written": "within_price",
+          "line": 75
+        },
+        {
+          "name_as_written": "negligible",
+          "line": 85
+        },
+        {
+          "name_as_written": "all_leading",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "path": "YM/SignedWilsonExpansion/Result/Orders.lean",
+      "sha256": "1efb220cec3dcb7bc80bb479b58dc0aff1a46270803b740732fe4425e27e9b95",
+      "bytes": 12704,
+      "declarations": [
+        {
+          "name_as_written": "LinePrices",
+          "line": 78
+        },
+        {
+          "name_as_written": "ticketsCompute",
+          "line": 84
+        },
+        {
+          "name_as_written": "ConferencePowers",
+          "line": 94
+        },
+        {
+          "name_as_written": "pricedLines",
+          "line": 108
+        },
+        {
+          "name_as_written": "RosterPrices",
+          "line": 124
+        },
+        {
+          "name_as_written": "inductionWith",
+          "line": 128
+        },
+        {
+          "name_as_written": "ordersAll",
+          "line": 129
+        },
+        {
+          "name_as_written": "pricesAll",
+          "line": 130
+        },
+        {
+          "name_as_written": "allFixedMeasured",
+          "line": 135
+        },
+        {
+          "name_as_written": "onSUtwo",
+          "line": 138
+        }
+      ]
+    },
+    {
+      "path": "YangMills/CorrelationHierarchy.lean",
+      "sha256": "174fd4ac134146f62afe64c479962e2d507b2e51d25560a4442f8c989201efdb",
+      "bytes": 11087,
+      "declarations": [
+        {
+          "name_as_written": "WilsonRegularity",
+          "line": 12
+        },
+        {
+          "name_as_written": "Hierarchy",
+          "line": 24
+        },
+        {
+          "name_as_written": "Tag",
+          "line": 57
+        },
+        {
+          "name_as_written": "grouped",
+          "line": 60
+        },
+        {
+          "name_as_written": "weight",
+          "line": 65
+        },
+        {
+          "name_as_written": "Within",
+          "line": 67
+        },
+        {
+          "name_as_written": "Clear",
+          "line": 69
+        },
+        {
+          "name_as_written": "truncatedWithSpectators",
+          "line": 74
+        },
+        {
+          "name_as_written": "OperatorProductExpansion",
+          "line": 80
+        },
+        {
+          "name_as_written": "ComplexTimes",
+          "line": 91
+        },
+        {
+          "name_as_written": "SpatialPoints",
+          "line": 92
+        },
+        {
+          "name_as_written": "orderedTube",
+          "line": 95
+        },
+        {
+          "name_as_written": "complexShift",
+          "line": 99
+        },
+        {
+          "name_as_written": "imaginaryTimes",
+          "line": 105
+        },
+        {
+          "name_as_written": "spatialPoints",
+          "line": 109
+        },
+        {
+          "name_as_written": "tensorTest",
+          "line": 113
+        },
+        {
+          "name_as_written": "Reconstructed",
+          "line": 117
+        },
+        {
+          "name_as_written": "stressTrace",
+          "line": 146
+        },
+        {
+          "name_as_written": "centeredTrace",
+          "line": 150
+        },
+        {
+          "name_as_written": "timePair",
+          "line": 155
+        },
+        {
+          "name_as_written": "traceTwo",
+          "line": 158
+        },
+        {
+          "name_as_written": "Mode",
+          "line": 161
+        },
+        {
+          "name_as_written": "Mode.kernel",
+          "line": 168
+        },
+        {
+          "name_as_written": "Track",
+          "line": 171
+        },
+        {
+          "name_as_written": "wickProfile",
+          "line": 174
+        },
+        {
+          "name_as_written": "TraceTest",
+          "line": 177
+        }
+      ]
+    },
+    {
+      "path": "YangMills/CutoffTrajectory.lean",
+      "sha256": "a79e6621529bca492c654740eae86ede5ef385f176010d12074313b459446614",
+      "bytes": 1653,
+      "declarations": [
+        {
+          "name_as_written": "wilsonBlock",
+          "line": 16
+        },
+        {
+          "name_as_written": "wilsonLogStep",
+          "line": 20
+        },
+        {
+          "name_as_written": "wilsonBareCenter",
+          "line": 24
+        },
+        {
+          "name_as_written": "WilsonTrajectory",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "path": "YangMills/Existence.lean",
+      "sha256": "19ac8b8e3f682dcd423b1b6215a4b30adfa25ab0d010ca66e4b94ad7fe635480",
+      "bytes": 2228,
+      "declarations": [
+        {
+          "name_as_written": "ContinuumLimit",
+          "line": 20
+        },
+        {
+          "name_as_written": "Construction.Realizes",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "path": "YangMills/FreeFields.lean",
+      "sha256": "dd59f0b5ce36f0ce38b8a7720a34dce45fab432884cdc5b52187dd7c48f260da",
+      "bytes": 5791,
+      "declarations": [
+        {
+          "name_as_written": "Color",
+          "line": 11
+        },
+        {
+          "name_as_written": "Tensor",
+          "line": 12
+        },
+        {
+          "name_as_written": "TwoJet",
+          "line": 13
+        },
+        {
+          "name_as_written": "partialD",
+          "line": 15
+        },
+        {
+          "name_as_written": "diagonal",
+          "line": 18
+        },
+        {
+          "name_as_written": "OnShell",
+          "line": 22
+        },
+        {
+          "name_as_written": "Coordinates",
+          "line": 30
+        },
+        {
+          "name_as_written": "Key",
+          "line": 46
+        },
+        {
+          "name_as_written": "Pol",
+          "line": 47
+        },
+        {
+          "name_as_written": "Tower",
+          "line": 48
+        },
+        {
+          "name_as_written": "eval",
+          "line": 50
+        },
+        {
+          "name_as_written": "Admissible",
+          "line": 54
+        },
+        {
+          "name_as_written": "green",
+          "line": 58
+        },
+        {
+          "name_as_written": "rightCurl",
+          "line": 59
+        },
+        {
+          "name_as_written": "curvatureKernel",
+          "line": 61
+        },
+        {
+          "name_as_written": "taylor",
+          "line": 64
+        },
+        {
+          "name_as_written": "covariance",
+          "line": 69
+        },
+        {
+          "name_as_written": "Occ",
+          "line": 77
+        },
+        {
+          "name_as_written": "Pairing",
+          "line": 79
+        },
+        {
+          "name_as_written": "wickMonomial",
+          "line": 84
+        },
+        {
+          "name_as_written": "stressValue",
+          "line": 91
+        },
+        {
+          "name_as_written": "Reference",
+          "line": 99
+        }
+      ]
+    },
+    {
+      "path": "YangMills/Geometry.lean",
+      "sha256": "207f1af64eb4873a2d0cef0fd6adcfd03daa8de40dc1d4849dcfe1102c2d99ae",
+      "bytes": 2931,
+      "declarations": [
+        {
+          "name_as_written": "UnitaryRepresentation",
+          "line": 20
+        },
+        {
+          "name_as_written": "GaugeGroup",
+          "line": 25
+        },
+        {
+          "name_as_written": "IsSimple",
+          "line": 39
+        },
+        {
+          "name_as_written": "Axis",
+          "line": 51
+        },
+        {
+          "name_as_written": "SpaceAxis",
+          "line": 52
+        },
+        {
+          "name_as_written": "timeAxis",
+          "line": 53
+        },
+        {
+          "name_as_written": "Spacetime",
+          "line": 54
+        },
+        {
+          "name_as_written": "Space",
+          "line": 55
+        },
+        {
+          "name_as_written": "Points",
+          "line": 57
+        },
+        {
+          "name_as_written": "separated",
+          "line": 59
+        },
+        {
+          "name_as_written": "SeparatedTest",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "path": "YangMills/LatticeFields.lean",
+      "sha256": "2cb992ddc5e75993c0a4fbfb4e9a032475078533b9abb0b850d3f3bd0bc05d40",
+      "bytes": 4371,
+      "declarations": [
+        {
+          "name_as_written": "wilsonOneLoop",
+          "line": 13
+        },
+        {
+          "name_as_written": "timeMirror",
+          "line": 20
+        },
+        {
+          "name_as_written": "timeMirrorLinks",
+          "line": 24
+        },
+        {
+          "name_as_written": "RawSpace",
+          "line": 30
+        },
+        {
+          "name_as_written": "GradedTokens",
+          "line": 34
+        },
+        {
+          "name_as_written": "WilsonData",
+          "line": 50
+        },
+        {
+          "name_as_written": "physicalLabel",
+          "line": 72
+        },
+        {
+          "name_as_written": "AdjointOn",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching.lean",
+      "sha256": "651df8a1d59699550a7352e893082d57daae299e8d61ab7c60f84c37291e68ec",
+      "bytes": 3160,
+      "declarations": [
+        {
+          "name_as_written": "MatchedRefinement",
+          "line": 20
+        },
+        {
+          "name_as_written": "MatchedRun",
+          "line": 44
+        },
+        {
+          "name_as_written": "MatchedRun.realizes",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Asymptotics.lean",
+      "sha256": "152a2564b8f8d3c047adf925ce4bdf3bc5880e990dc9f7486938968d4b3ce54c",
+      "bytes": 3001,
+      "declarations": [
+        {
+          "name_as_written": "coefficientNorm",
+          "line": 17
+        },
+        {
+          "name_as_written": "coefficientNorm_nonneg",
+          "line": 20
+        },
+        {
+          "name_as_written": "norm_coeff_le_coefficientNorm",
+          "line": 24
+        },
+        {
+          "name_as_written": "coefficientNorm_eq_zero_iff",
+          "line": 33
+        },
+        {
+          "name_as_written": "ShapeDerivativeBound",
+          "line": 46
+        },
+        {
+          "name_as_written": "HasSmearedExpansion",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Calibration.lean",
+      "sha256": "5b42de5dadd816459f835eb213e12457a6c025289ab268c36e9254735dca71e0",
+      "bytes": 4885,
+      "declarations": [
+        {
+          "name_as_written": "PositionScheme",
+          "line": 22
+        },
+        {
+          "name_as_written": "PositionScheme.conversion",
+          "line": 28
+        },
+        {
+          "name_as_written": "CorrectionSpace",
+          "line": 31
+        },
+        {
+          "name_as_written": "correctionBasis",
+          "line": 34
+        },
+        {
+          "name_as_written": "correctionCoordinates",
+          "line": 37
+        },
+        {
+          "name_as_written": "cutoffWidth",
+          "line": 43
+        },
+        {
+          "name_as_written": "smoothAdjustment",
+          "line": 50
+        },
+        {
+          "name_as_written": "groupMenu",
+          "line": 60
+        },
+        {
+          "name_as_written": "Calibration",
+          "line": 65
+        },
+        {
+          "name_as_written": "numericalAdjustment_ext",
+          "line": 73
+        },
+        {
+          "name_as_written": "Calibration.uniqueAt",
+          "line": 83
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Correlations.lean",
+      "sha256": "29303e27ef6020a87eaf56a620cf58c1aafbf016dde3b7af4a436ebe4c118a69",
+      "bytes": 4520,
+      "declarations": [
+        {
+          "name_as_written": "measuredCorrelation",
+          "line": 17
+        },
+        {
+          "name_as_written": "correlationPartialSum",
+          "line": 22
+        },
+        {
+          "name_as_written": "CorrelationExpansion",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/GraphCoefficients.lean",
+      "sha256": "51c7275566f0b075bfaf1c28c74e8e5e134f55405fb24c533c43c961b8f3114a",
+      "bytes": 2303,
+      "declarations": [
+        {
+          "name_as_written": "msbarCorrelationForm",
+          "line": 19
+        },
+        {
+          "name_as_written": "graphCorrelation",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Measurement.lean",
+      "sha256": "4b5360ddf1e779506be4ac647c3dcb0bc6d3d3385c18acc277b03468c03519ce",
+      "bytes": 4393,
+      "declarations": [
+        {
+          "name_as_written": "Measurement",
+          "line": 21
+        },
+        {
+          "name_as_written": "Measurement.inputs",
+          "line": 54
+        },
+        {
+          "name_as_written": "FrameCalibration",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/NativeLattice.lean",
+      "sha256": "9a715003fd6dd2419a077385eba1dbe215246b5cb47a76201f665da2defa2d66",
+      "bytes": 1705,
+      "declarations": [
+        {
+          "name_as_written": "wilsonFamily",
+          "line": 12
+        },
+        {
+          "name_as_written": "NativeCoordinates",
+          "line": 26
+        },
+        {
+          "name_as_written": "AdmissibleLattice",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/OperatorProducts.lean",
+      "sha256": "a8db0f3b627ff99cb5594131a070c34893913e5429ccb997c5c7fc1055833e82",
+      "bytes": 4475,
+      "declarations": [
+        {
+          "name_as_written": "measuredOPE",
+          "line": 20
+        },
+        {
+          "name_as_written": "HasChannelBasis",
+          "line": 29
+        },
+        {
+          "name_as_written": "opePartialSum",
+          "line": 37
+        },
+        {
+          "name_as_written": "OPEExpansion",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/PositionFrame.lean",
+      "sha256": "583167ff956d5eb9dbfa5c7e00e2122dbec8ae00e7432415f8e2002677de34d7",
+      "bytes": 3951,
+      "declarations": [
+        {
+          "name_as_written": "PositionFrames",
+          "line": 21
+        },
+        {
+          "name_as_written": "positionMoment",
+          "line": 24
+        },
+        {
+          "name_as_written": "positionReport",
+          "line": 30
+        },
+        {
+          "name_as_written": "PositionNormalized",
+          "line": 36
+        },
+        {
+          "name_as_written": "PositionLocallyUnique",
+          "line": 51
+        },
+        {
+          "name_as_written": "PositionUnital",
+          "line": 62
+        },
+        {
+          "name_as_written": "PositionNested",
+          "line": 69
+        },
+        {
+          "name_as_written": "PositionReal",
+          "line": 75
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/Reference.lean",
+      "sha256": "ddc92d6dccd75fa9d0890dd5236807b64f400912b5540d8e202179a6bce597b3",
+      "bytes": 2662,
+      "declarations": [
+        {
+          "name_as_written": "OPEIsDetermined",
+          "line": 13
+        },
+        {
+          "name_as_written": "msbarCoefficients",
+          "line": 18
+        },
+        {
+          "name_as_written": "valid_iff_eq_reference",
+          "line": 25
+        },
+        {
+          "name_as_written": "Reference",
+          "line": 35
+        },
+        {
+          "name_as_written": "Reference.coefficients",
+          "line": 44
+        },
+        {
+          "name_as_written": "Reference.scheme_unique",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/VolumeLimits.lean",
+      "sha256": "e1872a906045c341ef9e821eeca0ab27ca013ef194763c3a253d2bc76c93c58c",
+      "bytes": 5338,
+      "declarations": [
+        {
+          "name_as_written": "separatedModPeriod",
+          "line": 15
+        },
+        {
+          "name_as_written": "Grid",
+          "line": 19
+        },
+        {
+          "name_as_written": "Step",
+          "line": 24
+        },
+        {
+          "name_as_written": "position",
+          "line": 31
+        },
+        {
+          "name_as_written": "differences",
+          "line": 34
+        },
+        {
+          "name_as_written": "derivatives",
+          "line": 41
+        },
+        {
+          "name_as_written": "interpolate",
+          "line": 48
+        },
+        {
+          "name_as_written": "moment",
+          "line": 55
+        },
+        {
+          "name_as_written": "smear",
+          "line": 58
+        },
+        {
+          "name_as_written": "SmoothMeshLimit",
+          "line": 67
+        },
+        {
+          "name_as_written": "TestTable",
+          "line": 87
+        },
+        {
+          "name_as_written": "HasTestLimits",
+          "line": 92
+        },
+        {
+          "name_as_written": "RepresentsTestLimits",
+          "line": 101
+        }
+      ]
+    },
+    {
+      "path": "YangMills/PerturbativeMatching/WardIdentities.lean",
+      "sha256": "e232114b3c89bfbbe7c74dc90e500a81b7bfcf33fa6162c11e4a780d19940af5",
+      "bytes": 3055,
+      "declarations": [
+        {
+          "name_as_written": "Series",
+          "line": 16
+        },
+        {
+          "name_as_written": "inserted",
+          "line": 20
+        },
+        {
+          "name_as_written": "fluxIntegrand",
+          "line": 24
+        },
+        {
+          "name_as_written": "Determined",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "path": "YangMills/ScalingLimits.lean",
+      "sha256": "d29b60806751ddacb8374206f5857fba4529b4022c8a09cee075df851f353838",
+      "bytes": 7815,
+      "declarations": [
+        {
+          "name_as_written": "MaxwellScaling",
+          "line": 12
+        },
+        {
+          "name_as_written": "Aligned",
+          "line": 38
+        },
+        {
+          "name_as_written": "engineering",
+          "line": 41
+        },
+        {
+          "name_as_written": "PhaseJets",
+          "line": 44
+        },
+        {
+          "name_as_written": "Detects",
+          "line": 54
+        },
+        {
+          "name_as_written": "Laws",
+          "line": 62
+        },
+        {
+          "name_as_written": "Frame",
+          "line": 92
+        },
+        {
+          "name_as_written": "JetBound",
+          "line": 96
+        },
+        {
+          "name_as_written": "Laws",
+          "line": 106
+        },
+        {
+          "name_as_written": "Laws.selected",
+          "line": 116
+        },
+        {
+          "name_as_written": "KillsBelow",
+          "line": 125
+        },
+        {
+          "name_as_written": "FrameBounds",
+          "line": 131
+        }
+      ]
+    },
+    {
+      "path": "YangMills/VolumeLimit.lean",
+      "sha256": "48871fef2221e415e2c3b514601c45a96bed6226a71e15e51434fcb08b9d0941",
+      "bytes": 558,
+      "declarations": [
+        {
+          "name_as_written": "VolumeChoice",
+          "line": 9
+        },
+        {
+          "name_as_written": "Construction",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonLattice.lean",
+      "sha256": "4837b8c59f46fd5b812493c5909ca8042eea189bbe948a70b4796155cbc95090",
+      "bytes": 3611,
+      "declarations": [
+        {
+          "name_as_written": "Site",
+          "line": 11
+        },
+        {
+          "name_as_written": "Configuration",
+          "line": 12
+        },
+        {
+          "name_as_written": "Directions",
+          "line": 13
+        },
+        {
+          "name_as_written": "plaquette",
+          "line": 20
+        },
+        {
+          "name_as_written": "wilsonEnergy",
+          "line": 25
+        },
+        {
+          "name_as_written": "wilsonLaw",
+          "line": 29
+        },
+        {
+          "name_as_written": "WilsonFamily",
+          "line": 35
+        },
+        {
+          "name_as_written": "mesh",
+          "line": 50
+        },
+        {
+          "name_as_written": "place",
+          "line": 51
+        },
+        {
+          "name_as_written": "finiteMoment",
+          "line": 54
+        },
+        {
+          "name_as_written": "separated",
+          "line": 59
+        },
+        {
+          "name_as_written": "SeparatedTest",
+          "line": 60
+        },
+        {
+          "name_as_written": "suitable",
+          "line": 62
+        },
+        {
+          "name_as_written": "smear",
+          "line": 66
+        },
+        {
+          "name_as_written": "Converges",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/Construction.lean",
+      "sha256": "d5a57bf122709245f41f869f76615c0dab2fc525423c0c7a804f9867355d7b3f",
+      "bytes": 5693,
+      "declarations": [
+        {
+          "name_as_written": "refinementOnPublishedRun",
+          "line": 26
+        },
+        {
+          "name_as_written": "matchedRun",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/MeasuredExpansions.lean",
+      "sha256": "9d20518ae48e816dd8993c6479a21a08d7c638ddef5f344363a32b39f92d732e",
+      "bytes": 2316,
+      "declarations": [
+        {
+          "name_as_written": "channelsInFrame",
+          "line": 18
+        },
+        {
+          "name_as_written": "correlationInFrame",
+          "line": 21
+        },
+        {
+          "name_as_written": "ordinaryInFrame",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/CommissionedPublic/AppointedRoundedReader.lean",
+      "sha256": "9eeded7ad86291995b71d989f8ccd11618ddea8db39760f96ef7b50722257668",
+      "bytes": 5407,
+      "declarations": [
+        {
+          "name_as_written": "V",
+          "line": 30
+        },
+        {
+          "name_as_written": "N",
+          "line": 31
+        },
+        {
+          "name_as_written": "Q",
+          "line": 32
+        },
+        {
+          "name_as_written": "heat",
+          "line": 33
+        },
+        {
+          "name_as_written": "Numerator",
+          "line": 38
+        },
+        {
+          "name_as_written": "value",
+          "line": 45
+        },
+        {
+          "name_as_written": "coordinate",
+          "line": 67
+        },
+        {
+          "name_as_written": "regained",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/ContinuumConstruction/GroupOrdinaryTarget.lean",
+      "sha256": "42e2121996940479d70cb36ec3f8c9794a6e727e8069da286416097f688cb217",
+      "bytes": 6474,
+      "declarations": [
+        {
+          "name_as_written": "price",
+          "line": 18
+        },
+        {
+          "name_as_written": "valid",
+          "line": 24
+        },
+        {
+          "name_as_written": "determined",
+          "line": 29
+        },
+        {
+          "name_as_written": "numerical",
+          "line": 33
+        },
+        {
+          "name_as_written": "named",
+          "line": 37
+        },
+        {
+          "name_as_written": "homogeneousPrice",
+          "line": 42
+        },
+        {
+          "name_as_written": "exteriorDifference",
+          "line": 57
+        },
+        {
+          "name_as_written": "jointCrops",
+          "line": 63
+        },
+        {
+          "name_as_written": "fixedPosition",
+          "line": 88
+        },
+        {
+          "name_as_written": "original",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/ContinuumConstruction/StandaloneCorrelation.lean",
+      "sha256": "7644b5ec6e8215f581b09fad6548a9622c6802f8e322f4f4a14a8b947712ecd3",
+      "bytes": 6355,
+      "declarations": [
+        {
+          "name_as_written": "StandaloneCorrelation",
+          "line": 32
+        },
+        {
+          "name_as_written": "standaloneFromActualField",
+          "line": 46
+        },
+        {
+          "name_as_written": "standaloneOnNominatedMS",
+          "line": 54
+        },
+        {
+          "name_as_written": "standaloneOnAppointedRun",
+          "line": 67
+        },
+        {
+          "name_as_written": "standaloneCorrelationOnly",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/CorrelationMatching/Construction/Estimates.lean",
+      "sha256": "1ceb1595ca7fd0d7a4f14d0063fe880bb4ee56e915eac4dda5e3463b63b7918a",
+      "bytes": 2774,
+      "declarations": [
+        {
+          "name_as_written": "measurement",
+          "line": 16
+        },
+        {
+          "name_as_written": "graphRead",
+          "line": 33
+        },
+        {
+          "name_as_written": "graphEstimates",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/IssuedMaxwell/GraphOnlyPrice.lean",
+      "sha256": "7a1ea91aa1def6336030beb27c680bbd26d15312d8467f587a8c1ed8a16e1bc6",
+      "bytes": 2787,
+      "declarations": [
+        {
+          "name_as_written": "admitted",
+          "line": 12
+        },
+        {
+          "name_as_written": "original",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/IssuedMaxwell/GraphOrdinary.lean",
+      "sha256": "3165e4a14d6fd4035a4023dd42de0a0a589a1e17a814318d8e6298bd5638fe0d",
+      "bytes": 1447,
+      "declarations": [
+        {
+          "name_as_written": "valid",
+          "line": 12
+        },
+        {
+          "name_as_written": "original",
+          "line": 26
+        },
+        {
+          "name_as_written": "numerical",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/WilsonFlashScoredGroupReference.lean",
+      "sha256": "b82a60301d786787714fac737a56266876f8ab1d08d3a91b28dc05211bc5b89e",
+      "bytes": 2628,
+      "declarations": [
+        {
+          "name_as_written": "agrees",
+          "line": 13
+        },
+        {
+          "name_as_written": "bareAgrees",
+          "line": 17
+        },
+        {
+          "name_as_written": "determined",
+          "line": 22
+        },
+        {
+          "name_as_written": "issued",
+          "line": 26
+        },
+        {
+          "name_as_written": "named",
+          "line": 32
+        },
+        {
+          "name_as_written": "normalization",
+          "line": 36
+        },
+        {
+          "name_as_written": "calibrated",
+          "line": 40
+        },
+        {
+          "name_as_written": "stress",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/WilsonFlashScoredOrdinaryEstimates.lean",
+      "sha256": "a34066a42bc936ef930c055848622390f82d850f16f40a8d388f2b6420a8f47d",
+      "bytes": 3622,
+      "declarations": [
+        {
+          "name_as_written": "table",
+          "line": 16
+        },
+        {
+          "name_as_written": "conversion",
+          "line": 17
+        },
+        {
+          "name_as_written": "converted",
+          "line": 19
+        },
+        {
+          "name_as_written": "measurement",
+          "line": 33
+        },
+        {
+          "name_as_written": "filedReader",
+          "line": 36
+        },
+        {
+          "name_as_written": "clock",
+          "line": 41
+        },
+        {
+          "name_as_written": "estimates",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Dock/Recipes.lean",
+      "sha256": "fbc0be5017843be7fc3a70dfc22dbbf0f625c76373f370bf24305633cc0ece0b",
+      "bytes": 4019,
+      "declarations": [
+        {
+          "name_as_written": "program",
+          "line": 17
+        },
+        {
+          "name_as_written": "platform",
+          "line": 18
+        },
+        {
+          "name_as_written": "pb_u",
+          "line": 19
+        },
+        {
+          "name_as_written": "pm_u",
+          "line": 21
+        },
+        {
+          "name_as_written": "pb_coal",
+          "line": 22
+        },
+        {
+          "name_as_written": "pm_coal",
+          "line": 25
+        },
+        {
+          "name_as_written": "Schema",
+          "line": 28
+        },
+        {
+          "name_as_written": "leader",
+          "line": 29
+        },
+        {
+          "name_as_written": "comet",
+          "line": 30
+        },
+        {
+          "name_as_written": "satisfy",
+          "line": 31
+        },
+        {
+          "name_as_written": "satisfyY",
+          "line": 35
+        },
+        {
+          "name_as_written": "pc_max",
+          "line": 36
+        },
+        {
+          "name_as_written": "pm_max",
+          "line": 39
+        },
+        {
+          "name_as_written": "unique_B",
+          "line": 42
+        },
+        {
+          "name_as_written": "unique_M",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Block.lean",
+      "sha256": "d49fab45ecae128a66443ff16ce511c0c190d6832a05f6e2ac1960c393e14f29",
+      "bytes": 9433,
+      "declarations": [
+        {
+          "name_as_written": "scaleIntegral_zero_input",
+          "line": 60
+        },
+        {
+          "name_as_written": "integrateShell_page",
+          "line": 69
+        },
+        {
+          "name_as_written": "integrateShell_removal",
+          "line": 83
+        },
+        {
+          "name_as_written": "integrateShell_eq_wheels",
+          "line": 95
+        },
+        {
+          "name_as_written": "return_congr",
+          "line": 100
+        },
+        {
+          "name_as_written": "integrateShell_clock",
+          "line": 103
+        },
+        {
+          "name_as_written": "poleBound_valid",
+          "line": 114
+        },
+        {
+          "name_as_written": "counterterm_mint",
+          "line": 117
+        },
+        {
+          "name_as_written": "block",
+          "line": 128
+        },
+        {
+          "name_as_written": "ct_polynomial",
+          "line": 152
+        },
+        {
+          "name_as_written": "stay_congr",
+          "line": 163
+        },
+        {
+          "name_as_written": "coal_congr",
+          "line": 166
+        },
+        {
+          "name_as_written": "close_coal",
+          "line": 169
+        },
+        {
+          "name_as_written": "bridge_coal",
+          "line": 173
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Diagram.lean",
+      "sha256": "c449d33f7f30ded2476c13727091c9356f0ed3bcf504b796a124b528a19bbfd1",
+      "bytes": 9503,
+      "declarations": [
+        {
+          "name_as_written": "Valid",
+          "line": 69
+        },
+        {
+          "name_as_written": "rankBound",
+          "line": 77
+        },
+        {
+          "name_as_written": "input",
+          "line": 90
+        },
+        {
+          "name_as_written": "initialVertex",
+          "line": 95
+        },
+        {
+          "name_as_written": "VertexOK",
+          "line": 101
+        },
+        {
+          "name_as_written": "pulse_ok",
+          "line": 102
+        },
+        {
+          "name_as_written": "mark_ok",
+          "line": 105
+        },
+        {
+          "name_as_written": "Runs",
+          "line": 115
+        },
+        {
+          "name_as_written": "expandRuns",
+          "line": 121
+        },
+        {
+          "name_as_written": "reduce_bool",
+          "line": 124
+        },
+        {
+          "name_as_written": "certify_vertex",
+          "line": 128
+        },
+        {
+          "name_as_written": "certify_join",
+          "line": 132
+        },
+        {
+          "name_as_written": "ordered",
+          "line": 142
+        },
+        {
+          "name_as_written": "cycles_integrable",
+          "line": 160
+        },
+        {
+          "name_as_written": "expand_order",
+          "line": 166
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Enumeration.lean",
+      "sha256": "9c756a60e2769e1c2eaf8979fb3e9ac2c311dc91c7493be388dba2cd0feb5172",
+      "bytes": 4283,
+      "declarations": [
+        {
+          "name_as_written": "distribute_ok",
+          "line": 30
+        },
+        {
+          "name_as_written": "ambient_zero",
+          "line": 37
+        },
+        {
+          "name_as_written": "truncates",
+          "line": 39
+        },
+        {
+          "name_as_written": "ambient_unfold",
+          "line": 42
+        },
+        {
+          "name_as_written": "mark_unfold",
+          "line": 49
+        },
+        {
+          "name_as_written": "Is",
+          "line": 55
+        },
+        {
+          "name_as_written": "dist",
+          "line": 58
+        },
+        {
+          "name_as_written": "sum",
+          "line": 65
+        },
+        {
+          "name_as_written": "towers",
+          "line": 67
+        },
+        {
+          "name_as_written": "litV",
+          "line": 70
+        },
+        {
+          "name_as_written": "is_ambient",
+          "line": 73
+        },
+        {
+          "name_as_written": "is_insertions",
+          "line": 83
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Leading.lean",
+      "sha256": "0c22717267d8f21f0b43715fa266a38a5edfd48e3e33445deb1cf122f5a7cfed",
+      "bytes": 8402,
+      "declarations": [
+        {
+          "name_as_written": "bob_total",
+          "line": 30
+        },
+        {
+          "name_as_written": "all_bases",
+          "line": 39
+        },
+        {
+          "name_as_written": "total_junction",
+          "line": 47
+        },
+        {
+          "name_as_written": "all_total_forcing",
+          "line": 66
+        },
+        {
+          "name_as_written": "all_tree_seeds",
+          "line": 71
+        },
+        {
+          "name_as_written": "eval_ambient",
+          "line": 76
+        },
+        {
+          "name_as_written": "bulkCT",
+          "line": 84
+        },
+        {
+          "name_as_written": "bulk_P",
+          "line": 85
+        },
+        {
+          "name_as_written": "ambient_bob",
+          "line": 88
+        },
+        {
+          "name_as_written": "preparation",
+          "line": 109
+        },
+        {
+          "name_as_written": "sectorCT",
+          "line": 115
+        },
+        {
+          "name_as_written": "mark_bob",
+          "line": 117
+        },
+        {
+          "name_as_written": "contracted",
+          "line": 132
+        },
+        {
+          "name_as_written": "income_bulk",
+          "line": 138
+        },
+        {
+          "name_as_written": "contracts_seed",
+          "line": 142
+        },
+        {
+          "name_as_written": "income_mark",
+          "line": 148
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Lines.lean",
+      "sha256": "6aaf6a8ba68be9454791455f02d5bad6ba9001f30d31869ad97c455598b52322",
+      "bytes": 11164,
+      "declarations": [
+        {
+          "name_as_written": "halfCov",
+          "line": 60
+        },
+        {
+          "name_as_written": "halfD_eq",
+          "line": 63
+        },
+        {
+          "name_as_written": "propagator_derivative",
+          "line": 69
+        },
+        {
+          "name_as_written": "length_recovers_line",
+          "line": 76
+        },
+        {
+          "name_as_written": "halfCov_zero_UV",
+          "line": 88
+        },
+        {
+          "name_as_written": "bridging_eq",
+          "line": 97
+        },
+        {
+          "name_as_written": "bridgeForce_eq",
+          "line": 105
+        },
+        {
+          "name_as_written": "radialClose_eq_ocean",
+          "line": 112
+        },
+        {
+          "name_as_written": "cycle_integrals_exist",
+          "line": 117
+        },
+        {
+          "name_as_written": "radialClose_integer",
+          "line": 134
+        },
+        {
+          "name_as_written": "integer_integrable",
+          "line": 143
+        },
+        {
+          "name_as_written": "pitch_normalization",
+          "line": 151
+        },
+        {
+          "name_as_written": "toner0",
+          "line": 174
+        },
+        {
+          "name_as_written": "closeForce_eq",
+          "line": 176
+        },
+        {
+          "name_as_written": "bridge_common",
+          "line": 193
+        },
+        {
+          "name_as_written": "cycle_common",
+          "line": 199
+        },
+        {
+          "name_as_written": "close_common",
+          "line": 211
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/NextWick.lean",
+      "sha256": "a0c667c1a0d0cbbe026c2a0a4acf9e702810a0d72cac8a7b9d2d9f2c58ea6a84",
+      "bytes": 5257,
+      "declarations": [
+        {
+          "name_as_written": "tenor_hol",
+          "line": 28
+        },
+        {
+          "name_as_written": "radialForm",
+          "line": 33
+        },
+        {
+          "name_as_written": "radial_issue",
+          "line": 36
+        },
+        {
+          "name_as_written": "wickJoin_form",
+          "line": 39
+        },
+        {
+          "name_as_written": "wickJoin_issue",
+          "line": 45
+        },
+        {
+          "name_as_written": "radial_hol",
+          "line": 53
+        },
+        {
+          "name_as_written": "wickJoin_hol",
+          "line": 58
+        },
+        {
+          "name_as_written": "line_meter",
+          "line": 69
+        },
+        {
+          "name_as_written": "kPrice_wallet",
+          "line": 70
+        },
+        {
+          "name_as_written": "canon_at_zero",
+          "line": 78
+        },
+        {
+          "name_as_written": "canon_at_zero'",
+          "line": 84
+        },
+        {
+          "name_as_written": "phase_zero_placement",
+          "line": 88
+        },
+        {
+          "name_as_written": "joins_after_specialization",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Graphical/Panels.lean",
+      "sha256": "aa411823a421e256f95f60e61367a271cbb0adda57146bf3944765134a20b676",
+      "bytes": 5930,
+      "declarations": [
+        {
+          "name_as_written": "price_room",
+          "line": 47
+        },
+        {
+          "name_as_written": "gauge_cluster",
+          "line": 58
+        },
+        {
+          "name_as_written": "screened",
+          "line": 74
+        },
+        {
+          "name_as_written": "fixed_room",
+          "line": 82
+        },
+        {
+          "name_as_written": "collection_limits",
+          "line": 85
+        },
+        {
+          "name_as_written": "identification",
+          "line": 93
+        },
+        {
+          "name_as_written": "full_regulation",
+          "line": 99
+        },
+        {
+          "name_as_written": "deep_gain",
+          "line": 105
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Mach/Land.lean",
+      "sha256": "5a95019d923ea3ecf9f46fca019ac272a92889910fe7a15d0210245be0ef6ce0",
+      "bytes": 3551,
+      "declarations": [
+        {
+          "name_as_written": "sizeG",
+          "line": 18
+        },
+        {
+          "name_as_written": "PerG",
+          "line": 19
+        },
+        {
+          "name_as_written": "expands",
+          "line": 20
+        },
+        {
+          "name_as_written": "Blue",
+          "line": 21
+        },
+        {
+          "name_as_written": "CostsM",
+          "line": 22
+        },
+        {
+          "name_as_written": "suitable",
+          "line": 23
+        },
+        {
+          "name_as_written": "MS_Data",
+          "line": 24
+        },
+        {
+          "name_as_written": "bookedMS",
+          "line": 31
+        },
+        {
+          "name_as_written": "Prescription",
+          "line": 34
+        },
+        {
+          "name_as_written": "TaylorOK",
+          "line": 38
+        },
+        {
+          "name_as_written": "leader_M",
+          "line": 41
+        },
+        {
+          "name_as_written": "High_stops",
+          "line": 46
+        },
+        {
+          "name_as_written": "uniq",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Beat.lean",
+      "sha256": "d247ab22afaaf5cc0ae37d4b3cac5aa58c0a6fb38bafecc6ce6ce297e995483f",
+      "bytes": 4494,
+      "declarations": [
+        {
+          "name_as_written": "swap",
+          "line": 16
+        },
+        {
+          "name_as_written": "pearl",
+          "line": 21
+        },
+        {
+          "name_as_written": "shoots_off",
+          "line": 30
+        },
+        {
+          "name_as_written": "cape_tick",
+          "line": 37
+        },
+        {
+          "name_as_written": "cape0",
+          "line": 39
+        },
+        {
+          "name_as_written": "pulse",
+          "line": 41
+        },
+        {
+          "name_as_written": "dot_never",
+          "line": 45
+        },
+        {
+          "name_as_written": "constitution",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Pulp.lean",
+      "sha256": "e6cf5302c947776cbb4d87aa9c989bbf0a6109037ef20e7dc2efd63f1587b6e6",
+      "bytes": 1232,
+      "declarations": [
+        {
+          "name_as_written": "core",
+          "line": 17
+        },
+        {
+          "name_as_written": "ploy",
+          "line": 18
+        },
+        {
+          "name_as_written": "S_C",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Receipt.lean",
+      "sha256": "c465eb30ea9616906592a754cdf87100b60649582565c5991573f26031b41889",
+      "bytes": 2305,
+      "declarations": [
+        {
+          "name_as_written": "Up0",
+          "line": 17
+        },
+        {
+          "name_as_written": "energetic",
+          "line": 19
+        },
+        {
+          "name_as_written": "zonal",
+          "line": 23
+        },
+        {
+          "name_as_written": "Class_at",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Sync.lean",
+      "sha256": "0fb23cb5c191f34e50bc1441251d3499eadf5d1a966f7f87b2076119bd9de278",
+      "bytes": 2915,
+      "declarations": [
+        {
+          "name_as_written": "p_sym",
+          "line": 16
+        },
+        {
+          "name_as_written": "ploy_sym",
+          "line": 19
+        },
+        {
+          "name_as_written": "ploy_p",
+          "line": 21
+        },
+        {
+          "name_as_written": "kernel",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Warp.lean",
+      "sha256": "0852ad0e2e788b9465e4d5fee670dcf3b72db1552cb2b2f7142246f9dd172028",
+      "bytes": 3578,
+      "declarations": [
+        {
+          "name_as_written": "SQa",
+          "line": 24
+        },
+        {
+          "name_as_written": "SQc",
+          "line": 27
+        },
+        {
+          "name_as_written": "Sq",
+          "line": 33
+        },
+        {
+          "name_as_written": "sume_high",
+          "line": 34
+        },
+        {
+          "name_as_written": "sume_v",
+          "line": 37
+        },
+        {
+          "name_as_written": "core_g",
+          "line": 39
+        },
+        {
+          "name_as_written": "AllMaster",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Pearl/Broach.lean",
+      "sha256": "23c6a1dced34ad4d781c599203201d0a3a7245da1efd931760f51fb28c469938",
+      "bytes": 3642,
+      "declarations": [
+        {
+          "name_as_written": "Rub",
+          "line": 14
+        },
+        {
+          "name_as_written": "chosen",
+          "line": 15
+        },
+        {
+          "name_as_written": "ruby0",
+          "line": 16
+        },
+        {
+          "name_as_written": "gNat",
+          "line": 19
+        },
+        {
+          "name_as_written": "ley",
+          "line": 20
+        },
+        {
+          "name_as_written": "cubic",
+          "line": 22
+        },
+        {
+          "name_as_written": "ew",
+          "line": 23
+        },
+        {
+          "name_as_written": "chem",
+          "line": 24
+        },
+        {
+          "name_as_written": "priceY",
+          "line": 25
+        },
+        {
+          "name_as_written": "lexP",
+          "line": 26
+        },
+        {
+          "name_as_written": "emmer",
+          "line": 30
+        },
+        {
+          "name_as_written": "arrive",
+          "line": 31
+        },
+        {
+          "name_as_written": "R_prev0",
+          "line": 33
+        },
+        {
+          "name_as_written": "R_prev",
+          "line": 36
+        }
+      ]
+    },
+    {
+      "path": "YangMills/WilsonProof/ReferenceElection.lean",
+      "sha256": "9975654b38f98e07d88ce3fbb5e6b6c66dbd2d9a5befa9a0ef42d195ce1d7bdd",
+      "bytes": 1783,
+      "declarations": [
+        {
+          "name_as_written": "electedScheme",
+          "line": 10
+        },
+        {
+          "name_as_written": "electedReference",
+          "line": 14
+        },
+        {
+          "name_as_written": "issuedOPE",
+          "line": 27
+        }
+      ]
+    }
+  ],
+  "verification_evidence": [
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/matching-comparator.json",
+      "sha256": "87b43bb32f81fbb92eae52e15620965f9d51b5b648c25fa145d0134553ac28a0",
+      "finished_utc": "2026-11-10T05:30:13.229175+00:00",
+      "exit_code": 0,
+      "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/matching-comparator.log",
+      "log_sha256_verified": "4232861fa01f6035a6583f598152cc0fd7551f0afcbba9d911cc4c8b0815f45d"
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/patched-matching-comparator.json",
+      "sha256": "4407f5b418909a1de60dd47ec9b6ecbfddd9309f707b8ea4fdb2752c502a2aa2",
+      "finished_utc": "2026-11-10T08:18:57.132529+00:00",
+      "exit_code": 0,
+      "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/patched-matching-comparator.log",
+      "log_sha256_verified": "8145d25417c8f1d5904bf78ab46b11e7fac6f5e6140d88d7ff974c45527a8a6f"
+    },
+    {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/matching-axioms.json",
+      "sha256": "f2891745610c1c09d86728e488e8ba9857f16c6a2597d5dc981947903862ba23",
+      "finished_utc": "2026-11-10T04:50:21.311272+00:00",
+      "exit_code": 0,
+      "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/matching-axioms.log",
+      "log_sha256_verified": "e82d2a3e96f1c03b7e644f959cd072d7341abd5f7b3593c856bb188251acc97b"
+    }
+  ],
+  "informal_pdf_used": false,
+  "review_artifacts": [
+    {
+      "path": "IndependentMatchingTests.lean",
+      "sha256": "6a29ed6cd7ccf04d7371467c20eb9d7a8f153a996fa97caf637794812a869f03"
+    },
+    {
+      "path": "definition-glossary.json",
+      "sha256": "5885d6e2f8ab93720bf57333e7e3ff9225aac8b7a048b84a3d41a39466385e0e"
+    },
+    {
+      "path": "openai-test-inventory.json",
+      "sha256": "917d6cc9a71493280c51e383d5f465b127b7903869decb84392456fdb8dcc240"
+    }
+  ],
+  "comment_reference_caution": {
+    "not_located_graph_modules": [
+      "Coverage",
+      "Centrifuge",
+      "ConnectCost",
+      "Spinneys",
+      "SectorsAtCut"
+    ],
+    "not_located_declaration": "Sprout.at_absolute_cut",
+    "unrelated_coverage_file": "YM/RG02/Flat/Coverage.lean",
+    "scope": "Comments only; no inference that existing recursion/uniqueness theorems fail."
+  },
+  "additional_review_artifacts": [
+    {
+      "path": "checks/matching/GhostConventionCheck.lean",
+      "sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7"
+    },
+    {
+      "path": "checks/matching/CountertermAudit.lean",
+      "sha256": "a2386bde8467bb0b16827193cf67403e52190f20f5313ba8dbcf5f3118c1d490"
+    },
+    {
+      "path": "evidence/matching/ghost-convention-check.json",
+      "sha256": "8a85c8ca44492d39a6239ec7c8c1a53bf387e8c0826b2fe71c9d61d8e24028ee"
+    },
+    {
+      "path": "evidence/matching/counterterm-audit.json",
+      "sha256": "7e2b62877da482d17051e9d63e6fcdf3a086e3653d6be0f6ae2265755dee05ed"
+    },
+    {
+      "path": "checks/matching/GhostLoopBenchmark.lean",
+      "sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8"
+    },
+    {
+      "path": "evidence/matching/ghost-loop-benchmark.json",
+      "sha256": "10152c8860e9d36ba77c9da0998d8fd2cfa1fc5100f0d6cdf12e83280783e341"
+    },
+    {
+      "path": "checks/matching/GhostLoopFiniteEvaluation.lean",
+      "sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33"
+    },
+    {
+      "path": "evidence/matching/ghost-loop-finite-evaluation.json",
+      "sha256": "54d6947a0d6a768fb23667de694d0ca5209e244e2e50a455e203f94f9b6f5d9c"
+    },
+    {
+      "path": "evidence/matching/ghost-loop-finite-evaluation.log",
+      "sha256": "af0cf777a7f709bf69b9cea84501690b1d505396333d631129c435938055efbc"
+    },
+    {
+      "path": "checks/matching/GhostFiniteAudit.lean",
+      "sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9"
+    },
+    {
+      "path": "checks/matching/GhostLoopContinuation.lean",
+      "sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b"
+    },
+    {
+      "path": "checks/matching/GhostLoopFlow.lean",
+      "sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455"
+    },
+    {
+      "path": "checks/matching/GhostLoopInfrared.lean",
+      "sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3"
+    },
+    {
+      "path": "checks/matching/GhostLoopJet.lean",
+      "sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36"
+    },
+    {
+      "path": "checks/matching/GhostLoopMellin.lean",
+      "sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261"
+    },
+    {
+      "path": "checks/matching/GhostLoopPrimitive.lean",
+      "sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399"
+    },
+    {
+      "path": "checks/matching/GhostLoopRadial.lean",
+      "sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60"
+    },
+    {
+      "path": "checks/matching/GhostLoopSolution.lean",
+      "sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3"
+    },
+    {
+      "path": "checks/matching/GhostLoopTensor.lean",
+      "sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80"
+    },
+    {
+      "path": "checks/matching/GhostLoopTrace.lean",
+      "sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de"
+    },
+    {
+      "path": "checks/matching/GhostLoopUnit.lean",
+      "sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8"
+    },
+    {
+      "path": "evidence/matching/ghost-finite-build.json",
+      "sha256": "9308737f3bc12796ef6af6b823f713d66993db2bfbe6fcd4852a6263c292dba7"
+    },
+    {
+      "path": "evidence/matching/ghost-finite-comparator/ghost-finite-comparator.json",
+      "sha256": "84b9b79546b1c81970785f9ca4a4007102efacaeb89219cf48e784b1ec033a23"
+    },
+    {
+      "path": "evidence/matching/ghost-finite-comparator/ghost-finite-comparator.log",
+      "sha256": "ecf532bb428235ff49d843d31657f8926979dc2bb4515bb6e04fd3be6b773404"
+    },
+    {
+      "path": "evidence/matching/ghost-finite-comparator/input-stability.json",
+      "sha256": "6203e961b934e4963f343f02e3c4d5e3229c945282230e3cd91027cbd66a0fee"
+    },
+    {
+      "path": "evidence/matching/ghost-finite-comparator/prepared-inputs.json",
+      "sha256": "c60e341cc96ea2cb136b28b657971dfc2f1d47ad46b0ca542ebfe605f8067734"
+    }
+  ]
+}

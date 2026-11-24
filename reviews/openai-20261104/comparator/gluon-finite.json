@@ -1,0 +1,12 @@
+{
+  "challenge_module": "GluonFiniteChallenge",
+  "solution_module": "GluonLoopSolution",
+  "theorem_names": [
+    "YMReview.NovemberMatching.GluonSolution.acceptance"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

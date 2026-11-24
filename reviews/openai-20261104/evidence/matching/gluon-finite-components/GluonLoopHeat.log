@@ -1,0 +1,3 @@
+'YMReview.NovemberMatching.GluonHeat.split_radial_T' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonHeat.split_radial_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonHeat.heatPolynomial_integral' depends on axioms: [propext, Classical.choice, Quot.sound]

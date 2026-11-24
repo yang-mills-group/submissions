@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/yang-mills-group/OpenAI-YM-20261104",
+  "revision": "c1bb5a5566b2bad9d593980d470439f815895317",
+  "submission_subdirectory": ".",
+  "release_label": "OpenAI November 4, 2026 Yang-Mills submission",
+  "manifest": "SOURCES.sha256",
+  "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "files_in_manifest": 37673,
+  "archive_sha256": "d7c47cc0dd046b67cc96bf326f6361c32a33271e664fdd4266362282bada3ec4",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "scope": "Pins the unchanged received source bytes in the group archive. Historical origin retained for provenance; all review material is hosted by yang-mills-group.",
+  "historical_origin": {
+    "repository": "YM-lean/OpenAI-Nov4",
+    "revision": "b5e288edeac43ac088a2a291ac3841bdda9f20b8",
+    "submission_subdirectory": "submission"
+  }
+}

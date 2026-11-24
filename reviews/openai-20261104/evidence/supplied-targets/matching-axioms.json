@@ -1,0 +1,32 @@
+{
+  "stage": "matching-axioms",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/audit/MatchingAxioms.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "4"
+  },
+  "started_utc": "2026-11-10T04:48:42.562386+00:00",
+  "status": "passed",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/matching-axioms.log",
+  "resource_wrapper": null,
+  "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+  "pid": 53528,
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T04:50:21.311272+00:00",
+  "elapsed_seconds": 98.761,
+  "log_sha256": "e82d2a3e96f1c03b7e644f959cd072d7341abd5f7b3593c856bb188251acc97b",
+  "resources": {
+    "ru_utime": 5.023534,
+    "ru_stime": 27.865208,
+    "ru_maxrss": 15653158912,
+    "ru_minflt": 494598,
+    "ru_majflt": 637105,
+    "ru_inblock": 0,
+    "ru_oublock": 0
+  }
+}

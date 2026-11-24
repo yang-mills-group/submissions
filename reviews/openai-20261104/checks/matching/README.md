@@ -1,0 +1,28 @@
+# Perturbative-matching review checks
+
+These files are separate from the completed October-to-November acceptance theorem. They are not yet a combined matching acceptance target.
+
+[`DiagramReferenceAudit.lean`](DiagramReferenceAudit.lean) proves that the submitted free gauge line equals an explicitly stated transverse momentum-space propagator, with the color delta, factor of two and infrared filter made explicit. It also prints the types and axiom dependencies of twelve submitted theorems connecting the classical action, graph rules, local subtractions, flow uniqueness and calibrated coefficients. The latter is an inspection of existing theorems, not an independent reproof. The recorded run passed with no warnings and fourteen standard-axiom reports.
+
+[`IndependentMatchingTests.lean`](IndependentMatchingTests.lean) contains the earlier independent specifications, finite Pauli-matrix calculations and correlator adapter. Its position-space kernel comparison, interacting coefficient comparisons and other substantive tests remain open. The finite color calculation still needs a bridge to the submitted color frame.
+
+[`GhostConventionCheck.lean`](GhostConventionCheck.lean) proves five identities: both oriented ghost propagators, the cubic source vertex, its equality to the vertex of the full classical log density, and its scalar-antighost form. It fixes the convention `K_mu = -partial_mu barc`, Fourier derivative `+i p_mu`, and external order explicitly. This checks free symbols and a local cubic interaction; it does not identify unrestricted BV source variables with physical fields or establish equivalence of all renormalized diagrams. The run passed without warnings, with standard axioms only.
+
+[`CountertermAudit.lean`](CountertermAudit.lean) inspects eight submitted theorems about the calculated ghost-loop pole in the gauge-field two-point function and its insertion into a regulated complement. These include the statement that replacing the complement `d(z)` by `d(0)` before pole multiplication changes the finite limit by `-d'(0)`. That statement does not establish that the derivative is nonzero in every component or survives all physical sums. The run passed without warnings, with standard axioms only; it is an inspection of existing theorems, not an independent loop calculation.
+
+[`GhostLoopBenchmark.lean`](GhostLoopBenchmark.lean) derives the pole and finite part of an independently specified Gamma-function expression for the ghost loop. It proves that the submitted actual bubble pole agrees, including the full tensor and adjoint Casimir. The finite reference contains the constants `8/3` and `5/3`; its evaluation uses Mathlib's Gamma derivatives, not the submitted graph evaluator. A negative control proves the nonzero finite error from prematurely freezing a regulator-dependent tensor factor. The file now also proves the finite-reading bridge to the actual graph, its renormalization-scale dependence, and equivalence of the full finite test to the test at one reference scale. Bounds on the heat dressing and the pointwise infrared limit of the actual integrated line are proved. Eighteen theorem reports contain only standard axioms, and the build has no warnings. The dimensional momentum-integral reduction is explained in the notes but has not been formalized here. `SubmittedFinitePartTest` is an explicit, **unproved** proposition comparing the submitted bubble's finite value after its length limit with the reference. A pointwise line limit does not justify moving the limit inside the divergent loop; the notes spell out the still-unproved bridge to a convergent cutoff difference. This is a gauge-dependent intermediate graph check, not yet a prediction for a complete physical correlation.
+
+[`GhostLoopFiniteEvaluation.lean`](GhostLoopFiniteEvaluation.lean) extends the comparison to an explicit finite calculation. It proves the actual ordinary diagonal force, removal of the ghost closure's extra-polarization term, and reduction of `closeG` to a fixed radial function with the regulator in its weight. It checks the three scalar radial Gaussian moments, their dimension-polynomial combination, the local jet parameter value, and the finite integrals giving `2/9 = (1/12)(8/3)` and `5/18 = (1/6)(5/3)`. The build passes without warnings; all 23 printed theorem reports use standard axioms only. Appendix C of the notes supplies the full analytic calculation. **This is not a proof of `SubmittedFinitePartTest`.** Transport through the actual contracted source integral and its Taylor-subtracted infrared limit remains unformalized. `SubmittedRegulatorJetTest` makes the missing jet equality explicit without assuming it.
+
+After building the pinned November submission, run from its `lean/` directory, replacing the review path with your checkout:
+
+```sh
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/DiagramReferenceAudit.lean
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/IndependentMatchingTests.lean
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/GhostConventionCheck.lean
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/CountertermAudit.lean
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/GhostLoopBenchmark.lean
+lake env lean /path/to/OpenAI-Nov4-verification/checks/matching/GhostLoopFiniteEvaluation.lean
+```
+
+The original commands, source hashes, logs, scope and axiom lists are in [`evidence/matching/`](../../evidence/matching/). The [matching notes](../../docs/matching/november-perturbative-matching.pdf), especially Sections 3.3–3.6 and the independent-test section, explain what the checks establish and what remains.

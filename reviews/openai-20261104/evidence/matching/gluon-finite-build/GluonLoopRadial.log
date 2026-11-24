@@ -1,0 +1,13 @@
+/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-build-20261116/project/GluonLoopRadial.lean:22:33: warning: This simp argument is unused:
+  atR
+
+Hint: Omit it from the simp argument list.
+  simp [numerator, ̲numeratorPoly, ̲crossPoly, ̲GluonGaussian.core, ̲sqE, ̲GluonGaussian.speed, ̲perp,
+        GluonContraction.A, ̲B, ̲K, ̲atP, ̲atR̵,̵a̵t̵_pane, ̲at_sq, ̲Momentum.sq,
+  ̵  ̵ ̵ ̵ ̵ ̵Fin.sum_univ_succ,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲TwoPoint.primary, ̲spray, ̲Pi.single_apply, ̲TwoPoint.zeroDirection, ̲rises]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'YMReview.NovemberMatching.GluonRadial.actual_carpet_evaluated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-16T20:17:23.640649+00:00",
+  "finished_utc": "2026-11-16T20:17:40.281099+00:00",
+  "scope": "Five source-connected trace diagnostics and inspection of four submitted bridges: physical cubic vertex, gauge sewing, physical trace and integer-dimensional integration. The finite gluon-bubble value and its noninteger-dimensional evaluator comparison are not proved.",
+  "source": "checks/matching/GluonPolarizationAudit.lean",
+  "source_sha256": "ccbc54d723c4ab4de0bfe5766a226c124dfdf5dea230b3fc088b7be2e61fc050",
+  "log": "evidence/matching/gluon-polarization-audit.log",
+  "log_sha256": "3e151e451dcd16bac2f7e34803d267af5c4d4f548981fc50c0f5e9dd01c9010e",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-bubble/lean-build/project/.lake/build/lib/lean/GluonPolarizationAudit.olean",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-bubble/lean-build/project/GluonPolarizationAudit.lean"
+  ],
+  "project": "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-bubble/lean-build/project",
+  "exit_code": 0,
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GluonPolarization.precision_trace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonPolarization.projector_trace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonPolarization.metric_yeast": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonPolarization.metric_innerTrace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonPolarization.innerTrace_difference": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.WilsonMS.BetaValue.field_W": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.TwoPoint.gauge_hit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.TwoPoint.trace_value": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.closeG_integer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "submission_files_verified": 37673,
+  "source_build_reused": true,
+  "fresh_review_build": true,
+  "comparator_run": false,
+  "warnings": []
+}

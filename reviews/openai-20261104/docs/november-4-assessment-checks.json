@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-11-17T03:13:18.237138+00:00",
+  "scope": "Publication copy of the one-page November assessment; supporting document content unchanged. Existing proof results cited, not rerun.",
+  "pages": 1,
+  "tex_sha256": "a1d2207adf9d37519299aaeaddf9510982b2c2fc431a1e9af836618024d059ae",
+  "pdf_sha256": "6dcc29b24c79cbb491b2429d6f6414b08e86f491642684211390a574fa29541c",
+  "visual_review": "Final page rendered and inspected; no clipping or overlap. Original 11pt font retained.",
+  "compile_warnings": [],
+  "qpdf_check": "passed",
+  "supporting_documents": [
+    {
+      "path": "docs/matching/november-matching-assessment-draft.pdf",
+      "sha256": "cee36d0672542abbea98b9b2ec735ab5400e8c7832b05378b9c0c574c91ba2c8"
+    },
+    {
+      "path": "docs/matching/november-matching-assessment-draft.tex",
+      "sha256": "d32f5c7f8f9a395943381c15b1e11a99a13be2b6e74d67c3857a38bf8ac12e6f"
+    },
+    {
+      "path": "docs/matching/gluon-bubble-finite-identity.pdf",
+      "sha256": "8d71c8acd9f26b73d2618b28ef2d77f47127bf1e6ce1d973ffcdfd4515731f45"
+    },
+    {
+      "path": "docs/matching/gluon-bubble-finite-identity.tex",
+      "sha256": "54eefeb377e8f047a1b81f8197b1a3af15e532dccfa7c4921be8b99c939f70bc"
+    }
+  ],
+  "links": "Supporting note links changed from local paths to repository URLs; all repository-relative review targets exist in this commit."
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-13T16:15:42.377636+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/all-orders-statement-20261113-3/project/AllOrdersStatement.lean"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/all-orders-statement-20261113-3/project",
+  "source": "checks/matching/AllOrdersStatement.lean",
+  "source_sha256": "60cc963bf8802307074f87a2c00cc50ee21948a639a056183d5298cd6584529f",
+  "log": "evidence/matching/all-orders-statement.log",
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "submission_files_verified": 37673,
+  "submission_build_reused": true,
+  "fresh_overlay": true,
+  "target": "YMReview.NovemberMatching.AllOrders.submitted",
+  "scope": "Shared witnesses and all-orders remainder statement; reuses the public graph reference. Not an independent validation of all graph rules.",
+  "exit_code": 0,
+  "finished_utc": "2026-11-13T16:16:15.641323+00:00",
+  "log_sha256": "c6c43ca53eaa47ec9d9c74ea8ee4f865efa4149641f125e3dc99d5d77b8f6c2f",
+  "printed_axioms": {
+    "YMReview.NovemberMatching.AllOrders.submitted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.AllOrders.coupling_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "warnings": []
+}

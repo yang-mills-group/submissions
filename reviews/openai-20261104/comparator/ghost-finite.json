@@ -1,0 +1,6 @@
+{
+  "challenge_module": "GhostFiniteChallenge",
+  "solution_module": "GhostLoopSolution",
+  "theorem_names": ["YMReview.NovemberMatching.GhostSolution.acceptance"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

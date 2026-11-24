@@ -1,0 +1,246 @@
+{
+  "source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "scope": "Selected key interfaces, not an exhaustive dependency closure.",
+  "entries": [
+    {
+      "id": "G01",
+      "title": "Gauge group, representation and spacetime",
+      "path": "YangMills/Geometry.lean",
+      "declaration": "GaugeGroup",
+      "qualified_name": "YangMills.GaugeGroup",
+      "line": 25,
+      "sha256": "207f1af64eb4873a2d0cef0fd6adcfd03daa8de40dc1d4849dcfe1102c2d99ae",
+      "explanation_latex": "The input includes a closed subgroup of a unitary matrix group and its exact\none-parameter Lie algebra. \\code{IsSimple} requires real simplicity and\nnoncommutativity. Matrix trace conventions enter the free color metric and\ntherefore every coupling coefficient. Spacetime has four axes. The distinguished\n\\code{timeAxis} is index~3, whereas the chiral formula below uses the oriented\n0123 convention with axis~0 singled out. Tracking that change of convention is\npart of the sign review; it is not by itself an inconsistency."
+    },
+    {
+      "id": "G02",
+      "title": "Free on-shell curvature coordinates",
+      "path": "YangMills/FreeFields.lean",
+      "declaration": "Coordinates",
+      "qualified_name": "YangMills.Maxwell.Coordinates",
+      "line": 30,
+      "sha256": "dd59f0b5ce36f0ce38b8a7720a34dce45fab432884cdc5b52187dd7c48f260da",
+      "explanation_latex": "At derivative order $j$, the shell consists of symmetric derivative tensors\nof an antisymmetric two-form satisfying the free Bianchi and divergence equations.\nA basis supplies polynomial coordinates $(j,a)$; $a$ indexes the chosen shell\nbasis, not a spacetime index. Each coordinate has engineering weight $j+2$.\nThe color map obeys $-\\operatorname{Re}\\operatorname{Tr}(E_AE_B)=N\\delta_{AB}$,\nwhere $N=g.n+1$. The covariance differentiates the massless double curl and\nincludes Taylor factorials and the sign of derivatives on the second insertion."
+    },
+    {
+      "id": "G03",
+      "title": "Maxwell field reference",
+      "path": "YangMills/FreeFields.lean",
+      "declaration": "Reference",
+      "qualified_name": "YangMills.Maxwell.Reference",
+      "line": 99,
+      "sha256": "dd59f0b5ce36f0ce38b8a7720a34dce45fab432884cdc5b52187dd7c48f260da",
+      "explanation_latex": "The degree-$d$ sector consists exactly of the gauge-invariant polynomials\nof weight at most $d$ in the preceding coordinates. Moments are fixed by all\ncomplete cross-insertion Wick pairings. Self-pairings at a single insertion\nare excluded. The reference also fixes the free stress field and requires\nthat exterior correlations detect every nonzero sector element. This\n\\code{Maxwell.Reference} is the free field system; it is distinct from the\nperturbative \\code{Reference} in G11."
+    },
+    {
+      "id": "G04",
+      "title": "Microscopic Wilson family",
+      "path": "YangMills/WilsonLattice.lean",
+      "declaration": "WilsonFamily",
+      "qualified_name": "YangMills.WilsonFamily",
+      "line": 35,
+      "sha256": "4837b8c59f46fd5b812493c5909ca8042eea189bbe948a70b4796155cbc95090",
+      "explanation_latex": "A family records physical periods, inverse mesh sizes, the bare coupling,\nHaar measure and a token-indexed collection of lattice insertions.\nIts finite moments integrate those insertions with the specified Wilson\nweight. The matching target additionally requires a family arising from\nadmissible native lattice data, not an arbitrary assignment of token values.\nThe ultraviolet index and the physical-period index are separate parameters."
+    },
+    {
+      "id": "G05",
+      "title": "Continuum correlation hierarchy",
+      "path": "YangMills/CorrelationHierarchy.lean",
+      "declaration": "Hierarchy",
+      "qualified_name": "YangMills.Hierarchy",
+      "line": 24,
+      "sha256": "174fd4ac134146f62afe64c479962e2d507b2e51d25560a4442f8c989201efdb",
+      "explanation_latex": "This is the common carrier of continuum fields, correlations, phase\ncharacters, stress tensor and OPE data. A correlation has field labels,\npositions and an optional character argument: \\code{none} is the mixed\nhierarchy, and \\code{some character} is a selected phase. The carrier alone\ndoes not prove it is a Wilson limit. The continuum, phase, reconstruction\nand matching laws attached to the same hierarchy provide that connection."
+    },
+    {
+      "id": "G06",
+      "title": "Construction and volume refinement",
+      "path": "YangMills/VolumeLimit.lean",
+      "declaration": "Construction",
+      "qualified_name": "YangMills.Wilson.Construction",
+      "line": 14,
+      "sha256": "48871fef2221e415e2c3b514601c45a96bed6226a71e15e51434fcb08b9d0941",
+      "explanation_latex": "A construction contains one Wilson family and a refinement operation.\nGiven a strictly increasing sequence of volume indices, the operation\nreturns a strictly increasing subsequence and a hierarchy. Existence and\nmatching predicates supply the laws on those choices. This is selection\nfrom every requested volume sequence, not a claim that the unselected\nlarge-volume sequence converges or that different phases coincide."
+    },
+    {
+      "id": "G07",
+      "title": "The full matching witness",
+      "path": "YangMills/PerturbativeMatching.lean",
+      "declaration": "MatchedRun",
+      "qualified_name": "YangMills.PerturbativeMatching.MatchedRun",
+      "line": 44,
+      "sha256": "651df8a1d59699550a7352e893082d57daae299e8d61ab7c60f84c37291e68ec",
+      "explanation_latex": "One reference, lattice data, period kernels and trajectory serve all\nrequested volume sequences. Each \\code{MatchedRefinement} contains the\ncontinuum laws, measured fields and coupling, calibrated frame, channel\nbasis, Maxwell limits, and correlation and OPE expansions on its selected\nhierarchy. The theorem asks for this entire dependent package.\n\\code{MatchedRun.realizes} proves that the same run satisfies the existence\nrequirements."
+    },
+    {
+      "id": "G08",
+      "title": "Native insertion coordinates",
+      "path": "YangMills/PerturbativeMatching/NativeLattice.lean",
+      "declaration": "NativeCoordinates",
+      "qualified_name": "YangMills.PerturbativeMatching.NativeCoordinates",
+      "line": 26,
+      "sha256": "9a715003fd6dd2419a077385eba1dbe215246b5cb47a76201f665da2defa2d66",
+      "explanation_latex": "Raw field coordinates are the coefficient vectors of the original\ngraded lattice insertions, in their original order. The width equality\nidentifies the finite coefficient spaces, and the token equality identifies\ntheir actual insertions. \\code{AdmissibleLattice} combines this with the\nnative family's admissibility laws. These requirements matter when\nchecking that the later physical fields remain attached to the specified\nmicroscopic observables."
+    },
+    {
+      "id": "G09",
+      "title": "Smooth full-sequence ultraviolet limit",
+      "path": "YangMills/PerturbativeMatching/VolumeLimits.lean",
+      "declaration": "SmoothMeshLimit",
+      "qualified_name": "YangMills.PerturbativeMatching.SmoothMeshLimit",
+      "line": 67,
+      "sha256": "e1872a906045c341ef9e821eeca0ab27ca013ef194763c3a253d2bc76c93c58c",
+      "explanation_latex": "For each fixed period and token word there is one smooth kernel away\nfrom periodic coincidences. Every finite list of lattice difference\nstencils tends to its corresponding derivative, including evaluation\nalong convergent mesh points, compact uniform interpolation and smearing.\nThe empty stencil recovers the original moment. Its restriction agrees\nwith the period table used for the volume limit. The separate\n\\code{RepresentsTestLimits} clause is conditional on a whole test table\nalready converging along the requested volume sequence."
+    },
+    {
+      "id": "G10",
+      "title": "Continuum graph coefficient",
+      "path": "YangMills/PerturbativeMatching/GraphCoefficients.lean",
+      "declaration": "graphCorrelation",
+      "qualified_name": "YangMills.PerturbativeMatching.graphCorrelation",
+      "line": 43,
+      "sha256": "51c7275566f0b075bfaf1c28c74e8e5e134f55405fb24c533c43c961b8f3114a",
+      "explanation_latex": "This function supplies the coefficient of a specified perturbative\norder for a word of free polynomial labels at separated positions.\nIts inputs are the gauge group and free labels, not a Wilson hierarchy\nor phase. It is assembled from the continuum graph rules, pole\nsubtractions and regulator limits described in Sections~3 and~6.\nThe human validation task is to identify those rules with the intended\nYang--Mills perturbation theory, including signs and normalization."
+    },
+    {
+      "id": "G11",
+      "title": "Calibrated perturbative reference",
+      "path": "YangMills/PerturbativeMatching/Reference.lean",
+      "declaration": "Reference",
+      "qualified_name": "YangMills.PerturbativeMatching.Reference",
+      "line": 35,
+      "sha256": "ddc92d6dccd75fa9d0890dd5236807b64f400912b5540d8e202179a6bce597b3",
+      "explanation_latex": "This package requires the graph correlations to determine a unique\nordinary OPE, chooses the group-only normalization menu, calibrates a\nposition scheme and requires a unique Ward-normalized stress series.\nIts OPE is read from the exterior characterization, not freely supplied\nas a second unrelated coefficient array. Any two such references for\nthe same gauge group are equal. This uniqueness concerns perturbative\ndata, not infrared phases."
+    },
+    {
+      "id": "G12",
+      "title": "Finite normalization measurements",
+      "path": "MSPositionScreens.lean",
+      "declaration": "Screen",
+      "qualified_name": "YangMills.MSbar.Position.Screen",
+      "line": 54,
+      "sha256": "d4f0e46ae11499b2e20945dd21d9e5b916c926bdf8a0922016d67dda92f52ec1",
+      "explanation_latex": "A screen is a finite list of separated profiles and field words,\nwith a real-linear map from their complex readings to field\nendomorphisms. The \\code{Prepared} laws require that applying the screen\nto the free first variation recovers every allowed infinitesimal\nfield change. Cutoff compatibility and curvature parity are also\nimposed. Thus the screen is a finite determining system for the\nnormalization frame, rather than a single normalization number."
+    },
+    {
+      "id": "G13",
+      "title": "Signed cubic coupling observable",
+      "path": "MSPositionLabels.lean",
+      "declaration": "Triangle",
+      "qualified_name": "YangMills.MSbar.Position.Triangle",
+      "line": 40,
+      "sha256": "79a865cd37302f01faa125f75c7ba53948b1a55ea167ddf17fa99492a41dabea",
+      "explanation_latex": "The labels are a self-dual cubic curvature field of degree six\nand two copies of an anti-self-dual quadratic field of degree four.\nThey are read at a common cutoff six, with a unit in omitted slots.\nThe profile is applied after forming the third joint cumulant.\nAdmissibility requires a real nonnegative, rotation-invariant,\nwell-separated profile and a negative bare reading $c_T$.\nThe notation $T$ here is the cubic label, not the stress tensor;\nthe minus chirality is not charge-conjugation parity."
+    },
+    {
+      "id": "G14",
+      "title": "Independent bare triangle formula",
+      "path": "MSPositionCubic.lean",
+      "declaration": "bareTriangle",
+      "qualified_name": "YangMills.MSbar.Position.bareTriangle",
+      "line": 85,
+      "sha256": "a7063da8b35151df6205b28ec11ff507ddf03ef4ee79f2d3750c9f9f603b0744",
+      "explanation_latex": "The explicit reference uses the free covariance, orientation and\nLie-bracket color contractions to fix the signed first coefficient.\nBoth the nonlinear curvature in the insertions and the cubic\ninteraction contribute. Its integral defines $c_T$ before any\ninteracting hierarchy is consulted. \\code{RawSlopeAgrees} compares\nthe first connected graph coefficient with this value; the calibration\nrequires this for every admissible triangle, not just the elected menu."
+    },
+    {
+      "id": "G15",
+      "title": "Formal change of coupling and fields",
+      "path": "FormalConversion.lean",
+      "declaration": "Conversion",
+      "qualified_name": "YangMills.Matching.Conversion",
+      "line": 41,
+      "sha256": "3b8e10d527240493ccc2f981d735077fe80647c73fd7cb8aa37e890baedf5bfb",
+      "explanation_latex": "The scalar series $f$ satisfies $f_0=0$, $f_1=1$. Field series\n$Z$ and $Z^{-1}$ are mutually inverse and preserve homogeneous\nweights, the unit, reality, signed axes and cutoff compatibility.\nCorrelation conversion substitutes $f$ and $Z$ on each input leg\nbefore collecting a coefficient. OPE conversion also applies\n$Z^{-1}$ on the output. Omitting that output transformation would\ncompare coefficients in different field coordinates."
+    },
+    {
+      "id": "G16",
+      "title": "A fixed numerical realization of the field correction",
+      "path": "YangMills/PerturbativeMatching/Calibration.lean",
+      "declaration": "smoothAdjustment",
+      "qualified_name": "YangMills.PerturbativeMatching.smoothAdjustment",
+      "line": 50,
+      "sha256": "5b42de5dadd816459f835eb213e12457a6c025289ab268c36e9254735dca71e0",
+      "explanation_latex": "The formal adjustment removes unequal-weight parts of the raw\nposition frame. A specified smooth cutoff sum realizes all its\nTaylor coefficients as a numerical family. Calibration requires\nequality with this particular function, fixing even the freedom\ninvisible to its Taylor series. The group-only choice precedes\nthe Wilson family. This is different from asking merely for some\nsmooth realization with the right asymptotic expansion."
+    },
+    {
+      "id": "G17",
+      "title": "Physical position normalization",
+      "path": "YangMills/PerturbativeMatching/PositionFrame.lean",
+      "declaration": "PositionNormalized",
+      "qualified_name": "YangMills.MSbar.PositionNormalized",
+      "line": 36,
+      "sha256": "583167ff956d5eb9dbfa5c7e00e2122dbec8ae00e7432415f8e2002677de34d7",
+      "explanation_latex": "The actual mixed correlators are smeared at physical length $r$\nin an unadjusted frame. They approach free readings, satisfy the\nfinite normalization equations and have an invertible tangent\nresponse for every permitted infinitesimal change. Separate laws\nassert local uniqueness, unit insertion, nesting and reality.\nThese equations use the mixed hierarchy; the physical normalization\nis not independently fitted in each character phase."
+    },
+    {
+      "id": "G18",
+      "title": "Measured coupling and field frame",
+      "path": "YangMills/PerturbativeMatching/Measurement.lean",
+      "declaration": "Measurement",
+      "qualified_name": "YangMills.PerturbativeMatching.Measurement",
+      "line": 21,
+      "sha256": "4b5360ddf1e779506be4ac647c3dcb0bc6d3d3385c18acc277b03468c03519ce",
+      "explanation_latex": "One positive coupling and one family of linear field isomorphisms\nserve all phases, words and orders on a hierarchy. The coupling\nobeys the one-loop leading-log law in the public trace convention.\nField laws include unit insertion, cutoff compatibility, signed-axis\ncovariance and multilinearity. \\code{FrameCalibration} identifies the\ncoupling exactly with the normalized mixed triangle and the measured\nframe with the prescribed adjustment of the position frame."
+    },
+    {
+      "id": "G19",
+      "title": "Meaning of the remainder estimates",
+      "path": "YangMills/PerturbativeMatching/Asymptotics.lean",
+      "declaration": "ShapeDerivativeBound",
+      "qualified_name": "YangMills.Matching.ShapeDerivativeBound",
+      "line": 46,
+      "sha256": "152a2564b8f8d3c047adf925ce4bdf3bc5880e990dc9f7486938968d4b3ce54c",
+      "explanation_latex": "This predicate requires differentiability through a given order\nand a bound on each position derivative of the difference of two\nfunctions. The derivatives are with respect to the separated shape,\nnot the radius. \\code{HasSmearedExpansion} tests all separated\nprofiles supported in a compact set with bounded derivatives and\ngives a little-$o$ remainder at every order. The coefficient norm\nis the sum of the absolute polynomial coefficients."
+    },
+    {
+      "id": "G20",
+      "title": "Correlation and stress matching",
+      "path": "YangMills/PerturbativeMatching/Correlations.lean",
+      "declaration": "CorrelationExpansion",
+      "qualified_name": "YangMills.PerturbativeMatching.CorrelationExpansion",
+      "line": 31,
+      "sha256": "29303e27ef6020a87eaf56a620cf58c1aafbf016dde3b7af4a436ebe4c118a69",
+      "explanation_latex": "The five clauses give smeared expansions, compact\n$O(g_X^{p+1})$ bounds, all shape derivatives, short-distance\nagreement between any two phase choices, and matching of the\nactual physical stress field to the unique Ward series. Constants\nhave the quantifiers printed in Section~5. In particular the\nphase estimate has $r^\\gamma$, $0<\\gamma<4$, and the stress clause\nuses a separate little-$o(g_X^p)$ formulation."
+    },
+    {
+      "id": "G21",
+      "title": "Ordinary OPE characterized by exterior fields",
+      "path": "MSOrdinaryOPE.lean",
+      "declaration": "Valid",
+      "qualified_name": "YangMills.MSbar.Ordinary.Valid",
+      "line": 69,
+      "sha256": "13cf61e51fb2d62d5b8a3ae118418089d75b380e9b3bad3d4a312dd0ad619dd1",
+      "explanation_latex": "A candidate coefficient array is required to reproduce cluster\nexpansions of the reference correlations against arbitrary exterior\ninsertions, with the stated polynomial-logarithmic remainder control.\n\\code{Determined} says exactly one full array satisfies these laws.\nThis tests what the fused field does against spectators, not just\nits vacuum expectation. It identifies every finite output degree\nof the perturbative OPE."
+    },
+    {
+      "id": "G22",
+      "title": "Actual field-valued OPE output",
+      "path": "YangMills/PerturbativeMatching/OperatorProducts.lean",
+      "declaration": "measuredOPE",
+      "qualified_name": "YangMills.PerturbativeMatching.measuredOPE",
+      "line": 20,
+      "sha256": "a8db0f3b627ff99cb5594131a070c34893913e5429ccb997c5c7fc1055833e82",
+      "explanation_latex": "The physical channel coefficients are multiplied by their\nchannel fields and included in the space through the chosen\noutput cutoff. Applying the inverse measured frame gives a free\nsector element. \\code{HasChannelBasis} requires those included\nchannels to form a basis. \\code{OPEExpansion} then compares the\nwhole element with the converted graph prediction: smeared\nagainst every output functional, in coefficient norm, and with\nshape derivatives uniform over the dual unit ball."
+    },
+    {
+      "id": "G23",
+      "title": "Ward characterization of the stress series",
+      "path": "YangMills/PerturbativeMatching/WardIdentities.lean",
+      "declaration": "Determined",
+      "qualified_name": "YangMills.Matching.WardStress.Determined",
+      "line": 33,
+      "sha256": "e232114b3c89bfbbe7c74dc90e500a81b7bfcf33fa6162c11e4a780d19940af5",
+      "explanation_latex": "The series has the specified leading free stress, symmetry,\nsigned-axis covariance, vanishing one-point function, conservation\nand a translation identity. Translation is expressed by integrating\nstress flux against a window isolating the first insertion and\ncomparing with a derivative of the ordinary correlation test.\nBoth sides use the same conversion. The signs of the free stress,\nthe cutoff derivative and integration by parts must be reviewed\ntogether."
+    },
+    {
+      "id": "G24",
+      "title": "Maxwell scaling and all physical radii",
+      "path": "YangMills/ScalingLimits.lean",
+      "declaration": "MaxwellScaling",
+      "qualified_name": "YangMills.Hierarchy.MaxwellScaling",
+      "line": 12,
+      "sha256": "d29b60806751ddacb8374206f5857fba4529b4022c8a09cee075df851f353838",
+      "explanation_latex": "The scaling object supplies short-distance frames along a\nsequence. The matching refinement identifies those sampled frames\nwith its measured frame and additionally requires\n\\code{AllRadii.Laws}, \\code{AllRadii.FrameBounds} and\n\\code{FixedFields.Laws}. The full public package therefore has\nmore content than convergence on a selected sequence of radii.\nThese ultraviolet requirements do not remove the subsequence\nin the large-volume construction."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-16T21:28:42.868032+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+    "comparator.json"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-comparator-20261116/project",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "4",
+    "COMPARATOR_LANDRUN": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/scripts/fake-landrun.sh",
+    "COMPARATOR_LEAN4EXPORT": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export"
+  },
+  "log": "gluon-finite-comparator.log",
+  "pid": 97393,
+  "exit_code": 0,
+  "finished_utc": "2026-11-16T21:32:52.168448+00:00",
+  "elapsed_seconds": 249.3,
+  "log_sha256": "6664d390e836a04ae17b479f668d6ef9e834e62ae1e53e45bde1a7e5c4017636"
+}

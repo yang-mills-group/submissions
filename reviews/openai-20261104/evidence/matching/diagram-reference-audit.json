@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T04:27:29.969878+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/matching/DiagramReferenceAudit.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "source": "checks/matching/DiagramReferenceAudit.lean",
+  "source_sha256": "e78553d24a38292a0df69ee0a04fafb3046270f3b2b812a9091adef8bf195148",
+  "log": "evidence/matching/diagram-reference-audit.log",
+  "log_sha256": "580a6c6d1deae6dffb792de44d6223a06fa4637c7cdd8ba9491aff427793bf14",
+  "printed_axioms": {
+    "YM.MS.Motif.Class_at": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Motif.AllMaster": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Motif.kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.length_recovers_line": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.radialClose_integer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.pitch_normalization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.block": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.ct_polynomial": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.Diagram.income_bulk": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.Diagram.income_mark": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.identification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Graphical.calibrated_gates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.DiagramAudit.gauge_line": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.DiagramAudit.filtered_gauge_line": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Two independently stated free-gauge-line comparisons and type/axiom inspection of twelve existing submitted bridge theorems, against the previously built submission modules. This is not an independent proof of the twelve bridges, a clean whole-submission rebuild, a Comparator run, or a completed validation of interacting coefficients."
+}

@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T15:58:48.116048+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/matching/GhostLoopFiniteEvaluation.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "source": "checks/matching/GhostLoopFiniteEvaluation.lean",
+  "source_sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33",
+  "log": "evidence/matching/ghost-loop-finite-evaluation.log",
+  "log_sha256": "af0cf777a7f709bf69b9cea84501690b1d505396333d631129c435938055efbc",
+  "direct_import_sources": [
+    {
+      "module": "YM.MS.ScaleForest.Bubbles",
+      "path": "YM/MS/ScaleForest/Bubbles.lean",
+      "sha256": "fa979e13821c4d972815bb086cab2b5e2fc61b2785addcd14ee024f430c3a561"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Integrals/Basic.lean",
+      "sha256": "58a81e8137bddf5cc43ae28f08ffa75ea3aa086e607cf70e70f70c3c8e935e81"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Log.NegMulLog",
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Log/NegMulLog.lean",
+      "sha256": "e249365f3eff509bfd9774e8e5f380c7e0290d76847871daee3616fb15b6b643"
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Gamma",
+      "path": ".lake/packages/mathlib/Mathlib/MeasureTheory/Integral/Gamma.lean",
+      "sha256": "56e1a1d4092f9864a3968364825967da12e57840ee3708cad651df987a8842f4"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "path": ".lake/packages/mathlib/Mathlib/Tactic.lean",
+      "sha256": "c6f2c548596b635a3d5c8aff8b19cbdeb60dd54e41bb89a1cd03b1a54d335fa5"
+    }
+  ],
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GhostLoopFinite.moment_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.integral_pow_log": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.integral_Pdelta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.integral_Ppair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.integral_Wlog_log": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.submitted_force_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.finite_delta_parameter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.finite_pair_parameter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.finite_delta_half": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.finite_pair_half": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.moment_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.local_taylor_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.finite_integrand_reduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.ghost_yeast_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.ghost_innerTrace_no_explicit_z": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.split_radial_polynomial": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.gaussian_radial": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.regulator_jet_parameter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.ghost_loopCarpet_regulator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoopFinite.ghost_closeG_physical": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Local check of ordinary diagonal source force; source ghost-trace and split-radial-continuation reductions; scalar Gaussian radial integrals; dimensional polynomial identity; local regulator-jet parameter value; exact finite parameter integrals in both tensor channels. Uses already built submission libraries, not a new whole-submission rebuild or Comparator run.",
+  "not_proved": [
+    "SubmittedFinitePartTest: the end-to-end finite graph comparison.",
+    "SubmittedRegulatorJetTest: identification of the actual ruby/highTensor jet with the explicit computed parameter integral.",
+    "Identification of the contracted loopCarpet integrand and its integral/jet with the explicit continued Gaussian formula, including the source sector lifts and measures.",
+    "The actual ordinary/plow Taylor-subtracted Mellin integral infrared limit and momentum rescaling.",
+    "A complete gauge-invariant physical correlation coefficient or an all-order conventional-diagram comparison."
+  ],
+  "analytic_calculation": "Appendix C of docs/matching/november-perturbative-matching.tex gives the full source-based Gaussian/Mellin calculation and agrees with the independent benchmark, including 8/3 and 5/3. It explicitly distinguishes the hand calculation from the outstanding Lean source bridges."
+}

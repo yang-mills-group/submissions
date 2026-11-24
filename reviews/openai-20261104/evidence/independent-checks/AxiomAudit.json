@@ -1,0 +1,1743 @@
+{
+  "target": "AxiomAudit",
+  "started_utc": "2026-11-11T23:15:24.756229+00:00",
+  "source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_path": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/Cli/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/batteries/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/Qq/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/aesop/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/importGraph/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/plausible/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean:/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean:/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/lib/lean",
+  "lean_version": "Lean (version 4.32.0, arm64-apple-darwin24.6.0, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+  "status": "passed",
+  "fresh_review_build": false,
+  "modules": [
+    {
+      "module": "ClusterCore",
+      "source_sha256": "8ad237a735261da37012470880e91e713891eef682d703ed443a58c67f81d7ff",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterCore.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterCore.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterCore.log",
+      "log_sha256": "83b5e04599a232da2bceaae185e79b62f41d30bc7a291dd0c70265e434b41673",
+      "warnings": 0
+    },
+    {
+      "module": "ClusterCones",
+      "source_sha256": "4492d6f336246a82585b0d3538bea6284679ddb3822755a9c7cd6b2cdb677b9f",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterCones.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterCones.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterCones.log",
+      "log_sha256": "8ba8d52dbb94312ed4a152082b0da0c6c0bd8b0c6efd59c4430087bc46e35005",
+      "warnings": 0
+    },
+    {
+      "module": "SourceScalar",
+      "source_sha256": "8c39b1a21513d5270c2dacf27857614b2e282dd292b8afe09cafa808dc39be37",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/SourceScalar.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/SourceScalar.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/SourceScalar.log",
+      "log_sha256": "484f55bd471b4d225cdc8afaf8532b3854975455dbcbdfba4c6356bca8dee6ad",
+      "warnings": 0
+    },
+    {
+      "module": "ClusterKernel",
+      "source_sha256": "dc25d6d7dc572fecdf2fabccbef8cfcd2861ef497799044259cfb791a01b4c66",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterKernel.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterKernel.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterKernel.log",
+      "log_sha256": "aeafdfb4ef6417b3b97f8836c81ce49fc25e708a71f0cdbd927ee642af405330",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.Spacetime",
+      "source_sha256": "efcaee7bec7c942981d730ad127950a1d3862fc33380d17258d03fe1692f0668",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Vendored/Spacetime.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Vendored/Spacetime.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Vendored.Spacetime.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.TensorProduct",
+      "source_sha256": "25dd74dc54878a46e30cddf52f58c1203ca046aaafdd7872c5983eda1913bfdc",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Vendored/TensorProduct.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Vendored/TensorProduct.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Vendored.TensorProduct.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.ZeroDiagonal",
+      "source_sha256": "a9419bf5eef65969bb01e9f0ffbbed1ebb8cd47946eeff81bd059fc59f71eae0",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Vendored/ZeroDiagonal.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Vendored/ZeroDiagonal.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Vendored.ZeroDiagonal.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.OSConj",
+      "source_sha256": "66e873d6a80fdfb3521507b61dceb30accbf4c230beae10f1db087155166484f",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Vendored/OSConj.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Vendored/OSConj.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Vendored.OSConj.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Vendored.Axioms",
+      "source_sha256": "894166296660b1a77161fb73a238722059f549f785d384b028fd3100f966d940",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Vendored/Axioms.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Vendored/Axioms.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Vendored.Axioms.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "Coordinates",
+      "source_sha256": "ce992c3565446cb2578796c539c54caa728d1de8f9d6d8c4b1cf6d9bec4cecba",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/Coordinates.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/Coordinates.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/Coordinates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedCenterWeights",
+      "source_sha256": "0df3139e83cc4dea488b032f686689e1b6546aecebb49eb5a60240e725583961",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedCenterWeights.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedCenterWeights.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedCenterWeights.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedDiagonalFlatBounds",
+      "source_sha256": "0dfa0b6b39af9009d848e0d9293cf695a9e69735e6e32d3a8c0ef218651b5ecb",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedDiagonalFlatBounds.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedDiagonalFlatBounds.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedDiagonalFlatBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "TargetKernel",
+      "source_sha256": "e8510fa51b8dd8bf19696fa8003042ecd0b1a3205088dbddee445fd6b842d685",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/TargetKernel.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/TargetKernel.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/TargetKernel.log",
+      "log_sha256": "b6dbd04b59ee92de23b3c5366e4d5516c005d064b3647745f5341d1f748e6a97",
+      "warnings": 0
+    },
+    {
+      "module": "ClusterTarget",
+      "source_sha256": "fa4330a75ad94b410324fb943f5d7cee59164ae11c9b23995e614a85cfca9ee3",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterTarget.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterTarget.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterTarget.log",
+      "log_sha256": "7bafdc54a4ea4bad6bf0348263920f0c680f0943bc014b4a402fe9a58f2069d6",
+      "warnings": 0
+    },
+    {
+      "module": "Temperedness",
+      "source_sha256": "cdc87faf64a63b8070a2dcbb55097c2a4d35bee84fdcb34cfc9a7ce60fd6913a",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/Temperedness.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/Temperedness.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/Temperedness.log",
+      "log_sha256": "09e45e43b4aa4bbf6abd8dadef76aa5dec5dd77f14f8d9afb0558d45d3be80e8",
+      "warnings": 0
+    },
+    {
+      "module": "ClusterDomination",
+      "source_sha256": "03a2d2c42b486907a9b068d3c2c07334e2b366c143941ff3481c165d792e49c1",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterDomination.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterDomination.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterDomination.log",
+      "log_sha256": "c8f8cdd9f5f3a349fc23adfd34539a55cc4d68133d385f254a5cb1d439d8d90f",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedSchwartzDomain",
+      "source_sha256": "da32cc3c49063f761648b6f5792caf431ac9a3a1111559fd21ae18e1cb4e1e11",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedSchwartzDomain.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedSchwartzDomain.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedSchwartzDomain.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedSchwartzProduct",
+      "source_sha256": "a327d573d777d2552f520c3e8c684c0c1e49ae0a3f61858326f039fc009f8e51",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedSchwartzProduct.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedSchwartzProduct.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedSchwartzProduct.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ClusterSchwartz",
+      "source_sha256": "9ac62c789edac0662fe1ebbe7af9dd16781ddf5fe4330ff6cc724869b69307f5",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ClusterSchwartz.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ClusterSchwartz.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ClusterSchwartz.log",
+      "log_sha256": "23436c7ea1d8e8322b68de03dad3989039f4534dbe5663a94f1109bc66faecc7",
+      "warnings": 0
+    },
+    {
+      "module": "Invariance",
+      "source_sha256": "2a0e8864657b99c66e0a0e864e201e71b6a70f92fcf69e087e0e53ce03599f8d",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/Invariance.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/Invariance.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/Invariance.log",
+      "log_sha256": "1a749c9e453d61af74201d0421e05440b8b71ac2a16910f8e0376e1b34a0228e",
+      "warnings": 0
+    },
+    {
+      "module": "ReflectionTransport",
+      "source_sha256": "21c7c59a934a1eb5988d33b5b977bc39c21f6f8c9a34c08586f42c6e8b665d9c",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ReflectionTransport.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ReflectionTransport.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ReflectionTransport.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedSchwartzCutoffs",
+      "source_sha256": "6f6fdb12027c5de0654c8733a8a7f25d37c033cbbd8ffb1db9cdced1eb9077ad",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedSchwartzCutoffs.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedSchwartzCutoffs.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedSchwartzCutoffs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedReflectionApproximation",
+      "source_sha256": "71f6688c51564b64b910e207ea6305dcf5b23063ca8cbae44098b6327f993d41",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedReflectionApproximation.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedReflectionApproximation.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedReflectionApproximation.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ReflectionPositivity",
+      "source_sha256": "a6ebf02f2c9d06d804829d1918f7e84a597c12898d82f340690e1c9a98dea4eb",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ReflectionPositivity.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ReflectionPositivity.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ReflectionPositivity.log",
+      "log_sha256": "925d116b0d00c686c6f0c092a8425174f8139fe7ba0c57b25236d0e2a2a45edb",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOSRecon.Growth",
+      "source_sha256": "1057786eb5d4f5474ae8d416c0fcde3150f5ae4b5fc3125096d1311e44cd299c",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOSRecon/Growth.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOSRecon/Growth.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOSRecon.Growth.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ArityGrowth",
+      "source_sha256": "aa896e79fdd0650d8c61fcfa156de817697b6d0a454ed6922a2cd87d957fc9a3",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ArityGrowth.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ArityGrowth.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ArityGrowth.log",
+      "log_sha256": "424c416ffdaebd30653af722e6524a7c950d24ad909a94960b46fd7246d0156d",
+      "warnings": 0
+    },
+    {
+      "module": "RemainingObligations",
+      "source_sha256": "9d80987819b0e8e10a7ca6169519dbdb7bb9ed9f8450962a10d97fdebebea5dd",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/RemainingObligations.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/RemainingObligations.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/RemainingObligations.log",
+      "log_sha256": "f255712d56ae3547159b505f5a71dff60537d8525f2a41d92eef8e3eb5610705",
+      "warnings": 0
+    },
+    {
+      "module": "CompleteOS",
+      "source_sha256": "9168bea28abcc52634fa7272aedfaf38786b41d65f2a76a21663d4593af6625c",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/CompleteOS.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/CompleteOS.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/CompleteOS.log",
+      "log_sha256": "a0175859fa5cc3eae16d9f58da2485fc0159a0899f76d9555e5e79694af5e451",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedAFGauge",
+      "source_sha256": "136d59e698dde46cdf99e1fa37ce2b94ee210053f0d5f9b2e3b37938f3d4cfd7",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedAFGauge.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedAFGauge.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedAFGauge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedAFSpecification",
+      "source_sha256": "a80bf741dd9f71a7ee465601f253a6d09fd2ade88dd4acae2d0446013cab86eb",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedAFSpecification.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedAFSpecification.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedAFSpecification.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "AFSourceBridge",
+      "source_sha256": "d95e7a06f402471de50d240090b674bd1232e45bb2c0f6d1709f0799a700e694",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/AFSourceBridge.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/AFSourceBridge.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/AFSourceBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "CommonScaleAudit",
+      "source_sha256": "ac9b14ad7532a98156eecd33a29ee05647f5798f2ea0c5f3d13a2d6c711d41d5",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/CommonScaleAudit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/CommonScaleAudit.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/CommonScaleAudit.log",
+      "log_sha256": "8dc0c035ec87593a80ba86e09fdec22de3e9ee77a0c426f32f284be98de13df7",
+      "warnings": 0
+    },
+    {
+      "module": "NonzeroPhysicalObservable",
+      "source_sha256": "84d63157051a2f610c54eb8ec54917931781af77690fcd6d4898a7688ae95ec1",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NonzeroPhysicalObservable.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NonzeroPhysicalObservable.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NonzeroPhysicalObservable.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "TwoPointPhysicalObservable",
+      "source_sha256": "fbee2e2a403458626b7f8e464a59110a8eda18fc8e486bcc8215e81d7d4cdc98",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/TwoPointPhysicalObservable.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/TwoPointPhysicalObservable.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/TwoPointPhysicalObservable.log",
+      "log_sha256": "fb3598db4d7805f72ee56da45cb8b87f900dc1d52962302c5ac35cef4fbd0e67",
+      "warnings": 0
+    },
+    {
+      "module": "CompletenessAudit",
+      "source_sha256": "36c15bb8b5e360610afb3eb18dc5d597abc2bbe231a9b6588c23467840f6b3a9",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/CompletenessAudit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/CompletenessAudit.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/CompletenessAudit.log",
+      "log_sha256": "f9520e33f2a2d660fd21e703a76f992a51cffef27521f9c8be2015490916dfc6",
+      "warnings": 0
+    },
+    {
+      "module": "WardFormulationAudit",
+      "source_sha256": "5943d1d891f931404368d63a5b75e86e07b2c8a0c85b7df79aa2cb6056b48682",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/WardFormulationAudit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/WardFormulationAudit.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/WardFormulationAudit.log",
+      "log_sha256": "177a28d59e846efd8c04615b2a690731b990f1300c3151c2eb33ad46f2610cdf",
+      "warnings": 0
+    },
+    {
+      "module": "ImportedLGTData",
+      "source_sha256": "7e1ff512f0112e0d355033bdc84a49c7b19c1b92b029a4c2cc2a45a8ada47b04",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/ImportedLGTData.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/ImportedLGTData.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/ImportedLGTData.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "LGTWilsonBridge",
+      "source_sha256": "1cb91e87086dca5244240df0a6af54f85363ec69dcc1d1b458d5fd0163b85a0c",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/LGTWilsonBridge.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/LGTWilsonBridge.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/LGTWilsonBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "RetainedSourceSpec",
+      "source_sha256": "81d90e0107862e889ebefb34efc5e1417ba319362df8c9c2f4fe96c5238b0d0e",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/RetainedSourceSpec.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/RetainedSourceSpec.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/RetainedSourceSpec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "AcceptanceSpec",
+      "source_sha256": "e9b7862eef81d64dd1ee50cb8c8dcb3489e0fb8a090c427b8da9f7e269fa5bf6",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/AcceptanceSpec.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/AcceptanceSpec.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/AcceptanceSpec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "OPESpec",
+      "source_sha256": "037a780a58a02ababfe2473e093fe5cf5b40ede82b1f44556b487f25eb043e39",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/OPESpec.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/OPESpec.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/OPESpec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberAcceptanceSpec",
+      "source_sha256": "f073a8180ec15b1d112926525f27ba45686fcb09cd6084cae1e56c735e8b9b6d",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberAcceptanceSpec.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberAcceptanceSpec.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberAcceptanceSpec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberOS",
+      "source_sha256": "9b3f4bf0251e5a93d66bc1c4307434e984a56b622b9782d37c83cb72ae5af4ce",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberOS.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberOS.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/NovemberOS.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "CombinedAcceptance",
+      "source_sha256": "5737543125b52906c12220301aece4dc57fb379a7eb7d34f52b8e2c48e266e90",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/CombinedAcceptance.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/CombinedAcceptance.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/CombinedAcceptance.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "RetainedContactProof",
+      "source_sha256": "a7c860f3b2535effc1c79476de1ea69cd41bad3e47cc7e1ab9509aeda7f586bd",
+      "exit_code": 0,
+      "cached": true,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/RetainedContactProof.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/RetainedContactProof.lean"
+      ],
+      "seconds": 0.0,
+      "log": "evidence/independent-checks/RetainedContactProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "RetainedSourceProof",
+      "source_sha256": "3859ff7787092833595f4609ce9a099ead48cfaeb47227402225e8306326e56f",
+      "exit_code": 0,
+      "cached": false,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/RetainedSourceProof.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/RetainedSourceProof.lean"
+      ],
+      "seconds": 10.004,
+      "log": "evidence/independent-checks/RetainedSourceProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "OPECheck",
+      "source_sha256": "62263ce95347596a3e8e14fe77414718d91d676d7ba9b8b4a3c2a0b38e3690cf",
+      "exit_code": 0,
+      "cached": false,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/OPECheck.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/OPECheck.lean"
+      ],
+      "seconds": 9.805,
+      "log": "evidence/independent-checks/OPECheck.log",
+      "log_sha256": "47822e0527fceebddfda07a7b3c09396738cc8d22af639baf9682d372683c9a8",
+      "warnings": 0
+    },
+    {
+      "module": "NovemberCombined",
+      "source_sha256": "67ae58c8bc77305b6a2474ac46596b69a2db78aa143c42e8e6b0aac9f1fc71c5",
+      "exit_code": 0,
+      "cached": false,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/NovemberCombined.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/NovemberCombined.lean"
+      ],
+      "seconds": 19.588,
+      "log": "evidence/independent-checks/NovemberCombined.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "warnings": 0
+    },
+    {
+      "module": "AxiomAudit",
+      "source_sha256": "d8a5250e495c4add2d270b7adeef12db4784dcd4f99089053b7b765975036d0d",
+      "exit_code": 0,
+      "cached": false,
+      "command": [
+        "/Users/oai/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+        "--root=/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/.build/AxiomAudit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/AxiomAudit.lean"
+      ],
+      "seconds": 12.468,
+      "log": "evidence/independent-checks/AxiomAudit.log",
+      "log_sha256": "f5b85856b1e53e4c7a0ceaafde90206b4e95bac2fa00c6ded44654be6712f5d5",
+      "warnings": 0
+    }
+  ],
+  "external_imports": {
+    "YM.EveryPhase.Extension": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/EveryPhase/Extension.olean",
+      "sha256": "18d09d75691104a0b5db3ec57cbfe42261368861fab1df6d6a32e31b0555e72b"
+    },
+    "YM.Ground.Lean": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Ground/Lean.olean",
+      "sha256": "1563aa79650735568332bfba2da9633559060ae547072e864249c9b801026632"
+    },
+    "YM.Trace.Center": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Trace/Center.olean",
+      "sha256": "f6b0037c8c2488aff3caf8273d337a89f44661b8d6cd44a887dded5f3b2a09d6"
+    },
+    "Mathlib.Analysis.Distribution.SchwartzSpace.Deriv": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Distribution/SchwartzSpace/Deriv.olean",
+      "sha256": "9ea3b05d63809f79649b0bce06f746d18c781a29e268d39c4258479bafb62bf4"
+    },
+    "Mathlib.MeasureTheory.Constructions.Pi": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Constructions/Pi.olean",
+      "sha256": "e04afb9e9d28496d2a296b3c8828215c0f30d2ebcd703511d0566f27b783e4c9"
+    },
+    "Mathlib.MeasureTheory.Measure.Lebesgue.Basic": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Measure/Lebesgue/Basic.olean",
+      "sha256": "42536f738339e35abdc6dadb6e9c79e8b6f4aa3bc2be4ac468b397525983f16f"
+    },
+    "Mathlib.Analysis.SpecialFunctions.JapaneseBracket": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecialFunctions/JapaneseBracket.olean",
+      "sha256": "0193df988e2ce83e1768a5775467731a1ccf55ce5ebba04d5b35c1fc53c7e076"
+    },
+    "Mathlib.MeasureTheory.Integral.Pi": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/Pi.olean",
+      "sha256": "cb767fc97b311c2d8a8c1f3f25eafea1919df27cbfffe3ee47f4d17695ee43ae"
+    },
+    "Mathlib.MeasureTheory.Group.Prod": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Group/Prod.olean",
+      "sha256": "587219660addb3c31269b47269ce5afe50c2b34a02af04508449b88f82076639"
+    },
+    "Mathlib.Analysis.Calculus.MeanValue": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Calculus/MeanValue.olean",
+      "sha256": "95dcb0d3b9771455903187704d4a2fe145277af13382ec260cf0c2c2f47937fd"
+    },
+    "Mathlib.Analysis.Normed.Module.Convex": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Normed/Module/Convex.olean",
+      "sha256": "3b9296cde8b8e288d2c811449da99f0e95292baff3e51db5cd5286d4cba61745"
+    },
+    "Mathlib.Tactic.GCongr": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/GCongr.olean",
+      "sha256": "26f2314cf5bbe2d43379530ecc9ad042d9f9a09eedcc9768a97e3d412ad66cd4"
+    },
+    "YM.Euclid.Pairing": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Euclid/Pairing.olean",
+      "sha256": "7d0835ad277f3206b5aabc56f22f16d100d4bfce7341461ed493a3629fac7dc3"
+    },
+    "Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.olean",
+      "sha256": "27fcf1f2bdddab95b5d6042cf47db19329049445d5e4f36765df66f44e10a033"
+    },
+    "Mathlib.Topology.Sequences": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Sequences.olean",
+      "sha256": "9be0e17966098a0f11388bc6477209a07a97c32f7be6dad4f6ec5c1cecaaee87"
+    },
+    "YM.Work.B11": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Work/B11.olean",
+      "sha256": "7268d6adb0a3bf90d07ae488f86a70d78eb3e7a91b83720a024b0f719fe6387f"
+    },
+    "YM.Spec.Closed": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Spec/Closed.olean",
+      "sha256": "9a2c2ce9d44ba0c0c73681ae5a1f76c7e59de8aca11f229f798e1398adb053ec"
+    },
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecialFunctions/Pow/Real.olean",
+      "sha256": "a5d5ea7762c34422200b8549a96342c0b6a89b65e30f5daa8111a9c85026fab3"
+    },
+    "YM.TraceExtension.Endpoint": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/TraceExtension/Endpoint.olean",
+      "sha256": "b021700fbea928c1e06163f3aa6185aa5cf46a8e4326a0b47a3eb5b19fd0ec46"
+    },
+    "YM.Independent.Core": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Independent/Core.olean",
+      "sha256": "4f0fb1e12f993cfd9b12b85a8940bc6c2b000ad32326345eba537a9135a10ae8"
+    },
+    "Mathlib.Analysis.SpecialFunctions.Pow.Continuity": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecialFunctions/Pow/Continuity.olean",
+      "sha256": "83721e3b72e2ce6d76f2fff0e7281eb484960a4d2a6b1a65f0221c266a31d72f"
+    },
+    "YM.Trace.Estate": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Trace/Estate.olean",
+      "sha256": "3a977bac8c53e924d4f6888ea3002068f79485f5cded1c8625c0dec042d1c5b3"
+    },
+    "YM.Next.MAXWELL.System": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Next/MAXWELL/System.olean",
+      "sha256": "3e65b782c097207407a45f934ca2f76bd6e6b93078b85db406d9a9ec536f3d42"
+    },
+    "YM.Work.A01.Support": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Work/A01/Support.olean",
+      "sha256": "23075ad128c2fa63069efc57c5b45f392067dcca37352b07b209dcc60f59c15d"
+    },
+    "Mathlib": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean",
+      "sha256": "9c5bf984a8c4ed7c7854d68673a37a3847ff24783554f451920d4ff95d68b97e"
+    },
+    "YangMills.WilsonProof.WilsonBridge": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YangMills/WilsonProof/WilsonBridge.olean",
+      "sha256": "d9e0d70c72d044f1e5becbb13eceaa4142c6306f087f3d4ce14df7d9d33080f9"
+    },
+    "TraceBridge": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/TraceBridge.olean",
+      "sha256": "3307908f57cd970e59bc645f3e52c4aa96c7584d513ea1c6f7d6ba0e0040cc85"
+    },
+    "YangMills.CorrelationHierarchy": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YangMills/CorrelationHierarchy.olean",
+      "sha256": "626a702d9e964433bf2da595d1b8b7c20421167220dc923767c00641f679ca6f"
+    },
+    "YangMills.Existence": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YangMills/Existence.olean",
+      "sha256": "b222e260db5d4fb75964ff82592819d5dcc97024e3244d0c9ced755e93cfe03b"
+    },
+    "YM.Contacts.Solstice.Result": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Contacts/Solstice/Result.olean",
+      "sha256": "cc0a0a38d58bf5a72151cb41f11d191927317a65fe655c5fc1728f2cdec4a97a"
+    },
+    "YM.Contacts.Transport.Blend": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YM/Contacts/Transport/Blend.olean",
+      "sha256": "1905fac752377ced175bbe29b9653b7d00091fc2684a2d8ed3224cae53e410c4"
+    },
+    "YangMills.WilsonProof.Hierarchy": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/YangMills/WilsonProof/Hierarchy.olean",
+      "sha256": "5829dfc2de53922910f409332360418ee8314f41d200d12410a54390ed29bc22"
+    },
+    "Comparators.Existence.Solution": {
+      "path": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean/.lake/build/lib/lean/Comparators/Existence/Solution.olean",
+      "sha256": "105e35497d4c032925afa5a55504446a705d5677b526c64e8b7b43f110b0e637"
+    }
+  },
+  "comparator_run": false,
+  "seconds": 51.89,
+  "axiom_reports": [
+    {
+      "declaration": "YMOSBridge.chamber_ground_projection",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_mixed_heat_limit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_word_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.phase_word_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.phase_mixed_heat_limit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_vacuum_transverse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_transverse_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_word_placements",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.chamber_word_cone_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_rotation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_real",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_capped",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_cone_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_radial_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.targetKernel_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.targetKernel_radial_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.targetKernel_cluster_tendsto",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.schwinger_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E0_linear",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E0_tempered",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.translated_kernel_majorant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.cluster_integral_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.weighted_kernel_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.schwinger_cluster_sequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E0_reality",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E1_translation_invariant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E1_rotation_invariant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E3_symmetric",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.normalized_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.compact_reflection_positive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.reflection_positive_family",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E2_reflection_positive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.scalarKernel_all_arity_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.targetKernel_all_arity_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E0_prime_growth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E0_prime",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.completeOS",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E4_cluster_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.E4_cluster",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.verifiedOS",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.verifiedOS_growth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.reference_spacing",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.physical_side",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.reference_coupling",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.same_reference_coupling",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.positive_common_reference",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.shared_kinetic_paths",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.normalized_kinetic_metric",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.normalized_loop_jets",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.normalized_regular_remainders",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.reference_insertion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.same_insertion_readout",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.CommonScale.calibrated_reset",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.joined_eq_opposed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.phaseValue_selected",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.phaseValue_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.phaseValue_continuous_and_average",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.unselected_positive_of_selected",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.selected_positive_somewhere",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.nonzero_unselected_two_point",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.TwoPointScale.mass_limit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.raw_register_exhaustive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.free_no_extra_nulls",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.free_sector_exhaustive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.local_field_content",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.phase_field_content",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.registered_words_dense",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OperatorCompleteness.quotient_fields_not_lost",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YM.EveryPhase.recognizes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.WardAudit.windows_exist",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.WardAudit.phase_translation_derivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.WardAudit.phase_translation_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.WardAudit.phase_window_independent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OPE.from_source",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OPE.phase_difference",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OPE.channel_assembly",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OPE.single_field",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.finite_law_on_family",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.lattice_and_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.phase_and_os",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.translation_ward",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.operator_content",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.leading_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.accepted_of_source",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.combined_acceptance",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.verifiedOS",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMOSBridge.verifiedOS_growth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.public_trace_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.public_kernel_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.public_schwinger_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.public_os",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.public_realizes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.November.combined_acceptance",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.OPE.from_source",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "YMReview.Acceptance.source_conclusions",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "finished_utc": "2026-11-11T23:16:16.667217+00:00"
+}

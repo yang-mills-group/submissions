@@ -1,0 +1,8 @@
+'YMReview.NovemberMatching.colorSquare_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.adjointCasimir_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.doubledBracket_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.pauli_trace_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.pauli_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.SubmissionAdapter.observed_eq_public' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

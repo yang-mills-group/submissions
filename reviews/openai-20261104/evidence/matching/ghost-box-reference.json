@@ -1,0 +1,50 @@
+{
+  "checked_utc": "2026-11-16T18:35:08.172224+00:00",
+  "scope": "Independent conventional ghost-box reference only. No submitted-graph or lattice comparison; no Lean run; no certified quadrature error bound.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "exact_denominator_polynomial_identity": true,
+  "pair_coefficients": {
+    "0,1": "1/12",
+    "0,2": "-1/3",
+    "0,3": "1/4",
+    "1,2": "1/4",
+    "1,3": "-1/3",
+    "2,3": "1/12"
+  },
+  "bubble_weights": {
+    "1": "5/12",
+    "2": "-2/3",
+    "3": "1/4"
+  },
+  "c_box_exact": "46/15 + (32/15) log(2) - (81/20) log(3)",
+  "c_box": 0.09600088275537288,
+  "quadrature": [
+    {
+      "nodes_per_axis": 16,
+      "c_box": 0.09599915032245757,
+      "error_vs_analytic": -1.7324329153189932e-06
+    },
+    {
+      "nodes_per_axis": 32,
+      "c_box": 0.09600085455549633,
+      "error_vs_analytic": -2.819987655888756e-08
+    },
+    {
+      "nodes_per_axis": 64,
+      "c_box": 0.096000882298928,
+      "error_vs_analytic": -4.56444881891116e-10
+    },
+    {
+      "nodes_per_axis": 96,
+      "c_box": 0.09600088271475385,
+      "error_vs_analytic": -4.061903591257021e-11
+    },
+    {
+      "nodes_per_axis": 144,
+      "c_box": 0.09600088275175282,
+      "error_vs_analytic": -3.6200625830318245e-12
+    }
+  ],
+  "max_rational_identity_relative_error": 1.3561851697613417e-14
+}

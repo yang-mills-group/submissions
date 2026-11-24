@@ -1,0 +1,28 @@
+'YMReview.NovemberMatching.GhostLoop.numerator_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.numerator_gamma_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.numerator_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.tensor_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.tensor_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.finite_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.parameter_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.submitted_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.premature_tensor_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.premature_tensor_error_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.submitted_finite_reading' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.submitted_scale_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.submitted_scale_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.finitePart_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.finite_test_iff_reference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.heatDressing_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.heatDressing_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoop.submitted_line_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

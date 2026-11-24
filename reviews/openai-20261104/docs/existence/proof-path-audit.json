@@ -1,0 +1,269 @@
+{
+  "scope": "Source tracing of November existence improvements; no new Lean proof or Comparator execution.",
+  "new_source_root": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "old_source_root": "/Users/oai/Documents/Codex/repos/yang-mills-group/OpenAI-YM-20261028",
+  "files": [
+    {
+      "path": "Solution/PointReturns.lean",
+      "sha256": "4832e474adbd92315b0ecceb13853f2b42bbd03607e2a564f4289647a7839b98",
+      "declaration_lines": {
+        "theorem purchased": [
+          28
+        ],
+        "theorem measured": [
+          70
+        ],
+        "theorem compact": [
+          192
+        ],
+        "theorem nativeReturns": [
+          333
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "Solution/AllRadiiMaxwell.lean",
+      "sha256": "3ab482636a45ce7e98ebe44d641df12185b170ed9ef379f1e61ecf0acac71278",
+      "declaration_lines": {
+        "private theorem stress_column": [
+          48
+        ],
+        "theorem allRadii": [
+          95
+        ],
+        "theorem Law.marked": [
+          145
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "Solution/AllRadiiBridge.lean",
+      "sha256": "5cd2c4bd0f788f200f87c6e766e155899804db59cbe534864cab37119e9ff7fa",
+      "declaration_lines": {
+        "theorem extendFrame": [
+          115
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "Solution/SelectedJets.lean",
+      "sha256": "f5b41285db1767092ca5ea1109ff3fdecf293e12e6b5af41c40c7954c53d4a50",
+      "declaration_lines": {
+        "def splice": [
+          20
+        ],
+        "theorem selected": [
+          23
+        ],
+        "theorem original": [
+          31,
+          91,
+          196,
+          249,
+          280,
+          311,
+          362,
+          428,
+          451,
+          504,
+          559,
+          578,
+          628,
+          663
+        ],
+        "theorem convergence": [
+          48
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/PhysMS/Frame/Stage.lean",
+      "sha256": "c19224a475c39774ec79442249b65a6085f9d30c22196d92733ee89ee0c373a3",
+      "declaration_lines": {
+        "lemma on_crew": [
+          31
+        ],
+        "lemma furnished": [
+          40
+        ],
+        "theorem base_stage": [
+          69
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/PhysMS/Frame/Phases.lean",
+      "sha256": "d6935872a6eef1b03aee732678db2bcbc61e0ca55bf1109c67336bee8794950a",
+      "declaration_lines": {
+        "lemma within_price": [
+          75
+        ],
+        "theorem negligible": [
+          85
+        ],
+        "theorem all_leading": [
+          91
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/PhysMS/Foundation/Readout.lean",
+      "sha256": "265dd2fe45cbe6452778e680b2966e464f2ec1778a44871483d084f160aaef23",
+      "declaration_lines": {
+        "theorem phase_values": [
+          40
+        ],
+        "theorem phase_jets": [
+          126
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/PhysMS/Foundation/Estimates.lean",
+      "sha256": "e372fac470a3eb025baff612a4decee57c7ea60c551a4fd703a86b2c754814dd",
+      "declaration_lines": {
+        "lemma phase_jets_flat": [
+          49
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/OPE/Short/Gap.lean",
+      "sha256": "91068fac8163f6d8ce6f083efdcfaf71a4688352acd2bbb049c3d4450c5e36ee",
+      "declaration_lines": {
+        "lemma unit_field": [
+          22
+        ],
+        "lemma no_channels": [
+          35
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YangMills/FieldMeasurements.lean",
+      "sha256": "db7f188bdcf845470fd0f4d3dc62afbc16d8f48ba5197e3d2357e3652ab97711",
+      "declaration_lines": {
+        "def PhaseBound": [
+          19
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/IssuedBridge/OriginalTrainMoments.lean",
+      "sha256": "315d40dccacf5d9c24958fa11fb755e838620fd95b7519a8b9a1476c424e4f7c",
+      "declaration_lines": {
+        "theorem original": [
+          19
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/IssuedBridge/OriginalPhaseSeparation.lean",
+      "sha256": "0e4eebfae9b1fafd6cb14233a461ee5a5cb47b454f72ef6483ca6c4fa5e8ee16",
+      "declaration_lines": {
+        "theorem original": [
+          11
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YangMills/WilsonProof/NativeSupport/WardBridge.lean",
+      "sha256": "d39780057938060886d76cebc73d8ce500265d3ea4dacbbcd6512637b0e7985d",
+      "declaration_lines": {
+        "def publicWards": [
+          23
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "Solution/PhaseReconstruction.lean",
+      "sha256": "f9527f4397b7184107c2ba37e2e2c95d685ff45ae5230bf82ecdf9eecc888d0e",
+      "declaration_lines": {
+        "def source": [
+          422
+        ],
+        "def phases": [
+          477
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YM/Ground/Moments.lean",
+      "sha256": "336d2392b85d439b0f0f7a87ad49302e9a0feec539bb869cee2f7cde67a49f1f",
+      "declaration_lines": {
+        "lemma arcs": [
+          138
+        ]
+      },
+      "october_same_path_exists": true,
+      "byte_identical_to_october": true
+    },
+    {
+      "path": "YM/FullVolume/Profiles.lean",
+      "sha256": "ddcec78fb024b75afc15a0b16dac58f2b626f22ea935641307e8af421835075e",
+      "declaration_lines": {},
+      "october_same_path_exists": true,
+      "byte_identical_to_october": true
+    },
+    {
+      "path": "YM/FullVolume/Connect.lean",
+      "sha256": "2ba197e16a6d3f5d18dd470c131d51ffebd4ec11b1d9e6aa635f13616c2f2a39",
+      "declaration_lines": {},
+      "october_same_path_exists": true,
+      "byte_identical_to_october": true
+    },
+    {
+      "path": "Comparators/Existence/Solution.lean",
+      "sha256": "15d6ed5f8a92687a39e24667b2ed818e5dc3bb03d674d5cc13ebc2d0b41a6c4b",
+      "declaration_lines": {
+        "theorem YangMills.jointExistence": [
+          27
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    },
+    {
+      "path": "YangMills/Existence.lean",
+      "sha256": "19ac8b8e3f682dcd423b1b6215a4b30adfa25ab0d010ca66e4b94ad7fe635480",
+      "declaration_lines": {
+        "structure ContinuumLimit": [
+          20
+        ],
+        "def Construction.Realizes": [
+          41
+        ]
+      },
+      "october_same_path_exists": false,
+      "byte_identical_to_october": null
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+'YMReview.NovemberMatching.GhostLoopFinite.moment_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.integral_pow_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.integral_Pdelta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.integral_Ppair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.integral_Wlog_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.submitted_force_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.finite_delta_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.finite_pair_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.finite_delta_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.finite_pair_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.moment_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.local_taylor_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.finite_integrand_reduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.ghost_yeast_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.ghost_innerTrace_no_explicit_z' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.split_radial_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.gaussian_radial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.normalized_radial_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.regulator_jet_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.ghost_loopCarpet_regulator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GhostLoopFinite.ghost_closeG_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

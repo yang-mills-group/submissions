@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-16T20:43:34.746841+00:00",
+  "script_sha256": "b915b61d844dfcc22b6f8f183585873f0c64e52c654324cb78550102d7e8a9fb",
+  "scope": "Exact rational heat-density, regulator-jet and primitive calculation; independent heat-series checks. The source identification is an analytic derivation, not a completed Lean theorem.",
+  "conventions": {
+    "gauge": "Landau",
+    "sign": "Euclidean log density",
+    "regulator": "D=Ds=4+2z",
+    "mu_bar": "y=log(mu_bar)+(EulerGamma-log(4pi))/2",
+    "external_squared_momentum": "1 for calculation; restored by source scale law",
+    "coupling": "g^2 stripped"
+  },
+  "channels": {
+    "transverse": {
+      "heat_polynomial": "144*u + 98*u*X + 12*u*X^2 + -288*u^2 + -194*u^2*X + -24*u^2*X^2 + 144*u^3 + 192*u^3*X + 36*u^3*X^2 + -96*u^4*X + -24*u^4*X^2 + 12*u^5*X^2",
+      "force_constant": "33/4",
+      "force_X_coefficient": "25/6",
+      "jet_integrand_at_zero": "98*u + -338*u^2 + 480*u^3 + -240*u^4",
+      "jet_integrand_dimension_derivative": "104*u + -372*u^2 + 536*u^3 + -268*u^4",
+      "jet_integral_rational": "-5/36",
+      "jet_integral_log2_coefficient": "25/6",
+      "force_nonexponential": "-28*X^-2 + 50*X^-1 + 12",
+      "force_exponential_coefficient": "28*X^-2 + -36*X^-1 + -101/4 + -27/8*X",
+      "primitive_nonexponential": "14/3*X^-3 + -25/2*X^-2 + -6*X^-1",
+      "primitive_exponential_coefficient": "-14/3*X^-3 + 61/6*X^-2 + 181/24*X^-1",
+      "primitive_E1_coefficient": "-25/12",
+      "primitive_constant_rational": "-173/72",
+      "finite_constant": "89/36",
+      "extra_vector_trace_finite_contribution": "1/3",
+      "independent_heat_series_checks": [
+        {
+          "X": "1/10",
+          "absolute_error": "6.8E-68"
+        },
+        {
+          "X": "1",
+          "absolute_error": "1E-68"
+        },
+        {
+          "X": "3",
+          "absolute_error": "0E-68"
+        },
+        {
+          "X": "10",
+          "absolute_error": "0E-68"
+        }
+      ]
+    },
+    "longitudinal": {
+      "heat_polynomial": "144*u + 138*u*X + 9*u*X^2 + -288*u^2 + -714*u^2*X + -96*u^2*X^2 + 144*u^3 + 1152*u^3*X + 348*u^3*X^2 + 6*u^3*X^3 + -576*u^4*X + -504*u^4*X^2 + -30*u^4*X^3 + 252*u^5*X^2 + 48*u^5*X^3 + -24*u^6*X^3",
+      "force_constant": "33/4",
+      "force_X_coefficient": "-1/2",
+      "jet_integrand_at_zero": "138*u + -858*u^2 + 1440*u^3 + -720*u^4",
+      "jet_integrand_dimension_derivative": "158*u + -962*u^2 + 1608*u^3 + -804*u^4",
+      "jet_integral_rational": "5/6",
+      "jet_integral_log2_coefficient": "-1/2",
+      "force_nonexponential": "84*X^-2 + -18*X^-1 + 9",
+      "force_exponential_coefficient": "-84*X^-2 + -24*X^-1 + -9/4 + -3/8*X",
+      "primitive_nonexponential": "-14*X^-3 + 9/2*X^-2 + -9/2*X^-1",
+      "primitive_exponential_coefficient": "14*X^-3 + 5/2*X^-2 + -1/8*X^-1",
+      "primitive_E1_coefficient": "1/4",
+      "primitive_constant_rational": "1/12",
+      "finite_constant": "-1/2",
+      "extra_vector_trace_finite_contribution": "0",
+      "independent_heat_series_checks": [
+        {
+          "X": "1/10",
+          "absolute_error": "1.56E-67"
+        },
+        {
+          "X": "1",
+          "absolute_error": "3E-69"
+        },
+        {
+          "X": "3",
+          "absolute_error": "3E-69"
+        },
+        {
+          "X": "10",
+          "absolute_error": "0E-69"
+        }
+      ]
+    }
+  },
+  "verified_identities": [
+    "split radial Gaussian moments, with independent spin dimension H",
+    "heat parameter Jacobian and polynomial coefficients",
+    "regulator jet including vector-dimension derivative",
+    "elementary heat integral",
+    "primitive derivative",
+    "small-X cancellations and constant",
+    "finite constant with subtraction normalization",
+    "negative control with frozen vector trace"
+  ],
+  "limits_not_numerically_inferred": "Endpoint limits of the explicit primitive are proved in GluonLoopFinite.lean.",
+  "unproved_lean_target": "YMReview.NovemberMatching.GluonLoop.SubmittedFinitePartTest",
+  "formal_gaps": [
+    "actual noninteger innerTrace/yeast to the stated contracted Gaussian moment",
+    "source regulated Taylor coefficient to the explicit jet",
+    "assembly with source ultraviolet boundary and tensor/scale laws"
+  ]
+}

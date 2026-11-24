@@ -1,0 +1,9 @@
+import GhostLoopSolution
+#check YMReview.NovemberMatching.GhostSolution.acceptance
+#print axioms YMReview.NovemberMatching.GhostSolution.acceptance
+#print axioms YMReview.NovemberMatching.GhostUnit.finite_unit_exact
+#print axioms YMReview.NovemberMatching.GhostSolution.nonzero_limit
+#print axioms YMReview.NovemberMatching.GhostJet.submitted_regulator_jet_test
+#print axioms YMReview.NovemberMatching.GhostMellin.logExp_integral
+#print axioms YMReview.NovemberMatching.GhostPrimitive.primitive_small
+#print axioms YMReview.NovemberMatching.GhostPrimitive.primitive_large

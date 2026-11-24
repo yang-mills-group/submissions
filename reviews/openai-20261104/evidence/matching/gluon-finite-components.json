@@ -1,0 +1,402 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-16T20:50:07.197546+00:00",
+  "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "source_build_reused": true,
+  "review_build_initially_absent": true,
+  "project": "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project",
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "scope": "Gluon finite-value components only. Not a proof of SubmittedFinitePartTest.",
+  "full_evaluator_identity": "not_formalized",
+  "modules": [
+    {
+      "module": "GhostConventionCheck",
+      "source": "checks/matching/GhostConventionCheck.lean",
+      "source_sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7",
+      "log": "evidence/matching/gluon-finite-components/GhostConventionCheck.log",
+      "log_sha256": "63f04cf6464d145d0c65f3b1d5f74f68a154593426b3f36ff41482b4952c8e05",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostConventionCheck.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostConventionCheck.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopBenchmark",
+      "source": "checks/matching/GhostLoopBenchmark.lean",
+      "source_sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopBenchmark.log",
+      "log_sha256": "13a14f1e06bd2995d172c3baa12f372757cfe024385c762234577e8323eec11b",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopBenchmark.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopBenchmark.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopFiniteEvaluation",
+      "source": "checks/matching/GhostLoopFiniteEvaluation.lean",
+      "source_sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopFiniteEvaluation.log",
+      "log_sha256": "af0cf777a7f709bf69b9cea84501690b1d505396333d631129c435938055efbc",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopFiniteEvaluation.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopFiniteEvaluation.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopTrace",
+      "source": "checks/matching/GhostLoopTrace.lean",
+      "source_sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopTrace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopTrace.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopTrace.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopRadial",
+      "source": "checks/matching/GhostLoopRadial.lean",
+      "source_sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopRadial.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopRadial.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopRadial.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopContinuation",
+      "source": "checks/matching/GhostLoopContinuation.lean",
+      "source_sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopContinuation.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopContinuation.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopContinuation.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopJet",
+      "source": "checks/matching/GhostLoopJet.lean",
+      "source_sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopJet.log",
+      "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopJet.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopJet.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopInfrared",
+      "source": "checks/matching/GhostLoopInfrared.lean",
+      "source_sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopInfrared.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopInfrared.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopInfrared.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopMellin",
+      "source": "checks/matching/GhostLoopMellin.lean",
+      "source_sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopMellin.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopMellin.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopMellin.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopPrimitive",
+      "source": "checks/matching/GhostLoopPrimitive.lean",
+      "source_sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopPrimitive.log",
+      "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopPrimitive.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopPrimitive.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopFlow",
+      "source": "checks/matching/GhostLoopFlow.lean",
+      "source_sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopFlow.log",
+      "log_sha256": "d34baec7cbf7aad0535838538fd7ad1bcddfe027015fea3397ccd3086b203244",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopFlow.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopFlow.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopUnit",
+      "source": "checks/matching/GhostLoopUnit.lean",
+      "source_sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopUnit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopUnit.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopUnit.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopTensor",
+      "source": "checks/matching/GhostLoopTensor.lean",
+      "source_sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopTensor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopTensor.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopTensor.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopSolution",
+      "source": "checks/matching/GhostLoopSolution.lean",
+      "source_sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3",
+      "log": "evidence/matching/gluon-finite-components/GhostLoopSolution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostLoopSolution.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostLoopSolution.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GhostFiniteAudit",
+      "source": "checks/matching/GhostFiniteAudit.lean",
+      "source_sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9",
+      "log": "evidence/matching/gluon-finite-components/GhostFiniteAudit.log",
+      "log_sha256": "408810d2f43695ddc37d66e9e1d14d0db1db426bf421c22006c5820d9c48633e",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GhostFiniteAudit.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GhostFiniteAudit.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GluonLoopVertex",
+      "source": "checks/matching/GluonLoopVertex.lean",
+      "source_sha256": "1f3cb1bbfe868de55f1193dce5967786bd37647806c08cc917cb5c7233fa8ad2",
+      "log": "evidence/matching/gluon-finite-components/GluonLoopVertex.log",
+      "log_sha256": "4310ce7f222d36fe693adec725cba6bd2d847f7bf9fa89169d07959a35c14823",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GluonLoopVertex.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GluonLoopVertex.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GluonLoopTrace",
+      "source": "checks/matching/GluonLoopTrace.lean",
+      "source_sha256": "7090f5426d72bc8e692492fea9f520df9796fcd93df5b8c3a773043b227a90bd",
+      "log": "evidence/matching/gluon-finite-components/GluonLoopTrace.log",
+      "log_sha256": "54b78f9c72411e3dc205b6a4a307910f3e76371b094f32481aab610cfb70b9b6",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GluonLoopTrace.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GluonLoopTrace.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GluonLoopFinite",
+      "source": "checks/matching/GluonLoopFinite.lean",
+      "source_sha256": "1e2e1ac634e486bbf78de5b2e5d80a56076d1828d86177596095091796f77443",
+      "log": "evidence/matching/gluon-finite-components/GluonLoopFinite.log",
+      "log_sha256": "f33b0af9b81a53dabf12dd2a75bf79db8e0529b4962398326754f3d1daae608f",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GluonLoopFinite.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GluonLoopFinite.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GluonLoopHeat",
+      "source": "checks/matching/GluonLoopHeat.lean",
+      "source_sha256": "b82cb0b719f2d6a1b59f63b38f1d496f85c6c4d8fa4f720896dd89fd27ff1bd3",
+      "log": "evidence/matching/gluon-finite-components/GluonLoopHeat.log",
+      "log_sha256": "ee8de7f002883239a20b813fca9d2f1e8433a94d21fb4a455c7fc52098d913d3",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GluonLoopHeat.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GluonLoopHeat.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "module": "GluonLoopTensor",
+      "source": "checks/matching/GluonLoopTensor.lean",
+      "source_sha256": "731bbec9629455f332b7f3cc8e4b51813601927efcf46b24575f40eed6c83208",
+      "log": "evidence/matching/gluon-finite-components/GluonLoopTensor.log",
+      "log_sha256": "38b6e35ed11cefc81fa0a55a2ada676e61bc2f1ca003e2e78af317eeb2026f8d",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/.lake/build/lib/lean/GluonLoopTensor.olean",
+        "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/fresh-build/project/GluonLoopTensor.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GluonVertex.field_W": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonTrace.trace_value": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.submitted_finite_reading": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.submitted_finite_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.primitive_deriv": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.primitive_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.primitive_small": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonLoop.finite_constants": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonHeat.split_radial_T": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonHeat.split_radial_L": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonHeat.heatPolynomial_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonTensor.finite_sturdy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GluonTensor.finite_scale_word": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "finished_utc": "2026-11-16T20:52:43.930336+00:00",
+  "review_sources_unchanged": true
+}

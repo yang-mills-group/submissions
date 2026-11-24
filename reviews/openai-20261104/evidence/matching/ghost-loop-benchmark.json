@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T14:59:18.280381+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/matching/GhostLoopBenchmark.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "source": "checks/matching/GhostLoopBenchmark.lean",
+  "source_sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8",
+  "log": "evidence/matching/ghost-loop-benchmark.log",
+  "log_sha256": "13a14f1e06bd2995d172c3baa12f372757cfe024385c762234577e8323eec11b",
+  "direct_import_sources": [
+    {
+      "module": "YM.MS.ScaleForest.Bubbles",
+      "path": "YM/MS/ScaleForest/Bubbles.lean",
+      "sha256": "fa979e13821c4d972815bb086cab2b5e2fc61b2785addcd14ee024f430c3a561"
+    },
+    {
+      "module": "Mathlib.NumberTheory.Harmonic.GammaDeriv",
+      "path": ".lake/packages/mathlib/Mathlib/NumberTheory/Harmonic/GammaDeriv.lean",
+      "sha256": "a9c35fb825681e5ed9ec6cc72b1bddf306d9a79988b6f49ffe4cb1c3890158d4"
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "path": ".lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Integrals/Basic.lean",
+      "sha256": "58a81e8137bddf5cc43ae28f08ffa75ea3aa086e607cf70e70f70c3c8e935e81"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "path": ".lake/packages/mathlib/Mathlib/Tactic.lean",
+      "sha256": "c6f2c548596b635a3d5c8aff8b19cbdeb60dd54e41bb89a1cd03b1a54d335fa5"
+    }
+  ],
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GhostLoop.numerator_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.numerator_gamma_ratio": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.numerator_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.tensor_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.tensor_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.finite_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.parameter_weight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.submitted_pole": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.premature_tensor_error": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.premature_tensor_error_nonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.submitted_finite_reading": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.submitted_scale_difference": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.submitted_scale_coefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.finitePart_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.finite_test_iff_reference": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.heatDressing_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.heatDressing_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostLoop.submitted_line_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Independent Gamma-function reference and Laurent coefficients, submitted pole comparison, finite-reading bridge and exact renormalization-scale dependence, reduction to one reference scale, heat-dressing bounds and pointwise infrared removal for the actual integrated line. Uses already built submission libraries; not a new whole-submission rebuild or Comparator run.",
+  "not_proved": [
+    "Dimensional momentum integral reduction to the independent Gamma expression.",
+    "SubmittedFinitePartTest (equivalently ReferenceScaleTest): equality of the submitted finite bubble value after its infrared-length limit to the reference.",
+    "Identity of the ordered-scale graph with the dressed ordinary two-line integral, including its dimensional continuation and subtraction; loop-integral infrared removal.",
+    "A complete gauge-invariant physical correlation coefficient beyond calibration."
+  ],
+  "external_reference": {
+    "author": "Andreas Rodigast",
+    "title": "One-Loop Divergences of the Yang-Mills Theory Coupled to Gravitation",
+    "revision": "2008-08-20",
+    "url": "https://qft.physik.hu-berlin.de/wp-content/uploads/2012/10/DA-andreas.pdf",
+    "location": "Section 4.3.1, equation (4.30), printed page 27; PDF page 37",
+    "convention_note": "Source uses D=4-epsilon_R and Minkowski conventions; our epsilon is epsilon_R/2. Constants 8/3 and 5/3 are numerical cross-checks."
+  }
+}

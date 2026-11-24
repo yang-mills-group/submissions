@@ -1,0 +1,69 @@
+{
+  "checked_utc": "2026-11-16T19:21:09.926191+00:00",
+  "scope": "Exact rational scalar-antighost transcription; not a Lean evaluator run or formal source-equivalence proof.",
+  "cases": [
+    {
+      "n": 2,
+      "shapes": 1,
+      "raw_contractions": {
+        "0": 8
+      },
+      "raw_coefficients": {
+        "-1/4": 8
+      },
+      "ordered_domain_terms": 8,
+      "terms_per_cell": 4,
+      "cycle_order_cells": 2,
+      "weights": {
+        "-1": 2
+      }
+    },
+    {
+      "n": 3,
+      "shapes": 2,
+      "raw_contractions": {
+        "0": 48,
+        "1": 48
+      },
+      "raw_coefficients": {
+        "-1/8": 96
+      },
+      "ordered_domain_terms": 96,
+      "terms_per_cell": 8,
+      "cycle_order_cells": 12,
+      "weights": {
+        "-1": 12
+      }
+    },
+    {
+      "n": 4,
+      "shapes": 5,
+      "raw_contractions": {
+        "0": 384,
+        "1": 384,
+        "2": 384,
+        "3": 384,
+        "4": 384
+      },
+      "raw_coefficients": {
+        "-1/16": 1920
+      },
+      "ordered_domain_terms": 2304,
+      "terms_per_cell": 16,
+      "cycle_order_cells": 144,
+      "weights": {
+        "-1": 144
+      }
+    }
+  ],
+  "negative_control_omitting_balanced_tree_rejected": true,
+  "source_files": {
+    "YM/MS/KoszulAllocate.lean": "a2adc5d153c35e7f703e15c89b1774c4c58a6678abbcd405acaa142c6adc13d4",
+    "YM/MS/ScaleForest/Glue.lean": "2bc2a7b81d98f585e7e2fc01cce4be7d3ac61b4d969cfd4fc10fc46dc8331369",
+    "YM/MS/ScaleForest/Ordered.lean": "1ea8113f8bfb8280cd21d2a482641de7f9488161fa923c6ffe96c553c09f2abf",
+    "YM/MS/ScaleForest/AllHistories.lean": "fb8a4885c0fbee101ee172e51ce43ce413865d669a9c86931d55b7102eda2bb6",
+    "YM/MS/ScaleForest/Halves.lean": "829214f986e69125106c4c7be0ac8e714c7e3c98a6af4231e8c549d251a586dc",
+    "YM/MS/ScaleForest/HeatScale.lean": "b1dacf67849d28bf871853dd0c68420f8c5df3bd02221cf5484637caf3647ffd"
+  },
+  "box_conclusion": "Each of six directed cyclic orderings and 24 strict edge-scale orders has total coefficient -1. The four half-line factors, bulk bridge factors and all Koszul signs are included."
+}

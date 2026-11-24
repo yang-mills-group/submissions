@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T05:35:34.860578+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/matching/CountertermAudit.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "source": "checks/matching/CountertermAudit.lean",
+  "source_sha256": "a2386bde8467bb0b16827193cf67403e52190f20f5313ba8dbcf5f3118c1d490",
+  "log": "evidence/matching/counterterm-audit.log",
+  "log_sha256": "638c308dd65c8850b50c52ab845d0b7e4f328d57e05dcef25e6297eff12df86e",
+  "direct_import_sources": [
+    {
+      "module": "YM.MS.ScaleForest.TestScale",
+      "path": "YM/MS/ScaleForest/TestScale.lean",
+      "sha256": "f47a8607d4aeb5028768b5a9706790bc2ad1fc1edda0edbde199801b27b0c076"
+    }
+  ],
+  "printed_axioms": {
+    "YM.MS.ScaleForest.TwoPoint.poleK": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.TwoPoint.ghost_bill": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.Triangle.ghost_input": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.Triangle.premature": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.Triangle.DScaleJet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.simple_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.simple_pole_rule": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.final_including": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Type and axiom inspection of eight submitted pole and finite-term theorems. Not independent reproofs, a new loop calculation, or an identification of the full prescription with conventional MSbar amplitudes. Uses already built submission modules; no new Comparator run."
+}

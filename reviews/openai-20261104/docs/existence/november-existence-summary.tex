@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=0.8in]{geometry}
+\usepackage{amsmath,microtype,xcolor,xurl,hyperref,fancyhdr,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
+ pdftitle={The November OpenAI Yang-Mills construction: existence review},
+ pdfauthor={Yang--Mills group},
+ pdfsubject={Two-page summary of changes from October and the repeated independent checks}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{14pt}
+\setlist{leftmargin=1.35em,itemsep=5pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small November Yang--Mills construction: existence review}
+\fancyhead[R]{\small Draft for group review}
+\fancyfoot[C]{\thepage}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\begin{document}
+\begin{center}
+{\Large\bfseries The November OpenAI Yang--Mills construction}\par
+{\large Existence results and the repeated October checks}\par
+Yang--Mills group\quad\textbullet\quad 11 November 2026
+\end{center}
+
+\textbf{The November construction passes the group's October checks.}
+We adapted the independent tests to the November code, proved the combined
+acceptance theorems in Lean, and checked both with Comparator. November also
+strengthens OpenAI's public existence specification, particularly the
+connection to the lattice theory and the free-field short-distance limit.
+This note summarizes those changes and the completed checks. The separate
+claim of agreement with positive-order perturbation theory is the next
+subject of review.
+
+\textbf{What remains the same.}
+The construction starts from the specified Wilson lattice measure for the
+chosen compact matrix gauge group with nonabelian simple Lie algebra. It
+removes the lattice cutoff by full convergence at each fixed physical
+volume, then extracts an infinite-volume subsequence of any requested
+increasing volume-index sequence. A single refinement serves the whole
+correlation hierarchy. The resulting mean hierarchy is decomposed into
+character phases and used for reconstruction. Much of the underlying proof
+is shared with October. Our comparison found identical normalized
+declaration digests for all 1,591 recorded declarations in the retained
+native certificate's type and definition closure; this comparison excludes
+theorem proof bodies.
+
+\textbf{What November makes stronger or more explicit.}
+Several improvements concern what the public theorem requires, rather than
+properties absent from October's underlying proof. Our stronger October
+checks already retained many of these connections.
+
+\begin{enumerate}
+\item \textbf{Lattice fields and limits.}
+The public data now specify linear graded lattice insertions, their unit
+and adjoints, and their projection onto the physical field spaces. The
+one-loop running coefficient is tied to the actual Wilson parameter and
+the chosen group's normalization. A common finite-volume table explicitly
+connects lattice convergence to locally uniform convergence along the IR
+subsequence. These requirements strengthen the identification of the
+continuum theory with the specified lattice construction.
+
+\item \textbf{Phases and stress tensor.}
+All joint moments of phase readings are tied to limits of widely separated
+groups of insertions in the same mean Wilson hierarchy. Every character
+phase must have a Wightman reconstruction. The anomaly field is defined
+as the centered trace of the stress tensor, which must satisfy translation
+and rotation Ward identities. These relations fix more than the name or
+scaling dimension of a proposed stress-trace field.
+
+\item \textbf{The free-field ultraviolet limit.}
+November requires convergence to the gauge-invariant free Maxwell reference
+for the same Lie algebra, at all sufficiently small real radii, uniformly
+over phases, with derivatives on separated compact sets. The field
+normalization maps and their inverses obey bounds, and the physical stress
+tensor is identified in this comparison. This strengthens the mean-hierarchy
+comparison along a shrinking sequence explicitly retained in our October
+target. It concerns short distances within the continuum theory; October
+already had full convergence when removing the lattice cutoff.
+
+\item \textbf{OPE consistency.}
+The existence target adds algebraic conditions on the coefficients and
+quantitative consistency estimates for finite nested expansions. These
+complement the coefficient and remainder bounds. They do not by themselves
+identify positive-order coefficients with perturbative calculations.
+\end{enumerate}
+
+\newpage
+\textbf{What we rechecked.}
+The November submission was rebuilt with its Lean toolchain. OpenAI's
+Existence and Matching targets passed Comparator, including repeat runs
+with the newer checker. For existence, we then transferred the group's
+October acceptance tests and the separate OPE check. The independent
+requirements were retained; import paths, public interfaces and proof
+assembly were adapted to November. Additional source conclusions bundled
+into the October target, including contact and calibration results, were
+recovered through explicit adapters.
+
+The transferred checks cover the Wilson-measure and insertion comparison;
+full UV and subsequential IR convergence; the independent scalar OS axioms
+E0--E4 and E0$'$ growth; the translation Ward identity with its fixed sign
+and normalization; operator coverage, quotient and dense-domain properties;
+the leading stress-trace two-point coefficient; existing common-scale and
+positive-probe statements; and the explicit-radius OPE predicate.
+
+Two theorems record the result in \code{checks/NovemberCombined.lean}:
+\begin{itemize}
+\item \code{YMReview.Acceptance.combined_acceptance} proves the ported October
+combined target, retaining its quantifiers over extraction orders and
+positive construction penalties.
+\item \code{YMReview.November.combined_acceptance} proves November's full
+public existence conditions together with the group's checks. One Wilson
+family is fixed before the requested volume sequence; each refinement
+retains the native data from which its public hierarchy is defined.
+\end{itemize}
+Thus the independent checks and the public existence conditions hold on
+the same constructed theory. The OS bridge explicitly identifies the
+public centered stress-trace correlations with the functions satisfying
+the independent axioms. As in October, that comparison uses joint Schwartz
+tests flat on coincidence diagonals; it does not assert positivity or
+uniqueness for unrestricted Euclidean contact extensions.
+
+\textbf{Verification record.}
+Both group targets passed Comparator on 11 November 2026. The run checked
+the frozen statements and their definitions with no definition holes,
+using Comparator \code{d03acab} and its Lean 4.34.0 checking kernel. The
+review-module audit covered 49 modules with no warnings and 95 axiom
+reports, all restricted to \code{propext}, \code{Classical.choice} and
+\code{Quot.sound}. The original submission files and frozen review inputs
+were unchanged across the run. The review modules were built in a fresh
+overlay using the existing November and dependency builds. These macOS
+runs used the upstream development launcher, without Linux process
+isolation, the optional second kernel or Palomar.
+
+\textbf{Conclusion and next step.}
+The formal transfer of the October checks is complete. There is no
+identified failure in this work that calls for another round of existence
+tests before proceeding. The short summary can accompany the existing
+assessment and verification records; the detailed comparison remains
+available for questions about individual definitions and proof paths.
+Further targeted tests would be appropriate if a concrete discrepancy is
+found, rather than as a prerequisite to starting the next stage.
+
+The scope remains an existence result with full fixed-volume UV convergence
+and subsequential IR limits. Neither the repeated checks nor November's
+stronger existence target establishes a mass gap, IR uniqueness, a unique
+vacuum, or equality of the theories selected in the two submissions.
+These were not requirements of the October acceptance tests.
+
+We now turn to perturbative matching: the definition of its perturbative
+reference, the field and coupling normalization conventions, the precise
+coefficient and remainder statements, and independent checks of concrete
+low-order predictions. The Matching Comparator pass is a completed formal
+verification result; deciding whether its target expresses the intended
+agreement with standard perturbation theory is the new validation task.
+
+{\small\textbf{Supporting records.}
+See the accompanying \href{october-november-existence-comparison.pdf}{detailed
+comparison}, especially Sections 4--7; \path{docs/november-port.md};
+\path{checks/NovemberAcceptanceSpec.lean}; and
+\path{evidence/combined-targets/combined-comparator.json} with its log.
+Paths refer to the November verification package.}
+\end{document}

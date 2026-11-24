@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "scope": "Exact finite tests and independently differentiated tensors; not a new Lean proof of every tensor component or a continuum-limit theorem.",
+  "vertex_tests": [
+    {
+      "color_dimension": 3,
+      "cubic_tensor_entries": 1728,
+      "cubic_momentum_coefficients": 20736,
+      "cubic_nonzero_entries": 216,
+      "quartic_tensor_entries": 20736,
+      "quartic_nonzero_entries": 648
+    },
+    {
+      "color_dimension": 4,
+      "cubic_tensor_entries": 4096,
+      "cubic_momentum_coefficients": 49152,
+      "cubic_nonzero_entries": 864,
+      "quartic_tensor_entries": 65536,
+      "quartic_nonzero_entries": 6480
+    }
+  ],
+  "tests_impose_momentum_conservation": false,
+  "all_arithmetic": "integer/rational and exact imaginary unit",
+  "negative_controls": {
+    "cubic_sign_and_extra_factorial_detected": true,
+    "quartic_sign_and_extra_factorial_detected": true
+  },
+  "wilson_affine_SU2_plaquettes": [
+    {
+      "input": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "a4_coefficient": "2"
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          2,
+          -1,
+          3
+        ],
+        [
+          1,
+          3,
+          -2
+        ]
+      ],
+      "a4_coefficient": "71"
+    },
+    {
+      "input": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ],
+      "a4_coefficient": "7"
+    },
+    {
+      "input": [
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          3,
+          0,
+          -1
+        ],
+        [
+          -1,
+          2,
+          2
+        ]
+      ],
+      "a4_coefficient": "129/2"
+    }
+  ]
+}

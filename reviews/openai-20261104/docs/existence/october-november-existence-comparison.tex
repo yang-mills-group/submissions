@@ -1,0 +1,902 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in]{geometry}
+\PassOptionsToPackage{obeyspaces,spaces}{url}
+\usepackage{amsmath,amssymb,mathtools,booktabs,longtable,array,enumitem,microtype,xcolor,xurl,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
+ pdftitle={Comparison of the October 28 and November 4 OpenAI Yang-Mills submissions: common construction and existence checks},
+ pdfauthor={Yang--Mills group},
+ pdfsubject={Working comparison of the common existence results; perturbative matching deferred}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{14pt}
+\setlist{leftmargin=1.5em,itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small October--November Yang--Mills comparison}
+\fancyhead[R]{\small Working draft, 11 November 2026}
+\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\src}[1]{\textsf{[#1]}}
+\newcommand{\oldlink}[2]{\href{https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/#1}{#2}}
+\newcommand{\reviewlink}[2]{\href{https://github.com/yang-mills-group/YM/blob/55ba9fc36293b3f4d52c6b1f813169a0be76ee98/submissions/openai-20261028/#1}{#2}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Comparing the October 28 and November 4\\[3pt] OpenAI Yang--Mills submissions}\par
+\vspace{7pt}
+{\large The common construction and the strengthened existence checks}\par
+Yang--Mills group\quad\textbullet\quad Working draft, 11 November 2026
+\end{center}
+
+\textbf{Scope.} This document compares the existence material shared by the two
+submissions, with particular attention to the mathematical requirements in
+OpenAI's November existence Comparator target. It also compares that target
+with the group's stronger October acceptance theorem. The new perturbative
+matching theorem, its diagrammatic reference, and its positive-order
+correlation and OPE calculations are reserved for a later review.
+
+\textbf{Current finding.} November retains a large common construction core
+and makes substantially more of its relationship to Yang--Mills explicit in
+the public existence statement. The most consequential additions connect
+microscopic fields to reconstructed fields, identify phases through moments
+of the same Wilson hierarchy, require a Ward-normalized stress tensor, and
+impose a free-Maxwell short-distance comparison. Our October acceptance
+theorem already retains much of the construction data missing from the small
+October target. Nevertheless, equivalence between our October target and
+November's target has not been proved. The latter's explicit Maxwell
+comparison is stronger in its radius and phase quantifiers. Section~\ref{sec:proofs}
+traces how these obligations are proved and distinguishes additional
+arguments from new public presentations of existing results.
+
+\textbf{Verification status.} The November Existence and Matching targets
+both passed Comparator, and both subsequently passed a repeat with Comparator
+\code{d03acab154d269c06e60e4de7e4cc85deebff94b} and the Lean 4.34.0 checking
+kernel. The final repeat finished on 10 November at 00:19 Pacific time.
+These are completed receipts, not estimates of a running process. The runs
+used macOS development mode without Linux/Landrun isolation or an independent
+second kernel. Passing Matching is recorded as a mechanical fact; its physical
+interpretation is outside this document. Section~\ref{sec:verification}
+gives the precise scope and records.
+
+The group's October checks have now also been transferred to the November
+construction. Both combined targets passed Comparator on 11 November, with
+only the three standard Lean axioms. The new theorem retains one native
+construction witness for November's public existence conditions and our
+independent checks; it does not assert equivalence of the two submissions'
+chosen theories. Section~\ref{sec:remaining} describes this additional result.
+\src{G3,E4}
+
+\section{Three statements that must be distinguished}
+\label{sec:three}
+
+The October public target, the group's October acceptance target, and the
+November public target ask different mathematical questions. A change in
+the public target need not mean that the older construction lacked a proof
+of the newly exposed property. It can mean that the older short statement
+discarded information established by its proof.
+
+\emph{October's public target} is \code{YangMills.JointExistence}, proved by
+\code{YangMills.jointExistence}. Its final hierarchy satisfies four named
+properties: Wilson convergence, reconstruction, an OPE with estimates, and a
+nonfree trace test. This short interface leaves the microscopic insertions
+and some relations between the resulting structures comparatively free.
+\src{O1}
+
+\emph{The group's October target},
+\code{YMReview.Acceptance.combined_acceptance}, retains an actual native
+\code{Family} and a \code{YM.Spec.Final} witness. Its clauses use that same
+witness for the independent lattice comparison, scalar OS axioms,
+translation Ward identity, operator content, leading trace law, and positive
+continuum probe. Its \code{SourceConclusions} also retains stronger submitted
+reconstruction, OPE, contact and short-distance results. Retaining these
+source predicates is useful, but does not turn every internal definition into
+an independently validated physical specification. \src{G1}
+
+\emph{November's public target} has the following form:
+\[
+ \forall g\;\forall h:g.\mathrm{IsSimple},\quad
+ \exists B:\mathrm{Maxwell.Reference}(g),\quad
+ \exists R:\mathrm{Wilson.Construction}(g),\quad R.\mathrm{Realizes}(B).
+\]
+Here \code{Construction} contains one Wilson family and a function selecting
+a refinement and hierarchy for every requested increasing volume sequence.
+The content of \code{Realizes}, rather than the short theorem displayed in
+the challenge file, is the central object to review. Its proof has its own
+import closure and does not import \code{Comparators.Matching.Solution}.
+It does share substantial internal analysis with other parts of the release.
+\src{N1,N2}
+
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.16\textwidth}>{\raggedright\arraybackslash}p{.25\textwidth}>{\raggedright\arraybackslash}p{.27\textwidth}>{\raggedright\arraybackslash}p{.25\textwidth}@{}}
+\toprule
+Question & October public target & Group's October target & November Existence target\\\midrule\endfirsthead
+\toprule Question & October public target & Group's October target & November Existence target\\\midrule\endhead
+Lattice fields & Continuous, local, gauge-invariant insertions. & Native polynomial sections, classical jet normalization and RG transfer certificates. & Linear graded raw fields, unit, conjugation and OS adjoint, covering the physical field space.\\
+Bare coupling & A positive logarithmic slope. & Retains the native calibrated family; a separate lattice-law comparison fixes conventions. & Explicit one-loop slope and a common cutoff/coupling trajectory.\\
+Limits & Full UV limit at fixed volume; an IR subsequence for every requested volume sequence. & Same pattern through the retained native witness. & Also exposes a common finite-volume point table and local uniform point convergence.\\
+Phases & A mixture identity; reconstruction attached to the selected theory. & Native spectral phase certificate and all-phase results on the same witness. & Every phase reconstructed; separated word trains fix joint moments of phase readings.\\
+Stress trace & A supplied grade-four field called \code{centeredTrace}. & Identified with the trace of the same tensor checked by the translation Ward test. & Defined from the supplied stress tensor; translation and rotation Ward laws required.\\
+Maxwell limit & Absent from the short target. & Explicit \code{FirstExtension}: mean hierarchy, common shrinking sequence, moving frames, all derivatives on separated compacta. & Mean and every phase, all sufficiently small real radii, frame bounds and fixed-field identification.\\
+OPE & Coefficient and finite-truncation error bounds. & Retains these and native nested results; a separate group Comparator checks OPE alignment. & Also exposes coefficient algebra and finite-tree power estimates.\\
+Independent OS test & Not the group's formulation. & Compiled scalar bridge, including E0$'$ growth. & Group's bridge now proved for the November witness, including identification with its public selected trace.\\
+IR dynamics & No unique infinite-volume limit or mass gap. & No such additional conclusion. & No such additional conclusion.\\
+\bottomrule
+\end{longtable}\endgroup
+
+\section{The common construction: inputs and order of limits}
+\label{sec:limits}
+
+Both submissions start with a compact matrix gauge group whose real Lie
+algebra is nonabelian and simple, and with the Wilson lattice measure.
+The compared public definitions of the gauge group and simplicity condition
+are unchanged after removal of comments and whitespace. The same is true
+of the compared base Wightman definitions. The Wilson action is still the
+specified plaquette action, not an unspecified measure selected after the
+continuum functions have been found. \src{O1,N3,E2}
+
+A member of the regulated family requires more than a lattice size. It
+includes an inverse spacing $D_N$, a physical period $L_p$, the Wilson
+parameter $\beta_{N,p}$, a lattice configuration with a group element on
+each oriented link, and an insertion $I_{N,p}(v,x;U)$ for each microscopic
+field token $v$. The torus has $D_N L_p$ sites per side, and the physical mesh
+is $a_N=D_N^{-1}$. The period and mesh schedules, action parameter and
+insertions all belong to one family chosen before the requested IR sequence.
+\src{O1,N3}
+
+Writing $S_{N,p}$ for the resulting lattice correlations, the common limit
+pattern is schematically
+\begin{equation}\label{eq:limits}
+ \begin{gathered}
+ \exists C\quad\forall p:\N\to\N\text{ strictly increasing}\quad
+ \exists q:\N\to\N\text{ strictly increasing}\quad\exists S,\\
+ S_{p(q(k))}=\lim_{N\to\infty}S_{N,p(q(k))},\qquad
+ S=\lim_{k\to\infty}S_{p(q(k))}.
+ \end{gathered}
+\end{equation}
+The correlations and their test domains must be supplied to make this
+schematic formula precise. The UV limit is a full limit along the chosen
+cutoff schedule at each fixed period; the IR limit uses a subsequence of the
+requested period indices. Neither $p$ nor $q(k)$ is itself the physical side
+length. One refinement serves the whole hierarchy covered by the theorem,
+rather than being reselected for each correlation function.
+
+November's \code{FixedPointReturns} makes the intermediate objects explicit.
+Before requesting an IR sequence, one fixes a table $S_p(v;x)$ of continuous
+correlation kernels on separated configurations inside each physical torus.
+There are two compatibility statements. Smeared lattice correlations tend
+to integrals against that table. Also, on a compact separated set, lattice
+moments converge uniformly when their insertion sites approximate the
+specified continuum sites. The latter is an $\varepsilon$--$\delta$ statement
+about the mesh and point positions, not just pointwise convergence at one
+preferred sequence of lattice sites. \src{N4}
+
+The \code{pointwise} field of November's \code{ContinuumLimit} then requires
+these same finite-period kernels to converge locally uniformly along the
+selected IR subsequence. Its \code{smeared} field identifies the same mean
+hierarchy with the ordered lattice test limits. This exposes both steps of
+\eqref{eq:limits} in the public certificate. It does not make the IR limit
+unique and does not supply a general computable convergence rate. The
+selection uses ordinary noncomputable existence machinery.
+
+This distinction also prevents confusion between two uses of ``UV limit.''
+Removing the lattice cutoff at fixed physical volume is one limit. Taking
+short-distance scaling limits \emph{inside the already constructed continuum
+theory} is another. October has full convergence for the first operation
+even though the Maxwell comparison retained in our target uses a shrinking
+subsequence for the second. Section~\ref{sec:maxwell} explains November's
+improvement to the latter.
+
+\section{How much of the common proof is actually unchanged?}
+\label{sec:common}
+
+There are two useful comparison records, at different levels. First, a
+source-import analysis compares October's \code{Construction} with November's
+\code{Comparators.Existence.Solution}. These closures contain 9,466 and
+9,997 local modules respectively, excluding external dependencies. The
+November closure has the following classification against the original
+October source tree. \src{E2}
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule Classification & November existence modules\\\midrule
+Byte-identical source & 8,130\\
+Differences only in comments or whitespace & 959\\
+Differences only in diagnostics after comment removal & 281\\
+Remaining code differences at shared paths & 77\\
+New paths & 550\\\midrule
+Total & 9,997\\\bottomrule
+\end{tabular}
+\end{center}
+
+These are whole imported modules, not a count of declarations required by
+the final proof. Some new paths are reorganized or renamed old material.
+Consequently the table measures reuse and helps direct review; it does not
+say that precisely 550 new mathematical results were needed. Nor should the
+size of the entire November repository, much of which concerns matching,
+be used to estimate how much the common existence argument changed.
+
+Second, a retained Lean diagnostic starts at \code{YM.Spec.Final} in each
+compiled environment and follows project constants occurring in types and
+definition bodies, including constructors of encountered inductives. It
+does not follow theorem proof bodies. After removing binder names and
+expression metadata, all 1,591 recorded declarations have identical
+digests: declaration kinds, universe parameters, types and recorded bodies
+agree, and neither side has an extra declaration in this closure. The
+diagnostic preserves constant names rather than unfolding them into an
+arbitrary equivalence class. The two digest inventories have been rechecked
+for equality in preparing this draft. \src{E2}
+
+This is substantial evidence that the retained native certificate has not
+quietly acquired a different meaning. It is not a theorem identifying
+October's selected Wilson family with November's selected family, a replay
+of every theorem proof, or an audit of all the new public November records.
+The chosen witnesses may differ even when they satisfy the same native
+predicate. New public obligations still require inspection on their own.
+
+\section{What the November existence specification adds}
+\label{sec:additions}
+
+\subsection{Microscopic fields and the actual Wilson parameter}
+
+November's \code{WilsonData} supplies finite-dimensional raw coefficient
+spaces at each engineering cap. Their tokens exhaust the microscopic token
+type, and their finite-lattice insertions are complex-linear in the raw
+coefficients. There are compatible conjugation and reflected-adjoint maps,
+translation covariance, and a unit insertion that equals one at sufficiently
+fine cutoff, uniformly over periods. \code{AdjointOn} requires a surjective
+projection onto physical fields, a linear quotient at each grade, and
+compatibility with the reconstructed adjoint and unit. \src{N5}
+
+These conditions address a concrete weakness of a target that allows any
+local gauge-invariant observable. Setting every insertion to the constant
+one obeys locality and gauge invariance, but violates linearity at zero.
+Linearity alone would still allow uninformative field systems; coverage of
+the physical fields, the graded Maxwell identification, nonzero trace law
+and other requirements must be considered together. Our October target
+instead retains native local-polynomial sections and their prescribed
+classical curvature-jet expansion. These are related approaches, not an
+already proved equivalence of specifications.
+
+The one-loop coefficient is now expressed using the same trace-normalized
+color space as the free reference and the Wilson action. If $E_a$ is an
+orthonormal Lie-algebra frame for
+$\langle X,Y\rangle=-m^{-1}\operatorname{ReTr}(XY)$, with $m$ the matrix
+size and $d_{\g}=\dim_\R\g$, the public definition is
+\begin{equation}\label{eq:casimir}
+ C_{\g}=\frac{1}{m d_{\g}}\sum_{a,b}
+       -\operatorname{ReTr}\bigl([E_a,E_b]^2\bigr),\qquad
+ b_0=\frac{11C_{\g}}{48\pi^2}.
+\end{equation}
+The running clause requires $\beta_{N,p}/\log D_N\to 2b_0$ uniformly in
+$p$. This is a statement about the parameter in the actual Wilson law.
+\code{WilsonTrajectory} additionally fixes one reference inverse coupling
+for all volumes, constrains all finite bare parameters to intervals around
+its logarithmic center, and imposes divisibility, odd blocking factors and
+a gentle relative logarithmic advance of the cutoff. These clauses prevent
+the running law from referring to an independently chosen number unrelated
+to the lattice action. They do not prove uniqueness of the IR state or the
+existence of a particular intrinsic physical mass scale. \src{N5,N6}
+
+There is also a useful uniqueness statement of limited scope:
+\code{AdjointOn.orthogonalSection} chooses the unique lift perpendicular to
+the kernel of the raw-to-physical map. This fixes a representative once the
+raw coordinates and projection are given. It is not uniqueness of the
+renormalized theory, its physical field normalization, or its OPE. \src{N7}
+
+\subsection{Phases are tied to the mean Wilson hierarchy}
+
+The small October public target relates the mean and proposed phase
+correlations through a mixture identity. A first-moment identity by itself
+does not establish that the proposed pieces are physical states. Formally,
+one could average $A$ and $2M-A$ to obtain $M$ even when the second term has
+no positivity. This is an illustration of the missing relation, not a
+complete countermodel satisfying every October condition.
+
+November requires more. For a separated word $w$ of microscopic observables,
+let $S_\chi(w)$ be its reading in character $\chi$. The phase signatures must
+separate characters. If $w_1,\ldots,w_k$ are translated apart by increasing
+Euclidean-time gaps, their single concatenated reading in the mean hierarchy
+must satisfy
+\begin{equation}\label{eq:trains}
+ \lim_{n\to\infty} S_{\rm mean}
+   \bigl(w_1,\tau_n w_2,\ldots,\tau_{(k-1)n}w_k\bigr)
+  =\int_X\prod_{j=1}^k S_\chi(w_j)\,d\nu(\chi).
+\end{equation}
+The formal statement also permits OS-adjoint words, giving the corresponding
+complex-conjugate factors. The cutoff and volume limits have already been
+taken before this separation limit. Thus the same Wilson hierarchy
+determines all these joint phase moments, not just a barycenter. \src{N8}
+
+Every character must also have a Wightman theory, a faithful field
+representation, analytic continuation and joint tempered boundary
+distributions. The selected theory and its tube function are identified
+with the selected member of this family. These are genuine additional
+requirements on the proposed phases. Our October target retains a native
+spectral certificate that supplies related information, but the comparison
+of the two formulations has not been packaged as a Lean implication.
+Neither formulation classifies the vacuum space or proves that there is
+only one character. \src{N9,G1}
+
+\subsection{The anomaly field is the Ward-normalized stress trace}
+
+The October compact hierarchy stores a field called \code{centeredTrace}
+without storing a stress tensor in that structure. November stores
+$T_{\mu\nu}$ and a unit field and defines
+\[
+ \Theta=\sum_\mu T_{\mu\mu}
+       -S_{\chi_*}\!\left(\sum_\mu T_{\mu\mu}\right)\mathbf1.
+\]
+Its linearity and unit conditions make this subtraction agree with what
+correlations and reconstructed operators actually read. \src{N10}
+
+For a smooth compact window $\eta$ equal to one near the distinguished
+insertion and supported away from the spectators, the translation Ward
+identity requires
+\begin{equation}\label{eq:ward}
+ -\sum_\mu\int (\partial_\mu\eta)(y)
+ S_s\bigl(T_{\mu\nu}(y),A(x_0),\ldots\bigr)\,d^4y
+   =\partial_{x_0^\nu}S_s\bigl(A(x_0),\ldots\bigr).
+\end{equation}
+Here $s$ ranges over the mean and every phase. The same tensor has symmetry,
+conservation, rotation covariance and rotation Ward laws. Its continued
+Minkowski form is required to implement the infinitesimal symmetry action
+on the reconstructed field domain. Equation~\eqref{eq:ward} fixes a sign
+and normalization that conservation away from insertions alone would not
+fix. A freely rescaled scalar cannot replace the trace while preserving
+these relations. Our October Ward and trace bridges already check this
+connection on the October native witness. \src{N11,N9,G1}
+
+The explicit leading trace asymptotic remains
+\[
+ r^8\log^2(1/r)\,S_{\chi_*}\bigl(\Theta(-re_0/2),\Theta(re_0/2)\bigr)
+ \longrightarrow \frac{3\dim_\R\g}{\pi^4}.
+\]
+The specified finite Wick-profile exclusion is retained. This should not
+be enlarged to a theorem excluding every imaginable realization by
+composites of an arbitrary Gaussian family. Also, the numerical $b_0$
+cancels from this leading trace amplitude; the explicit running clause is
+a distinct test. The group's worked October LeadingTrace example explains
+that cancellation and its supporting normalization conventions. \src{G2,N10}
+
+\subsection{An all-radius, all-phase Maxwell comparison}
+\label{sec:maxwell}
+
+The November free reference is tied to the chosen group. Its color space
+maps onto the specified Lie algebra with the normalized trace metric.
+Its variables are free curvature jets obeying the Bianchi and free field
+equations; the sectors are exactly the gauge-invariant polynomials through
+each engineering degree. Correlations are fixed by Wick pairing of the
+massless curvature covariance, and the free stress has a specified
+normalization. The reference is therefore constrained data rather than an
+arbitrary correlation array to which an interacting theory may be fitted.
+\src{N12}
+
+A radius-dependent linear isomorphism $J_r$ identifies each such free
+sector with the corresponding physical field space. For finitely many
+fields and any derivative order, the public target requires, schematically,
+\begin{equation}\label{eq:maxwell}
+ \sup_{s\in X\cup\{\mathrm{mean}\}}\sup_{x\in K}
+ \left\|\partial^\alpha_x
+ S_s\bigl(J_rv_1,\ldots,J_rv_n;rx\bigr)
+ -\partial^\alpha_x S_{\rm Maxwell}(v_1,\ldots,v_n;x)\right\|
+ \longrightarrow0\quad(r\downarrow0)
+\end{equation}
+for compact separated $K$. The formal \code{mixed} clause also allows
+marked slots containing the \emph{fixed physical stress tensor} multiplied
+by $r^4$; these slots cannot be replaced by arbitrary moving fields.
+Its eventual-radius quantifier precedes the phase quantifier, so the
+comparison is uniform over phases. \src{N13}
+
+The target also bounds $J_r$ and its inverse in fixed coordinates, with
+arbitrarily small power losses. A row that first detects engineering degree
+$e$ has a forward bound of order $r^{e-\delta}$, and the inverse on the
+space through degree $d$ has a bound of order $r^{-d-\delta}$. Fixed-field
+laws identify the unit, stress and derivatives and include a finite set of
+separating probes. Such conditions restrict the otherwise substantial
+freedom of a radius-dependent choice of basis.
+
+Our October target explicitly retains \code{Pert.FirstExtension}, which
+compares the mean hierarchy and its derivatives with the free hierarchy
+along a common shrinking sequence, including marked stress slots. Its
+statement alone does not contain November's all-radius extension, uniform
+every-phase conclusion or frame bounds. November's proof obtains sampled
+estimates and applies \code{AllRadii.extendFrame} and
+\code{AllRadii.maxwellLimit} to supply the stronger public conclusion.
+This is a substantive difference between the compared statements. A more
+extensive theorem elsewhere in October could be relevant, but no completed
+implication from our published combined target to this November clause is
+claimed here. \src{O2,N1,N13}
+
+Equation~\eqref{eq:maxwell} is an order-zero free limit with controlled
+fields. It is not the deferred theorem identifying positive-order
+perturbative coefficients.
+
+\subsection{OPE consistency exposed in the existence target}
+
+The common OPE subject remains an asymptotic expansion of separated local
+fields with coefficient bounds and errors after finite truncation.
+November adds \code{CoefficientLaws}: multilinearity, compatibility with
+the physical labels and translations, dual channel coordinates, completeness
+of the channel expansion of one field, and deletion of a unit insertion.
+One explicit consequence is that a channel field cannot be zero; this
+excludes padding the coefficient table with invisible zero fields. \src{N14}
+
+\code{PowerTreeExpansion} also requires estimates for a fixed finite fusion
+tree with internal truncation levels fixed before the outer radius tends
+to zero. It compares flat and nested coefficients, and controls the
+corresponding correlation remainder with spectators. The bounds permit
+arbitrarily small power losses and include tested statements. These clauses
+expose consistency and quantitative information beyond a bare existential
+OPE assertion. They do not identify the coefficients with Feynman-graph
+coefficients, prove a convergent infinite OPE series, or establish uniqueness
+of every possible contact extension. The group's explicit-radius OPE
+predicate is now proved on the November hierarchy (Section~\ref{sec:remaining}).
+Equivalence between the finite-tree laws and October's native nested OPE
+formulation remains a separate alignment question. \src{N15,G3}
+
+\section{How the strengthened requirements are proved}
+\label{sec:proofs}
+
+The differences above are differences between specifications. To assess
+what changed mathematically, one must also read the proof supplying each
+new clause. Some clauses are direct translations of October's native
+certificate; others need additional estimates and selection arguments.
+The following comparison traces the actual November existence proof,
+without using the separate perturbative matching theorem.
+
+\subsection{One construction supplies all the objects}
+
+November's \path{Comparators/Existence/Solution.lean} starts by constructing
+one native run. Before any volume sequence is requested, it fixes the
+Wilson family, its lattice fields, a free reference for the same gauge
+group, and the finite-period continuum point table. For a requested volume
+sequence it invokes the native refinement theorem, obtaining a table $S$,
+a certificate $F$ of type \code{YM.Spec.Final}, and an OPE reader $Q$.
+The public hierarchy is then literally \code{hierarchy F Q}. The proof
+fills the fields of \code{ContinuumLimit} using these arguments throughout.
+\src{N1}
+
+This shared dependence is the essential connection. The phase proof does
+not start from a second independently selected ensemble, nor does the Ward
+proof select a new stress tensor after testing the anomaly. The OPE
+coefficients are the coordinates of the reader $Q$ belonging to this
+hierarchy. Its Maxwell comparison also uses $F$ and $Q$. This is visible in
+the short final proof and in the types of its bridge lemmas; it is more
+informative than a list of separate existence statements.
+
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.40\textwidth}>{\raggedright\arraybackslash}p{.30\textwidth}@{}}
+\toprule Public obligation & November producer & What is identified\\\midrule\endfirsthead
+\toprule Public obligation & November producer & What is identified\\\midrule\endhead
+Finite-period and IR points & \code{LeanPointReturns.nativeReturns} & One finite-period table works with every native final hierarchy of this run.\\
+Microscopic adjoint and quotient & \code{IssuedBridge.FieldQuotient.adjoints} & The actual lattice token projects to the same physical field and reflected adjoint.\\
+Phase moment laws & \code{IssuedBridge.PhaseCorrelations.law} & Word readings are characters of the native ground-state algebra.\\
+Every-phase reconstruction & \code{VacuumReconstruction.phases} in \code{IssuedExistencePhase} & The existing phase atlas supplies the Wightman theories and boundary distributions.\\
+Stress and anomaly & \code{publicWards}, \code{publicTrace} & The tensor is $F$'s energy field, and the anomaly field is its centered trace.\\
+OPE algebra and trees & \code{publicCoefficientLaws}, \code{onFiledUniform} & Coefficients, nested contractions and spectator estimates use the same $Q$.\\
+Full short-distance comparison & \code{FixedFields.sampledEstimates}, \code{AllRadii.extendFrame} & Sampled and all-radius field frames are reconciled on the same $F$.\\
+\bottomrule
+\end{longtable}\endgroup
+
+These source-level identifications are now supplemented by the group's
+combined November theorem, which requires the independent October checks
+on the same native witness. This establishes that the November construction
+satisfies those requirements; it does not prove equivalence between the
+two acceptance specifications. Section~\ref{sec:remaining} describes the port.
+
+\subsection{Point convergence is made explicit, using existing local control}
+
+The proof of \code{nativeReturns} has two parts. At a fixed period, the
+existing full-mesh UV theorem provides a continuous kernel and convergence
+along every sequence of lattice sites approaching a separated continuum
+configuration. Compactness of a fixed configuration set upgrades this to
+the uniform $\varepsilon$--$\delta$ assertion in \code{FixedPointReturns}:
+failure would give increasingly fine lattices and bad configurations;
+a convergent subsequence of those configurations would contradict the
+original point-limit assertion. This compactness argument does not replace
+the UV limit by a subsequential one. It proves a uniform statement about
+the already established full UV limit. \src{N16}
+
+For the IR comparison, \code{SpatialModulus.purchased} obtains a local
+Lipschitz estimate from the submitted bounds on lattice finite differences,
+uniform in the relevant large periods and fine cutoffs. On a slightly
+enlarged separated compact set, convergence at the existing dense set of
+generic configurations, that Lipschitz estimate, and continuity of the
+limiting kernel give local control near each point. A finite cover makes
+the control uniform. Passing to the fixed-period UV limit then gives
+local uniform convergence of the finite-period continuum kernels to $S$
+along the chosen volume subsequence. \src{N16}
+
+The November module packages this argument as a public bridge. The native
+modules \path{YM/FullVolume/Profiles.lean} and
+\path{YM/FullVolume/Connect.lean} used here are byte-identical to October's
+copies. The improvement is an explicit point-table interface and the
+uniform comparison proof connecting it to the final hierarchy, rather than
+a new solution of the IR uniqueness problem.
+
+\subsection{The phase and Ward checks expose native October structure}
+
+For phase moments, November's \code{OriginalTrainMoments.original} uses
+\code{YM.OS.Ground.arcs}. That lemma was already present in October, in
+the byte-identical file \path{YM/Ground/Moments.lean}. Increasing the
+separations between word insertions makes their mean correlation converge
+to a product of compressed operators on the ground-state space. The
+spectral representation turns this product into the integral of the
+product of character readings in \eqref{eq:trains}. Adding the reflected
+adjoint words gives the conjugate readings. \src{O3,N17}
+
+The separation statement has a similarly concrete proof. The compressed
+word operators generate the ground-state algebra. Two characters agreeing
+on all word readings agree on these generators, hence on the algebraic
+star algebra they generate, and then by continuity on its norm closure.
+Injectivity of the spectral parametrization identifies the characters.
+November exposes this consequence as injectivity of the public phase
+signature. It supplies more than a choice of functions whose average
+happens to be the mean correlation. \src{N17}
+
+Every-phase reconstruction is also built from the native phase atlas
+\code{L : EveryPhase.Almanac F}. Its existing actors provide the Hilbert
+spaces and fields; its contours provide the analytic functions and joint
+tempered boundary distributions. November checks the unit operator and
+adjoint identifications and explicitly identifies the selected actor and
+selected analytic function with the public selected theory. October's
+detailed \code{constructed} theorem already retained this all-phase
+reconstruction data. Thus much of the improvement here concerns what the
+public Comparator target is required to retain. \src{O2,N18}
+
+The Ward bridge is particularly transparent. For the mean hierarchy it
+uses \code{F.phase.transport.charges}; for a character $\chi$ it uses
+\code{F.phase.phase.flux chi}. Covariance likewise comes from
+\code{transport.motion} and \code{phase.sym}. These are fields of the
+native certificate whose definition closure agrees between the releases.
+November's public checks now require the derivative insertion, tensor
+transformation, translation flux, rotation flux and centered trace to fit
+together. They expose structure already central to the October construction
+and to our October Ward check. \src{N19,O4}
+
+\subsection{All radii require a new selection argument}
+
+One cannot obtain convergence at every small radius merely by writing down
+values between the sampled radii of \code{FirstExtension}. November instead
+proves that satisfactory frames exist at every sufficiently small radius
+for each fixed finite collection of demands. A demand bounds the number of
+insertions, filtration degrees and derivative orders, specifies a compact
+separated configuration window, and fixes an error tolerance. The finite
+tests are made on basis vectors; multilinearity then recovers general
+fields. \src{N20}
+
+The key lemma is \code{PhysMS.Frame.on_crew}. If a fixed demand failed at
+arbitrarily small radii, one could select a bad sequence tending to zero.
+The native trace-construction certificate supplies a refinement and
+calibrated frames along that sequence. The sequence comparison eventually
+satisfies the finite demand, giving a contradiction. The lemma therefore
+establishes eventual existence at all real radii, using more information
+than the single sampled sequence alone.
+
+Next, \code{furnished} makes one radius-dependent choice satisfying an
+increasing number of these demands as $r\downarrow0$.
+\code{base_stage} assembles the resulting frame tower, with compatible
+filtration inclusions, unit, reality and signed-coordinate symmetries, and
+mean Maxwell convergence on every separated compact set. This is a
+diagonal selection over finite requirements at each radius. It does not
+assert that the chosen frame depends continuously or differentiably on
+$r$, or give an effective convergence modulus. \src{N20}
+
+Finally, the public bridge must also agree exactly with the original
+sampled frames. \code{SparseFrame.splice} uses the original frame at a
+sampled radius and the all-radius frame elsewhere. Both choices satisfy
+the required asymptotics on their respective sets, so the combined choice
+does too. The splice is a compatibility step after the all-radius theorem
+has been proved; it is not the argument establishing convergence between
+samples. \src{N21}
+
+The native \code{PhysMS/Frame} modules and these assembly arguments are
+new files in November. This is additional analysis supporting a stronger
+existence endpoint. The source comparison does not prove that no equivalent
+result could be derived from October's more extensive internal estimates.
+
+\subsection{Why phases share the short-distance limit}
+
+The phase comparison uses the OPE and the engineering filtration. For the
+simple groups in the theorem, the free gauge-invariant field space below
+degree four is the identity line. Equality of the finite-dimensional
+physical and free field ranks transfers this statement to the interacting
+field quotient. In \code{YM.OPE.Short.Gap}, \code{unit_field} proves that
+every field of degree below four is a multiple of the unit, and
+\code{no_channels} eliminates positive OPE channels of degrees one, two
+and three. This is an engineering-degree statement, not a spectral mass
+gap. \src{N22}
+
+Consider a word $\boldsymbol A=(A_1,\ldots,A_n)$, with fixed filtration
+degrees $d_i$, and rescale every insertion position by $r$. Truncating its
+OPE at degree three leaves only the identity coefficient. The reader $Q$
+is common to the phases, and each phase assigns expectation one to the
+identity. Consequently the phase dependence is contained in the OPE
+remainder. With $D=\sum_i d_i$, the internal estimate is
+\begin{equation}\label{eq:phase-small}
+ \sup_{s,t}\sup_{x\in K}
+ \left\|\partial_x^j\left[
+ r^D\bigl(S_s(\boldsymbol A;rx)-S_t(\boldsymbol A;rx)\bigr)
+ \right]\right\|
+ \leq 2(4n)^j r^{4-\varepsilon}
+\end{equation}
+at sufficiently small positive $r$, for a separated compact $K$ and
+$\varepsilon>0$. Here $\partial_x^j$ denotes the full iterated derivative
+in the rescaled coordinates, and $s,t$ may be characters or the mean.
+For $j=0$ the numerical prefactor is two. Differentiating raises the
+degree of the differentiated field and introduces the compensating power
+of $r$, which preserves the remainder power. \src{N22}
+
+The public \code{FixedFields.PhaseBound} deliberately asks for the weaker
+zero-derivative bound $2r^{1-\delta}$, together with convergence of the
+phase differences at every derivative order. The stronger
+\eqref{eq:phase-small} is an internal theorem used by the existence proof;
+it should not be attributed verbatim to the public target. Transferring
+the estimate to moving fields also needs the frame bounds. The new
+\code{PhysMS.Frame.Phases} argument supplies that transfer, obtaining
+uniform vanishing of the differences in a common leading frame and then
+combining it with the mean Maxwell limit. \src{N22,N23}
+
+This explains both the strength and the limitation of the conclusion.
+After normalization, the same free limit is reached in every phase, with
+one frame shared by all phases. The frame covers the full finite-degree
+gauge-invariant curvature-polynomial spaces, so this test is substantially
+broader than testing only the stress trace. Yet all insertion points in
+\eqref{eq:phase-small} are in the shrinking cluster. The argument does not
+identify correlations at fixed macroscopic distances, nor assert the same
+phase independence with additional unscaled spectator fields.
+
+There is a useful consequence already available without reviewing
+perturbative matching. For a calibrated coupling
+$g(r)\asymp[\log(1/r)]^{-1/2}$, any positive power of $r$ is smaller than
+any prescribed power $g(r)^N$ at sufficiently small $r$. The lemmas
+\code{phase_jets_flat} and \code{Frame.negligible} make this comparison
+precise. They show why different phases can have indistinguishable
+short-distance power-series behavior while differing nonperturbatively.
+They do not calculate that series or prove that its coefficients agree
+with perturbation theory. \src{N22,N23}
+
+\subsection{The fixed stress tensor survives the field-frame choice}
+
+An arbitrary moving basis could otherwise conceal whether the physical
+stress tensor has the required free limit. November treats it separately.
+In \code{AllRadiiMaxwell.stress_column}, the rescaled physical tensor has
+coordinates of the schematic form
+\[
+ U_r^{-1}(r^4T_{\mu\nu})
+ =a(r)T^{\rm free}_{\mu\nu}
+   +\delta_{\mu\nu}\bigl(d(r)\Phi+e(r)\mathbf1\bigr).
+\]
+The trace-calibration estimates give $a(r)\to1$ and $d(r)\to0$.
+The unit term is controlled by the exact expectation identity
+$4e(r)=r^4\langle\operatorname{tr}T\rangle$, so $e(r)\to0$ as well.
+The free tensor here has the previously fixed Ward normalization.
+\src{N24}
+
+Finite-dimensional multilinearity then combines moving free-field slots
+with these fixed stress slots. This supplies the marked mixed moments
+in \code{MaxwellLimit.mixed}. The physical tensor is the one already
+identified by the translation and rotation laws; it is not replaced by
+a different tensor for each test or phase. The finite-probe conditions
+in \code{FixedFieldLaws} also ensure that prescribed field columns can
+be identified from a finite set of separated free-field measurements at
+each degree. \src{N13,N24}
+
+\subsection{Stronger existence checks do not re-export every October result}
+
+November's public existence theorem is not literally a superset of the
+long October \code{constructed} theorem. October explicitly returned
+contact-extension devices and their compatibility with the OPE reader,
+the \code{FourMeters} result, and a construction for every positive
+construction-penalty parameter. November's short existence target has no
+corresponding contact or \code{FourMeters} clause; its displayed proof
+chooses the penalty to be one. It asks for refinements of every requested
+volume sequence with full fixed-volume UV convergence. \src{O2,N1,N2}
+
+These are differences in what the endpoints retain, not evidence that
+November's source has lost the older capabilities. The group's November
+port now recovers these additional conclusions on its native witness,
+including the contact devices, \code{FourMeters}, and arbitrary positive
+penalty. They are proved by explicit adapters using November's lemmas;
+they do not follow merely from a pass of its short public target. \src{G3}
+
+\section{November passes the group's October checks}
+\label{sec:remaining}
+
+\textbf{The November construction satisfies the group's October acceptance
+conditions.} We proved this in Lean using the November construction results,
+and both combined targets passed Comparator on 11 November. This includes
+the independent OS comparison, the lattice and continuum-limit checks,
+the translation Ward identity, operator content, the leading stress-trace
+two-point law, the existing scale checks, and the OPE check. \src{G3,E4}
+
+To apply the October checks, we adapted their interfaces to the November code.
+The central lattice, OS, translation Ward, operator-content and leading-trace
+predicates retain their statement bodies. The OPE check retains its radius
+and state quantifiers, with the renamed public channel field. The additional
+source conclusions bundled into the October target were recovered through
+explicit adapters. The independent acceptance requirements were retained.
+\src{G3,E4}
+
+Two theorems make the result precise. The theorem
+\code{YMReview.Acceptance.combined_acceptance} proves the ported October
+combined acceptance target, retaining its quantifiers over input extraction
+orders and positive construction penalties. The theorem
+\code{YMReview.November.combined_acceptance} additionally requires November's
+full public existence conditions and the group's checks to hold together.
+It retains one Wilson family and, for each requested volume sequence, a
+refinement with native data $F$ and $Q$; the public hierarchy is explicitly
+\code{YangMills.hierarchy F Q}. Thus the tests apply to the same constructed
+theory. Both proofs are in \path{checks/NovemberCombined.lean}. \src{G3,E4}
+
+For the OS comparison, the port identifies the public centered stress trace
+with the native field used in our bridge, then proves equality of their
+Schwinger functions. Thus E0--E4 and E0$'$ apply to the selected scalar
+hierarchy on the same diagonal-flat joint Schwartz tests as in October.
+This does not establish unrestricted Euclidean contact-term positivity or
+uniqueness of a contact extension. The additional source contact and
+calibration conclusions are retained separately; bundling them does not
+independently validate every source definition.
+
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.22\textwidth}>{\raggedright\arraybackslash}p{.43\textwidth}>{\raggedright\arraybackslash}p{.28\textwidth}@{}}
+\toprule Check & Result on the November construction & Scope or remaining work\\\midrule\endfirsthead
+\toprule Check & Result on the November construction & Scope or remaining work\\\midrule\endhead
+Common native core & Both targets use a retained native \code{Final}; the new target also contains all November public existence conditions. & No cross-release equality theorem.\\
+Independent OS axioms & E0--E4 and E0$'$ proved for the public selected centered stress trace. & Scalar hierarchy; diagonal-flat joint tests.\\
+Lattice law and fields & Independent Wilson-law and insertion requirements proved on the November witness. & Predicate bodies retained.\\
+Stress and leading trace & Independent Ward identity and leading two-point law proved, with the public trace identified. & Same sign, coefficient and field requirements.\\
+Operator content & Independent coverage, quotient, no-extra-null-field and dense-domain requirements proved. & No separately specified canonical Hilbert space.\\
+Common physical scale & Existing common calibration and positive-probe conclusions transferred. & No intrinsic nonzero mass scale or mass gap claimed.\\
+OPE and contacts & Explicit-radius OPE check and additional contact/calibration source conclusions proved. & No contact-extension uniqueness or positive-order matching claim.\\
+\bottomrule
+\end{longtable}\endgroup
+
+The scope is the same as for the October checks: an existence theorem with
+suitable refinements of the requested volume sequences. The result does
+not require October and November to select identical IR limits. A mass gap,
+unique IR limit, unique vacuum and universality under arbitrary regulator
+choices were not October acceptance conditions and are not established by
+this transfer. Human validation of the definitions, a new November-specific
+adversarial exercise and the review of positive-order perturbative matching
+remain separate tasks; they do not change the completed status of the
+formal October checks.
+
+\section{Completed Comparator runs and their meaning}
+\label{sec:verification}
+
+The received November sources were rebuilt with Lean 4.32.0, beginning with
+no compiled project objects reused from either submission. Verified external
+dependency caches were reused. All four default targets compiled. The first
+resource-timing wrapper recorded an operating-system reporting failure after
+Lake had completed successfully; a separate direct
+\code{lake --no-cache --no-build build} then returned zero. That distinction
+is preserved in the receipts rather than replacing the original failed
+wrapper record. \src{E1}
+
+Each target was checked against its supplied challenge. Both configurations
+permit only \code{propext}, \code{Classical.choice} and \code{Quot.sound},
+enable no definition holes, and disable the optional second kernel. The
+separate theorem-specific axiom audits report exactly those three axioms.
+The challenge files intentionally use \code{sorry} to state the reference
+obligation; an accepted solution cannot depend on \code{sorryAx}.
+
+\begin{center}\small
+\begin{tabular}{llll}
+\toprule Target & Checker & Completion (UTC, 10 Nov) & Result\\\midrule
+Existence & Release-pinned \code{07bc4ea} & 04:48:38 & Passed\\
+Matching & Release-pinned \code{07bc4ea} & 05:30:13 & Passed\\
+Existence & \code{d03acab}, Lean 4.34.0 & 05:43:19 & Passed\\
+Matching & \code{d03acab}, Lean 4.34.0 & 08:18:57 & Passed\\\bottomrule
+\end{tabular}
+\end{center}
+
+The group's two combined November targets passed together on 11 November
+at 23:33:32 UTC, using Comparator \code{d03acab} and its Lean 4.34.0
+checking kernel, with no definition holes. The run took 1,020 seconds and
+built the review modules in a fresh overlay while reusing the existing
+November and dependency builds. The separate compilation audit covered 49
+review modules with no warnings and 95 axiom reports, all limited to the
+three standard axioms. The original 37,673 submission files and the frozen
+review inputs were unchanged across the run. This is an additional check
+of the transferred October requirements, distinct from the supplied-target
+runs above. \src{E4}
+
+The repeat used an unchanged upstream Comparator checkout and a Lean 4.32.0
+exporter, with the newer checking kernel. The local name ``patched recheck''
+in its evidence filenames denotes this newer-tool replay; it does not mean
+we edited the submitted proof or maintained a locally modified checker.
+The newer replay matters because the local tool audit reproduced defects
+with the older tools. This finding concerns the verifier software and is
+distinct from the October target's omitted physical relations.
+
+Preparing this draft rechecked the four log hashes, exit statuses and the
+explicit kernel/Comparator acceptance messages. It also rehashed all 37,673
+files in the received November source manifest: no differences were found.
+The prior four small controls accepted a valid proof and rejected a changed
+statement, a forbidden axiom and a changed definition. Those controls are
+not complete attempts to substitute a physically different QFT.
+
+The runs used the upstream macOS development launcher
+\code{fake-landrun.sh}. They establish the recorded formal comparison and
+kernel verdicts under that execution mode. They do not reproduce Linux
+process isolation, constitute a Palomar run, or validate the physical
+meaning of perturbative matching. The continued scientific review should
+use the stronger November statement as its object, not treat these mechanical
+verdicts as a substitute for that review.
+
+\appendix
+\section{Source map and retained evidence}
+\label{sec:sources}
+
+October source links below point to the public original-submission commit
+\code{3456e5e75cf8d4cd558955a5c7638fba2d68f464}; group-check links point to
+the published YM assembly \code{55ba9fc36293b3f4d52c6b1f813169a0be76ee98}.
+November source paths are relative to the \code{lean/} directory of the received
+November 4 distribution. The group's port paths in G3 and E4 refer to its
+separate November verification package. This local working draft does not require a link
+to a private GitHub repository. The SHA-256 of its supplied
+\code{SOURCES.sha256} file is
+\begin{quote}\small\path{c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9}.\end{quote}
+
+\begin{description}[style=nextline,leftmargin=3.5em,labelwidth=3em,align=left]
+\item[O1] \oldlink{ChallengeSpec.lean}{\code{ChallengeSpec.lean}}: public regularity, hierarchy, trace test, properties and joint existence. \oldlink{PublicWilson.lean}{\code{PublicWilson.lean}} and \oldlink{PublicTheory.lean}{\code{PublicTheory.lean}}: lattice and Wightman definitions.
+\item[O2] \oldlink{YM/Pert/FirstTarget.lean}{\code{YM/Pert/FirstTarget.lean}}, especially \code{FirstExtension}; \oldlink{Construction.lean}{\code{Construction.lean}}: the detailed October construction.
+\item[O3] \oldlink{YM/Ground/Moments.lean}{\code{YM/Ground/Moments.lean}}, \code{YM.OS.Ground.arcs}: separated-word limits in the ground-state algebra; byte-identical in November.
+\item[O4] \oldlink{YM/Spec/Closed.lean}{\code{YM/Spec/Closed.lean}}, \code{Locals}, \code{Materializes}, \code{Final}: the retained native field, Ward, phase and reconstruction data.
+\item[G1] \reviewlink{checks/AcceptanceSpec.lean}{\code{checks/AcceptanceSpec.lean}}: \code{SourceConclusions}, \code{Accepted}, \code{CombinedAcceptance}; \reviewlink{checks/CombinedAcceptance.lean}{\code{checks/CombinedAcceptance.lean}} and \reviewlink{checks/CompleteOS.lean}{\code{checks/CompleteOS.lean}}: compiled group endpoints.
+\item[G2] \reviewlink{docs/examples/LeadingTrace-20261028.lean}{\code{LeadingTrace-20261028.lean}} and \reviewlink{docs/examples/OctoberChain.lean}{\code{OctoberChain.lean}}: worked derivation and construction connections.
+\item[G3] In the November verification package: \path{checks/NovemberAcceptanceSpec.lean} and \path{checks/NovemberCombined.lean}, the two combined targets and their proofs; \path{checks/NovemberOS.lean}, the public-trace and Schwinger-function identifications; \path{checks/RetainedSourceProof.lean} and \path{checks/RetainedContactProof.lean}, the additional source conclusions. \path{docs/november-port.md} gives the detailed port report and reproduction commands.
+\item[N1] \path{Comparators/Existence/Challenge.lean}; \path{Comparators/Existence/Solution.lean}: the exact challenge and its construction proof.
+\item[N2] \path{YangMills/Existence.lean}, \code{ContinuumLimit} and \code{Construction.Realizes}; \path{YangMills/VolumeLimit.lean}, \code{Construction}.
+\item[N3] \path{YangMills/Geometry.lean}; \path{YangMills/Wightman.lean}; \path{YangMills/WilsonLattice.lean}.
+\item[N4] \path{YangMills/FiniteVolume.lean}, \code{PeriodPointTable} and \code{FixedPointReturns}.
+\item[N5] \path{YangMills/LatticeFields.lean}, \code{wilsonOneLoop}, \code{GradedTokens}, \code{WilsonData}, \code{AdjointOn}.
+\item[N6] \path{YangMills/CutoffTrajectory.lean}, \code{WilsonTrajectory}.
+\item[N7] \path{YangMills/LatticeSections.lean}, \code{AdjointOn.orthogonalSection}.
+\item[N8] \path{YangMills/Phases.lean}, \code{ObservablePhases.Law}.
+\item[N9] \path{YangMills/VacuumReconstruction.lean}, \code{TableLaws}, \code{ContinuedStress}, \code{PhaseSource}, \code{Phases}.
+\item[N10] \path{YangMills/CorrelationHierarchy.lean}, \code{stressTrace}, \code{centeredTrace}, \code{TraceTest}.
+\item[N11] \path{YangMills/StressTensor.lean}, \code{translationFlux}, \code{StressWardLaws}.
+\item[N12] \path{YangMills/FreeFields.lean}, \code{Coordinates}, \code{Reference}.
+\item[N13] \path{YangMills/ShortDistance.lean}, \code{FixedFieldLaws}, \code{FrameBounds}, \code{MaxwellLimit}; \path{Solution/AllRadiiBridge.lean}: public all-radius bridge.
+\item[N14] \path{YangMills/OPECoefficientLaws.lean}, including \code{CoefficientLaws.channelField_ne_zero}.
+\item[N15] \path{YangMills/PhysicalOPE/PowerTrees.lean}, \code{PowerTreeExpansion}.
+\item[N16] \path{Solution/PointReturns.lean}, \code{SpatialModulus.purchased}, \code{CompactTransfer.measured}, \code{LeanPointReturns.Uniform.compact}, \code{LeanPointReturns.nativeReturns}: fixed-period point tables and local uniform IR comparison.
+\item[N17] \path{YangMills/WilsonProof/NativeSupport/IssuedBridge/OriginalTrainMoments.lean}, \code{original}; \path{YangMills/WilsonProof/NativeSupport/IssuedBridge/OriginalPhaseSeparation.lean}, \code{original}: native train moments and character separation.
+\item[N18] \path{Solution/PhaseReconstruction.lean}, \code{OriginalPhaseContours.source}, \code{VacuumReconstruction.phases} in \code{IssuedExistencePhase}: all-phase public reconstruction.
+\item[N19] \path{YangMills/WilsonProof/NativeSupport/WardBridge.lean}, \code{publicWards}: public stress laws from the native mean and phase certificates.
+\item[N20] \path{YM/PhysMS/Frame/Atlas.lean}, \code{survey}; \path{YM/PhysMS/Frame/Stage.lean}, \code{on_crew}, \code{furnished}, \code{base_stage}: finite demands and the all-radius frame selection.
+\item[N21] \path{Solution/SelectedJets.lean}, \code{SparseFrame.splice}, \code{SparseFrame.original}, \code{SparseLeading.original} in \code{YM.Existence.SelectedJets}: compatibility with the sampled frames.
+\item[N22] \path{YM/OPE/Short/Gap.lean}, \code{unit_field}, \code{no_channels}; \path{YM/PhysMS/Foundation/Readout.lean}, \code{phase_values}, \code{phase_jets}; \path{YM/PhysMS/Foundation/Estimates.lean}, \code{phase_jets_flat}: engineering-degree and phase-remainder estimates.
+\item[N23] \path{YangMills/FieldMeasurements.lean}, \code{PhaseBound}; \path{YM/PhysMS/Frame/Phases.lean}, \code{within_price}, \code{negligible}, \code{all_leading}: public phase bound and its stronger native moving-frame estimates.
+\item[N24] \path{Solution/AllRadiiMaxwell.lean}, \code{stress_column}, \code{allRadii}, \code{Law.marked}; \path{Solution/FixedFieldBridge.lean}, \code{detector}, \code{sampledEstimates}: fixed stress and finite-probe identification.
+\end{description}
+
+The retained local evidence uses the workspace root
+\begin{quote}\small\path{/Users/oai/Documents/Codex/2026-10-28/thre/}.\end{quote}
+The following paths are relative to that root:
+\begin{description}[style=nextline,leftmargin=3.5em,labelwidth=3em,align=left]
+\item[E1] \path{work/ym-nov4-verification/evidence/}: \code{comparator-results.json}, \code{patched-comparator-recheck.json}, the four corresponding Comparator logs and receipts, \code{release-build-check.json}, \code{prepared-inputs.json}, \code{controls.json}, and \code{verification-report.md}. The prepared source is \path{work/ym-nov4-verification/release/}.
+\item[E2] \path{work/ym-october-november-comparison/}: \code{existence-only-import-comparison.json}, \code{public-declaration-comparison.json}, \code{DefinitionAudit.lean}, \code{definition-audit-receipt.json}, \code{definition-comparison.json} and the two definition-digest inventories. The older broad narrative report in that directory contains a stale pending-run sentence; this draft uses the completed receipts in E1 for status.
+\item[E3] \path{work/ym-october-november-acceptance/evidence/status.json}.
+\par This records an earlier, stopped attempt to apply November tests to the October submission, with no Comparator start or successful complete combined build. It is separate from the successful application of the group's October checks to November recorded in E4.
+\item[E4] In \path{/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/}, at revision \code{7a15e748eedc89e951be4dbc0ce5200478171451}: \path{evidence/independent-checks/AxiomAudit.json} and \path{port-audit.json}; \path{evidence/combined-targets/combined-comparator.json}, its log, \path{prepared-inputs.json}, and \path{input-stability.json}. The frozen reference statements and configuration are in \path{comparator/NovemberChallenge.lean} and \path{comparator/combined.json}.
+\end{description}
+
+The adjacent \code{evidence-summary.json} records the source and log checks
+performed for this draft. \code{proof-path-audit.json} records the file
+hashes and declaration locations used for Section~\ref{sec:proofs}, including
+the byte-identical native modules identified there.
+The new independent-target run is recorded separately in E4. A later review of perturbative
+matching should start from its precise public reference, coefficient
+definitions and same-witness clauses, rather than extending the conclusions
+of this existence comparison by implication.
+\end{document}

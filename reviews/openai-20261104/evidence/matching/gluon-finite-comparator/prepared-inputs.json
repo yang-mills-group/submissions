@@ -1,0 +1,387 @@
+{
+  "prepared_utc": "2026-11-16T21:28:42.867010+00:00",
+  "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "project": "/Users/oai/Documents/Codex/2026-11-13/loo/work/gluon-finite/full-comparator-20261116/project",
+  "review_modules": [
+    {
+      "module": "GhostConventionCheck",
+      "path": "GhostConventionCheck.lean",
+      "repository_source": "checks/matching/GhostConventionCheck.lean",
+      "sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7"
+    },
+    {
+      "module": "GhostLoopBenchmark",
+      "path": "GhostLoopBenchmark.lean",
+      "repository_source": "checks/matching/GhostLoopBenchmark.lean",
+      "sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8"
+    },
+    {
+      "module": "GhostLoopFiniteEvaluation",
+      "path": "GhostLoopFiniteEvaluation.lean",
+      "repository_source": "checks/matching/GhostLoopFiniteEvaluation.lean",
+      "sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33"
+    },
+    {
+      "module": "GhostLoopTrace",
+      "path": "GhostLoopTrace.lean",
+      "repository_source": "checks/matching/GhostLoopTrace.lean",
+      "sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de"
+    },
+    {
+      "module": "GhostLoopRadial",
+      "path": "GhostLoopRadial.lean",
+      "repository_source": "checks/matching/GhostLoopRadial.lean",
+      "sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60"
+    },
+    {
+      "module": "GhostLoopContinuation",
+      "path": "GhostLoopContinuation.lean",
+      "repository_source": "checks/matching/GhostLoopContinuation.lean",
+      "sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b"
+    },
+    {
+      "module": "GhostLoopJet",
+      "path": "GhostLoopJet.lean",
+      "repository_source": "checks/matching/GhostLoopJet.lean",
+      "sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36"
+    },
+    {
+      "module": "GhostLoopInfrared",
+      "path": "GhostLoopInfrared.lean",
+      "repository_source": "checks/matching/GhostLoopInfrared.lean",
+      "sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3"
+    },
+    {
+      "module": "GhostLoopMellin",
+      "path": "GhostLoopMellin.lean",
+      "repository_source": "checks/matching/GhostLoopMellin.lean",
+      "sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261"
+    },
+    {
+      "module": "GhostLoopPrimitive",
+      "path": "GhostLoopPrimitive.lean",
+      "repository_source": "checks/matching/GhostLoopPrimitive.lean",
+      "sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399"
+    },
+    {
+      "module": "GhostLoopFlow",
+      "path": "GhostLoopFlow.lean",
+      "repository_source": "checks/matching/GhostLoopFlow.lean",
+      "sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455"
+    },
+    {
+      "module": "GhostLoopUnit",
+      "path": "GhostLoopUnit.lean",
+      "repository_source": "checks/matching/GhostLoopUnit.lean",
+      "sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8"
+    },
+    {
+      "module": "GhostLoopTensor",
+      "path": "GhostLoopTensor.lean",
+      "repository_source": "checks/matching/GhostLoopTensor.lean",
+      "sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80"
+    },
+    {
+      "module": "GhostLoopSolution",
+      "path": "GhostLoopSolution.lean",
+      "repository_source": "checks/matching/GhostLoopSolution.lean",
+      "sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3"
+    },
+    {
+      "module": "GhostFiniteAudit",
+      "path": "GhostFiniteAudit.lean",
+      "repository_source": "checks/matching/GhostFiniteAudit.lean",
+      "sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9"
+    },
+    {
+      "module": "GluonLoopVertex",
+      "path": "GluonLoopVertex.lean",
+      "repository_source": "checks/matching/GluonLoopVertex.lean",
+      "sha256": "1f3cb1bbfe868de55f1193dce5967786bd37647806c08cc917cb5c7233fa8ad2"
+    },
+    {
+      "module": "GluonLoopTrace",
+      "path": "GluonLoopTrace.lean",
+      "repository_source": "checks/matching/GluonLoopTrace.lean",
+      "sha256": "7090f5426d72bc8e692492fea9f520df9796fcd93df5b8c3a773043b227a90bd"
+    },
+    {
+      "module": "GluonLoopFinite",
+      "path": "GluonLoopFinite.lean",
+      "repository_source": "checks/matching/GluonLoopFinite.lean",
+      "sha256": "1e2e1ac634e486bbf78de5b2e5d80a56076d1828d86177596095091796f77443"
+    },
+    {
+      "module": "GluonLoopHeat",
+      "path": "GluonLoopHeat.lean",
+      "repository_source": "checks/matching/GluonLoopHeat.lean",
+      "sha256": "b82cb0b719f2d6a1b59f63b38f1d496f85c6c4d8fa4f720896dd89fd27ff1bd3"
+    },
+    {
+      "module": "GluonLoopTensor",
+      "path": "GluonLoopTensor.lean",
+      "repository_source": "checks/matching/GluonLoopTensor.lean",
+      "sha256": "731bbec9629455f332b7f3cc8e4b51813601927efcf46b24575f40eed6c83208"
+    },
+    {
+      "module": "GluonLoopContraction",
+      "path": "GluonLoopContraction.lean",
+      "repository_source": "checks/matching/GluonLoopContraction.lean",
+      "sha256": "2b7fc1661d6cf6f93c5a08ffb88fa4f919d188fd0069e47a76f12d9412c5c07a"
+    },
+    {
+      "module": "GluonLoopYeast",
+      "path": "GluonLoopYeast.lean",
+      "repository_source": "checks/matching/GluonLoopYeast.lean",
+      "sha256": "3a7ff13f33a82cde36e2821154501ef5560b6dbb71649ff1304d5b442509db0b"
+    },
+    {
+      "module": "GluonLoopGaussian",
+      "path": "GluonLoopGaussian.lean",
+      "repository_source": "checks/matching/GluonLoopGaussian.lean",
+      "sha256": "0d84d31beee037b7a3964deb03f7ce58905b4e7733611673d321c4b3afd33768"
+    },
+    {
+      "module": "GluonLoopCarpet",
+      "path": "GluonLoopCarpet.lean",
+      "repository_source": "checks/matching/GluonLoopCarpet.lean",
+      "sha256": "95af7d8135f99c10f502c9cf5b2b9ad670a19d98d18dd00a70fd4a808578da61"
+    },
+    {
+      "module": "GluonLoopRadial",
+      "path": "GluonLoopRadial.lean",
+      "repository_source": "checks/matching/GluonLoopRadial.lean",
+      "sha256": "59726f646d935a4cc0c164243a6d843fcaed827a72ec264b0c504bd8d4e6142d"
+    },
+    {
+      "module": "GluonLoopContinuation",
+      "path": "GluonLoopContinuation.lean",
+      "repository_source": "checks/matching/GluonLoopContinuation.lean",
+      "sha256": "cb1d2fc8a6b081c22d2148cb9d3088d4a371f819b87aaee8403e14b9a1cf57d8"
+    },
+    {
+      "module": "GluonLoopJet",
+      "path": "GluonLoopJet.lean",
+      "repository_source": "checks/matching/GluonLoopJet.lean",
+      "sha256": "94130879b6adbe46fd06f846877b7224900cdc14ee1acec9b6a4cb829ddf6922"
+    },
+    {
+      "module": "GluonLoopInfrared",
+      "path": "GluonLoopInfrared.lean",
+      "repository_source": "checks/matching/GluonLoopInfrared.lean",
+      "sha256": "6914b38f8c27c7c132b0de44a5bcf09dd60992af7e8b8c1e55ecf94355a8443b"
+    },
+    {
+      "module": "GluonLoopJetParameter",
+      "path": "GluonLoopJetParameter.lean",
+      "repository_source": "checks/matching/GluonLoopJetParameter.lean",
+      "sha256": "7b24f967ba6a3dd38cec752b2807dd00975b6c2e3cec1a71d931bd70ac8e6016"
+    },
+    {
+      "module": "GluonLoopFlow",
+      "path": "GluonLoopFlow.lean",
+      "repository_source": "checks/matching/GluonLoopFlow.lean",
+      "sha256": "e90c29029061e55f17246425c46054e54f9ea4b136467329c291c1e2cd9576e6"
+    },
+    {
+      "module": "GluonLoopUnit",
+      "path": "GluonLoopUnit.lean",
+      "repository_source": "checks/matching/GluonLoopUnit.lean",
+      "sha256": "f68e0ed2b24187eee3abaf2e008b9f86c2b261bafd46e97bf29cd61508b9d1be"
+    },
+    {
+      "module": "GluonLoopSolution",
+      "path": "GluonLoopSolution.lean",
+      "repository_source": "checks/matching/GluonLoopSolution.lean",
+      "sha256": "83a703b0b92e51a9ce9a93c9cc3dd77cc8184bbb9d2a0f57ac27a8411d578ad0"
+    },
+    {
+      "module": "GluonFiniteAudit",
+      "path": "GluonFiniteAudit.lean",
+      "repository_source": "checks/matching/GluonFiniteAudit.lean",
+      "sha256": "620c518d40c4d609acc92b9ca0c0ab9eefe71ab348662ecee2d7e654ee03edc5"
+    }
+  ],
+  "project_files": [
+    {
+      "path": "GhostConventionCheck.lean",
+      "sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7"
+    },
+    {
+      "path": "GhostFiniteAudit.lean",
+      "sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9"
+    },
+    {
+      "path": "GhostLoopBenchmark.lean",
+      "sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8"
+    },
+    {
+      "path": "GhostLoopContinuation.lean",
+      "sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b"
+    },
+    {
+      "path": "GhostLoopFiniteEvaluation.lean",
+      "sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33"
+    },
+    {
+      "path": "GhostLoopFlow.lean",
+      "sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455"
+    },
+    {
+      "path": "GhostLoopInfrared.lean",
+      "sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3"
+    },
+    {
+      "path": "GhostLoopJet.lean",
+      "sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36"
+    },
+    {
+      "path": "GhostLoopMellin.lean",
+      "sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261"
+    },
+    {
+      "path": "GhostLoopPrimitive.lean",
+      "sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399"
+    },
+    {
+      "path": "GhostLoopRadial.lean",
+      "sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60"
+    },
+    {
+      "path": "GhostLoopSolution.lean",
+      "sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3"
+    },
+    {
+      "path": "GhostLoopTensor.lean",
+      "sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80"
+    },
+    {
+      "path": "GhostLoopTrace.lean",
+      "sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de"
+    },
+    {
+      "path": "GhostLoopUnit.lean",
+      "sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8"
+    },
+    {
+      "path": "GluonFiniteAudit.lean",
+      "sha256": "620c518d40c4d609acc92b9ca0c0ab9eefe71ab348662ecee2d7e654ee03edc5"
+    },
+    {
+      "path": "GluonFiniteChallenge.lean",
+      "sha256": "3c8f36f6f57eff38723275a5ba8702c229234579fbcdbdfdda8b9b1695045496"
+    },
+    {
+      "path": "GluonLoopCarpet.lean",
+      "sha256": "95af7d8135f99c10f502c9cf5b2b9ad670a19d98d18dd00a70fd4a808578da61"
+    },
+    {
+      "path": "GluonLoopContinuation.lean",
+      "sha256": "cb1d2fc8a6b081c22d2148cb9d3088d4a371f819b87aaee8403e14b9a1cf57d8"
+    },
+    {
+      "path": "GluonLoopContraction.lean",
+      "sha256": "2b7fc1661d6cf6f93c5a08ffb88fa4f919d188fd0069e47a76f12d9412c5c07a"
+    },
+    {
+      "path": "GluonLoopFinite.lean",
+      "sha256": "1e2e1ac634e486bbf78de5b2e5d80a56076d1828d86177596095091796f77443"
+    },
+    {
+      "path": "GluonLoopFlow.lean",
+      "sha256": "e90c29029061e55f17246425c46054e54f9ea4b136467329c291c1e2cd9576e6"
+    },
+    {
+      "path": "GluonLoopGaussian.lean",
+      "sha256": "0d84d31beee037b7a3964deb03f7ce58905b4e7733611673d321c4b3afd33768"
+    },
+    {
+      "path": "GluonLoopHeat.lean",
+      "sha256": "b82cb0b719f2d6a1b59f63b38f1d496f85c6c4d8fa4f720896dd89fd27ff1bd3"
+    },
+    {
+      "path": "GluonLoopInfrared.lean",
+      "sha256": "6914b38f8c27c7c132b0de44a5bcf09dd60992af7e8b8c1e55ecf94355a8443b"
+    },
+    {
+      "path": "GluonLoopJet.lean",
+      "sha256": "94130879b6adbe46fd06f846877b7224900cdc14ee1acec9b6a4cb829ddf6922"
+    },
+    {
+      "path": "GluonLoopJetParameter.lean",
+      "sha256": "7b24f967ba6a3dd38cec752b2807dd00975b6c2e3cec1a71d931bd70ac8e6016"
+    },
+    {
+      "path": "GluonLoopRadial.lean",
+      "sha256": "59726f646d935a4cc0c164243a6d843fcaed827a72ec264b0c504bd8d4e6142d"
+    },
+    {
+      "path": "GluonLoopSolution.lean",
+      "sha256": "83a703b0b92e51a9ce9a93c9cc3dd77cc8184bbb9d2a0f57ac27a8411d578ad0"
+    },
+    {
+      "path": "GluonLoopTensor.lean",
+      "sha256": "731bbec9629455f332b7f3cc8e4b51813601927efcf46b24575f40eed6c83208"
+    },
+    {
+      "path": "GluonLoopTrace.lean",
+      "sha256": "7090f5426d72bc8e692492fea9f520df9796fcd93df5b8c3a773043b227a90bd"
+    },
+    {
+      "path": "GluonLoopUnit.lean",
+      "sha256": "f68e0ed2b24187eee3abaf2e008b9f86c2b261bafd46e97bf29cd61508b9d1be"
+    },
+    {
+      "path": "GluonLoopVertex.lean",
+      "sha256": "1f3cb1bbfe868de55f1193dce5967786bd37647806c08cc917cb5c7233fa8ad2"
+    },
+    {
+      "path": "GluonLoopYeast.lean",
+      "sha256": "3a7ff13f33a82cde36e2821154501ef5560b6dbb71649ff1304d5b442509db0b"
+    },
+    {
+      "path": "comparator.json",
+      "sha256": "0aa508d28eaa1375475d9fd2edeb9cff95e825d27eb3fddfb84e49b35798f09a"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "ba46642e11ca72a0df977efc85ac0a28419658822b67eab6d22dd8aed03ad6e3"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "ee4ff6906443495c770bafcfdd1cff3cd8c28e91fc87163a0f3e2acadfbfd682"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+    }
+  ],
+  "tools": [
+    {
+      "name": "comparator",
+      "revision": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "toolchain": "leanprover/lean4:v4.34.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/comparator/.lake/build/bin/comparator",
+      "binary_sha256": "ef2b6b0742f22655cf41bcced461c1f19376a25253a6d5abb987add91451d738"
+    },
+    {
+      "name": "lean4export",
+      "revision": "4e7915201d3f9f04470d9eae002fa695f7cdc589",
+      "toolchain": "leanprover/lean4:v4.32.0",
+      "binary": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-comparator/tools/lean4export/.lake/build/bin/lean4export",
+      "binary_sha256": "ef1d0587c57f9d9aabf2a54952203a4405eeb4b8f613254e93b5b83e1a74769e"
+    }
+  ],
+  "target": "YMReview.NovemberMatching.GluonSolution.acceptance",
+  "target_predicate": "YMReview.NovemberMatching.GluonLoop.SubmittedFinitePartTest",
+  "audit_receipt_sha256": "8217a4b3cefff70d4f71905e62e780e3525a4dc9c945f708ac9e117710dc27d7",
+  "submission_before": {
+    "files_checked": 37673,
+    "manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+    "checked_utc": "2026-11-16T21:28:42.700694+00:00"
+  },
+  "submission_build_reused": true,
+  "project_build_initially_absent": true,
+  "definition_holes": [],
+  "mode": "macOS development; upstream fake-landrun; no optional second kernel"
+}

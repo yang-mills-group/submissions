@@ -1,0 +1,105 @@
+# Verification of the OpenAI November 4 Yang–Mills construction
+
+This private repository collects the group's verification of the November 4, 2026 submission: explanatory documents, independent Lean checks, build and axiom audits, Comparator records, and reproduction scripts. The construction passes the group's October acceptance checks. The perturbative-matching review now includes an explicit all-orders statement check and a completed finite ghost-loop calculation.
+
+**Human review of the all-orders perturbative reference remains necessary before a scientific endorsement of matching.** Lean and Comparator check the formal claims against their definitions. Our statement check makes the quantifiers and connection to the constructed theory explicit. The remaining central question is whether the action, graph/flow rules, subtraction prescription and operator dictionary define the intended Yang–Mills perturbation theory. The [review requirements below](#requirements-for-human-review) specify what must be examined.
+
+The submitted source is preserved in [OpenAI-YM-20261104](https://github.com/yang-mills-group/OpenAI-YM-20261104/tree/c1bb5a5566b2bad9d593980d470439f815895317/). [The source pin](provenance/submission.json) and [received-file manifest](provenance/SUBMISSION-SOURCES.sha256) identify the exact submission being reviewed. This repository keeps our additions and verification records separate from that source. The documents are working material for group review, not a completed assessment of perturbative matching.
+
+## Where to start
+
+| Read | Purpose |
+| --- | --- |
+| [One-page November assessment](docs/november-4-assessment-draft.pdf) ([source](docs/november-4-assessment-draft.tex)) | Current formal checks, the all-orders matching statement, and subtleties in renormalization, composite operators and interpretation. |
+| [Two-page existence summary](docs/existence/november-existence-summary.pdf) ([source](docs/existence/november-existence-summary.tex)) | Main changes from October and the successful transfer of the group's checks. The [detailed comparison](docs/existence/october-november-existence-comparison.pdf), [port report](docs/november-port.md) and [construction checklist](docs/checklist.md) give the supporting analysis. |
+| [All-orders statement review](docs/matching/all-orders-statement-review.md) | The intended asymptotic statement, its informal–formal correspondences, quantifier order, and remaining definition-level questions. Read this before interpreting the finite-loop result as evidence for all orders. |
+| [Perturbative-matching notes](docs/matching/november-perturbative-matching.pdf) ([source](docs/matching/november-perturbative-matching.tex)) | Detailed derivation, definition glossary, supplied-test inventory and independent tests. Sections 3.3–3.6 explain the graph/flow uniqueness bridges and diagnostic calculations; Appendix C follows the full finite ghost-loop proof. |
+| [Finite ghost-loop check](docs/matching/ghost-finite-check.md) | Exact theorem, normalization conventions, proof-file map, scope and reproduction commands for the completed benchmark. |
+| [Verification records](evidence/README.md) | What each build, axiom audit and Comparator run checked, with receipts, hashes and platform limits. |
+
+The readable Lean theorem [`AllOrders.submitted`](checks/matching/AllOrdersStatement.lean) proves a shared-witness restatement of arbitrary-order correlation and full OPE-output bounds, including that the measured coupling tends to zero. It reuses the submission's reference coefficients and conversion, so it checks statement alignment rather than independently identifying the reference with conventional perturbation theory. Its local build and axiom audit are distinct from the successful Comparator run for OpenAI's full Matching target.
+
+The independent theorem [`GhostSolution.acceptance`](checks/matching/GhostLoopSolution.lean) proves the full finite value of the actual submitted ghost-loop graph, including the constants `8/3` and `5/3`, every nonzero momentum, all color and tensor components, and every positive renormalization scale. Its frozen target passed Comparator. This is one gauge-dependent graph contribution, not the sum of all one-loop diagrams. The conventional Feynman-integral reduction underlying the independently specified answer still requires human review.
+
+## Current status
+
+| Work | Status |
+| --- | --- |
+| Clean submission build | Completed; the successful direct follow-up check resolves a timing-wrapper error |
+| OpenAI's Existence and Matching targets | Both passed Comparator, including the repeat with Comparator `d03acab` and the Lean 4.34.0 checking kernel |
+| Theorem-specific axiom audits | Both report only `propext`, `Classical.choice`, and `Quot.sound` |
+| October-to-November construction comparison | Two-page summary, detailed comparison and source tracing available |
+| Group's independent October checks on the November witness | Proved in Lean; 49 review modules and 95 axiom reports, with standard axioms only |
+| Comparator for the group's combined November targets | Both passed on November 11, with no definition holes; records kept separately from the supplied-target checks |
+| Independent full finite ghost-loop comparison | Proved; fresh 15-module build, standard-axiom audit and frozen-target Comparator passed on November 13 |
+| All-orders statement alignment | Shared-witness correlation/OPE restatement proved on the submitted construction; small-coupling limit and standard-axiom audit passed |
+| Scientific validation of perturbative matching | Prepared for human review; the requirements below remain to be resolved before endorsement |
+
+See [the verification records](evidence/README.md) for the commands, log hashes and platform limits. These runs used macOS development mode, without Linux/Landrun isolation or the optional second kernel. They are not Palomar runs.
+
+## Requirements for human review
+
+The review should decide whether the formal all-orders claim has the intended physical and mathematical meaning. It need not calculate infinitely many diagrams separately. The submission characterizes its graph sums by flow equations, classical input and renormalization boundary conditions, with uniqueness results at every order. Validating those definitions and general results offers an all-orders route; the explicit low-order calculations test consequences of that route.
+
+The following areas require readers familiar with QFT and Lean to compare the informal interpretation with the actual declarations. The [all-orders alignment table](docs/matching/all-orders-statement-review.md#informalformal-alignment), [matching glossary and discussion](docs/matching/november-perturbative-matching.pdf), and [source map](docs/matching/source-map.json) locate the relevant definitions in the pinned submission.
+
+| Area | What a reviewer needs to establish |
+| --- | --- |
+| **Classical action and field dictionary** | Identify the gauge-fixed Yang–Mills action, gauge group, coupling and color normalizations, BRST/source terms, propagators and local insertions. Check the scalar-antighost interpretation of the submitted source variables and its extension to renormalized composite insertions. The existing free-line and cubic ghost-vertex checks cover particular conventions, not this whole dictionary. |
+| **Graph rules and the all-orders flow characterization** | Check contraction and joining operations, graded signs, multiplicities and loop counting. Verify that the graph-to-flow identities and uniqueness hypotheses characterize the intended coefficient system at every order. A uniqueness theorem for a misidentified flow equation would not settle the physics question. |
+| **Renormalization and finite parts** | Check dimensional continuation, the permitted local counterterms, pure-pole subtraction, and ultraviolet boundary data against the claimed MS-bar prescription. Explain the relation between the summed scale-sector subtraction and conventional forest subtraction. Independently review the benchmark's Feynman integral, sign, Casimir convention and scale conversion; its Lean proof checks equality to the specified finite formula. |
+| **Composite operators, mixing and OPE** | Check the claimed insertion space, derivatives and equation-of-motion conventions, the common field and coupling conversion, and its inverse on OPE outputs. Verify that arbitrary exterior-field tests determine the full OPE output through each finite cutoff. The output cutoff and perturbative order are distinct quantifiers. |
+| **Matching to the constructed theory at all orders** | Trace the coefficients and remainder bounds to the same lattice-derived continuum hierarchy. Check the common reference, calibrated frame and measured coupling, their quantifier order, and the stated uniformities in phase, position and fields. Distinguish the construction's UV and selected IR limits from short-distance asymptotics and graph-regulator removal. Inspect the actual convergence theorems behind totalized limit definitions. |
+
+These are requirements for reviewing the statement and its defining mathematics. They should not be reported as a line-by-line human audit of the entire analytic proof. Reviewers who inspect particular estimates or proofs should identify those additional checks explicitly.
+
+For each area, record the declarations and source revision examined, the intended informal statement, the conclusion and supporting reasoning, the reviewer's name and date, and any unresolved questions. Distinguish **reviewed and accepted**, **needs clarification**, and **discrepancy found**. A passing Lean or Comparator log supplies verification evidence; it does not by itself resolve one of these interpretation questions. The present documents locate the questions and record completed formal checks; they do not claim that this human review is finished.
+
+The assessment must also retain the scope of the results. All-orders matching means an asymptotic remainder estimate at each fixed finite order, not convergence or Borel summability of the perturbative series. The condensed Lean statement leaves additional smeared and stress clauses in the full supplied target; the stress remainder has its own formulation. Matching concerns separated configurations and does not by itself settle contact terms or uniqueness of the large-volume limit. The transferred independent OS bridge concerns the selected centered stress-trace hierarchy on diagonal-flat joint Schwartz tests. Neither that bridge nor the matching check asserts a mass gap or identification with a separately specified canonical Hilbert space.
+
+## Contents
+
+- [`docs/existence/`](docs/existence/) contains the two-page summary, detailed comparison, their LaTeX sources, and supporting inventories.
+- [`docs/matching/`](docs/matching/) contains the matching account, definition glossary, supplied-test inventory, all-orders statement review, finite-loop guide and source map.
+- [`docs/checklist.md`](docs/checklist.md) records the completed transfer from October and separates optional follow-up work.
+- [`checks/`](checks/README.md) contains the independent specifications, their November proofs, and the OSreconstruction bridge.
+- [`comparator/`](comparator/) contains the frozen combined and finite ghost-loop reference statements and Comparator configurations.
+- [`evidence/`](evidence/README.md) keeps the submission build, supplied-target records and group-target records distinct.
+- [`provenance/`](provenance/) fixes the source inputs and hashes of the copied review artifacts.
+
+## Getting the source and checking this snapshot
+
+Organization members have read access to this review and the original source. From the submission-index checkout, first run `cd reviews/openai-20261104`, then:
+
+```sh
+git clone https://github.com/yang-mills-group/OpenAI-YM-20261104.git vendor/OpenAI-YM-20261104
+git -C vendor/OpenAI-YM-20261104 checkout --detach c1bb5a5566b2bad9d593980d470439f815895317
+python3 scripts/check_snapshot.py --source vendor/OpenAI-YM-20261104
+```
+
+The script checks the copied evidence and all received-file hashes. It does not compile Lean or rerun Comparator. Omit `--source` to check only this repository's evidence snapshot. The submitted build and Comparator instructions are in the pinned source's `NOTES.md`.
+
+After building the November submission, compile and audit our checks with:
+
+```sh
+python3 scripts/build_checks.py --source vendor/OpenAI-YM-20261104/lean --target AxiomAudit
+```
+
+The [port report](docs/november-port.md#reproducing-the-checks) also gives the command for a new independent-target Comparator run. Our main theorem is [`YMReview.November.combined_acceptance`](checks/NovemberCombined.lean), with its explicit witness structure in [`NovemberAcceptanceSpec.lean`](checks/NovemberAcceptanceSpec.lean). It combines November's public existence conditions with our checks on the same native construction.
+
+For the matching additions, use the same built submission and a fresh work directory for each command:
+
+```sh
+python3 scripts/build_all_orders_statement.py \
+  --source vendor/OpenAI-YM-20261104/lean \
+  --work work-cache/all-orders-statement-local
+python3 scripts/build_ghost_finite.py \
+  --source vendor/OpenAI-YM-20261104/lean \
+  --work work-cache/ghost-finite-local-build
+```
+
+These compile and audit the review modules against the pinned submission libraries. They leave the committed evidence unchanged. The [finite-loop guide](docs/matching/ghost-finite-check.md#reproduce) gives the separate Comparator command and tool setup. The all-orders restatement has a local build and axiom audit; the full supplied Matching target has its own Comparator records under [`evidence/supplied-targets/`](evidence/supplied-targets/).
+
+Our code and documentation are licensed under [Apache-2.0](LICENSE). The submission remains separately attributed and retains its own notices and third-party licenses.
+
+[Group import and link-migration record](provenance/group-import.json).

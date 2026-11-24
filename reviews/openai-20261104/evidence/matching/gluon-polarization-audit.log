@@ -1,0 +1,33 @@
+'YMReview.NovemberMatching.GluonPolarization.precision_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonPolarization.projector_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonPolarization.metric_yeast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YMReview.NovemberMatching.GluonPolarization.metric_innerTrace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YMReview.NovemberMatching.GluonPolarization.innerTrace_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+YM.WilsonMS.BetaValue.field_W {G : Gauge} (a b c : Landau.CI G) (p q r : Tone.QP) (x y z : Axis) :
+  WilsonMS.BetaValue.Cubic G [Landau.Detect.W x a p, Landau.Detect.W y b q, Landau.Detect.W z c r] =
+    -Complex.I * WilsonMS.BetaValue.fColor a b c * ↑(WilsonMS.BetaValue.trident p q r x y z)
+'YM.WilsonMS.BetaValue.field_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.ScaleForest.TwoPoint.gauge_hit {G : Gauge} (r : ℝ) (p q : Tone.QP) (mu x y : Axis) (i a b : Landau.CI G) :
+  WilsonMS.BetaValue.HitM (WilsonMS.BetaValue.HeatLine G r) (WilsonMS.BetaValue.Cubic G)
+      [Landau.Detect.W x i q, Landau.Detect.W mu a p] [Landau.Detect.W y i (-q), Landau.Detect.W mu b (-p)] =
+    2 * ScaleForest.angle i a b * ScaleForest.TwoPoint.twoG r p q mu x y
+'YM.MS.ScaleForest.TwoPoint.gauge_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.ScaleForest.TwoPoint.trace_value {G : Gauge} (r : ℝ) (p q : Tone.QP) (mu : Axis) (ξ σ : Bool)
+  (a b : Landau.CI G) :
+  (Plane.Flux.trc (ScaleForest.TwoPoint.Km 1 ξ 0) q) (ScaleForest.TwoPoint.connective r σ G 0)
+      (ScaleForest.TwoPoint.word mu mu a b p) =
+    (∑ i, ScaleForest.angle i a b) *
+      (ScaleForest.TwoPoint.bothTensor r p q mu ξ σ + ScaleForest.TwoPoint.bothTensor r p (-q) mu ξ σ)
+'YM.MS.ScaleForest.TwoPoint.trace_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.MS.ScaleForest.closeG_integer {G : Gauge} {K : Rip G} {F : Mob G} {b : Bool} {m n : ℕ} (hK : Rock.Knot b K)
+  (hF : Rock.Form0 b F) (hL : m ≤ n) (w : Koszul.Legs (Shore G m)) (y : ℝ) :
+  MeasureTheory.Integrable (fun q => ∑ i, ∑ j, K n i j q * F n ((i, q) :: (j, -q) :: lift hL w)) (Rock.Path.Px n) ∧
+    ScaleForest.closeG K (↑n) y F m w =
+      Complex.exp (-↑y * 2 * ↑n) *
+        (↑((2 * Real.pi) ^ (4 + 2 * n))⁻¹ *
+          ∫ (q : SectorP n), ∑ i, ∑ j, K n i j q * F n ((i, q) :: (j, -q) :: lift hL w) ∂Rock.Path.Px n)
+'YM.MS.ScaleForest.closeG_integer' depends on axioms: [propext, Classical.choice, Quot.sound]

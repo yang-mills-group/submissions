@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T05:35:35.609347+00:00",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/checks/matching/GhostConventionCheck.lean"
+  ],
+  "working_directory": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "exit_code": 0,
+  "warnings": [],
+  "source": "checks/matching/GhostConventionCheck.lean",
+  "source_sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7",
+  "log": "evidence/matching/ghost-convention-check.log",
+  "log_sha256": "63f04cf6464d145d0c65f3b1d5f74f68a154593426b3f36ff41482b4952c8e05",
+  "direct_import_sources": [
+    {
+      "module": "YM.MS.Graphical.CommonGates",
+      "path": "YM/MS/Graphical/CommonGates.lean",
+      "sha256": "fd81c97120fcb3e129afcabc8e6c8722d20eef79d4892a9794d1b21b80993183"
+    },
+    {
+      "module": "YM.MS.Motif.Vox",
+      "path": "YM/MS/Motif/Vox.lean",
+      "sha256": "505b9e05bbf8312c8a7f46dfd66ad174745e846718feb628636b11f8d96249dc"
+    },
+    {
+      "module": "YangMills.WilsonProof.NativeSupport.YM.MS.Motif.Warp",
+      "path": "YangMills/WilsonProof/NativeSupport/YM/MS/Motif/Warp.lean",
+      "sha256": "0852ad0e2e788b9465e4d5fee670dcf3b72db1552cb2b2f7142246f9dd172028"
+    },
+    {
+      "module": "Mathlib.Tactic",
+      "path": ".lake/packages/mathlib/Mathlib/Tactic.lean",
+      "sha256": "c6f2c548596b635a3d5c8aff8b19cbdeb60dd54e41bb89a1cd03b1a54d335fa5"
+    }
+  ],
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GhostCheck.ghost_to_vector": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostCheck.vector_to_ghost": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostCheck.source_ghost_gluon": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostCheck.classical_ghost_gluon": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostCheck.scalar_antighost_vertex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Five independently stated symbol and classical-vertex identities. Uses the already built November library; not an all-order gauge-fixing equivalence, loop calculation, whole-submission rebuild, or Comparator run."
+}

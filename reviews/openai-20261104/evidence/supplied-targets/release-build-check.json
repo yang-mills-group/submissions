@@ -1,0 +1,32 @@
+{
+  "stage": "release-build-check",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "--no-cache",
+    "--no-build",
+    "build"
+  ],
+  "cwd": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "environment_overrides": {
+    "LEAN_NUM_THREADS": "6"
+  },
+  "started_utc": "2026-11-10T04:34:35.836213+00:00",
+  "status": "passed",
+  "log": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/evidence/release-build-check.log",
+  "resource_wrapper": null,
+  "resource_method": "Python getrusage(RUSAGE_CHILDREN), Darwin units",
+  "pid": 49778,
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T04:34:50.665289+00:00",
+  "elapsed_seconds": 14.829,
+  "log_sha256": "e240eae3dabb6f1c8c8402bec23f90a393e4a2ef0114028e22c24181473369a9",
+  "resources": {
+    "ru_utime": 8.892502,
+    "ru_stime": 12.754704,
+    "ru_maxrss": 1135837184,
+    "ru_minflt": 90687,
+    "ru_majflt": 126,
+    "ru_inblock": 0,
+    "ru_oublock": 0
+  }
+}

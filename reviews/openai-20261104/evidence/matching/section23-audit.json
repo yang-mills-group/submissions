@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-16T19:38:58.451818+00:00",
+  "finished_utc": "2026-11-16T19:39:05.751464+00:00",
+  "scope": "Two classical-density identities (quartic is definitional) and inspection of nine submitted bridges: color, seed, forest germ, continued insertions, Wilson law/moments and scheme uniqueness. No generic vertex tensor or conventional all-order forest equivalence is proved.",
+  "source": "checks/matching/Section23Audit.lean",
+  "source_sha256": "3fb759c59c14c5b1582702adc9fa1e82f8ef0e94720b7aa4bd0bbf402c54227d",
+  "log": "evidence/matching/section23-audit.log",
+  "log_sha256": "ab7b6a3ac4d675f0998744691d9b524f3327452b15ef3ca5f49a20cc1c190b19",
+  "command": [
+    "/Users/oai/.elan/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/section23/lean-build/project/.lake/build/lib/lean/Section23Audit.olean",
+    "/Users/oai/Documents/Codex/2026-11-13/loo/work/section23/lean-build/project/Section23Audit.lean"
+  ],
+  "project": "/Users/oai/Documents/Codex/2026-11-13/loo/work/section23/lean-build/project",
+  "exit_code": 0,
+  "printed_axioms": {
+    "YMReview.NovemberMatching.Section23.cubic_density": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.Section23.quartic_density": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.Gauge.trace_color": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.Gauge.trace_adjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.Motif.Class_at": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.GraphSum.forest_germ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YM.MS.ScaleForest.common_native": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YangMills.energy_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YangMills.law_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YangMills.moment_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YangMills.PerturbativeMatching.Reference.scheme_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "submission_files_verified": 37673,
+  "source_build_reused": true,
+  "fresh_review_build": true,
+  "comparator_run": false,
+  "warnings": []
+}

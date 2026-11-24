@@ -1,0 +1,330 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-13T14:47:24.712879+00:00",
+  "project": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project",
+  "source": "/Users/oai/Documents/Codex/2026-10-28/thre/work/ym-nov4-verification/release/lean",
+  "target": "YMReview.NovemberMatching.GhostSolution.acceptance",
+  "definition_holes": [],
+  "submission_manifest_sha256": "c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9",
+  "source_build_reused": true,
+  "review_build_initially_absent": true,
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "modules": [
+    {
+      "module": "GhostConventionCheck",
+      "source": "checks/matching/GhostConventionCheck.lean",
+      "source_sha256": "40db9eda624b0dbcef5d5cd9d495eff2d6092125b2aa26529f047010b9acdba7",
+      "log": "evidence/matching/ghost-finite-build/GhostConventionCheck.log",
+      "log_sha256": "63f04cf6464d145d0c65f3b1d5f74f68a154593426b3f36ff41482b4952c8e05",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostConventionCheck.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostConventionCheck.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:24.713069+00:00",
+      "finished_utc": "2026-11-13T14:47:30.180437+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopBenchmark",
+      "source": "checks/matching/GhostLoopBenchmark.lean",
+      "source_sha256": "7acd7203a122f45ab1d2d4033ef755632501619e9a88a915ad0f787fc4d2acd8",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopBenchmark.log",
+      "log_sha256": "13a14f1e06bd2995d172c3baa12f372757cfe024385c762234577e8323eec11b",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopBenchmark.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopBenchmark.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:30.180656+00:00",
+      "finished_utc": "2026-11-13T14:47:34.762215+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopFiniteEvaluation",
+      "source": "checks/matching/GhostLoopFiniteEvaluation.lean",
+      "source_sha256": "a66a8d1794e185f8da3872b0494bd1c6db5b508ba3bb2d18b45444f1a53b6c33",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopFiniteEvaluation.log",
+      "log_sha256": "af0cf777a7f709bf69b9cea84501690b1d505396333d631129c435938055efbc",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopFiniteEvaluation.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopFiniteEvaluation.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:34.762532+00:00",
+      "finished_utc": "2026-11-13T14:47:39.735736+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopTrace",
+      "source": "checks/matching/GhostLoopTrace.lean",
+      "source_sha256": "a99b9522ade337776186e771bc627f94cc21e5f2f4f44a4d5992ae0f0f2ff2de",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopTrace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopTrace.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopTrace.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:39.735982+00:00",
+      "finished_utc": "2026-11-13T14:47:46.870188+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopRadial",
+      "source": "checks/matching/GhostLoopRadial.lean",
+      "source_sha256": "a12a94079f6a357633c748671aa26a7be95c5dfcf700a2fa896f2c5f7c956a60",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopRadial.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopRadial.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopRadial.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:46.870508+00:00",
+      "finished_utc": "2026-11-13T14:47:52.225607+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopContinuation",
+      "source": "checks/matching/GhostLoopContinuation.lean",
+      "source_sha256": "498e976b124bd27393e4b1e641ba8cbf8fc902cfa4f2fa659cc68d8771244a7b",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopContinuation.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopContinuation.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopContinuation.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:52.225931+00:00",
+      "finished_utc": "2026-11-13T14:47:57.332124+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopJet",
+      "source": "checks/matching/GhostLoopJet.lean",
+      "source_sha256": "376f8265c32be1a05fc6a9194f99e0f4226794db093e28c400a03ea9db476e36",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopJet.log",
+      "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopJet.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopJet.lean"
+      ],
+      "started_utc": "2026-11-13T14:47:57.332445+00:00",
+      "finished_utc": "2026-11-13T14:48:02.168157+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopInfrared",
+      "source": "checks/matching/GhostLoopInfrared.lean",
+      "source_sha256": "9e4b0de2008c3a836618abccc041ef8d9801df0593db3b4601f7d8fcae1af4a3",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopInfrared.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopInfrared.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopInfrared.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:02.168433+00:00",
+      "finished_utc": "2026-11-13T14:48:07.427039+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopMellin",
+      "source": "checks/matching/GhostLoopMellin.lean",
+      "source_sha256": "d8b6dfdcba041856946d80eed59211e9de0585428c4652f2d26e073c845a4261",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopMellin.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopMellin.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopMellin.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:07.427399+00:00",
+      "finished_utc": "2026-11-13T14:48:11.826533+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopPrimitive",
+      "source": "checks/matching/GhostLoopPrimitive.lean",
+      "source_sha256": "74578888f2bfd69a45f5d9e9b08bcfc986ce7dabfccdbe5d67ee559e192e9399",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopPrimitive.log",
+      "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopPrimitive.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopPrimitive.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:11.826918+00:00",
+      "finished_utc": "2026-11-13T14:48:16.645680+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopFlow",
+      "source": "checks/matching/GhostLoopFlow.lean",
+      "source_sha256": "1be44fb92b30bd2c7eb0e989cb0977530a627174f2675b6f6148974813e0a455",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopFlow.log",
+      "log_sha256": "4cb977915de24aa4b078bab7ab32bd8a3ef06e9b8a241aadeef5ba3d479f7f2a",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopFlow.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopFlow.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:16.646023+00:00",
+      "finished_utc": "2026-11-13T14:48:21.364823+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopUnit",
+      "source": "checks/matching/GhostLoopUnit.lean",
+      "source_sha256": "0f3daf3cd4bd723e5c94f5583d975803beae087b8249c3b229080f992552a7d8",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopUnit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopUnit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopUnit.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:21.365148+00:00",
+      "finished_utc": "2026-11-13T14:48:25.942245+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopTensor",
+      "source": "checks/matching/GhostLoopTensor.lean",
+      "source_sha256": "0af37c28414340fbb91a85ee9973e885a9c884c92fb97b03fec3bd5d1b36af80",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopTensor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopTensor.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopTensor.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:25.942647+00:00",
+      "finished_utc": "2026-11-13T14:48:30.539080+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostLoopSolution",
+      "source": "checks/matching/GhostLoopSolution.lean",
+      "source_sha256": "5eef667834fdd48787965c067c6e623c5b76cad3e399b6219a43d16b52a8bfc3",
+      "log": "evidence/matching/ghost-finite-build/GhostLoopSolution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostLoopSolution.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopSolution.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:30.539458+00:00",
+      "finished_utc": "2026-11-13T14:48:35.275934+00:00",
+      "exit_code": 0
+    },
+    {
+      "module": "GhostFiniteAudit",
+      "source": "checks/matching/GhostFiniteAudit.lean",
+      "source_sha256": "5018478b85fe6df74158d542191ec224b1cfb71da7d47f6556231cfe6b2ce7d9",
+      "log": "evidence/matching/ghost-finite-build/GhostFiniteAudit.log",
+      "log_sha256": "408810d2f43695ddc37d66e9e1d14d0db1db426bf421c22006c5820d9c48633e",
+      "command": [
+        "/Users/oai/.elan/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/.lake/build/lib/lean/GhostFiniteAudit.olean",
+        "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostFiniteAudit.lean"
+      ],
+      "started_utc": "2026-11-13T14:48:35.276329+00:00",
+      "finished_utc": "2026-11-13T14:48:39.422325+00:00",
+      "exit_code": 0
+    }
+  ],
+  "finished_utc": "2026-11-13T14:48:39.423288+00:00",
+  "printed_axioms": {
+    "YMReview.NovemberMatching.GhostSolution.acceptance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostUnit.finite_unit_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostSolution.nonzero_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostJet.submitted_regulator_jet_test": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostMellin.logExp_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostPrimitive.primitive_small": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "YMReview.NovemberMatching.GhostPrimitive.primitive_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "review_sources_unchanged": true,
+  "warnings": [
+    {
+      "module": "GhostLoopFlow",
+      "message": "/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/work-cache/ghost-finite-build-20261113-1/project/GhostLoopFlow.lean:169:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    }
+  ],
+  "scope": "Full SubmittedFinitePartTest, not only its pole or a conditional implication."
+}
