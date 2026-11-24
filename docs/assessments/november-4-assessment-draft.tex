@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,microtype,xcolor,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue!45!black,linkcolor=blue!45!black,
+ filecolor=blue!45!black,
+ pdftitle={Assessment of the OpenAI November 4 Yang-Mills submission},
+ pdfauthor={Yang--Mills group -- working draft}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\pagestyle{empty}
+\clubpenalty=10000
+\widowpenalty=10000
+\newcommand{\reviewdoc}[2]{\href{https://github.com/YM-lean/OpenAI-Nov4-verification/blob/main/#1}{#2}}
+
+% Separate draft: the October assessment is preserved unchanged.
+% Repository links currently require access to the private review repository.
+% Supporting notes are published under docs/matching/.
+\begin{document}
+\begin{center}
+{\Large\bfseries OpenAI Yang--Mills: November assessment}\par
+\vspace{3pt}
+\href{https://github.com/YM-lean/OpenAI-Nov4/tree/b5e288edeac43ac088a2a291ac3841bdda9f20b8/submission}{4 November 2026 submission}\quad\textbullet\quad Yang--Mills group\par
+{\small Draft for discussion, 16 November 2026}
+\end{center}
+\vspace{-4pt}
+
+This supplements our \href{https://github.com/yang-mills-group/YM/blob/main/docs/assessment-1.pdf}{October assessment}.
+November adds all-orders matching and passes our formal checks.
+Human review remains minimal; a more extensive review is underway.
+
+\textbf{1. Existence and completed checks.}
+Both releases construct a Wightman theory from four-dimensional Wilson lattice
+gauge theory in the stated simple-group setting, via a full fixed-volume
+ultraviolet limit and a subsequential infinite-volume limit. November clarifies
+the lattice-field dictionary and normalization, strengthens the phase-uniform
+free-Maxwell comparison, and adds OPE consistency.
+Our October checks transferred to the same November witness: Wilson origin,
+OS axioms with growth on diagonal-flat joint Schwartz tests, Ward and stress
+identities, field coverage and OPE bounds. Both combined targets passed
+Comparator with standard Lean axioms only. Neither release establishes a mass
+gap or uniqueness of the infinite-volume limit.
+
+\textbf{2. Perturbative matching: statement and evidence.}
+One Wilson construction and perturbative reference are chosen before the
+volume sequence. Each selected continuum hierarchy has one calibrated field
+frame $J_r$ and measured coupling $g_X(r)\to0$, common to all orders. Set
+$S_{\sigma,r}(v;x,o)=S_\sigma(J_rv_1,\ldots,J_rv_n;o+rx_1,\ldots,o+rx_n)$
+for local gauge-invariant fields. For every finite order $N$, derivative order
+$j$, field-degree cutoffs and compact set $K$ of separated shapes,
+\[
+ \left\|D_x^\ell\!\left[S_{\sigma,r}(v;x,o)
+       -\sum_{k=0}^{N}g_X(r)^k C^X_{n,k}(v;x)\right]\right\|
+ \le A\!\prod_i\|v_i\|_{\mathrm{coeff}}\,|g_X(r)|^{N+1},
+ \qquad \ell\le j.
+\]
+for sufficiently small $r>0$, uniformly in $x\in K$, center, phase and fields.
+The constant and radius threshold may depend on $N,j,K$ and the cutoffs.
+Analogous bounds control the full OPE output at each finite output cutoff.
+The $C^X$ come from the submitted graph reference, intended as Landau-gauge
+$\overline{\mathrm{MS}}$ with a fixed field/coupling conversion. The proof compares the
+continuum limit of lattice coefficients with continuum flow solutions,
+matching sums at each order. It does not assert convergence of the series.
+
+The supplied Existence and Matching targets passed Comparator; our Lean
+restatement checks the quantifiers and common witnesses. Independent finite
+ghost- and gluon-bubble identities also passed Lean and Comparator, including
+the finite $1/3$ polarization-trace term. The four-leg ghost box has analytic,
+structural Lean and numerical checks; its final evaluator equality remains
+unproved in Lean.
+
+\textbf{3. Subtleties still requiring comparison at all orders.}
+\begin{list}{\textbullet}{\setlength{\leftmargin}{12pt}\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}
+\item \textbf{Renormalization.} Compare recursive scale-sector counterterms with
+conventional forest subtraction, including overlapping subdivergences; fix
+finite terms, the $\overline{\mathrm{MS}}$ scale and conversion to the measured scheme.
+\item \textbf{Dimensional continuation.} Keep open tensor indices and evanescent terms
+through pole subtraction: they can leave finite contributions. Check the order
+of subtraction and infrared-cutoff removal.
+\item \textbf{Composite operators.} Specify interacting completions of free
+curvature labels, operator mixing, equation-of-motion and BRST-exact terms,
+evanescent lifts and normalization. The label $F_0^2$ alone does not identify
+$[F^2]_{\overline{\mathrm{MS}}}$.
+\item \textbf{Flow and uniqueness.} Identify graph multiplicities, graded signs,
+classical input and boundary data before using uniqueness to identify the
+intended perturbative coefficients.
+\item \textbf{OPE and scope.} Check the common field conversion and its inverse on
+OPE outputs, compatibility across cutoffs and control against arbitrary exterior
+insertions. Separated-point bounds do not establish contact identities or an
+off-shell operator algebra.
+\end{list}
+
+
+{\small\textbf{Supporting working material (AI-generated):}
+\reviewdoc{docs/existence/october-november-existence-comparison.pdf}{Existence comparison};
+\reviewdoc{docs/matching/all-orders-statement-review.md}{matching statement};
+\reviewdoc{docs/matching/november-matching-assessment-draft.pdf}{detailed matching review};
+\reviewdoc{docs/matching/ghost-finite-check.md}{ghost check};
+\reviewdoc{docs/matching/gluon-bubble-finite-identity.pdf}{gluon calculation}.
+Repository links require group access.}
+\end{document}
