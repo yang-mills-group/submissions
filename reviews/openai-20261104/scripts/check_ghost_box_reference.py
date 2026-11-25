@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-check the conventional four-leg ghost-box formula in the draft.
+"""Cross-check the conventional four-leg ghost-box formula in the report.
 
 Requires NumPy. This does not evaluate a submitted Lean graph or prove an
 error bound for the quadrature. Run without arguments for JSON on stdout,

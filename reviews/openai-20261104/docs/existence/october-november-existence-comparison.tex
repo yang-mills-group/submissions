@@ -7,14 +7,14 @@
 \hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
  pdftitle={Comparison of the October 28 and November 4 OpenAI Yang-Mills submissions: common construction and existence checks},
  pdfauthor={Yang--Mills group},
- pdfsubject={Working comparison of the common existence results; perturbative matching deferred}}
+ pdfsubject={Comparison of the common existence results; perturbative matching deferred}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt plus 1pt}
 \setlength{\headheight}{14pt}
 \setlist{leftmargin=1.5em,itemsep=2pt,topsep=3pt}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small October--November Yang--Mills comparison}
-\fancyhead[R]{\small Working draft, 11 November 2026}
+\fancyhead[R]{\small 25 November 2026}
 \fancyfoot[C]{\thepage}
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
@@ -29,7 +29,7 @@
 {\LARGE\bfseries Comparing the October 28 and November 4\\[3pt] OpenAI Yang--Mills submissions}\par
 \vspace{7pt}
 {\large The common construction and the strengthened existence checks}\par
-Yang--Mills group\quad\textbullet\quad Working draft, 11 November 2026
+Yang--Mills group\quad\textbullet\quad 25 November 2026
 \end{center}
 
 \textbf{Scope.} This document compares the existence material shared by the two
@@ -229,7 +229,7 @@ digests: declaration kinds, universe parameters, types and recorded bodies
 agree, and neither side has an extra declaration in this closure. The
 diagnostic preserves constant names rather than unfolding them into an
 arbitrary equivalence class. The two digest inventories have been rechecked
-for equality in preparing this draft. \src{E2}
+for equality in preparing this report. \src{E2}
 
 This is substantial evidence that the retained native certificate has not
 quietly acquired a different meaning. It is not a theorem identifying
@@ -817,7 +817,7 @@ The newer replay matters because the local tool audit reproduced defects
 with the older tools. This finding concerns the verifier software and is
 distinct from the October target's omitted physical relations.
 
-Preparing this draft rechecked the four log hashes, exit statuses and the
+Preparing this report rechecked the four log hashes, exit statuses and the
 explicit kernel/Comparator acceptance messages. It also rehashed all 37,673
 files in the received November source manifest: no differences were found.
 The prior four small controls accepted a valid proof and rejected a changed
@@ -841,7 +841,7 @@ October source links below point to the public original-submission commit
 the published YM assembly \code{55ba9fc36293b3f4d52c6b1f813169a0be76ee98}.
 November source paths are relative to the \code{lean/} directory of the received
 November 4 distribution. The group's port paths in G3 and E4 refer to its
-separate November verification package. This local working draft does not require a link
+separate November verification package. This report does not require a link
 to a private GitHub repository. The SHA-256 of its supplied
 \code{SOURCES.sha256} file is
 \begin{quote}\small\path{c15ffe5e8ca808f5748170c2f3910a6000cf4a01c0757ece91bd5b5bf65e60f9}.\end{quote}
@@ -885,14 +885,14 @@ The retained local evidence uses the workspace root
 The following paths are relative to that root:
 \begin{description}[style=nextline,leftmargin=3.5em,labelwidth=3em,align=left]
 \item[E1] \path{work/ym-nov4-verification/evidence/}: \code{comparator-results.json}, \code{patched-comparator-recheck.json}, the four corresponding Comparator logs and receipts, \code{release-build-check.json}, \code{prepared-inputs.json}, \code{controls.json}, and \code{verification-report.md}. The prepared source is \path{work/ym-nov4-verification/release/}.
-\item[E2] \path{work/ym-october-november-comparison/}: \code{existence-only-import-comparison.json}, \code{public-declaration-comparison.json}, \code{DefinitionAudit.lean}, \code{definition-audit-receipt.json}, \code{definition-comparison.json} and the two definition-digest inventories. The older broad narrative report in that directory contains a stale pending-run sentence; this draft uses the completed receipts in E1 for status.
+\item[E2] \path{work/ym-october-november-comparison/}: \code{existence-only-import-comparison.json}, \code{public-declaration-comparison.json}, \code{DefinitionAudit.lean}, \code{definition-audit-receipt.json}, \code{definition-comparison.json} and the two definition-digest inventories. The older broad narrative report in that directory contains a stale pending-run sentence; this report uses the completed receipts in E1 for status.
 \item[E3] \path{work/ym-october-november-acceptance/evidence/status.json}.
 \par This records an earlier, stopped attempt to apply November tests to the October submission, with no Comparator start or successful complete combined build. It is separate from the successful application of the group's October checks to November recorded in E4.
 \item[E4] In \path{/Users/oai/Documents/Codex/repos/YM-lean/OpenAI-Nov4-verification/}, at revision \code{7a15e748eedc89e951be4dbc0ce5200478171451}: \path{evidence/independent-checks/AxiomAudit.json} and \path{port-audit.json}; \path{evidence/combined-targets/combined-comparator.json}, its log, \path{prepared-inputs.json}, and \path{input-stability.json}. The frozen reference statements and configuration are in \path{comparator/NovemberChallenge.lean} and \path{comparator/combined.json}.
 \end{description}
 
 The adjacent \code{evidence-summary.json} records the source and log checks
-performed for this draft. \code{proof-path-audit.json} records the file
+performed for this report. \code{proof-path-audit.json} records the file
 hashes and declaration locations used for Section~\ref{sec:proofs}, including
 the byte-identical native modules identified there.
 The new independent-target run is recorded separately in E4. A later review of perturbative

@@ -10,7 +10,7 @@ The submitted source is preserved in [OpenAI-YM-20261104](https://github.com/yan
 
 | Read | Purpose |
 | --- | --- |
-| [One-page November assessment](docs/november-4-assessment-draft.pdf) ([source](docs/november-4-assessment-draft.tex)) | Current formal checks, the all-orders matching statement, and subtleties in renormalization, composite operators and interpretation. |
+| [One-page November assessment](docs/november-4-assessment.pdf) ([source](docs/november-4-assessment.tex)) | Current formal checks, the all-orders matching statement, and subtleties in renormalization, composite operators and interpretation. |
 | [Two-page existence summary](docs/existence/november-existence-summary.pdf) ([source](docs/existence/november-existence-summary.tex)) | Main changes from October and the successful transfer of the group's checks. The [detailed comparison](docs/existence/october-november-existence-comparison.pdf), [port report](docs/november-port.md) and [construction checklist](docs/checklist.md) give the supporting analysis. |
 | [All-orders statement review](docs/matching/all-orders-statement-review.md) | The intended asymptotic statement, its informal–formal correspondences, quantifier order, and remaining definition-level questions. Read this before interpreting the finite-loop result as evidence for all orders. |
 | [Perturbative-matching notes](docs/matching/november-perturbative-matching.pdf) ([source](docs/matching/november-perturbative-matching.tex)) | Detailed derivation, definition glossary, supplied-test inventory and independent tests. Sections 3.3–3.6 explain the graph/flow uniqueness bridges and diagnostic calculations; Appendix C follows the full finite ghost-loop proof. |

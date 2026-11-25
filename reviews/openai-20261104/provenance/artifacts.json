@@ -15,7 +15,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "d09d6612cc40e7622fbc8193b334befa9b5023de925ff7e6c4dc8ef2184a71df"
+      "sha256": "fbd1892cd15ac2ea990a47a9472c8130f07768307b4e67f70d0e1258242c54d0"
     },
     {
       "path": "checks/AFSourceBridge.lean",
@@ -423,19 +423,19 @@
     },
     {
       "path": "docs/existence/november-existence-summary.pdf",
-      "sha256": "1e87564aba681bd8cf21c8d4cc35030477f4a3a968db7af4c11f09f3910f8603"
+      "sha256": "697d27013549fbf5d9a9be93ac6298057977fb116446f73307108be7a1997e97"
     },
     {
       "path": "docs/existence/november-existence-summary.tex",
-      "sha256": "62bf2f98dcd0da2366a092d4dd3e12bb4d7a9411c57c48b26df5218c138e638c"
+      "sha256": "4be09a20011d52972036f8e4a16078ca5c940707728f6dd386635fda7c14700f"
     },
     {
       "path": "docs/existence/october-november-existence-comparison.pdf",
-      "sha256": "fce352c9f29fc399f94d01f0af0e7c9bb2d81f1713180fb49730ada383fd3f22"
+      "sha256": "f413b0592a018e8cecdbc43bf7e04f7a83227626d8439409ab6cae9b2d0b6bdb"
     },
     {
       "path": "docs/existence/october-november-existence-comparison.tex",
-      "sha256": "c48c8a120b5d5e5971dff325f82d29df78a4a628b4ecec113a7c7071325646d6"
+      "sha256": "0d937b09181da7e447753b1305e8ef9b1c6bedcbbe2ff9f21688b090b6a16224"
     },
     {
       "path": "docs/existence/proof-path-audit.json",
@@ -467,11 +467,11 @@
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.pdf",
-      "sha256": "8d71c8acd9f26b73d2618b28ef2d77f47127bf1e6ce1d973ffcdfd4515731f45"
+      "sha256": "30adcca16ba0b533be3e071a2f0e74321b110317e75a187babc35ed8d4a81e7c"
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.tex",
-      "sha256": "54eefeb377e8f047a1b81f8197b1a3af15e532dccfa7c4921be8b99c939f70bc"
+      "sha256": "53060fe3480723ed51fb2c75c9a85556542920ea214f31c1fd1e4afcf75a8253"
     },
     {
       "path": "docs/matching/gluon-bubble-source-map.json",
@@ -482,20 +482,20 @@
       "sha256": "9655bf8a0597d4a746e5a36427dcc02348779a74f42fb5490f0ce43e3ef53544"
     },
     {
-      "path": "docs/matching/november-matching-assessment-draft.pdf",
-      "sha256": "03e40ff1bd2735c9536d4912d565e39df53c6ba85ad788b0346255ce03241776"
+      "path": "docs/matching/november-matching-assessment.pdf",
+      "sha256": "ceb954a722fc838a5742d6f5e616a12a886306c07a4a5c8b077295b96ee06b09"
     },
     {
-      "path": "docs/matching/november-matching-assessment-draft.tex",
-      "sha256": "36e5d43063240c114518d306cb6bab89d6ebbdf90bfdd0408c1d1486bf581120"
+      "path": "docs/matching/november-matching-assessment.tex",
+      "sha256": "94c1065ea0e016c7ab29e4dba207840fc219facb231bad5f12afe8f40fdaa0a3"
     },
     {
       "path": "docs/matching/november-perturbative-matching.pdf",
-      "sha256": "0463cf9f136ae755147b82dc31d3c9081a82fab6461d0b4bc74b93195b2c19a1"
+      "sha256": "4b15593baf829589f4c50b187b1e8f0079ba021cf6879a09cafdf375bee94b1e"
     },
     {
       "path": "docs/matching/november-perturbative-matching.tex",
-      "sha256": "afd43f025cceb1786a6e908184884aa85e21783e74b85cd393cc9b791092ef6c"
+      "sha256": "401e1d6f38ec0b0a21f26b24feeb1012a1454f892a44d0baf72ef3f4fc57760f"
     },
     {
       "path": "docs/matching/openai-test-inventory.json",
@@ -511,15 +511,15 @@
     },
     {
       "path": "docs/november-4-assessment-checks.json",
-      "sha256": "b7ac416f314f8083c2e28ca185d01402a063bab48161c268a0d19859d5b19a5e"
+      "sha256": "723799c895fec138c24bc7e039db42b987c24b173b01e2613ecfc13b069c6ae9"
     },
     {
-      "path": "docs/november-4-assessment-draft.pdf",
-      "sha256": "3a5392421d805973430dfbe4bb6a9dfa1aa286f775ac8f7b88f6a41f4bec3523"
+      "path": "docs/november-4-assessment.pdf",
+      "sha256": "b4dfe5aa426fe3e26276fdc56523c2f3b827e8eb6cba55a43b9d7fafa15ac1aa"
     },
     {
-      "path": "docs/november-4-assessment-draft.tex",
-      "sha256": "76b6d7c8b0e1801a2101258eae464a49320a581f3eddc59f38d9c4f44a2d0382"
+      "path": "docs/november-4-assessment.tex",
+      "sha256": "743aecf0e7f315b51ff7d9245f7f05fc86ff8e901f0de67b5a21bd6702c4d3ff"
     },
     {
       "path": "docs/november-port.md",
@@ -1295,7 +1295,7 @@
     },
     {
       "path": "scripts/check_ghost_box_reference.py",
-      "sha256": "900db8493a8c64fe3087f8f39761113d2ef747effd7e2ec28742cb8389c275bb"
+      "sha256": "783b9fae1fbf42a0dc2ad1f5ef3028299264f0dba8f89496831e36340cb4879e"
     },
     {
       "path": "scripts/check_ghost_box_sectors.py",
@@ -1329,5 +1329,6 @@
       "path": "scripts/run_gluon_finite_comparator.py",
       "sha256": "83969642d6d3b01508a686fee48e9977ccf53d9153e21158745fd3977c6708a9"
     }
-  ]
+  ],
+  "editorial_finalization_utc": "2026-11-25T14:16:27.057733+00:00"
 }
