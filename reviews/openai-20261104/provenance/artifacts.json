@@ -15,7 +15,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "fbd1892cd15ac2ea990a47a9472c8130f07768307b4e67f70d0e1258242c54d0"
+      "sha256": "f97341c66fd94fae24be77188d225d5c49df7929387d0cb228bef5e7ebcfe57c"
     },
     {
       "path": "checks/AFSourceBridge.lean",
@@ -423,19 +423,19 @@
     },
     {
       "path": "docs/existence/november-existence-summary.pdf",
-      "sha256": "697d27013549fbf5d9a9be93ac6298057977fb116446f73307108be7a1997e97"
+      "sha256": "9144da86bdecc1ea2491422c66382e52a3a7e4c9ccdad30a741838e0f4981fdc"
     },
     {
       "path": "docs/existence/november-existence-summary.tex",
-      "sha256": "4be09a20011d52972036f8e4a16078ca5c940707728f6dd386635fda7c14700f"
+      "sha256": "a51bfa7a3f968714733f7dbd2a90093acc1bc68327e8a9b0d40e1f94da3ed60a"
     },
     {
       "path": "docs/existence/october-november-existence-comparison.pdf",
-      "sha256": "f413b0592a018e8cecdbc43bf7e04f7a83227626d8439409ab6cae9b2d0b6bdb"
+      "sha256": "f038134ebeca3c86d5cc4a274d4a53e2f862ce3e42efbd67987a95f89112375a"
     },
     {
       "path": "docs/existence/october-november-existence-comparison.tex",
-      "sha256": "0d937b09181da7e447753b1305e8ef9b1c6bedcbbe2ff9f21688b090b6a16224"
+      "sha256": "37c888618d3ff4e21ab3bf1a2d4839ae235d4e4d89b5a6c91aa1b8dcb6bc361c"
     },
     {
       "path": "docs/existence/proof-path-audit.json",
@@ -467,11 +467,11 @@
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.pdf",
-      "sha256": "30adcca16ba0b533be3e071a2f0e74321b110317e75a187babc35ed8d4a81e7c"
+      "sha256": "8818ba4f566b88e6bf3c6354434ad2f8a5fae8adaf5fac40d9d5534c8f00a593"
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.tex",
-      "sha256": "53060fe3480723ed51fb2c75c9a85556542920ea214f31c1fd1e4afcf75a8253"
+      "sha256": "8c3f0e572e1306dcc04b62e5e1a7dde2357c83c1ff0674050deb650b8ac10892"
     },
     {
       "path": "docs/matching/gluon-bubble-source-map.json",
@@ -483,19 +483,19 @@
     },
     {
       "path": "docs/matching/november-matching-assessment.pdf",
-      "sha256": "ceb954a722fc838a5742d6f5e616a12a886306c07a4a5c8b077295b96ee06b09"
+      "sha256": "2bcf4ba2a0a1b61db9233d701b8ebb649275cf045484740ab753fcf05723df7d"
     },
     {
       "path": "docs/matching/november-matching-assessment.tex",
-      "sha256": "94c1065ea0e016c7ab29e4dba207840fc219facb231bad5f12afe8f40fdaa0a3"
+      "sha256": "0878239e7e7f251816832ac1e2b486daa7696130d88657b30313cad4af292946"
     },
     {
       "path": "docs/matching/november-perturbative-matching.pdf",
-      "sha256": "4b15593baf829589f4c50b187b1e8f0079ba021cf6879a09cafdf375bee94b1e"
+      "sha256": "9073da05acc34464d63b42a52a1846c54fcd464be378515e00d9d4ca68d13416"
     },
     {
       "path": "docs/matching/november-perturbative-matching.tex",
-      "sha256": "401e1d6f38ec0b0a21f26b24feeb1012a1454f892a44d0baf72ef3f4fc57760f"
+      "sha256": "433f71ef57dd84c5295b36ab0205fbb8fa76d0561f445031e6e9bf3a3715bcaf"
     },
     {
       "path": "docs/matching/openai-test-inventory.json",
@@ -511,15 +511,15 @@
     },
     {
       "path": "docs/november-4-assessment-checks.json",
-      "sha256": "723799c895fec138c24bc7e039db42b987c24b173b01e2613ecfc13b069c6ae9"
+      "sha256": "978b08efbeab68307b047af6d3bdd844d7509aa9420dae74d07c544f7607e7cf"
     },
     {
       "path": "docs/november-4-assessment.pdf",
-      "sha256": "b4dfe5aa426fe3e26276fdc56523c2f3b827e8eb6cba55a43b9d7fafa15ac1aa"
+      "sha256": "dedfe645f42c0d228d9b58df5409358d758a972c9fd076202abe921e7f463193"
     },
     {
       "path": "docs/november-4-assessment.tex",
-      "sha256": "743aecf0e7f315b51ff7d9245f7f05fc86ff8e901f0de67b5a21bd6702c4d3ff"
+      "sha256": "f4145ef59e134bc2776d85ae533325a9fcb3961ed4f5383033001c69544266be"
     },
     {
       "path": "docs/november-port.md",
@@ -1330,5 +1330,6 @@
       "sha256": "83969642d6d3b01508a686fee48e9977ccf53d9153e21158745fd3977c6708a9"
     }
   ],
-  "editorial_finalization_utc": "2026-11-25T14:16:27.057733+00:00"
+  "editorial_finalization_utc": "2026-11-25T14:16:27.057733+00:00",
+  "authorship_revision_utc": "2026-11-25T14:42:17.159451+00:00"
 }

@@ -1,31 +1,31 @@
 {
-  "checked_utc": "2026-11-25T14:16:27.057733+00:00",
-  "scope": "Final edition dates and labels, final filenames and updated links. Supporting reports finalized with the same date. Mathematical content and recorded verification results unchanged; no new proof run.",
+  "checked_utc": "2026-11-25T14:42:17.159451+00:00",
+  "scope": "Editorial revision: explicit AI attribution and initial draft status for supporting reports; group receipt-date wording and link hierarchy. Mathematical claims and recorded proof results unchanged; no new proof run.",
   "pages": 1,
-  "tex_sha256": "743aecf0e7f315b51ff7d9245f7f05fc86ff8e901f0de67b5a21bd6702c4d3ff",
-  "pdf_sha256": "b4dfe5aa426fe3e26276fdc56523c2f3b827e8eb6cba55a43b9d7fafa15ac1aa",
-  "visual_review": "All pages rendered and visually inspected; no clipping or overlap. Edition date and absence of draft labels also checked in extracted PDF text.",
+  "tex_sha256": "f4145ef59e134bc2776d85ae533325a9fcb3961ed4f5383033001c69544266be",
+  "pdf_sha256": "dedfe645f42c0d228d9b58df5409358d758a972c9fd076202abe921e7f463193",
+  "visual_review": "All 100 revised-document pages rendered. The 42 changed page images were visually inspected; 58 are pixel-identical to previously inspected pages. No clipping or overlap.",
   "compile_warnings": [],
   "qpdf_check": "passed",
   "supporting_documents": [
     {
       "path": "docs/matching/november-matching-assessment.pdf",
-      "sha256": "ceb954a722fc838a5742d6f5e616a12a886306c07a4a5c8b077295b96ee06b09"
+      "sha256": "2bcf4ba2a0a1b61db9233d701b8ebb649275cf045484740ab753fcf05723df7d"
     },
     {
       "path": "docs/matching/november-matching-assessment.tex",
-      "sha256": "94c1065ea0e016c7ab29e4dba207840fc219facb231bad5f12afe8f40fdaa0a3"
+      "sha256": "0878239e7e7f251816832ac1e2b486daa7696130d88657b30313cad4af292946"
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.pdf",
-      "sha256": "30adcca16ba0b533be3e071a2f0e74321b110317e75a187babc35ed8d4a81e7c"
+      "sha256": "8818ba4f566b88e6bf3c6354434ad2f8a5fae8adaf5fac40d9d5534c8f00a593"
     },
     {
       "path": "docs/matching/gluon-bubble-finite-identity.tex",
-      "sha256": "53060fe3480723ed51fb2c75c9a85556542920ea214f31c1fd1e4afcf75a8253"
+      "sha256": "8c3f0e572e1306dcc04b62e5e1a7dde2357c83c1ff0674050deb650b8ac10892"
     }
   ],
   "links": "All seven distinct PDF links target group-hosted material; all five review-document destinations exist locally.",
   "edition_date": "2026-11-25",
-  "status": "final"
+  "status": "summary assessment"
 }
