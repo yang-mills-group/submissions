@@ -27,9 +27,9 @@ Both informal manuscripts span all three theories. The submitters describe the N
 - [QCD](https://github.com/yang-mills-group/QCD): current assessment and links to the QCD checks and detailed records.
 - [chiral](https://github.com/yang-mills-group/chiral): current assessment, native compilation and axiom records, completed Comparator replay with both kernels and seven controls, and representation diagnostics.
 
-The [assessment source index](docs/assessments/README.md) gives source and version notes. The complete [November YM review package](reviews/openai-20261104/README.md) is included here. QCD and chiral review material is in their group results repositories. All linked group review material is available to organization members.
+The [assessment source index](docs/assessments/README.md) gives source and version notes. The complete [November YM review package](reviews/openai-20261104/README.md) is included here. QCD and chiral review material is in their group results repositories. All linked group review material is publicly readable.
 
-For proposed submissions and feedback, see the group's [submission requirements](https://github.com/yang-mills-group/.github-private/blob/main/profile/README.md#making-a-submission) or email [yangmills4d@gmail.com](mailto:yangmills4d@gmail.com).
+For proposed submissions and feedback, see the group's [submission requirements](https://github.com/yang-mills-group/.github/blob/main/profile/README.md#making-a-submission) or email [yangmills4d@gmail.com](mailto:yangmills4d@gmail.com).
 
 ## Initial draft assessments and supporting analyses
 
