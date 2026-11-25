@@ -511,15 +511,15 @@
     },
     {
       "path": "docs/november-4-assessment-checks.json",
-      "sha256": "81f72414f24bac9fa48a5787f1d67f557a68d8ef2ee2069e6b6735a4bb01273e"
+      "sha256": "b7ac416f314f8083c2e28ca185d01402a063bab48161c268a0d19859d5b19a5e"
     },
     {
       "path": "docs/november-4-assessment-draft.pdf",
-      "sha256": "fa957c03d6ddacc2d12f316e118d47106e02c08d346eb7c1d0a9113468ad4e39"
+      "sha256": "3a5392421d805973430dfbe4bb6a9dfa1aa286f775ac8f7b88f6a41f4bec3523"
     },
     {
       "path": "docs/november-4-assessment-draft.tex",
-      "sha256": "93d9b87bd0d01b4a898681bb8a7699b002278bf133ed28a126356ad9180cf6f2"
+      "sha256": "76b6d7c8b0e1801a2101258eae464a49320a581f3eddc59f38d9c4f44a2d0382"
     },
     {
       "path": "docs/november-port.md",

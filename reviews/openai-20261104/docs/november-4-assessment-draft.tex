@@ -1,14 +1,14 @@
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=0.75in,bottom=0.5in]{geometry}
 \usepackage{amsmath,amssymb,microtype,xcolor,hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue!45!black,linkcolor=blue!45!black,
  filecolor=blue!45!black,
  pdftitle={Assessment of the OpenAI November 4 Yang-Mills submission},
  pdfauthor={Yang--Mills group -- working draft}}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{4pt}
 \setlength{\abovedisplayskip}{6pt}
 \setlength{\belowdisplayskip}{6pt}
 \pagestyle{empty}
@@ -24,25 +24,29 @@
 {\Large\bfseries OpenAI Yang--Mills: November assessment}\par
 \vspace{3pt}
 \href{https://github.com/yang-mills-group/OpenAI-YM-20261104/tree/c1bb5a5566b2bad9d593980d470439f815895317/}{4 November 2026 submission}\quad\textbullet\quad Yang--Mills group\par
-{\small Draft for discussion, 16 November 2026}
+{\small Draft for discussion, revised 24 November 2026}
 \end{center}
 \vspace{-4pt}
 
 This supplements our \href{https://github.com/yang-mills-group/YM/blob/main/docs/assessment-1.pdf}{October assessment}.
-November adds all-orders matching and passes our formal checks.
-Human review remains minimal; a more extensive review is underway.
+OpenAI's November submission strengthens the checks that the construction has
+the intended Yang--Mills fields and short-distance behavior. Its principal
+addition is matching to a specified perturbative reference at every finite
+order. Agreement of that reference with conventional Yang--Mills perturbation
+theory remains under review; human review so far is limited.
 
 \textbf{1. Existence and completed checks.}
 Both releases construct a Wightman theory from four-dimensional Wilson lattice
-gauge theory in the stated simple-group setting, via a full fixed-volume
-ultraviolet limit and a subsequential infinite-volume limit. November clarifies
-the lattice-field dictionary and normalization, strengthens the phase-uniform
-free-Maxwell comparison, and adds OPE consistency.
-Our October checks transferred to the same November witness: Wilson origin,
+gauge theory for the stated simple groups, taking a full ultraviolet limit at
+fixed volume and then a subsequential infinite-volume limit. OpenAI also clarifies
+the lattice-field identification and normalization, extends the free-Maxwell
+comparison to every phase and all sufficiently small scales, and adds OPE consistency.
+\textbf{Our additional checks} transfer the October requirements to the same
+November witness: Wilson origin,
 OS axioms with growth on diagonal-flat joint Schwartz tests, Ward and stress
 identities, field coverage and OPE bounds. Both combined targets passed
 Comparator with standard Lean axioms only. Neither release establishes a mass
-gap or uniqueness of the infinite-volume limit.
+gap or a unique infinite-volume limit.
 
 \textbf{2. Perturbative matching: statement and evidence.}
 One Wilson construction and perturbative reference are chosen before the
@@ -75,8 +79,8 @@ unproved in Lean.
 \textbf{3. Subtleties still requiring comparison at all orders.}
 \begin{list}{\textbullet}{\setlength{\leftmargin}{12pt}\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}
 \item \textbf{Renormalization.} Compare recursive scale-sector counterterms with
-conventional forest subtraction, including overlapping subdivergences; fix
-finite terms, the $\overline{\mathrm{MS}}$ scale and conversion to the measured scheme.
+forest subtraction, including overlapping subdivergences, finite terms, the
+$\overline{\mathrm{MS}}$ scale and conversion to the measured scheme.
 \item \textbf{Dimensional continuation.} Keep open tensor indices and evanescent terms
 through pole subtraction: they can leave finite contributions. Check the order
 of subtraction and infrared-cutoff removal.

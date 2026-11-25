@@ -14,7 +14,7 @@ This index links the original submissions held by the Yang–Mills group and the
 | 10 November 2026 | [Massive QCD](https://github.com/yang-mills-group/OpenAI-QCD-20261110) | [Draft summary and renormalization appendix](https://github.com/yang-mills-group/QCD/blob/main/docs/assessment-1.pdf) | [Detailed QCD assessment](https://github.com/yang-mills-group/QCD/blob/main/docs/qcd-verification-assessment.pdf) |
 | 15 November 2026 | [Chiral SU(5)](https://github.com/yang-mills-group/OpenAI-chiral-20261115) | [Draft one-page assessment](https://github.com/yang-mills-group/chiral/blob/main/docs/assessment-1.pdf) | Not yet written |
 
-The three November submission dates are provisional labels and may be corrected before public release. They are distinct from the assessment dates: **16 November** for the November YM summary, and **24 November** for the QCD and chiral summaries. These summaries are drafts for discussion, not final statements of the group.
+The three November submission dates are provisional labels and may be corrected before public release. They are distinct from the assessment dates: the November YM summary was revised **24 November**, and the QCD and chiral summaries are dated **24 November**. These summaries are drafts for discussion, not final statements of the group.
 
 The QCD summary occupies page 1; page 2 explains its renormalization prescription. Its latest mass/current discussion is in this summary and the linked [normalization audit](https://github.com/yang-mills-group/QCD/blob/main/docs/mass-current-normalization.md); the longer assessment records earlier stages of the review. The informal manuscript spans all three theories; the assessment links in the table are assigned to the corresponding formal submissions.
 
